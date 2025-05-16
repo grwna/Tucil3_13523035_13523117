@@ -14,7 +14,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
-    <javafx.version>21.0.7</javafx.version> </properties>
+    <javafx.version>21.0.7</javafx.version>
+  </properties>
 
   <dependencies>
     <dependency>
@@ -38,9 +39,7 @@
   </dependencies>
 
   <build>
-    <sourceDirectory>src</sourceDirectory>
-    <directory>bin</directory>
-    <plugins>
+    <sourceDirectory>src</sourceDirectory> <directory>bin</directory>         <plugins>
       <plugin>
         <artifactId>maven-clean-plugin</artifactId>
         <version>3.1.0</version>
@@ -65,6 +64,12 @@
       <plugin>
         <artifactId>maven-jar-plugin</artifactId>
         <version>3.0.2</version>
+        <configuration>
+            <archive>
+                <manifest>
+                    <mainClass>app.Main</mainClass> </manifest>
+            </archive>
+        </configuration>
         </plugin>
       <plugin>
         <artifactId>maven-install-plugin</artifactId>
@@ -91,8 +96,8 @@
             <execution>
                 <id>default-cli</id>
                 <configuration>
-                    <mainClass>ui.GUI</mainClass>
-                    </configuration>
+                    <mainClass>app.Main</mainClass>
+                </configuration>
             </execution>
         </executions>
       </plugin>
