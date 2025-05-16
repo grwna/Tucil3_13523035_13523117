@@ -6,10 +6,12 @@ MODULES = javafx.controls,javafx.fxml,javafx.graphics
 all: build run
 
 build:
-	$(shell mkdir -p $(BIN_DIR))
-	javac --module-path $(JAVAFX) --add-modules $(MODULES) -d bin src/*.java
+	@mvn compile
 run:
-	java -cp $(BIN_DIR) Main
+	@java --module-path $(JAVAFX) --add-modules $(MODULES) -cp $(BIN_DIR)/classes Main
+
+run-ui:
+	@java --module-path $(JAVAFX) --add-modules $(MODULES) -cp $(BIN_DIR)/classes ui.GUI
 
 clean:
 	@mvn clean

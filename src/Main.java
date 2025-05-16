@@ -1,19 +1,48 @@
-import algorithm.*;
-import java.io.*;
-import java.util.*;
-import model.*;
+import java.io.IOException;
+import java.util.List;
+import java.util.Scanner;
+
+import algorithm.AStar;
+import algorithm.BlockingCarsHeuristic;
+import algorithm.GreedyBestFirst;
+import algorithm.Heuristic;
+import algorithm.ManhattanToExitHeuristic;
+import algorithm.Pathfinder;
+import algorithm.UCS;
+import model.Board;
+import model.State;
 import parser.InputParser;
 import utils.Printer;
 
 public class Main {
     public static void main(String[] args) {
+        testParsing();
+        // testProgram();   
+    }
+    public static void testParsing(){
+        Scanner sc = new Scanner(System.in);
+        Board initialBoard;
+
+        // 1. Input file
+        System.out.print("Masukkan path file input: ");
+        String path = sc.nextLine();
+        sc.close();
+        try {
+            initialBoard = InputParser.parseFromFile(path);
+            System.out.println("Berhasil membaca file.");
+            Printer.print(initialBoard);
+        } catch (IOException e) {
+            System.out.println("Gagal membaca file: " + e.getMessage());
+        }
+    }
+
+    public static void testProgram(){
         Scanner sc = new Scanner(System.in);
         Board initialBoard = null;
 
         // 1. Input file
         System.out.print("Masukkan path file input: ");
         String path = sc.nextLine();
-
         try {
             initialBoard = InputParser.parseFromFile(path);
         } catch (IOException e) {
@@ -56,7 +85,7 @@ public class Main {
                 solver = new AStar(heuristic);
             }
         }
-
+        sc.close();
         // 4. Jalankan algoritma
         long startTime = System.nanoTime();
         List<State> solution = solver.solve(initialBoard);
@@ -77,5 +106,5 @@ public class Main {
             System.out.println("Jumlah langkah: " + (solution.size() - 1));
             System.out.printf("Waktu eksekusi: %.3f ms\n", durationMs);
         }
-    }
+    } 
 }
