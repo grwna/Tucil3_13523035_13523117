@@ -12,13 +12,20 @@ import algorithm.UCS;
 import model.Board;
 import model.State;
 import parser.InputParser;
+import ui.GUI;
 import utils.Printer;
 
 public class Main {
     public static void main(String[] args) {
-        testParsing();
+        testGUI(args);
+        // testParsing();
         // testProgram();   
     }
+
+    public static void testGUI(String[] args){
+        GUI.main(args);
+    }
+
     public static void testParsing(){
         Scanner sc = new Scanner(System.in);
         Board initialBoard;
