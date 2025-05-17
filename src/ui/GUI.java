@@ -325,44 +325,38 @@ public class GUI extends Application {
     }
 
     public void initSearch() {
-        if (this.board == null) {
-            inputError("Cannot initialize search: Board data is missing.", true);
-            return;
-        }
-
         this.boardDisplayArea = new StackPane();
-        this.boardDisplayArea.setAlignment(Pos.CENTER);
 
-        VBox boardViewLayout = drawBoard(this.board);
-        boardViewLayout.setAlignment(Pos.CENTER);
-        this.boardDisplayArea.getChildren().add(boardViewLayout);
+        VBox boardViewFromDrawBoard = drawBoard(this.board);
+        if (boardViewFromDrawBoard != null) {
+            this.boardDisplayArea.getChildren().add(boardViewFromDrawBoard);
+        }
 
         Label algoDisplayLabel = new Label("Algorithm: " + this.algorithm);
         algoDisplayLabel.setFont(Font.font("Arial", FontWeight.NORMAL, 18));
 
         VBox infoBox = new VBox(5);
+        infoBox.setAlignment(Pos.CENTER);
         infoBox.getChildren().add(algoDisplayLabel);
 
-        if ("A*".equals(this.algorithm) || "Greedy".equals(this.algorithm)) {
+        if (("A*".equals(this.algorithm) || "Greedy".equals(this.algorithm))
+            && this.heuristic != null && !this.heuristic.isEmpty()) {
             Label heuristicDisplayLabel = new Label("Heuristic: " + this.heuristic);
             heuristicDisplayLabel.setFont(Font.font("Arial", FontWeight.NORMAL, 18));
             infoBox.getChildren().add(heuristicDisplayLabel);
         }
-        infoBox.setAlignment(Pos.CENTER);
-
+        
         Label initialBoardLabel = new Label("Initial Board");
         initialBoardLabel.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        initialBoardLabel.setPadding(new Insets(0,0,10,0));
 
-        VBox boardLabelBox = new VBox(5);
-        boardLabelBox.getChildren().add(initialBoardLabel);
-        boardLabelBox.setAlignment(Pos.CENTER);
-        boardLabelBox.setPadding(new Insets(30,0,0,0));
 
         Button startSearchButton = new Button("Start Search");
         startSearchButton.setPrefWidth(INPUT_BTN_WIDTH + 50);
         startSearchButton.setPrefHeight(INPUT_BTN_HEIGHT);
         startSearchButton.setOnAction(e -> {
             System.out.println("Start Search button clicked!");
+            startSearchButton.setDisable(true);
             startSearch();
         });
 
@@ -373,21 +367,24 @@ public class GUI extends Application {
 
         HBox buttonControlBox = new HBox(20, backButton, startSearchButton);
         buttonControlBox.setAlignment(Pos.CENTER);
-        BorderPane searchScreenLayout = new BorderPane();
+
+        VBox searchScreenLayout = new VBox(20);
+        searchScreenLayout.setAlignment(Pos.CENTER);
         searchScreenLayout.setPadding(new Insets(20));
 
-        // VBox topControls = new VBox(15, infoBox, buttonControlBox);
-        // topControls.setAlignment(Pos.CENTER);
-        // topControls.setPadding(new Insets(0, 0, 20, 0));
+        searchScreenLayout.getChildren().add(initialBoardLabel);
+        if (this.boardDisplayArea != null) {
+            searchScreenLayout.getChildren().add(this.boardDisplayArea);
+        }
+        searchScreenLayout.getChildren().add(infoBox);
+        searchScreenLayout.getChildren().add(buttonControlBox);
 
-        // searchScreenLayout.setCenter(boardViewLayout);
-        // searchScreenLayout.setBottom(topControls);
-        // searchScreenLayout.setTop(boardLabelBox);
-
-        
-
-        double sceneWidth = Math.max(800, this.primaryStage.getScene().getWidth());
-        double sceneHeight = Math.max(600, this.primaryStage.getScene().getHeight());
+        double sceneWidth = 800;
+        double sceneHeight = 700;
+        if (this.primaryStage.getScene() != null) {
+            sceneWidth = Math.max(sceneWidth, this.primaryStage.getScene().getWidth());
+            sceneHeight = Math.max(sceneHeight, this.primaryStage.getScene().getHeight());
+        }
 
         Scene searchScene = new Scene(searchScreenLayout, sceneWidth, sceneHeight);
         this.primaryStage.setScene(searchScene);
@@ -421,12 +418,28 @@ public class GUI extends Application {
 
     public void animateSolution(List<State> solution) {
         Timeline timeline = new Timeline();
-        timeline.setCycleCount(solution.size());
         for (int i = 0; i < solution.size(); i++) {
-            State state = solution.get(i);
-            KeyFrame keyFrame = new KeyFrame(Duration.millis(i * 1000), e -> drawBoard(state.board));
+            final State currentState = solution.get(i); 
+            if (i == solution.size() - 1) {
+                this.board = currentState.board;
+            }
+            KeyFrame keyFrame = new KeyFrame(Duration.millis(i * 700), event -> {
+                VBox newBoardView = drawBoard(currentState.board);
+                if (newBoardView != null) {
+                    this.boardDisplayArea.getChildren().clear();
+                    newBoardView.setAlignment(Pos.CENTER);
+                    this.boardDisplayArea.getChildren().add(newBoardView);
+                }
+            });
             timeline.getKeyFrames().add(keyFrame);
         }
+
+        timeline.setOnFinished(event -> {
+            System.out.println("Animation finished.");
+            solutionsFound();
+        });
+
+        System.out.println("Playing animation with " + timeline.getKeyFrames().size() + " frames.");
         timeline.play();
     }
 
