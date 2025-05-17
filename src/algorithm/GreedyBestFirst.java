@@ -1,9 +1,13 @@
 package algorithm;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Set;
+
 import model.Board;
 import model.State;
-
-import java.util.*;
 
 public class GreedyBestFirst extends Pathfinder {
     private Heuristic heuristic;
@@ -14,47 +18,63 @@ public class GreedyBestFirst extends Pathfinder {
 
     @Override
     public String getName() {
-        return "Greedy Best First Search";
+        return "Fixed Greedy Best First Search using " + heuristic.toString();
     }
 
     @Override
     public List<State> solve(Board startBoard) {
         PriorityQueue<Node> openSet = new PriorityQueue<>();
-        Set<Board> visited = new HashSet<>();
+        Set<String> visited = new HashSet<>();
 
         State start = new State(startBoard, "Start", null);
-        openSet.add(new Node(start, heuristic.estimate(startBoard)));
+        int startH = heuristic.estimate(startBoard);
+        openSet.add(new Node(start, startH));
+        
+        System.out.println("Starting Greedy Best First search with " + heuristic.toString() + "...");
+        System.out.println("Initial heuristic value: " + startH);
+        int expandedNodes = 0;
 
         while (!openSet.isEmpty()) {
             Node current = openSet.poll();
             State currState = current.state;
             Board board = currState.board;
+            String boardKey = boardToString(board);
+            
+            expandedNodes++;
+            if (expandedNodes % 1000 == 0) {
+                System.out.println("Expanded " + expandedNodes + " nodes, current queue size: " + openSet.size());
+            }
 
             if (board.isSolved()) {
+                System.out.println("Solution found after expanding " + expandedNodes + " nodes!");
                 return reconstructStatePath(currState);
             }
 
-            visited.add(board);
+            if (visited.contains(boardKey)) continue;
+            visited.add(boardKey);
 
             for (State neighbor : generateNeighbors(currState)) {
-                if (!visited.contains(neighbor.board)) {
-                    openSet.add(new Node(neighbor, heuristic.estimate(neighbor.board)));
+                String neighborKey = boardToString(neighbor.board);
+                if (!visited.contains(neighborKey)) {
+                    int h = heuristic.estimate(neighbor.board);
+                    openSet.add(new Node(neighbor, h));
                 }
             }
         }
 
+        System.out.println("No solution found after expanding " + expandedNodes + " nodes.");
         return new ArrayList<>();
     }
-
-    private List<State> reconstructStatePath(State goal) {
-        List<State> path = new ArrayList<>();
-        State current = goal;
-        while (current != null) {
-            path.add(current);
-            current = current.prev;
+    
+    // Helper method untuk mengubah board menjadi string untuk keperluan set dan map
+    private String boardToString(Board board) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < board.rows; i++) {
+            for (int j = 0; j < board.cols; j++) {
+                sb.append(board.grid[i][j]);
+            }
         }
-        Collections.reverse(path);
-        return path;
+        return sb.toString();
     }
 
     private static class Node implements Comparable<Node> {
