@@ -20,7 +20,7 @@ public class AStar extends Pathfinder {
 
     @Override
     public String getName() {
-        return "Fixed A* Search using " + heuristic.toString();
+        return "A* Search using " + heuristic.toString();
     }
 
     @Override

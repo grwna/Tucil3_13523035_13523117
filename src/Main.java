@@ -5,7 +5,7 @@ import java.util.Scanner;
 import algorithm.AStar;
 import algorithm.BlockingCarsHeuristic;
 import algorithm.GreedyBestFirst;
-import algorithm.Heuristic; // Added this import to fix the error
+import algorithm.Heuristic;
 import algorithm.ManhattanToExitHeuristic;
 import algorithm.Pathfinder;
 import algorithm.UCS;
@@ -23,87 +23,85 @@ public class Main {
         } else {
             // Mode Command Line
             Scanner scanner = new Scanner(System.in);
-            System.out.print("Masukkan path file input: ");
-            String inputPath = scanner.nextLine();
+            boolean running = true;
             
-            try {
-                Board initialBoard = InputParser.parseFromFile(inputPath);
-                System.out.println("Berhasil membaca file:");
-                Printer.print(initialBoard);
+            while (running) {
+                System.out.println("\n====================================");
+                System.out.println("  PROGRAM SOLVER RUSH HOUR GAME");
+                System.out.println("====================================");
                 
-                // Pilih mode eksekusi
-                System.out.println("\nPilih mode eksekusi:");
-                System.out.println("1. Jalankan semua algoritma secara otomatis");
-                System.out.println("2. Pilih algoritma manual");
-                System.out.println("3. Bandingkan semua algoritma");
-                System.out.print("Pilihan [1/2/3]: ");
-                String modeChoice = scanner.nextLine().trim();
-                
-                switch(modeChoice) {
-                    case "1":
-                        // Mode otomatis - jalankan semua algoritma seperti di Main asli
-                        runAllAlgorithmsAutomatic(initialBoard);
+                // Input file loop
+                Board initialBoard = null;
+                while (initialBoard == null) {
+                    System.out.print("\nInsert path file input (or 'exit' to quit from program): ");
+                    String inputPath = scanner.nextLine().trim();
+                    
+                    if (inputPath.equalsIgnoreCase("exit")) {
+                        running = false;
                         break;
-                    case "2":
-                        // Mode pilih manual
-                        runManualAlgorithm(scanner, initialBoard);
-                        break;
-                    case "3":
-                    default:
-                        // Mode bandingkan semua algoritma
-                        runAllAlgorithmsComparison(initialBoard);
-                        break;
+                    }
+                    
+                    try {
+                        initialBoard = InputParser.parseFromFile(inputPath);
+                        System.out.println("\n Successfully read the file");
+                        Printer.print(initialBoard);
+                    } catch (IOException e) {
+                        System.out.println("Failed to read the file: " + e.getMessage());
+                        System.out.println("Please try again!");
+                    }
                 }
                 
-            } catch (IOException e) {
-                System.out.println("Gagal membaca file: " + e.getMessage());
-            } finally {
-                scanner.close();
+                if (!running) break;
+                
+                // Main menu loop
+                boolean solving = true;
+                while (solving) {
+                    System.out.println("\nMain Menu:");
+                    System.out.println("1. Find the solution for the board");
+                    System.out.println("2. Insert new file");
+                    System.out.println("3. Exit from the program");
+                    System.out.print("Choice [1/2/3]: ");
+                    String mainChoice = scanner.nextLine().trim();
+                    
+                    switch (mainChoice) {
+                        case "1":
+                            runManualAlgorithm(scanner, initialBoard);
+                            break;
+                        case "2":
+                            solving = false; // Will go back to file input
+                            break;
+                        case "3":
+                            solving = false;
+                            running = false;
+                            break;
+                        default:
+                            System.out.println("invalid choice, please try again!");
+                    }
+                }
             }
+            
+            System.out.println("\nThank you for using thus program!");
+            scanner.close();
         }
-    }
-
-    private static void runAllAlgorithmsAutomatic(Board initialBoard) {
-        System.out.println("====================================");
-        System.out.println("Menjalankan algoritma UCS...");
-        System.out.println("====================================");
-        runAlgorithm(new UCS(), initialBoard);
-        
-        System.out.println("\n====================================");
-        System.out.println("Menjalankan algoritma GBFS dengan BlockingCarsHeuristic...");
-        System.out.println("====================================");
-        runAlgorithm(new GreedyBestFirst(new BlockingCarsHeuristic()), initialBoard);
-        
-        System.out.println("\n====================================");
-        System.out.println("Menjalankan algoritma GBFS dengan ManhattanToExitHeuristic...");
-        System.out.println("====================================");
-        runAlgorithm(new GreedyBestFirst(new ManhattanToExitHeuristic()), initialBoard);
-        
-        System.out.println("\n====================================");
-        System.out.println("Menjalankan algoritma A* dengan BlockingCarsHeuristic...");
-        System.out.println("====================================");
-        runAlgorithm(new AStar(new BlockingCarsHeuristic()), initialBoard);
-        
-        System.out.println("\n====================================");
-        System.out.println("Menjalankan algoritma A* dengan ManhattanToExitHeuristic...");
-        System.out.println("====================================");
-        runAlgorithm(new AStar(new ManhattanToExitHeuristic()), initialBoard);
     }
     
     private static void runManualAlgorithm(Scanner scanner, Board initialBoard) {
         // Pilih algoritma
-        System.out.println("\nPilih algoritma:");
+        System.out.println("\nChoose the algorithm:");
         System.out.println("1. Uniform Cost Search (UCS)");
         System.out.println("2. Greedy Best First Search (GBFS)");
         System.out.println("3. A* Search");
-        System.out.print("Pilihan: ");
+        System.out.println("4. Back");
+        System.out.print("Choice: ");
         int algoChoice;
         try {
             algoChoice = Integer.parseInt(scanner.nextLine().trim());
         } catch (NumberFormatException e) {
-            System.out.println("Input tidak valid, menggunakan default (1)");
-            algoChoice = 1;
+            System.out.println("Invalid choice!");
+            return;
         }
+
+        if (algoChoice == 4) return;
 
         Pathfinder solver;
         
@@ -111,17 +109,20 @@ public class Main {
             solver = new UCS();
         } else {
             // Pilih heuristic untuk GBFS/A*
-            System.out.println("\nPilih heuristic:");
+            System.out.println("\nChoose the heuristic:");
             System.out.println("1. Blocking Cars Heuristic");
             System.out.println("2. Manhattan To Exit Heuristic");
-            System.out.print("Pilihan: ");
+            System.out.println("3. Back");
+            System.out.print("Choice: ");
             int heurChoice;
             try {
                 heurChoice = Integer.parseInt(scanner.nextLine().trim());
             } catch (NumberFormatException e) {
-                System.out.println("Input tidak valid, menggunakan default (1)");
+                System.out.println("Invalid choice!");
                 heurChoice = 1;
             }
+
+            if (heurChoice == 3) return;
 
             Heuristic heuristic = heurChoice == 1 ? 
                 new BlockingCarsHeuristic() : 
@@ -134,67 +135,9 @@ public class Main {
 
         // Jalankan algoritma
         System.out.println("\n====================================");
-        System.out.println("Menjalankan algoritma " + solver.getName() + "...");
+        System.out.println("Running " + solver.getName() + "Algorithm ...");
         System.out.println("====================================");
         runSingleAlgorithm(solver, initialBoard);
-    }
-
-    private static void runAllAlgorithmsComparison(Board initialBoard) {
-        System.out.println("\n====================================");
-        System.out.println("MEMBANDINGKAN SEMUA ALGORITMA");
-        System.out.println("====================================\n");
-
-        Pathfinder[] algorithms = {
-            new UCS(),
-            new GreedyBestFirst(new BlockingCarsHeuristic()),
-            new GreedyBestFirst(new ManhattanToExitHeuristic()),
-            new AStar(new BlockingCarsHeuristic()),
-            new AStar(new ManhattanToExitHeuristic())
-        };
-
-        for (Pathfinder algo : algorithms) {
-            System.out.println("\nALGORITMA: " + algo.getName().toUpperCase());
-            System.out.println("------------------------------------");
-            runSingleAlgorithm(algo, initialBoard);
-            System.out.println("------------------------------------");
-        }
-    }
-    
-    private static void runAlgorithm(Pathfinder solver, Board initialBoard) {
-        long startTime = System.nanoTime();
-        List<State> solution = solver.solve(initialBoard);
-        long endTime = System.nanoTime();
-        
-        if (solution.isEmpty()) {
-            System.out.println("\n❌ Tidak ditemukan solusi dengan algoritma " + solver.getName());
-        } else {
-            System.out.println("\n✅ Solusi ditemukan dengan algoritma " + solver.getName() + "!");
-            System.out.println("Jumlah langkah: " + (solution.size() - 1));
-            
-            // Tampilkan beberapa langkah awal dan akhir saja untuk mempersingkat output
-            int stepsToShow = Math.min(solution.size(), 5);
-            
-            for (int i = 0; i < stepsToShow; i++) {
-                State state = solution.get(i);
-                System.out.println("Langkah " + i + ": " + state.move);
-                if (i < 3) {  // Hanya cetak board untuk langkah awal
-                    Printer.print(state.board);
-                }
-            }
-            
-            // Tampilkan langkah-langkah akhir jika solusi panjang
-            if (solution.size() > 5) {
-                System.out.println("...");
-                for (int i = solution.size() - 3; i < solution.size(); i++) {
-                    State state = solution.get(i);
-                    System.out.println("Langkah " + i + ": " + state.move);
-                    Printer.print(state.board);
-                }
-            }
-            
-            double durationMs = (endTime - startTime) / 1e6;
-            System.out.printf("Waktu eksekusi: %.3f ms\n", durationMs);
-        }
     }
     
     private static void runSingleAlgorithm(Pathfinder solver, Board initialBoard) {
@@ -203,28 +146,27 @@ public class Main {
         long endTime = System.nanoTime();
 
         if (solution.isEmpty()) {
-            System.out.println("\n❌ Tidak ditemukan solusi");
+            System.out.println("\nNo solution found!");
         } else {
-            System.out.println("\n✅ Solusi ditemukan!");
-            System.out.println("Jumlah langkah: " + (solution.size() - 1));
+            System.out.println("\n✅ Solution found!");
+            System.out.println("Number of moves: " + (solution.size() - 1));
             
             // Tampilkan 3 langkah pertama
             for (int i = 0; i < Math.min(3, solution.size()); i++) {
                 State state = solution.get(i);
-                System.out.println("Langkah " + i + ": " + state.move);
+                System.out.println("Move number " + i + ": " + state.move);
                 Printer.print(state.board);
             }
             
-            // Tampilkan langkah terakhir jika lebih dari 3 langkah
             if (solution.size() > 3) {
                 System.out.println("...");
                 State lastState = solution.get(solution.size() - 1);
-                System.out.println("Langkah " + (solution.size() - 1) + ": " + lastState.move);
+                System.out.println("Move number " + (solution.size() - 1) + ": " + lastState.move);
                 Printer.print(lastState.board);
             }
 
             double durationMs = (endTime - startTime) / 1e6;
-            System.out.printf("Waktu eksekusi: %.3f ms\n", durationMs);
+            System.out.printf("Execution time: %.3f ms\n", durationMs);
         }
     }
 }

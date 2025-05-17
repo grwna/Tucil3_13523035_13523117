@@ -29,6 +29,6 @@ public class ManhattanToExitHeuristic implements Heuristic {
 
     @Override
     public String toString() {
-        return "ManhattanToExitHeuristic (Fixed)";
+        return "ManhattanToExitHeuristic";
     }
 }

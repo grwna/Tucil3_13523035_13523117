@@ -15,7 +15,7 @@ public class UCS extends Pathfinder {
 
     @Override
     public String getName() {
-        return "Fixed Uniform Cost Search";
+        return "Uniform Cost Search";
     }
 
     @Override

@@ -18,7 +18,7 @@ public class GreedyBestFirst extends Pathfinder {
 
     @Override
     public String getName() {
-        return "Fixed Greedy Best First Search using " + heuristic.toString();
+        return "Greedy Best First Search using " + heuristic.toString();
     }
 
     @Override

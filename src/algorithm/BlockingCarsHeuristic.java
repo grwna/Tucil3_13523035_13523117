@@ -29,6 +29,6 @@ public class BlockingCarsHeuristic implements Heuristic {
 
     @Override
     public String toString() {
-        return "BlockingCarsHeuristic (Fixed)";
+        return "BlockingCarsHeuristic";
     }
 }

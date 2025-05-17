@@ -1,6 +1,7 @@
 package parser;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,58 +30,127 @@ public class InputParser {
     }
 
     public static Board parseFromFile(String path) throws IOException {
+        // Validasi file ada
+        File inputFile = new File(path);
+        if (!inputFile.exists() || !inputFile.isFile()) {
+            throw new IOException("File is not found: " + path);
+        }
+
         BufferedReader br = new BufferedReader(new FileReader(path));
         Position exit = null;
         char[][] grid;
         int usableRows, usableCols;
         Map<Character, Piece> pieces = new HashMap<>();
         Set<Position> allCellsForPieces = new HashSet<>();
+        Set<Character> validSymbols = new HashSet<>();
+        boolean hasPrimaryPiece = false;
 
         try {
+            // Validasi 
             String dimsLine = br.readLine();
             if (dimsLine == null) throw new IOException("Missing dimensions line.");
             String[] sizeParts = dimsLine.split(" ");
             if (sizeParts.length != 2) throw new IOException("Invalid dimensions format: " + dimsLine);
-            usableRows = Integer.parseInt(sizeParts[0]);
-            usableCols = Integer.parseInt(sizeParts[1]);
+            
+            try {
+                usableRows = Integer.parseInt(sizeParts[0]);
+                usableCols = Integer.parseInt(sizeParts[1]);
+                
+                if (usableRows <= 0 || usableCols <= 0) {
+                    throw new IOException("Board dimention can't be negative: " + usableRows + "x" + usableCols);
+                }
+            } catch (NumberFormatException e) {
+                throw new IOException("Board dimention must be integer: " + dimsLine);
+            }
 
             grid = new char[usableRows + 2][usableCols + 2];
             for (char[] row : grid) Arrays.fill(row, ' ');
 
-            if (br.readLine() == null) throw new IOException("Missing piece count or K/first grid line.");
+            String pieceCountLine = br.readLine();
+            if (pieceCountLine == null) throw new IOException("Missing piece count or first grid line.");
+            
+            int pieceCount = -1;
+            try {
+                pieceCount = Integer.parseInt(pieceCountLine.trim());
+                if (pieceCount < 0) {
+                    throw new IOException("The number of character (piece) has to be positive: " + pieceCount);
+                }
+            } catch (NumberFormatException e) {
+                // Bukan angka, anggap sebagai baris pertama grid
+                pieceCountLine = null;
+            }
 
-            String lineForKAboveOrFirstGrid = br.readLine();
+            String lineForKAboveOrFirstGrid = pieceCountLine != null ? br.readLine() : pieceCountLine;
             if (lineForKAboveOrFirstGrid == null) throw new IOException("Missing K_above or first grid line.");
             int KColInLine = getKColIdx(lineForKAboveOrFirstGrid);
+            
+            int totalKCount = 0;
+            
             if (KColInLine != -1) {
                 if (KColInLine >= usableCols) throw new IOException("K at column " + KColInLine + " is outside playable width " + usableCols);
                 exit = new Position(0, KColInLine + 1);
                 grid[0][KColInLine + 1] = 'K';
                 lineForKAboveOrFirstGrid = null;
+                totalKCount++;
             }
 
+            int actualRows = 0;
+            
             for (int i = 0; i < usableRows; i++) {
                 String currentLine = (i == 0 && lineForKAboveOrFirstGrid != null) ? lineForKAboveOrFirstGrid : br.readLine();
+                while (currentLine != null && currentLine.trim().isEmpty()) {
+                    // Lewati baris kosong
+                    currentLine = br.readLine();
+                }
                 if (currentLine == null) throw new IOException("EOF: Expected " + usableRows + " grid rows, found " + i);
+                actualRows++;
 
                 char[] lineChars;
+                currentLine = currentLine.replaceAll(" ", "");
                 if (currentLine.length() == usableCols) {
                     lineChars = currentLine.toCharArray();
-                    for (int j = 0; j < usableCols; j++) grid[i+1][j+1] = lineChars[j];
+                    for (int j = 0; j < usableCols; j++) {
+                        char c = lineChars[j];
+                        // Validasi karakter
+                        if (!isValidChar(c)) {
+                            throw new IOException("Invalid character '" + c + "' at (" + (i+1) + "," + (j+1) + " position)");
+                        }
+                        if (c == 'P') hasPrimaryPiece = true;
+                        if (c != ' ' && c != '.' && c != 'K') validSymbols.add(c);
+                        grid[i+1][j+1] = c;
+                    }
                 } else if (currentLine.length() == usableCols + 1) {
-                    if (exit != null) throw new IOException("Multiple K definitions found (e.g. K_above and K_left/right).");
+                    if (totalKCount > 0) throw new IOException("Multiple K definitions found (total so far: " + totalKCount + ")");
+                    
                     if (currentLine.charAt(0) == 'K') {
                         exit = new Position(i + 1, 0);
                         grid[i+1][0] = 'K';
                         lineChars = currentLine.substring(1).toCharArray();
+                        totalKCount++;
                     } else if (currentLine.charAt(usableCols) == 'K') {
                         exit = new Position(i + 1, usableCols + 1);
                         grid[i+1][usableCols+1] = 'K';
                         lineChars = currentLine.substring(0, usableCols).toCharArray();
+                        totalKCount++;
                     } else throw new IOException("Malformed line " + (i+1) + " (len " + (usableCols+1) + ", no K at ends).");
 
-                    for (int j = 0; j < usableCols; j++) grid[i+1][j+1] = lineChars[j];
-                } else throw new IOException("Malformed line " + (i+1) + " (unexpected length " + currentLine.length() + ").");
+                    for (int j = 0; j < usableCols; j++) {
+                        char c = lineChars[j];
+                        if (!isValidChar(c)) {
+                            throw new IOException("Invalid character '" + c + "' at (" + (i+1) + "," + (j+1) + "position)");
+                        }
+                        if (c == 'P') hasPrimaryPiece = true;
+                        if (c != ' ' && c != '.' && c != 'K') validSymbols.add(c);
+                        grid[i+1][j+1] = c;
+                    }
+                } else {
+                    throw new IOException("Row's length " + (i+1) + " (" + currentLine.length() + 
+                                         ") is not compatible with (" + usableCols + "board's width)");
+                }
+            }
+            
+            if (actualRows != usableRows) {
+                throw new IOException("The number of row doesn't match: expected " + usableRows + ", but only found " + actualRows);
             }
 
             if (exit == null) {
@@ -91,9 +161,23 @@ public class InputParser {
                         if (KColInLine >= usableCols) throw new IOException("K at column " + KColInLine + " is outside playable width " + usableCols);
                         exit = new Position(usableRows + 1, KColInLine + 1);
                         grid[usableRows+1][KColInLine+1] = 'K';
+                        totalKCount++;
                     } else throw new IOException("Extra data after grid, not valid line for K");
                 }
             }
+            
+            if (totalKCount == 0) {
+                throw new IOException("There is no 'K' character (exit) on the board");
+            } else if (totalKCount > 1) {
+                throw new IOException("There is more than one 'K' character (exit), found: " + totalKCount);
+            }
+            
+            if (!hasPrimaryPiece) {
+                throw new IOException("There is no 'P' (primary piece) on the board");
+            }
+            
+            int pCount = 0;
+            Position pStart = null;
 
             for (int r = 0; r < usableRows; r++) {
                 for (int c = 0; c < usableCols; c++) {
@@ -108,7 +192,7 @@ public class InputParser {
                     }
 
                     if (pieces.containsKey(val)) {
-                        throw new IOException("Duplicate piece '" + val + "' found!");
+                        throw new IOException("Duplicate or 'L' shaped piece '" + val + "' found!");
                     }
 
                     List<Position> currPieceOccupied = new ArrayList<>();
@@ -142,14 +226,45 @@ public class InputParser {
                              throw new IOException("Cell " + p + " for piece '" + val + "' was already processed, indicating overlap or malformed piece.");
                         }
                     }
+                    
+                    if (val == 'P') {
+                        pCount++;
+                        pStart = currentPos;
+                    }
+                    
                     pieces.put(val, new Piece(val, currentPos, len, horizontal));
                 }
             }
-
-            if (exit == null) throw new IOException("Exit 'K' not found.");
+            
+            Piece primaryPiece = pieces.get('P');
+            if (primaryPiece != null) {
+                boolean canReachExit = false;
+                
+                if (primaryPiece.isHorizontal) {
+                    if ((exit.col == 0 || exit.col == usableCols + 1) && 
+                        exit.row == primaryPiece.start.row) {
+                        canReachExit = true;
+                    }
+                } 
+                else {
+                    if ((exit.row == 0 || exit.row == usableRows + 1) && 
+                        exit.col == primaryPiece.start.col) {
+                        canReachExit = true;
+                    }
+                }
+                
+                if (!canReachExit) {
+                    throw new IOException(" Primary piece 'P' can't reach the exit 'K' because invalid orientation or position");
+                }
+            }
+            
             return new Board(usableRows + 2, usableCols + 2, grid, pieces, exit);
         } finally {
             br.close();
         }
+    }
+    
+    private static boolean isValidChar(char c) {
+        return Character.isLetterOrDigit(c) || c == ' ' || c == '.' || c == 'K';
     }
 }
