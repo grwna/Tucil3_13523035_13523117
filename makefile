@@ -1,6 +1,6 @@
 SRC_DIR = src
 BIN_DIR = bin
-JAVAFX = ../javafx-sdk-21.0.7/lib/
+JAVAFX = ../javafx-sdk-21.0.1/lib/
 MODULES = javafx.controls,javafx.fxml,javafx.graphics
 
 all: build run

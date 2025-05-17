@@ -16,19 +16,22 @@ import utils.Printer;
 
 public class Main {
     public static void main(String[] args) {
-        testParsing();
-        // testProgram();   
-    }
-    public static void testParsing(){
-        Scanner sc = new Scanner(System.in);
-        Board initialBoard;
-
-        // 1. Input file
+        Scanner scanner = new Scanner(System.in);
+        
+        // Get input file path once
         System.out.print("Masukkan path file input: ");
-        String path = sc.nextLine();
-        sc.close();
+        String inputPath = scanner.nextLine();
+        
+        // Run both functions with the same input
+        testParsing(inputPath);
+        testProgram(inputPath);
+        
+        scanner.close();
+    }
+    
+    public static void testParsing(String inputPath) {
         try {
-            initialBoard = InputParser.parseFromFile(path);
+            Board initialBoard = InputParser.parseFromFile(inputPath);
             System.out.println("Berhasil membaca file.");
             Printer.print(initialBoard);
         } catch (IOException e) {
@@ -36,17 +39,15 @@ public class Main {
         }
     }
 
-    public static void testProgram(){
-        Scanner sc = new Scanner(System.in);
+    public static void testProgram(String inputPath) {
         Board initialBoard = null;
+        Scanner sc = new Scanner(System.in);
 
-        // 1. Input file
-        System.out.print("Masukkan path file input: ");
-        String path = sc.nextLine();
         try {
-            initialBoard = InputParser.parseFromFile(path);
+            initialBoard = InputParser.parseFromFile(inputPath);
         } catch (IOException e) {
             System.out.println("Gagal membaca file: " + e.getMessage());
+            sc.close();
             return;
         }
 
@@ -63,7 +64,7 @@ public class Main {
         Heuristic heuristic = null;
 
         if (algoChoice == 1) {
-            solver = new UCS(); // kamu bisa buat UCS serupa A*
+            solver = new UCS();
         } else {
             // 3. Pilih heuristic
             System.out.println("\nPilih heuristic:");
@@ -80,12 +81,13 @@ public class Main {
             }
 
             if (algoChoice == 2) {
-                solver = new GreedyBestFirst(heuristic); // bisa pakai base Pathfinder juga
+                solver = new GreedyBestFirst(heuristic);
             } else {
                 solver = new AStar(heuristic);
             }
         }
         sc.close();
+        
         // 4. Jalankan algoritma
         long startTime = System.nanoTime();
         List<State> solution = solver.solve(initialBoard);
