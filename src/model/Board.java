@@ -1,6 +1,10 @@
 package model;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 public class Board {
     public int rows, cols;
@@ -83,5 +87,22 @@ public class Board {
     @Override
     public int hashCode() {
         return Arrays.deepHashCode(this.grid);
+    }
+
+    public void print() {
+        for (int i = 0; i < this.rows; i++) {
+            for (int j = 0; j < this.cols; j++) {
+                char c = this.grid[i][j];
+                if (c == 'P') {
+                    System.out.print("\u001B[31m" + c + "\u001B[0m"); // Merah
+                } else if (c == 'K') {
+                    System.out.print("\u001B[34m" + c + "\u001B[0m"); // Biru
+                } else {
+                    System.out.print(c);
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
     }
 }
