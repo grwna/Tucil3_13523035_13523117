@@ -1,9 +1,15 @@
 package algorithm;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.PriorityQueue;
+import java.util.Set;
+
 import model.Board;
 import model.State;
-
-import java.util.*;
 
 public class AStar extends Pathfinder {
     private Heuristic heuristic;
@@ -14,54 +20,71 @@ public class AStar extends Pathfinder {
 
     @Override
     public String getName() {
-        return "A* Search";
+        return "Fixed A* Search using " + heuristic.toString();
     }
 
     @Override
     public List<State> solve(Board startBoard) {
         PriorityQueue<Node> openSet = new PriorityQueue<>();
-        Map<Board, Integer> gScore = new HashMap<>();
-        Set<Board> visited = new HashSet<>();
+        Map<String, Integer> gScore = new HashMap<>();
+        Set<String> visited = new HashSet<>();
 
         State start = new State(startBoard, "Start", null);
-        openSet.add(new Node(start, heuristic.estimate(start.board), 0));
-        gScore.put(start.board, 0);
+        int startH = heuristic.estimate(start.board);
+        openSet.add(new Node(start, startH, 0));
+        String startBoardKey = boardToString(startBoard);
+        gScore.put(startBoardKey, 0);
+
+        System.out.println("Starting A* search with " + heuristic.toString() + "...");
+        System.out.println("Initial heuristic value: " + startH);
+        int expandedNodes = 0;
 
         while (!openSet.isEmpty()) {
             Node current = openSet.poll();
             State currState = current.state;
             Board board = currState.board;
+            String boardKey = boardToString(board);
+            
+            expandedNodes++;
+            if (expandedNodes % 1000 == 0) {
+                System.out.println("Expanded " + expandedNodes + " nodes, current queue size: " + openSet.size());
+            }
 
             if (board.isSolved()) {
+                System.out.println("Solution found after expanding " + expandedNodes + " nodes!");
                 return reconstructStatePath(currState);
             }
 
-            visited.add(board);
+            if (visited.contains(boardKey)) continue;
+            visited.add(boardKey);
 
             for (State neighbor : generateNeighbors(currState)) {
-                if (visited.contains(neighbor.board)) continue;
+                String neighborKey = boardToString(neighbor.board);
+                if (visited.contains(neighborKey)) continue;
 
                 int tentativeG = current.gScore + 1;
-                if (!gScore.containsKey(neighbor.board) || tentativeG < gScore.get(neighbor.board)) {
-                    gScore.put(neighbor.board, tentativeG);
-                    int f = tentativeG + heuristic.estimate(neighbor.board);
+                if (!gScore.containsKey(neighborKey) || tentativeG < gScore.get(neighborKey)) {
+                    gScore.put(neighborKey, tentativeG);
+                    int h = heuristic.estimate(neighbor.board);
+                    int f = tentativeG + h;
                     openSet.add(new Node(neighbor, f, tentativeG));
                 }
             }
         }
 
+        System.out.println("No solution found after expanding " + expandedNodes + " nodes.");
         return new ArrayList<>();
     }
-
-    private List<State> reconstructStatePath(State goal) {
-        List<State> path = new ArrayList<>();
-        State current = goal;
-        while (current != null) {
-            path.add(current);
-            current = current.prev;
+    
+    // Helper method untuk mengubah board menjadi string untuk keperluan set dan map
+    private String boardToString(Board board) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < board.rows; i++) {
+            for (int j = 0; j < board.cols; j++) {
+                sb.append(board.grid[i][j]);
+            }
         }
-        Collections.reverse(path);
-        return path;
+        return sb.toString();
     }
 
     private static class Node implements Comparable<Node> {
