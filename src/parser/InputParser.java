@@ -29,6 +29,16 @@ public class InputParser {
         return (kCount == 1) ? kPos : -1;
     }
 
+        // Calculate Length without counting spaces
+    public static int effLength(String string){
+        int length = 0;
+        for (int i = 0; i < string.length(); i++) {
+            char c = string.charAt(i);
+            if (c != ' ' && c != 'K') length++;
+        }
+        return length;
+    }
+
     public static Board parseFromFile(String path) throws IOException {
         // Validasi file ada
         File inputFile = new File(path);
