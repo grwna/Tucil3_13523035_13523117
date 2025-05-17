@@ -1,6 +1,6 @@
 SRC_DIR = src
 BIN_DIR = bin
-JAVAFX = ../javafx-sdk-21.0.1/lib/
+JAVAFX = ../javafx-sdk-21.0.7/lib/
 MODULES = javafx.controls,javafx.fxml,javafx.graphics
 
 all: build run
@@ -11,7 +11,7 @@ run:
 	@java --module-path $(JAVAFX) --add-modules $(MODULES) -cp $(BIN_DIR)/classes Main
 
 run-ui:
-	@java --module-path $(JAVAFX) --add-modules $(MODULES) -cp $(BIN_DIR)/classes ui.GUI
+	@java --module-path $(JAVAFX) --add-modules $(MODULES) -cp $(BIN_DIR)/classes Main --gui
 
 clean:
 	@mvn clean

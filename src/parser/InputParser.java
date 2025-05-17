@@ -28,6 +28,16 @@ public class InputParser {
         return (kCount == 1) ? kPos : -1;
     }
 
+        // Calculate Length without counting spaces
+    public static int effLength(String string){
+        int length = 0;
+        for (int i = 0; i < string.length(); i++) {
+            char c = string.charAt(i);
+            if (c != ' ' && c != 'K') length++;
+        }
+        return length;
+    }
+
     public static Board parseFromFile(String path) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(path));
         Position exit = null;
@@ -68,7 +78,7 @@ public class InputParser {
                     lineChars = currentLine.toCharArray();
                     for (int j = 0; j < usableCols; j++) grid[i+1][j+1] = lineChars[j];
                 } else if (currentLine.length() == usableCols + 1) {
-                    if (exit != null) throw new IOException("Multiple K definitions found (e.g. K_above and K_left/right).");
+                    if (exit != null) throw new IOException("Multiple K definitions found.");
                     if (currentLine.charAt(0) == 'K') {
                         exit = new Position(i + 1, 0);
                         grid[i+1][0] = 'K';
@@ -147,7 +157,9 @@ public class InputParser {
             }
 
             if (exit == null) throw new IOException("Exit 'K' not found.");
-            return new Board(usableRows + 2, usableCols + 2, grid, pieces, exit);
+            Board result = new Board(usableRows + 2, usableCols + 2, grid, pieces, exit);
+
+            return result;
         } finally {
             br.close();
         }
