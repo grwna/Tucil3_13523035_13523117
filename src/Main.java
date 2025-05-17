@@ -12,13 +12,25 @@ import algorithm.UCS;
 import model.Board;
 import model.State;
 import parser.InputParser;
+import ui.GUI;
 import utils.Printer;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        // Get input file path once
+        testGUI(args);
+        // testParsing();
+        // testProgram();   
+    }
+
+    public static void testGUI(String[] args){
+        GUI.main(args);
+    }
+
+    public static void testParsing(){
+        Scanner sc = new Scanner(System.in);
+        Board initialBoard;
+
+        // 1. Input file
         System.out.print("Masukkan path file input: ");
         String inputPath = scanner.nextLine();
         
