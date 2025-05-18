@@ -503,7 +503,7 @@ public class GUI extends Application {
         int displayRows = board.rows;
         int displayCols = board.cols;
 
-        double cellSize = 40;
+        double cellSize = 50;
         gridPane.setMinSize(displayCols * cellSize, displayRows * cellSize);
 
         for (int i = 0; i < displayRows; i++) {

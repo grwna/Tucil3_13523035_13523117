@@ -9,6 +9,16 @@ import model.Board;
 import model.State;
 
 public class IDDFS extends Pathfinder {
+    private long runtimeNano = -1;
+    private int nodes;
+
+    public long getRuntimeNano() {
+        return this.runtimeNano;
+    }
+
+    public int getNodes(){
+        return this.nodes;
+    }
 
     @Override
     public String getName() {
@@ -18,6 +28,7 @@ public class IDDFS extends Pathfinder {
     @Override
     public List<State> solve(Board startBoard) {
         System.out.println("Starting Iterative Deepening Search...");
+        long startTime = System.nanoTime();
         int totalNodesExpandedEstimate = 0;
 
         for (int depthLimit = 0; ; depthLimit++) {
@@ -29,6 +40,8 @@ public class IDDFS extends Pathfinder {
             totalNodesExpandedEstimate += nodesExpandedThisDLS[0];
 
             if (resultPath != null) {
+                this.runtimeNano = System.nanoTime() - startTime;
+                this.nodes = totalNodesExpandedEstimate;
                 System.out.println("Solution found at depth " + (resultPath.size() - 1) + " after exploring approximately " + totalNodesExpandedEstimate + " states.");
                 return resultPath;
             }
@@ -42,6 +55,8 @@ public class IDDFS extends Pathfinder {
                 break;
             }
         }
+        this.runtimeNano = System.nanoTime() - startTime;
+        this.nodes = totalNodesExpandedEstimate;
         System.out.println("No solution found. Total states explored: " + totalNodesExpandedEstimate);
         return new ArrayList<>();
     }
