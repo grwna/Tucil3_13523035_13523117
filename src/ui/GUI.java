@@ -9,6 +9,7 @@ import java.util.Map;
 import algorithm.AStar;
 import algorithm.BlockingCarsHeuristic;
 import algorithm.GreedyBestFirst;
+import algorithm.IDDFS;
 import algorithm.ManhattanToExitHeuristic;
 import algorithm.Pathfinder;
 import algorithm.UCS;
@@ -47,10 +48,9 @@ public class GUI extends Application {
     public String heuristic;
     public String filePath;
     public Board board;
+    public List<State> solution;
     public Stage primaryStage;
     public StackPane boardDisplayArea;
-    static int TITLE_BTN_WIDTH = 170;
-    static int TITLE_BTN_HEIGHT = 40;
     static int FILE_PATH_FIELD_WIDTH = 300;
     static int INPUT_BTN_WIDTH = 120;
     static int INPUT_BTN_HEIGHT = 30;
@@ -95,16 +95,16 @@ public class GUI extends Application {
         titleBox.setAlignment(Pos.CENTER);
 
         Button startButton = new Button("Start");
-        startButton.setPrefWidth(TITLE_BTN_WIDTH);
-        startButton.setPrefHeight(TITLE_BTN_HEIGHT);
+        startButton.setPrefWidth(170);
+        startButton.setPrefHeight(40);
         startButton.setOnAction(e -> {
             System.out.println("Start button clicked on title screen!");
             userInputs();
         });
 
         Button exitButton = new Button("Exit");
-        exitButton.setPrefWidth(TITLE_BTN_WIDTH);
-        exitButton.setPrefHeight(TITLE_BTN_HEIGHT);
+        exitButton.setPrefWidth(170);
+        exitButton.setPrefHeight(40);
         exitButton.setOnAction(e -> {
             System.out.println("Exit button clicked!");
             this.primaryStage.close();
@@ -137,7 +137,7 @@ public class GUI extends Application {
 
         RadioButton aStarRadio = new RadioButton("A* Search");
         aStarRadio.setToggleGroup(algoToggleGroup);
-        aStarRadio.setUserData("A*");
+        aStarRadio.setUserData("A* Search");
         aStarRadio.setFont(Font.font("Arial", 16));
 
         RadioButton greedyRadio = new RadioButton("Greedy Best First Search");
@@ -147,11 +147,16 @@ public class GUI extends Application {
 
         RadioButton ucsRadio = new RadioButton("Uniform Cost Search");
         ucsRadio.setToggleGroup(algoToggleGroup);
-        ucsRadio.setUserData("UCS");
+        ucsRadio.setUserData("Uniform Cost Search");
         ucsRadio.setFont(Font.font("Arial", 16));
 
+        RadioButton iddfsRadio = new RadioButton("Iterative Deepening Search");
+        iddfsRadio.setToggleGroup(algoToggleGroup);
+        iddfsRadio.setUserData("Iterative Deepening Search");
+        iddfsRadio.setFont(Font.font("Arial", 16));
+
         aStarRadio.setSelected(true);
-        this.algorithm = "A*";
+        this.algorithm = "A* Search";
 
         algoToggleGroup.selectedToggleProperty().addListener((observable, oldVal, newVal) -> {
             if (newVal != null) {
@@ -160,7 +165,7 @@ public class GUI extends Application {
             }
         });
 
-        VBox radioButtonBox = new VBox(10, aStarRadio, greedyRadio, ucsRadio);
+        VBox radioButtonBox = new VBox(10, aStarRadio, greedyRadio, ucsRadio, iddfsRadio);
         radioButtonBox.setAlignment(Pos.CENTER_LEFT);
 
         HBox radioContainer = new HBox(radioButtonBox);
@@ -183,10 +188,8 @@ public class GUI extends Application {
         filePathField.setPrefHeight(INPUT_BTN_HEIGHT);
         filePathField.setEditable(false);
 
-        Button browseButton = new Button("Browse...");
-        browseButton.setPrefWidth(INPUT_BTN_WIDTH);
-        browseButton.setPrefHeight(INPUT_BTN_HEIGHT);
-        browseButton.setOnAction(e -> {
+        
+        Button browseButton = createButton("Browse...", e -> {
             FileChooser fileChooser = new FileChooser();
             fileChooser.setTitle("Open Configuration File");
             fileChooser.getExtensionFilters().addAll(
@@ -202,14 +205,11 @@ public class GUI extends Application {
 
         HBox fileInputBox = new HBox(10, filePathField, browseButton);
         fileInputBox.setAlignment(Pos.CENTER);
-
         // End of File Input Elements
 
-        Button nextButton = new Button("Next");
-        nextButton.setPrefWidth(INPUT_BTN_WIDTH);
-        nextButton.setPrefHeight(INPUT_BTN_HEIGHT);
-        nextButton.setOnAction(e -> {
-            this.filePath = filePathField.getText();
+        
+        Button nextButton = createButton("Next", e -> {
+             this.filePath = filePathField.getText();
 
             if (this.algorithm == null || this.algorithm.isEmpty()) {
                 System.out.println("Please select an algorithm.");
@@ -219,20 +219,15 @@ public class GUI extends Application {
                 System.out.println("Please enter or browse for a configuration file.");
                 return;
             }
-            if (this.algorithm.equals("A*") || this.algorithm.equals("Greedy")){
+            if (this.algorithm.equals("A* Search") || this.algorithm.equals("Greedy Best First Search")){
                 heuristicInput();
             } else {
                 processInput();
             }
         });
 
-        Button backButton = new Button("Back");
-        backButton.setPrefWidth(INPUT_BTN_WIDTH);
-        backButton.setPrefHeight(INPUT_BTN_HEIGHT);
-        backButton.setOnAction(e -> {
-            System.out.println("Back button clicked, navigate to previous screen.");
-            titleScreen();
-        });
+        
+        Button backButton = createButton("Back", e-> {titleScreen();});
 
         HBox navigationButtonBox = new HBox(20, backButton, nextButton);
         navigationButtonBox.setAlignment(Pos.CENTER);
@@ -255,16 +250,16 @@ public class GUI extends Application {
 
         RadioButton blockingCarsRadio = new RadioButton("Blocking Cars");
         blockingCarsRadio.setToggleGroup(heuristicToggleGroup);
-        blockingCarsRadio.setUserData("Blocking");
+        blockingCarsRadio.setUserData("Blocking Cars");
         blockingCarsRadio.setFont(Font.font("Arial", 16));
 
         RadioButton manhattanRadio = new RadioButton("Manhattan To Exit");
         manhattanRadio.setToggleGroup(heuristicToggleGroup);
-        manhattanRadio.setUserData("Manhattan");
+        manhattanRadio.setUserData("Manhattan To Exit");
         manhattanRadio.setFont(Font.font("Arial", 16));
 
         blockingCarsRadio.setSelected(true);
-        this.heuristic = "Blocking";
+        this.heuristic = "Blocking Cars";
 
         heuristicToggleGroup.selectedToggleProperty().addListener((observable, oldVal, newVal) -> {
             if (newVal != null) {
@@ -287,10 +282,7 @@ public class GUI extends Application {
         heuristicBox.setAlignment(Pos.CENTER);
         // End of Heuristic Elements
 
-        Button nextButton = new Button("Next");
-        nextButton.setPrefWidth(INPUT_BTN_WIDTH);
-        nextButton.setPrefHeight(INPUT_BTN_HEIGHT);
-        nextButton.setOnAction(e -> {
+        Button nextButton = createButton("Next", e->{
             if (this.heuristic == null || this.heuristic.isEmpty()) {
                 System.out.println("Please select a heuristic.");
                 return;
@@ -298,13 +290,7 @@ public class GUI extends Application {
             processInput();
         });
 
-        Button backButton = new Button("Back");
-        backButton.setPrefWidth(INPUT_BTN_WIDTH);
-        backButton.setPrefHeight(INPUT_BTN_HEIGHT);
-        backButton.setOnAction(e -> {
-            System.out.println("Back button clicked, navigate to previous screen.");
-            userInputs();
-        });
+        Button backButton = createButton("Back", e->{userInputs();});
 
         HBox navigationButtonBox = new HBox(20, backButton, nextButton);
         navigationButtonBox.setAlignment(Pos.CENTER);
@@ -346,7 +332,7 @@ public class GUI extends Application {
         infoBox.setAlignment(Pos.CENTER);
         infoBox.getChildren().add(algoDisplayLabel);
 
-        if (("A*".equals(this.algorithm) || "Greedy".equals(this.algorithm))
+        if (("A* Search".equals(this.algorithm) || "Greedy Best First Search".equals(this.algorithm))
             && this.heuristic != null && !this.heuristic.isEmpty()) {
             Label heuristicDisplayLabel = new Label("Heuristic: " + this.heuristic);
             heuristicDisplayLabel.setFont(Font.font("Arial", FontWeight.NORMAL, 18));
@@ -358,26 +344,21 @@ public class GUI extends Application {
         initialBoardLabel.setPadding(new Insets(0,0,10,0));
 
 
-        Button startSearchButton = new Button("Start Search");
-        startSearchButton.setPrefWidth(INPUT_BTN_WIDTH + 50);
-        startSearchButton.setPrefHeight(INPUT_BTN_HEIGHT);
+        Button startSearchButton = createButton("Start Search", e -> {});
+        Button backButton = createButton("Back to Inputs", e -> {userInputs();});
         startSearchButton.setOnAction(e -> {
-            System.out.println("Start Search button clicked!");
             startSearchButton.setDisable(true);
+            backButton.setDisable(true);
             startSearch();
         });
 
-        Button backButton = new Button("Back to Inputs");
-        backButton.setPrefWidth(INPUT_BTN_WIDTH + 50);
-        backButton.setPrefHeight(INPUT_BTN_HEIGHT);
-        backButton.setOnAction(e -> userInputs());
 
         HBox buttonControlBox = new HBox(20, backButton, startSearchButton);
+        buttonControlBox.setPadding(new Insets(0,0,40,0));
         buttonControlBox.setAlignment(Pos.CENTER);
 
         VBox searchScreenLayout = new VBox(20);
         searchScreenLayout.setAlignment(Pos.CENTER);
-        searchScreenLayout.setPadding(new Insets(20));
 
         searchScreenLayout.getChildren().add(initialBoardLabel);
         if (this.boardDisplayArea != null) {
@@ -387,7 +368,7 @@ public class GUI extends Application {
         searchScreenLayout.getChildren().add(buttonControlBox);
 
         double sceneWidth = 800;
-        double sceneHeight = 700;
+        double sceneHeight = 800;
         if (this.primaryStage.getScene() != null) {
             sceneWidth = Math.max(sceneWidth, this.primaryStage.getScene().getWidth());
             sceneHeight = Math.max(sceneHeight, this.primaryStage.getScene().getHeight());
@@ -400,34 +381,36 @@ public class GUI extends Application {
 
     public void startSearch() {
         Pathfinder solver = null;
-        if ("UCS".equals(this.algorithm)) {
+        if ("Uniform Cost Search".equals(this.algorithm)) {
             solver = new UCS();
-        } else if ("Greedy".equals(this.algorithm)) {
-            if ("Blocking".equals(this.heuristic)) {
+        } else if ("Greedy Best First Search".equals(this.algorithm)) {
+            if ("Blocking Cars".equals(this.heuristic)) {
                 solver = new GreedyBestFirst(new BlockingCarsHeuristic());
-            } else if ("Manhattan".equals(this.heuristic)) {
+            } else if ("Manhattan To Exit".equals(this.heuristic)) {
                 solver = new GreedyBestFirst(new ManhattanToExitHeuristic());
             }
-        } else if ("A*".equals(this.algorithm)) {
-            if ("Blocking".equals(this.heuristic)) {
+        } else if ("A* Search".equals(this.algorithm)) {
+            if ("Blocking Cars".equals(this.heuristic)) {
                 solver = new AStar(new BlockingCarsHeuristic());
-            } else if ("Manhattan".equals(this.heuristic)) {
+            } else if ("Manhattan To Exit".equals(this.heuristic)) {
                 solver = new AStar(new ManhattanToExitHeuristic());
             }
+        } else if ("Iterative Deepening Search".equals(this.algorithm)){
+            solver = new IDDFS();
         }
-        List<State> solution = solver.solve(this.board);
-        if (solution.isEmpty()) {
+        this.solution = solver.solve(this.board);
+        if (this.solution.isEmpty()) {
             inputError("No solution found.", false);
             return;
         }
-        animateSolution(solution);
+        animateSolution();
     }
 
-    public void animateSolution(List<State> solution) {
+    public void animateSolution() {
         Timeline timeline = new Timeline();
-        for (int i = 0; i < solution.size(); i++) {
-            final State currentState = solution.get(i); 
-            if (i == solution.size() - 1) {
+        for (int i = 0; i < this.solution.size(); i++) {
+            final State currentState = this.solution.get(i); 
+            if (i == this.solution.size() - 1) {
                 this.board = currentState.board;
             }
             KeyFrame keyFrame = new KeyFrame(Duration.millis(i * 700), event -> {
@@ -451,52 +434,61 @@ public class GUI extends Application {
     }
 
     public void solutionsFound(){
-        VBox boardViewLayout = drawBoard(this.board);
+        this.boardDisplayArea.getChildren().clear();
 
-        Label timeLabel = new Label("Execution time: " + this.algorithm);
+        VBox finalBoardView = drawBoard(this.board);
+        if (finalBoardView != null) {
+            finalBoardView.setAlignment(Pos.CENTER);
+            this.boardDisplayArea.getChildren().add(finalBoardView);
+        }
+
+        Label timeLabel = new Label("Execution time: " + "time");
         timeLabel.setFont(Font.font("Arial", FontWeight.NORMAL, 18));
 
-        VBox infoBox = new VBox(5);
-        infoBox.getChildren().add(timeLabel);
-
-        Label nodesLabel = new Label("Heuristic: " + this.heuristic);
+        Label nodesLabel = new Label("Nodes visited: " + "nodes");
         nodesLabel.setFont(Font.font("Arial", FontWeight.NORMAL, 18));
 
-        infoBox.getChildren().add(nodesLabel);
+        VBox infoBox = new VBox(5);
+        infoBox.getChildren().addAll(timeLabel, nodesLabel);
         infoBox.setAlignment(Pos.CENTER);
 
-        Label initialBoardLabel = new Label("Final State");
-        initialBoardLabel.setFont(Font.font("Arial", FontWeight.BOLD, 20));
 
-        VBox boardLabelBox = new VBox(5);
-        boardLabelBox.getChildren().add(initialBoardLabel);
-        boardLabelBox.setAlignment(Pos.CENTER);
-        boardLabelBox.setPadding(new Insets(30,0,0,0));
+        Label finalStateTitleLabel = new Label("Solution Found");
+        finalStateTitleLabel.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        finalStateTitleLabel.setPadding(new Insets(10, 0, 0, 0));
+        
+        Button backToTitleButton = createButton("Back to Inputs", e -> userInputs());
+        Button replayButton = createButton("Replay", e -> {
+            if (this.solution != null && !this.solution.isEmpty()) {
+                System.out.println("Replay button clicked!");
+                ((Button)e.getSource()).setDisable(true);
+                backToTitleButton.setDisable(true);
 
-        Button backButton = new Button("Back to Title");
-        backButton.setPrefWidth(INPUT_BTN_WIDTH + 50);
-        backButton.setPrefHeight(INPUT_BTN_HEIGHT);
-        backButton.setOnAction(e -> titleScreen());
+                animateSolution();
+            } else {
+                inputError("No solution path available to replay.", false);
+            }
+        });
 
-        HBox buttonControlBox = new HBox(20, backButton);
+
+        HBox buttonControlBox = new HBox(20, backToTitleButton, replayButton);
         buttonControlBox.setAlignment(Pos.CENTER);
-        BorderPane searchScreenLayout = new BorderPane();
-        searchScreenLayout.setPadding(new Insets(20));
+        buttonControlBox.setPadding(new Insets(0, 0, 50, 0));
 
-        VBox topControls = new VBox(15, infoBox, buttonControlBox);
-        topControls.setAlignment(Pos.CENTER);
-        topControls.setPadding(new Insets(0, 0, 20, 0));
+        VBox solutionScreenLayout = new VBox(20);
+        solutionScreenLayout.setAlignment(Pos.CENTER);
+        solutionScreenLayout.setPadding(new Insets(20));
+        solutionScreenLayout.getChildren().addAll(finalStateTitleLabel,this.boardDisplayArea,infoBox,buttonControlBox);
 
-        searchScreenLayout.setCenter(boardViewLayout);
-        searchScreenLayout.setBottom(topControls);
-        searchScreenLayout.setTop(boardLabelBox);
+        double sceneWidth = 800;
+        double sceneHeight = 700;
+        if (this.primaryStage.getScene() != null) {
+            sceneWidth = Math.max(sceneWidth, this.primaryStage.getScene().getWidth());
+            sceneHeight = Math.max(sceneHeight, this.primaryStage.getScene().getHeight());
+        }
 
-        double sceneWidth = Math.max(800, this.primaryStage.getScene().getWidth());
-        double sceneHeight = Math.max(600, this.primaryStage.getScene().getHeight());
-
-        Scene searchScene = new Scene(searchScreenLayout, sceneWidth, sceneHeight);
-        this.primaryStage.setScene(searchScene);
-        this.primaryStage.centerOnScreen();
+        Scene solutionScene = new Scene(solutionScreenLayout, sceneWidth, sceneHeight);
+        this.primaryStage.setScene(solutionScene);
         this.primaryStage.centerOnScreen();
     }
 
@@ -519,28 +511,30 @@ public class GUI extends Application {
                 cellPane.setPrefSize(cellSize, cellSize);
 
                 Rectangle cellRect = new Rectangle(cellSize, cellSize);
-                Label pieceLabel = new Label(""); // Initialize empty label
-                pieceLabel.setFont(Font.font("Arial", FontWeight.BOLD, cellSize * 0.6)); // Adjust font size
+                Label pieceLabel = new Label("");
+                pieceLabel.setFont(Font.font("Arial", FontWeight.BOLD, cellSize * 0.6));
 
-                char pieceChar = (board.grid != null && i < board.grid.length && j < board.grid[i].length)
-                        ? board.grid[i][j]
-                        : '.'; // Default to empty if grid is not as expected
+                char pieceChar = (board.grid != null && i < board.grid.length && j < board.grid[i].length)? board.grid[i][j] : '.';
+                pieceLabel.setText(String.valueOf(pieceChar));
 
                 if (pieceChar == '.') {
+                    pieceLabel.setText("");
                     cellRect.setFill(Color.LIGHTGRAY);
                     cellRect.setStroke(Color.DARKGRAY);
-                } else if (pieceChar == 'P' || pieceChar == 'K') { // Primary Piece
+                } else if (pieceChar == 'P') {
                     cellRect.setFill(Color.RED);
                     cellRect.setStroke(Color.DARKRED);
-                    pieceLabel.setText(String.valueOf(pieceChar));
-                    pieceLabel.setTextFill(Color.WHITE); // White text on red 
-                } else if (pieceChar == ' '){
+                    pieceLabel.setTextFill(Color.WHITE);
+                } else if (pieceChar == 'K') {
+                    cellRect.setFill(Color.LIME);
+                    cellRect.setStroke(Color.GREEN);
+                    pieceLabel.setTextFill(Color.BLACK);
+                }else if (pieceChar == ' '){
                     continue;
-                }else { // Other pieces (A-Z etc.)
+                }else {
                     Color pieceColor = pieceColors.get(pieceChar);
                     cellRect.setFill(pieceColor);
                     cellRect.setStroke(pieceColor.darker());
-                    pieceLabel.setText(String.valueOf(pieceChar));
 
                     // contrasting text color
                     if (pieceColor.getBrightness() * pieceColor.getSaturation() < 0.15) {
@@ -588,13 +582,6 @@ public class GUI extends Application {
         errorMessageLabel.setMaxWidth(400);
 
         Button backButton = createButton("Back to inputs", e-> {userInputs();});
-        // Button backButton = new Button("Back to Inputs");
-        backButton.setPrefWidth(INPUT_BTN_WIDTH + 20);
-        backButton.setPrefHeight(INPUT_BTN_HEIGHT);
-        backButton.setOnAction(e -> {
-            System.out.println("Back button clicked from error screen.");
-            userInputs();
-        });
 
         VBox errorLayout = new VBox(30);
         errorLayout.getChildren().addAll(errorTitleLabel, errorMessageLabel, backButton);
