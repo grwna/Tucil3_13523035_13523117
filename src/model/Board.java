@@ -43,20 +43,16 @@ public class Board {
     public boolean isSolved() {
         Piece primary = pieces.get('P');
         if (primary.isHorizontal) {
-            int pRightmostCol = primary.start.col + primary.length - 1;
-            return primary.start.row == this.exit.row && pRightmostCol == this.exit.col;
-            int pRightmostCol = primary.start.col + primary.length - 1;
-            return primary.start.row == this.exit.row && pRightmostCol == this.exit.col;
-        } else {
-            if (primary.start.row == this.exit.row) {
-                return primary.start.col == this.exit.col;
+            if (primary.start.row != this.exit.row) {
+                return false;
             }
+            return (primary.start.col == this.exit.col || primary.start.col + primary.length - 1 == this.exit.col);
 
-            int pBottommostRow = primary.start.row + primary.length - 1;
-            if (pBottommostRow == this.exit.row) {
-                return primary.start.col == this.exit.col;
+        } else { // Vertical
+            if (primary.start.col != this.exit.col) {
+                return false;
             }
-            return false;
+            return (primary.start.row == this.exit.row || primary.start.row + primary.length - 1 == this.exit.row);
         }
     }
 
