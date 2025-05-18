@@ -44,43 +44,27 @@ public class OutputWriter {
             writer.println("Number of moves: " + (solution.size() - 1));
             writer.println("Execution time: " + String.format("%.3f ms", executionTime));
             writer.println();
+            writer.println("----------------------------------------------------------");
             State state = solution.get(0);
+            writer.println("Start");
             writer.println();
-            writer.println("Move " + 0 + ": " + state.move);
             for (int r = 0; r < state.board.rows; r++) {
                 for (int c = 0; c < state.board.cols; c++) {
                     writer.print(state.board.grid[r][c]);
                 }
                 writer.println();
             }
-            writer.println();
             writer.println("----------------------------------------------------------");
-            writer.println("Move " + (solution.size()-1) + ": " + state.move);
-            state = solution.get(solution.size());
+            state = solution.get(solution.size()-1);
+            writer.println("Finish State");
+            writer.println();
             for (int r = 0; r < state.board.rows; r++) {
                 for (int c = 0; c < state.board.cols; c++) {
                     writer.print(state.board.grid[r][c]);
                 }
                 writer.println();
             }
-            writer.println();
             writer.println("----------------------------------------------------------");
-
-            for (int i = 0; i < solution.size()-1; i++) {
-                state = solution.get(i);
-                writer.println("Move " + i + ": " + state.move);
-                writer.println();
-                
-                for (int r = 0; r < state.board.rows; r++) {
-                    for (int c = 0; c < state.board.cols; c++) {
-                        writer.print(state.board.grid[r][c]);
-                    }
-                    writer.println();
-                }
-                writer.println();
-                writer.println("----------------------------------------------------------");
-            }
-            writer.println();
             writer.println("SOLUTION STEPS:");
             writer.println("----------------------------------------------------------");
             
