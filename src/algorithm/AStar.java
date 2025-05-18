@@ -14,9 +14,14 @@ import model.State;
 public class AStar extends Pathfinder {
     private Heuristic heuristic;
     private long runtimeNano = -1;
+    private int nodes;
 
     public long getRuntimeNano() {
-        return runtimeNano;
+        return this.runtimeNano;
+    }
+
+    public int getNodes(){
+        return this.nodes;
     }
 
     public AStar(Heuristic heuristic) {
@@ -58,6 +63,7 @@ public class AStar extends Pathfinder {
 
             if (board.isSolved()) {
                 this.runtimeNano = System.nanoTime() - startTime;
+                this.nodes = expandedNodes;
                 System.out.println("Solution found after expanding " + expandedNodes + " nodes!");
                 return reconstructStatePath(currState);
             }
@@ -79,6 +85,7 @@ public class AStar extends Pathfinder {
             }
         }
         this.runtimeNano = System.nanoTime() - startTime;
+        this.nodes = expandedNodes;
         System.out.println("No solution found after expanding " + expandedNodes + " nodes.");
         return new ArrayList<>();
     }

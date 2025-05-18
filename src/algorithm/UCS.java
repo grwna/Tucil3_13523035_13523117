@@ -13,9 +13,14 @@ import model.State;
 
 public class UCS extends Pathfinder {
     private long runtimeNano = -1;
+    private int nodes;
 
     public long getRuntimeNano() {
         return this.runtimeNano;
+    }
+
+    public int getNodes(){
+        return this.nodes;
     }
 
     @Override
@@ -51,6 +56,7 @@ public class UCS extends Pathfinder {
 
             if (board.isSolved()) {
                 this.runtimeNano = System.nanoTime() - startTime;
+                this.nodes = expandedNodes;
                 System.out.println("Solution found after expanding " + expandedNodes + " nodes!");
                 return reconstructStatePath(currState);
             }
@@ -70,6 +76,7 @@ public class UCS extends Pathfinder {
             }
         }
         this.runtimeNano = System.nanoTime() - startTime;
+        this.nodes = expandedNodes;
         System.out.println("No solution found after expanding " + expandedNodes + " nodes.");
         return new ArrayList<>();
     }
