@@ -14,6 +14,7 @@ import algorithm.IDDFS;
 import algorithm.ManhattanToExitHeuristic;
 import algorithm.Pathfinder;
 import algorithm.UCS;
+import algorithm.CombinedHeuristic;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
@@ -267,6 +268,11 @@ public class GUI extends Application {
         manhattanRadio.setUserData("Manhattan To Exit");
         manhattanRadio.setFont(Font.font("Arial", 16));
 
+        RadioButton combinedRadio = new RadioButton("Combined Heuristic");
+        combinedRadio.setToggleGroup(heuristicToggleGroup);
+        combinedRadio.setUserData("Combined Heuristic");
+        combinedRadio.setFont(Font.font("Arial", 16));
+
         blockingCarsRadio.setSelected(true);
         this.heuristic = "Blocking Cars";
 
@@ -277,7 +283,7 @@ public class GUI extends Application {
             }
         });
 
-        VBox radioButtonBox = new VBox(10, blockingCarsRadio, manhattanRadio);
+        VBox radioButtonBox = new VBox(10, blockingCarsRadio, manhattanRadio, combinedRadio);
         radioButtonBox.setAlignment(Pos.CENTER_LEFT);
 
         HBox radioContainer = new HBox(radioButtonBox);
@@ -441,12 +447,16 @@ public class GUI extends Application {
                 solver = new GreedyBestFirst(new BlockingCarsHeuristic());
             } else if ("Manhattan To Exit".equals(this.heuristic)) {
                 solver = new GreedyBestFirst(new ManhattanToExitHeuristic());
+            } else if("Combined Heuristic".equals(this.heuristic)){
+                solver = new GreedyBestFirst(new CombinedHeuristic());
             }
         } else if ("A* Search".equals(this.algorithm)) {
             if ("Blocking Cars".equals(this.heuristic)) {
                 solver = new AStar(new BlockingCarsHeuristic());
             } else if ("Manhattan To Exit".equals(this.heuristic)) {
                 solver = new AStar(new ManhattanToExitHeuristic());
+            } else if("Combined Heuristic".equals(this.heuristic)){
+                solver = new AStar(new CombinedHeuristic());
             }
         } else if ("Iterative Deepening Search".equals(this.algorithm)){
             solver = new IDDFS();
