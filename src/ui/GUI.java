@@ -15,6 +15,8 @@ import algorithm.UCS;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -505,14 +507,14 @@ public class GUI extends Application {
         gridPane.setHgap(1);
         gridPane.setVgap(1);
 
-        int displayRows = board.rows - 2;
-        int displayCols = board.cols - 2;
+        int displayRows = board.rows;
+        int displayCols = board.cols;
 
         double cellSize = 60;
         gridPane.setMinSize(displayCols * cellSize, displayRows * cellSize);
 
-        for (int i = 1; i < displayRows; i++) {
-            for (int j = 1; j < displayCols; j++) {
+        for (int i = 0; i < displayRows; i++) {
+            for (int j = 0; j < displayCols; j++) {
                 StackPane cellPane = new StackPane();
                 cellPane.setPrefSize(cellSize, cellSize);
 
@@ -527,12 +529,14 @@ public class GUI extends Application {
                 if (pieceChar == '.') {
                     cellRect.setFill(Color.LIGHTGRAY);
                     cellRect.setStroke(Color.DARKGRAY);
-                } else if (pieceChar == 'P') { // Primary Piece
+                } else if (pieceChar == 'P' || pieceChar == 'K') { // Primary Piece
                     cellRect.setFill(Color.RED);
                     cellRect.setStroke(Color.DARKRED);
-                    pieceLabel.setText("P");
-                    pieceLabel.setTextFill(Color.WHITE); // White text on red
-                } else { // Other pieces (A-Z etc.)
+                    pieceLabel.setText(String.valueOf(pieceChar));
+                    pieceLabel.setTextFill(Color.WHITE); // White text on red 
+                } else if (pieceChar == ' '){
+                    continue;
+                }else { // Other pieces (A-Z etc.)
                     Color pieceColor = pieceColors.get(pieceChar);
                     cellRect.setFill(pieceColor);
                     cellRect.setStroke(pieceColor.darker());
@@ -546,7 +550,7 @@ public class GUI extends Application {
                     }
                 }
                 cellPane.getChildren().addAll(cellRect, pieceLabel);
-                gridPane.add(cellPane, j-1, i-1);
+                gridPane.add(cellPane, j, i);
             }
         }
 
@@ -555,6 +559,14 @@ public class GUI extends Application {
         boardLayout.setPadding(new Insets(20));
 
         return boardLayout;
+    }
+
+    public Button createButton(String title, EventHandler<ActionEvent> action) {
+        Button button = new Button(title);
+        button.setPrefWidth(INPUT_BTN_WIDTH);
+        button.setPrefHeight(INPUT_BTN_HEIGHT);
+        button.setOnAction(action);
+        return button;
     }
 
     // initially just for error, but used for no solutions too
@@ -575,7 +587,8 @@ public class GUI extends Application {
         errorMessageLabel.setTextAlignment(TextAlignment.CENTER);
         errorMessageLabel.setMaxWidth(400);
 
-        Button backButton = new Button("Back to Inputs");
+        Button backButton = createButton("Back to inputs", e-> {userInputs();});
+        // Button backButton = new Button("Back to Inputs");
         backButton.setPrefWidth(INPUT_BTN_WIDTH + 20);
         backButton.setPrefHeight(INPUT_BTN_HEIGHT);
         backButton.setOnAction(e -> {

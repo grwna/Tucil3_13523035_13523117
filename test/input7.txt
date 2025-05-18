@@ -1,7 +1,0 @@
-4 9
-8
-
- KAA.BB.CC.
-  .A.DEE.F.
-  .PPDE.FF.
-  ...GGHHII
