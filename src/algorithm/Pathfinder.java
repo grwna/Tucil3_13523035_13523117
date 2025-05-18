@@ -183,4 +183,14 @@ public class Pathfinder {
         Collections.reverse(path);
         return path;
     }
+    protected static String boardToString(Board board) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < board.rows; i++) {
+            for (int j = 0; j < board.cols; j++) {
+                sb.append(board.grid[i][j]);
+            }
+        }
+        return sb.toString();
+    }
+    
 }

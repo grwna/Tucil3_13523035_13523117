@@ -32,7 +32,7 @@ public class AStar extends Pathfinder {
         State start = new State(startBoard, "Start", null);
         int startH = heuristic.estimate(start.board);
         openSet.add(new Node(start, startH, 0));
-        String startBoardKey = boardToString(startBoard);
+        String startBoardKey = Pathfinder.boardToString(startBoard);
         gScore.put(startBoardKey, 0);
 
         System.out.println("Starting A* search with " + heuristic.toString() + "...");
@@ -43,7 +43,7 @@ public class AStar extends Pathfinder {
             Node current = openSet.poll();
             State currState = current.state;
             Board board = currState.board;
-            String boardKey = boardToString(board);
+            String boardKey = Pathfinder.boardToString(board);
             
             expandedNodes++;
             if (expandedNodes % 1000 == 0) {
@@ -59,7 +59,7 @@ public class AStar extends Pathfinder {
             visited.add(boardKey);
 
             for (State neighbor : generateNeighbors(currState)) {
-                String neighborKey = boardToString(neighbor.board);
+                String neighborKey = Pathfinder.boardToString(neighbor.board);
                 if (visited.contains(neighborKey)) continue;
 
                 int tentativeG = current.gScore + 1;
@@ -76,17 +76,6 @@ public class AStar extends Pathfinder {
         return new ArrayList<>();
     }
     
-    // Helper method untuk mengubah board menjadi string untuk keperluan set dan map
-    private String boardToString(Board board) {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < board.rows; i++) {
-            for (int j = 0; j < board.cols; j++) {
-                sb.append(board.grid[i][j]);
-            }
-        }
-        return sb.toString();
-    }
-
     private static class Node implements Comparable<Node> {
         State state;
         int fScore;
