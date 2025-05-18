@@ -1,9 +1,9 @@
 6 7
-12
+11
  K
 AAB..F.
-..BCDF.
-.PPCDF.K
+.PBCDF.
+.P.CDF.
 G..III.
 G.J....
 LLJMM..
