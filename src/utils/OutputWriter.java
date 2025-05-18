@@ -1,12 +1,9 @@
 
 package utils;
 
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 import model.State;
@@ -23,18 +20,7 @@ public class OutputWriter {
      * @return The path of the created file
      * @throws IOException If an I/O error occurs
      */
-    public static String writeSolution(List<State> solution, String algorithmName, double executionTime) throws IOException {
-        // Create the output folder if it doesn't exist
-        File outputDir = new File(OUTPUT_FOLDER);
-        if (!outputDir.exists()) {
-            outputDir.mkdirs();
-        }
-        
-        // Generate a unique filename with timestamp
-        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String filename = "solution_" + algorithmName.replaceAll("[^a-zA-Z0-9]", "_") + "_" + timestamp + ".txt";
-        String outputPath = OUTPUT_FOLDER + File.separator + filename;
-        
+    public static String writeSolution(List<State> solution, String algorithmName, double executionTime, String outputPath) throws IOException {
         // Create the file and write the solution
         try (PrintWriter writer = new PrintWriter(new FileWriter(outputPath))) {
             writer.println("==========================================================");

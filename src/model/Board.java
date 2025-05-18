@@ -96,4 +96,50 @@ public class Board {
         }
         System.out.println();
     }
+
+    public static Board createIntermediateBoard(Board startBoard, Board endBoard, char pieceId, String direction, int currentStep, int totalSteps) {
+        Board intermediateBoard = startBoard.copy();
+        Piece piece = intermediateBoard.pieces.get(pieceId);
+        if (piece == null) {
+            return intermediateBoard;
+        }
+        
+        for (int r = 0; r < intermediateBoard.rows; r++) {
+            for (int c = 0; c < intermediateBoard.cols; c++) {
+                if (intermediateBoard.grid[r][c] == pieceId) {
+                    intermediateBoard.grid[r][c] = '.';
+                }
+            }
+        }
+        
+        int deltaRow = 0;
+        int deltaCol = 0;
+        
+        switch (direction.toLowerCase()) {
+            case "up":
+                deltaRow = -currentStep;
+                break;
+            case "down":
+                deltaRow = currentStep;
+                break;
+            case "left":
+                deltaCol = -currentStep;
+                break;
+            case "right":
+                deltaCol = currentStep;
+                break;
+        }
+        
+        piece.start = new Position(startBoard.pieces.get(pieceId).start.row + deltaRow, startBoard.pieces.get(pieceId).start.col + deltaCol);
+        
+        int r = piece.start.row;
+        int c = piece.start.col;
+        for (int i = 0; i < piece.length; i++) {
+            intermediateBoard.grid[r][c] = pieceId;
+            if (piece.isHorizontal) c++;
+            else r++;
+        }
+        
+        return intermediateBoard;
+    }
 }

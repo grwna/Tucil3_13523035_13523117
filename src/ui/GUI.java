@@ -25,7 +25,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
@@ -46,8 +45,6 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import javafx.util.StringConverter;
 import model.Board;
-import model.Piece;
-import model.Position;
 import model.State;
 import parser.InputParser;
 import utils.OutputWriter;
@@ -206,9 +203,7 @@ public class GUI extends Application {
         Button browseButton = createButton("Browse...", e -> {
             FileChooser fileChooser = new FileChooser();
             fileChooser.setTitle("Open Configuration File");
-            fileChooser.getExtensionFilters().addAll(
-                    new FileChooser.ExtensionFilter("Text Files", "*.txt"),
-                    new FileChooser.ExtensionFilter("All Files", "*.*"));
+            fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Text Files", "*.txt"));
             File selectedFile = fileChooser.showOpenDialog(this.primaryStage);
             if (selectedFile != null) {
                 filePathField.setText(selectedFile.getAbsolutePath());
@@ -379,7 +374,7 @@ public class GUI extends Application {
                     try {
                         return Double.parseDouble(string);
                     } catch (NumberFormatException e) {
-                        return null; // Or a default value
+                        return null;
                     }
                 }
             }, this.animationDelay, filter);
@@ -486,7 +481,7 @@ public class GUI extends Application {
                             KeyFrame intermediateFrame = new KeyFrame(
                                 Duration.millis(totalDuration + step * this.animationDelay),
                                 event -> {
-                                    Board intermediateBoard = createIntermediateBoard(prevState.board, currentState.board, pieceId, direction, currentStep, steps);
+                                    Board intermediateBoard = Board.createIntermediateBoard(prevState.board, currentState.board, pieceId, direction, currentStep, steps);
                                     
                                     VBox newBoardView = drawBoard(intermediateBoard);
                                     if (newBoardView != null) {
@@ -527,52 +522,6 @@ public class GUI extends Application {
         timeline.play();
     }
 
-    private Board createIntermediateBoard(Board startBoard, Board endBoard, char pieceId, String direction, int currentStep, int totalSteps) {
-        Board intermediateBoard = startBoard.copy();
-        Piece piece = intermediateBoard.pieces.get(pieceId);
-        if (piece == null) {
-            return intermediateBoard;
-        }
-        
-        for (int r = 0; r < intermediateBoard.rows; r++) {
-            for (int c = 0; c < intermediateBoard.cols; c++) {
-                if (intermediateBoard.grid[r][c] == pieceId) {
-                    intermediateBoard.grid[r][c] = '.';
-                }
-            }
-        }
-        
-        int deltaRow = 0;
-        int deltaCol = 0;
-        
-        switch (direction.toLowerCase()) {
-            case "up":
-                deltaRow = -currentStep;
-                break;
-            case "down":
-                deltaRow = currentStep;
-                break;
-            case "left":
-                deltaCol = -currentStep;
-                break;
-            case "right":
-                deltaCol = currentStep;
-                break;
-        }
-        
-        piece.start = new Position(startBoard.pieces.get(pieceId).start.row + deltaRow, startBoard.pieces.get(pieceId).start.col + deltaCol);
-        
-        int r = piece.start.row;
-        int c = piece.start.col;
-        for (int i = 0; i < piece.length; i++) {
-            intermediateBoard.grid[r][c] = pieceId;
-            if (piece.isHorizontal) c++;
-            else r++;
-        }
-        
-        return intermediateBoard;
-    }
-
     public void solutionsFound(){
         this.boardDisplayArea.getChildren().clear();
 
@@ -609,34 +558,8 @@ public class GUI extends Application {
                 inputError("No solution path available to replay.", false);
             }
         });
-        Button saveButton = createButton("Save Solution", e -> {
-            Alert alert = new Alert(AlertType.CONFIRMATION);
-            alert.setTitle("Save Solution");
-            alert.setHeaderText("Save Solution to File");
-            alert.setContentText("Do you want to save the complete solution to a file?");
-            
-            alert.showAndWait().ifPresent(response -> {
-                if (response == ButtonType.OK) {
-                    try {
-                        String outputPath = OutputWriter.writeSolution(
-                            this.solution, 
-                            this.solver.getName(), 
-                            this.solver.getRuntimeNano()/1e6);
-                        Alert successAlert = new Alert(AlertType.INFORMATION);
-                        successAlert.setTitle("Success");
-                        successAlert.setHeaderText(null);
-                        successAlert.setContentText("Solution saved successfully to:\n" + outputPath);
-                        successAlert.showAndWait();
-                    } catch (IOException ex) {
-                        Alert errorAlert = new Alert(AlertType.ERROR);
-                        errorAlert.setTitle("Error");
-                        errorAlert.setHeaderText("Failed to save solution");
-                        errorAlert.setContentText(ex.getMessage());
-                        errorAlert.showAndWait();
-                    }
-                }
-            });
-        });
+        Button saveButton = createButton("Save Solution", e->{});
+        saveButton.setOnAction(e -> {saveToFile(solution, algorithm, animationDelay, saveButton);});
 
         HBox buttonControlBox = new HBox(20, backToTitleButton, replayButton, saveButton);
         buttonControlBox.setAlignment(Pos.CENTER);
@@ -728,6 +651,48 @@ public class GUI extends Application {
         button.setPrefHeight(INPUT_BTN_HEIGHT);
         button.setOnAction(action);
         return button;
+    }
+
+    public void saveToFile(List<State> solution, String algorithmName, double executionTime, Button callerButton){
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Save Solution As");
+
+        // Default file name
+        String initialFileName = "solution_";
+        if (this.solver != null && this.solver.getName() != null && !this.solver.getName().isEmpty()) {
+            initialFileName += this.solver.getName().replaceAll("[^a-zA-Z0-9.-]", "_");
+        } else if (algorithmName != null && !algorithmName.isEmpty()){
+            initialFileName += algorithmName.replaceAll("[^a-zA-Z0-9.-]", "_");
+        } else {
+            initialFileName += "output";
+        }
+        initialFileName += ".txt";
+
+        fileChooser.setInitialFileName(initialFileName);
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Text Files (*.txt)", "*.txt"));
+
+        Stage stage = (Stage) callerButton.getScene().getWindow();
+        File fileToSave = fileChooser.showSaveDialog(stage);
+        if (!fileToSave.getAbsolutePath().toLowerCase().endsWith(".txt")) fileToSave = new File(fileToSave.getAbsolutePath() + ".txt");
+        if (fileToSave != null) {
+            try {
+                String outputPath = OutputWriter.writeSolution( solution, algorithmName, executionTime,  fileToSave.getAbsolutePath());
+
+                Alert successAlert = new Alert(AlertType.INFORMATION);
+                successAlert.setTitle("Success");
+                successAlert.setHeaderText(null);
+                successAlert.setContentText("Solution saved successfully to:\n" + outputPath);
+                successAlert.showAndWait();
+            } catch (Exception ex) {
+                Alert errorAlert = new Alert(AlertType.ERROR);
+                errorAlert.setTitle("Error");
+                errorAlert.setHeaderText("An unexpected error occurred while saving");
+                errorAlert.setContentText(ex.getMessage());
+                errorAlert.showAndWait();
+            }
+        } else {
+            System.out.println("Save operation cancelled by user.");
+        }
     }
 
     // initially just for error, but used for no solutions too
