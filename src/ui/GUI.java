@@ -443,10 +443,10 @@ public class GUI extends Application {
             this.boardDisplayArea.getChildren().add(finalBoardView);
         }
 
-        Label timeLabel = new Label("Execution time: " + this.solver.getRuntimeNano()/1e6 + "ms");
+        Label timeLabel = new Label("Execution time: " + this.solver.getRuntimeNano() + "ms");
         timeLabel.setFont(Font.font("Arial", FontWeight.NORMAL, 18));
 
-        Label nodesLabel = new Label("Nodes visited: " + this.solver.get);
+        Label nodesLabel = new Label("Nodes visited: " + this.solver.getNodes());
         nodesLabel.setFont(Font.font("Arial", FontWeight.NORMAL, 18));
 
         VBox infoBox = new VBox(5);
@@ -503,7 +503,7 @@ public class GUI extends Application {
         int displayRows = board.rows;
         int displayCols = board.cols;
 
-        double cellSize = 60;
+        double cellSize = 40;
         gridPane.setMinSize(displayCols * cellSize, displayRows * cellSize);
 
         for (int i = 0; i < displayRows; i++) {
