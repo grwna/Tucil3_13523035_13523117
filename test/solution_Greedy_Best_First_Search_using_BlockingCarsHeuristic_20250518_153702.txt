@@ -1,0 +1,95 @@
+==========================================================
+  RUSH HOUR GAME SOLUTION USING GREEDY BEST FIRST SEARCH USING BLOCKINGCARSHEURISTIC
+==========================================================
+
+Number of moves: 6
+Execution time: 42,925 ms
+
+SOLUTION STEPS:
+==========================================================
+Move 0: Start
+
+         
+ AAB..F. 
+ ..BCDF. 
+ .PPCDF.K
+ GH.III. 
+ GHJ.... 
+ LLJMM.. 
+         
+
+----------------------------------------------------------
+Move 1: C-up
+
+         
+ AABC.F. 
+ ..BCDF. 
+ .PP.DF.K
+ GH.III. 
+ GHJ.... 
+ LLJMM.. 
+         
+
+----------------------------------------------------------
+Move 2: D-up
+
+         
+ AABCDF. 
+ ..BCDF. 
+ .PP..F.K
+ GH.III. 
+ GHJ.... 
+ LLJMM.. 
+         
+
+----------------------------------------------------------
+Move 3: P-left
+
+         
+ AABCDF. 
+ ..BCDF. 
+ PP...F.K
+ GH.III. 
+ GHJ.... 
+ LLJMM.. 
+         
+
+----------------------------------------------------------
+Move 4: I-left
+
+         
+ AABCDF. 
+ ..BCDF. 
+ PP...F.K
+ GHIII.. 
+ GHJ.... 
+ LLJMM.. 
+         
+
+----------------------------------------------------------
+Move 5: F-down-3
+
+         
+ AABCD.. 
+ ..BCD.. 
+ PP.....K
+ GHIIIF. 
+ GHJ..F. 
+ LLJMMF. 
+         
+
+----------------------------------------------------------
+Move 6: P-right-5
+
+         
+ AABCD.. 
+ ..BCD.. 
+ .....PPK
+ GHIIIF. 
+ GHJ..F. 
+ LLJMMF. 
+         
+
+----------------------------------------------------------
+
+Solution finished. Game solved successfully!

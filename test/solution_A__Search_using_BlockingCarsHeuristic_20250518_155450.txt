@@ -1,0 +1,20 @@
+==========================================================
+  RUSH HOUR GAME SOLUTION USING A* SEARCH USING BLOCKINGCARSHEURISTIC
+==========================================================
+
+Number of moves: 5
+Execution time: 16,628 ms
+
+
+Move 0: Start
+         
+ AAB..F. 
+ ..BCDF. 
+ .PPCDF.K
+ GH.III. 
+ GHJ.... 
+ LLJMM.. 
+         
+
+----------------------------------------------------------
+Move 5: Start

@@ -21,7 +21,10 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
@@ -40,8 +43,11 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import model.Board;
+import model.Piece;
+import model.Position;
 import model.State;
 import parser.InputParser;
+import utils.OutputWriter;
 
 public class GUI extends Application {
     public String algorithm;
@@ -143,7 +149,7 @@ public class GUI extends Application {
 
         RadioButton greedyRadio = new RadioButton("Greedy Best First Search");
         greedyRadio.setToggleGroup(algoToggleGroup);
-        greedyRadio.setUserData("Greedy");
+        greedyRadio.setUserData("Greedy Best First Search");
         greedyRadio.setFont(Font.font("Arial", 16));
 
         RadioButton ucsRadio = new RadioButton("Uniform Cost Search");
@@ -409,29 +415,136 @@ public class GUI extends Application {
 
     public void animateSolution() {
         Timeline timeline = new Timeline();
+        double frameDelay = 500; // Base delay between frames in ms
+        
+        // Track our position in the animation timeline
+        double totalDuration = 0;
+        
         for (int i = 0; i < this.solution.size(); i++) {
-            final State currentState = this.solution.get(i); 
+            final State currentState = this.solution.get(i);
+            final State prevState = (i > 0) ? this.solution.get(i-1) : null;
+            
+            if (prevState != null) {
+                // Find the piece that moved and how far it moved
+                String move = currentState.move;
+                if (move != null && !move.equals("Start")) {
+                    // Parse the move string (e.g. "C-right-2")
+                    String[] parts = move.split("-");
+                    if (parts.length >= 2) {
+                        char pieceId = parts[0].charAt(0);
+                        String direction = parts[1];
+                        int steps = (parts.length > 2) ? Integer.parseInt(parts[2]) : 1;
+                        
+                        // Create intermediate frames for multi-step moves
+                        for (int step = 1; step <= steps; step++) {
+                            final int currentStep = step;
+                            KeyFrame intermediateFrame = new KeyFrame(
+                                Duration.millis(totalDuration + step * 200), // 200ms per step
+                                event -> {
+                                    Board intermediateBoard = createIntermediateBoard(
+                                        prevState.board, 
+                                        currentState.board, 
+                                        pieceId, 
+                                        direction, 
+                                        currentStep,
+                                        steps
+                                    );
+                                    
+                                    VBox newBoardView = drawBoard(intermediateBoard);
+                                    if (newBoardView != null) {
+                                        this.boardDisplayArea.getChildren().clear();
+                                        newBoardView.setAlignment(Pos.CENTER);
+                                        this.boardDisplayArea.getChildren().add(newBoardView);
+                                    }
+                                }
+                            );
+                            timeline.getKeyFrames().add(intermediateFrame);
+                        }
+                        // Update the total duration based on the number of steps
+                        totalDuration += steps * 200;
+                    }
+                }
+            } else {
+                // First state (starting position)
+                KeyFrame startFrame = new KeyFrame(Duration.ZERO, event -> {
+                    VBox newBoardView = drawBoard(currentState.board);
+                    if (newBoardView != null) {
+                        this.boardDisplayArea.getChildren().clear();
+                        newBoardView.setAlignment(Pos.CENTER);
+                        this.boardDisplayArea.getChildren().add(newBoardView);
+                    }
+                });
+                timeline.getKeyFrames().add(startFrame);
+            }
+            
+            // Update the current board reference at the end
             if (i == this.solution.size() - 1) {
                 this.board = currentState.board;
             }
-            KeyFrame keyFrame = new KeyFrame(Duration.millis(i * 700), event -> {
-                VBox newBoardView = drawBoard(currentState.board);
-                if (newBoardView != null) {
-                    this.boardDisplayArea.getChildren().clear();
-                    newBoardView.setAlignment(Pos.CENTER);
-                    this.boardDisplayArea.getChildren().add(newBoardView);
-                }
-            });
-            timeline.getKeyFrames().add(keyFrame);
         }
-
+        
         timeline.setOnFinished(event -> {
             System.out.println("Animation finished.");
             solutionsFound();
         });
-
+        
         System.out.println("Playing animation with " + timeline.getKeyFrames().size() + " frames.");
         timeline.play();
+    }
+
+    // Add this new helper method to create intermediate boards
+    private Board createIntermediateBoard(Board startBoard, Board endBoard, char pieceId, String direction, int currentStep, int totalSteps) {
+        // Create a copy of the start board
+        Board intermediateBoard = startBoard.copy();
+        
+        // Find the piece in the start board
+        Piece piece = intermediateBoard.pieces.get(pieceId);
+        if (piece == null) {
+            return intermediateBoard; // Return the board as is if piece not found
+        }
+        
+        // Clear the current piece from the grid
+        for (int r = 0; r < intermediateBoard.rows; r++) {
+            for (int c = 0; c < intermediateBoard.cols; c++) {
+                if (intermediateBoard.grid[r][c] == pieceId) {
+                    intermediateBoard.grid[r][c] = '.';
+                }
+            }
+        }
+        
+        // Calculate the new position based on the direction and current step
+        int deltaRow = 0;
+        int deltaCol = 0;
+        
+        switch (direction.toLowerCase()) {
+            case "up":
+                deltaRow = -currentStep;
+                break;
+            case "down":
+                deltaRow = currentStep;
+                break;
+            case "left":
+                deltaCol = -currentStep;
+                break;
+            case "right":
+                deltaCol = currentStep;
+                break;
+        }
+        
+        // Set the new piece position
+        piece.start = new Position(startBoard.pieces.get(pieceId).start.row + deltaRow, 
+                                startBoard.pieces.get(pieceId).start.col + deltaCol);
+        
+        // Redraw the piece on the grid
+        int r = piece.start.row;
+        int c = piece.start.col;
+        for (int i = 0; i < piece.length; i++) {
+            intermediateBoard.grid[r][c] = pieceId;
+            if (piece.isHorizontal) c++;
+            else r++;
+        }
+        
+        return intermediateBoard;
     }
 
     public void solutionsFound(){
@@ -443,7 +556,7 @@ public class GUI extends Application {
             this.boardDisplayArea.getChildren().add(finalBoardView);
         }
 
-        Label timeLabel = new Label("Execution time: " + this.solver.getRuntimeNano() + "ms");
+        Label timeLabel = new Label("Execution time: " + this.solver.getRuntimeNano()/1e6 + "ms");
         timeLabel.setFont(Font.font("Arial", FontWeight.NORMAL, 18));
 
         Label nodesLabel = new Label("Nodes visited: " + this.solver.getNodes());
@@ -470,9 +583,36 @@ public class GUI extends Application {
                 inputError("No solution path available to replay.", false);
             }
         });
+        Button saveButton = createButton("Save Solution", e -> {
+            Alert alert = new Alert(AlertType.CONFIRMATION);
+            alert.setTitle("Save Solution");
+            alert.setHeaderText("Save Solution to File");
+            alert.setContentText("Do you want to save the complete solution to a file?");
+            
+            alert.showAndWait().ifPresent(response -> {
+                if (response == ButtonType.OK) {
+                    try {
+                        String outputPath = OutputWriter.writeSolution(
+                            this.solution, 
+                            this.solver.getName(), 
+                            this.solver.getRuntimeNano()/1e6);
+                        Alert successAlert = new Alert(AlertType.INFORMATION);
+                        successAlert.setTitle("Success");
+                        successAlert.setHeaderText(null);
+                        successAlert.setContentText("Solution saved successfully to:\n" + outputPath);
+                        successAlert.showAndWait();
+                    } catch (IOException ex) {
+                        Alert errorAlert = new Alert(AlertType.ERROR);
+                        errorAlert.setTitle("Error");
+                        errorAlert.setHeaderText("Failed to save solution");
+                        errorAlert.setContentText(ex.getMessage());
+                        errorAlert.showAndWait();
+                    }
+                }
+            });
+        });
 
-
-        HBox buttonControlBox = new HBox(20, backToTitleButton, replayButton);
+        HBox buttonControlBox = new HBox(20, backToTitleButton, replayButton, saveButton);
         buttonControlBox.setAlignment(Pos.CENTER);
         buttonControlBox.setPadding(new Insets(0, 0, 50, 0));
 
