@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.UnaryOperator;
 
 import algorithm.AStar;
 import algorithm.BlockingCarsHeuristic;
@@ -25,6 +26,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextFormatter;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
@@ -39,9 +41,11 @@ import javafx.scene.text.TextAlignment;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import javafx.util.StringConverter;
 import model.Board;
 import model.State;
 import parser.InputParser;
+
 
 public class GUI extends Application {
     public String algorithm;
@@ -50,8 +54,11 @@ public class GUI extends Application {
     public Board board;
     public Pathfinder solver;
     public List<State> solution;
+    public double animationDelay; 
+
     public Stage primaryStage;
     public StackPane boardDisplayArea;
+
     static int FILE_PATH_FIELD_WIDTH = 300;
     static int INPUT_BTN_WIDTH = 120;
     static int INPUT_BTN_HEIGHT = 30;
@@ -143,7 +150,7 @@ public class GUI extends Application {
 
         RadioButton greedyRadio = new RadioButton("Greedy Best First Search");
         greedyRadio.setToggleGroup(algoToggleGroup);
-        greedyRadio.setUserData("Greedy");
+        greedyRadio.setUserData("Greedy Best First Search");
         greedyRadio.setFont(Font.font("Arial", 16));
 
         RadioButton ucsRadio = new RadioButton("Uniform Cost Search");
@@ -342,9 +349,51 @@ public class GUI extends Application {
         
         Label initialBoardLabel = new Label("Initial Board");
         initialBoardLabel.setFont(Font.font("Arial", FontWeight.BOLD, 20));
-        initialBoardLabel.setPadding(new Insets(0,0,10,0));
 
-        // below the above label and before the board is drawn add an input field for delay in ms, (make sure only double values are allowed)
+        Label delayInputLabel = new Label("Animation Delay (ms):");
+        delayInputLabel.setFont(Font.font("Arial", FontWeight.NORMAL, 16));
+        this.animationDelay = 500;
+        TextField delayTextField = new TextField();
+        delayTextField.setPrefWidth(80);
+        delayTextField.setPromptText("500");
+        UnaryOperator<TextFormatter.Change> filter = change -> {
+            String newText = change.getControlNewText();
+            if (newText.matches("\\d*\\.?\\d*")) { // digits and only one decimal point
+                return change;
+            }
+            return null;
+        };
+        TextFormatter<Double> delayFormatter = new TextFormatter<>(new StringConverter<Double>() {
+                @Override
+                public String toString(Double object) {
+                    return object == null ? "" : object.toString();
+                }
+                @Override
+                public Double fromString(String string) {
+                    try {
+                        return Double.parseDouble(string);
+                    } catch (NumberFormatException e) {
+                        return null; // Or a default value
+                    }
+                }
+            }, this.animationDelay, filter);
+        delayTextField.setTextFormatter(delayFormatter);
+
+        delayTextField.textProperty().addListener((obs, oldVal, newVal) -> {
+            try {
+                double delay = Double.parseDouble(newVal);
+                if (delay > 0) {
+                    this.animationDelay = delay;
+                    System.out.println("Animation delay set to: " + this.animationDelay + " ms");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid delay input: " + newVal);
+            }
+        });
+
+        HBox delayInputBox = new HBox(10, delayInputLabel, delayTextField);
+        delayInputBox.setAlignment(Pos.CENTER);
+
 
         Button startSearchButton = createButton("Start Search", e -> {});
         Button backButton = createButton("Back to Inputs", e -> {userInputs();});
@@ -363,6 +412,7 @@ public class GUI extends Application {
         searchScreenLayout.setAlignment(Pos.CENTER);
 
         searchScreenLayout.getChildren().add(initialBoardLabel);
+        searchScreenLayout.getChildren().add(delayInputBox);
         if (this.boardDisplayArea != null) {
             searchScreenLayout.getChildren().add(this.boardDisplayArea);
         }
@@ -415,7 +465,7 @@ public class GUI extends Application {
             if (i == this.solution.size() - 1) {
                 this.board = currentState.board;
             }
-            KeyFrame keyFrame = new KeyFrame(Duration.millis(i * 700), event -> {
+            KeyFrame keyFrame = new KeyFrame(Duration.millis(i * this.animationDelay), event -> {
                 VBox newBoardView = drawBoard(currentState.board);
                 if (newBoardView != null) {
                     this.boardDisplayArea.getChildren().clear();
