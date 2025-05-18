@@ -44,15 +44,33 @@ public class OutputWriter {
             writer.println("Number of moves: " + (solution.size() - 1));
             writer.println("Execution time: " + String.format("%.3f ms", executionTime));
             writer.println();
-            writer.println("SOLUTION STEPS:");
-            writer.println("==========================================================");
-            
-            for (int i = 0; i < solution.size(); i++) {
-                State state = solution.get(i);
+            State state = solution.get(0);
+            writer.println();
+            writer.println("Move " + 0 + ": " + state.move);
+            for (int r = 0; r < state.board.rows; r++) {
+                for (int c = 0; c < state.board.cols; c++) {
+                    writer.print(state.board.grid[r][c]);
+                }
+                writer.println();
+            }
+            writer.println();
+            writer.println("----------------------------------------------------------");
+            writer.println("Move " + (solution.size()-1) + ": " + state.move);
+            state = solution.get(solution.size());
+            for (int r = 0; r < state.board.rows; r++) {
+                for (int c = 0; c < state.board.cols; c++) {
+                    writer.print(state.board.grid[r][c]);
+                }
+                writer.println();
+            }
+            writer.println();
+            writer.println("----------------------------------------------------------");
+
+            for (int i = 0; i < solution.size()-1; i++) {
+                state = solution.get(i);
                 writer.println("Move " + i + ": " + state.move);
                 writer.println();
                 
-                // Print the board state
                 for (int r = 0; r < state.board.rows; r++) {
                     for (int c = 0; c < state.board.cols; c++) {
                         writer.print(state.board.grid[r][c]);
@@ -62,7 +80,14 @@ public class OutputWriter {
                 writer.println();
                 writer.println("----------------------------------------------------------");
             }
+            writer.println();
+            writer.println("SOLUTION STEPS:");
+            writer.println("----------------------------------------------------------");
             
+            for (int i = 1; i < solution.size(); i++) {
+                state = solution.get(i);
+                writer.println("Move " + i + ": " + state.move);
+            }
             writer.println("\nSolution finished. Game solved successfully!");
         }
         
