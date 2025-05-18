@@ -1,0 +1,95 @@
+==========================================================
+  RUSH HOUR GAME SOLUTION USING GREEDY BEST FIRST SEARCH USING MANHATTANTOEXITHEURISTIC
+==========================================================
+
+Number of moves: 6
+Execution time: 15,147 ms
+
+SOLUTION STEPS:
+==========================================================
+Move 0: Start
+
+         
+ AAB..F. 
+ ..BCDF. 
+ .PPCDF.K
+ GH.III. 
+ GHJ.... 
+ LLJMM.. 
+         
+
+----------------------------------------------------------
+Move 1: C-up
+
+         
+ AABC.F. 
+ ..BCDF. 
+ .PP.DF.K
+ GH.III. 
+ GHJ.... 
+ LLJMM.. 
+         
+
+----------------------------------------------------------
+Move 2: D-up
+
+         
+ AABCDF. 
+ ..BCDF. 
+ .PP..F.K
+ GH.III. 
+ GHJ.... 
+ LLJMM.. 
+         
+
+----------------------------------------------------------
+Move 3: P-right-2
+
+         
+ AABCDF. 
+ ..BCDF. 
+ ...PPF.K
+ GH.III. 
+ GHJ.... 
+ LLJMM.. 
+         
+
+----------------------------------------------------------
+Move 4: G-up
+
+         
+ AABCDF. 
+ ..BCDF. 
+ G..PPF.K
+ GH.III. 
+ .HJ.... 
+ LLJMM.. 
+         
+
+----------------------------------------------------------
+Move 5: I-left
+
+         
+ AABCDF. 
+ ..BCDF. 
+ G..PPF.K
+ GHIII.. 
+ .HJ.... 
+ LLJMM.. 
+         
+
+----------------------------------------------------------
+Move 6: F-down-3
+
+         
+ AABCD.. 
+ ..BCD.. 
+ G..PP..K
+ GHIIIF. 
+ .HJ..F. 
+ LLJMMF. 
+         
+
+----------------------------------------------------------
+
+Solution finished. Game solved successfully!

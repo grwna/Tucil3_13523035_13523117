@@ -1,8 +1,8 @@
 5 4
 3
-    K 
- .AA. 
- BBP. 
- BBP. 
- CCP. 
- CC.. 
+   K 
+.AA. 
+B.P. 
+B.P. 
+.CP. 
+.C.. 

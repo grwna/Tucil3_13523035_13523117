@@ -3,9 +3,15 @@ package ui;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.List;
+import java.util.Map;
 
+import algorithm.AStar;
+import algorithm.BlockingCarsHeuristic;
+import algorithm.GreedyBestFirst;
+import algorithm.ManhattanToExitHeuristic;
+import algorithm.Pathfinder;
+import algorithm.UCS;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
@@ -30,9 +36,8 @@ import javafx.scene.text.TextAlignment;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
-import algorithm.*;
-import model.*;
+import model.Board;
+import model.State;
 import parser.InputParser;
 
 public class GUI extends Application {
@@ -413,10 +418,10 @@ public class GUI extends Application {
             inputError("No solution found.", false);
             return;
         }
-        animateSolution(solution);
+        animateSolution(solution, solver);
     }
 
-    public void animateSolution(List<State> solution) {
+    public void animateSolution(List<State> solution, Pathfinder solver) {
         Timeline timeline = new Timeline();
         for (int i = 0; i < solution.size(); i++) {
             final State currentState = solution.get(i); 
@@ -436,17 +441,17 @@ public class GUI extends Application {
 
         timeline.setOnFinished(event -> {
             System.out.println("Animation finished.");
-            solutionsFound();
+            solutionsFound(solver);
         });
 
         System.out.println("Playing animation with " + timeline.getKeyFrames().size() + " frames.");
         timeline.play();
     }
 
-    public void solutionsFound(){
+    public void solutionsFound(Pathfinder solver){
         VBox boardViewLayout = drawBoard(this.board);
 
-        Label timeLabel = new Label("Execution time: " + this.algorithm);
+        Label timeLabel = new Label("Execution time: " + solver.getRuntimeNano()/1e6);
         timeLabel.setFont(Font.font("Arial", FontWeight.NORMAL, 18));
 
         VBox infoBox = new VBox(5);

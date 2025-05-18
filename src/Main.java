@@ -13,6 +13,7 @@ import model.Board;
 import model.State;
 import parser.InputParser;
 import ui.GUI;
+import utils.OutputWriter;
 import utils.Printer;
 
 public class Main {
@@ -80,7 +81,7 @@ public class Main {
                 }
             }
             
-            System.out.println("\nThank you for using thus program!");
+            System.out.println("\nThank you for using this program!");
             scanner.close();
         }
     }
@@ -141,9 +142,7 @@ public class Main {
     }
     
     private static void runSingleAlgorithm(Pathfinder solver, Board initialBoard) {
-        long startTime = System.nanoTime();
         List<State> solution = solver.solve(initialBoard);
-        long endTime = System.nanoTime();
 
         if (solution.isEmpty()) {
             System.out.println("\nNo solution found!");
@@ -165,8 +164,21 @@ public class Main {
                 Printer.print(lastState.board);
             }
 
-            double durationMs = (endTime - startTime) / 1e6;
-            System.out.printf("Execution time: %.3f ms\n", durationMs);
+            System.out.printf("Execution time: %.3f ms\n", solver.getRuntimeNano() /1e6);
+
+
+            System.out.print("\nDo you want to save the complete solution to a file? (y/n): ");
+            Scanner scanner = new Scanner(System.in);
+            String saveChoice = scanner.nextLine().trim().toLowerCase();
+            
+            if (saveChoice.equals("y") || saveChoice.equals("yes")) {
+                try {
+                    String outputPath = OutputWriter.writeSolution(solution, solver.getName(), solver.getRuntimeNano()/1e6);
+                    System.out.println("Solution saved successfully to: " + outputPath);
+                } catch (IOException e) {
+                    System.out.println("Failed to save solution: " + e.getMessage());
+                }
+            }
         }
     }
 }
