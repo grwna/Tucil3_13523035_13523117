@@ -17,7 +17,13 @@ public class Board {
         this.cols = cols;
         this.grid = grid;
         this.pieces = pieces;
-        this.exit = exit;
+        Position adjustedExit = new Position(exit.row, exit.col);
+        if (adjustedExit.row == 0) {adjustedExit.row = 1;} 
+        else if (adjustedExit.row == rows - 1) {adjustedExit.row = rows - 2;}
+        if (adjustedExit.col == 0) {adjustedExit.col = 1;}
+        else if (adjustedExit.col == cols - 1) {adjustedExit.col = cols - 2;}
+
+        this.exit = adjustedExit;
     }
 
     public Board copy() {
@@ -36,32 +42,21 @@ public class Board {
 
     public boolean isSolved() {
         Piece primary = pieces.get('P');
-        if (primary == null || !primary.isHorizontal) return false;
-
-        int row = primary.start.row;
-        int rightEdge = primary.start.col + primary.length - 1;
-
-        // Jika exit tidak didefinisikan, cukup periksa apakah ada jalur ke kanan
-        if (exit == null) {
-            // Geser dari ujung primary ke kanan sampai ujung papan
-            for (int col = rightEdge + 1; col < cols; col++) {
-                if (grid[row][col] != '.' && grid[row][col] != 'K') {
-                    return false;
-                }
-            }
-            // Jika semua sel kosong, mobil dapat keluar
-            return true;
+        if (primary.isHorizontal) {
+            int pRightmostCol = primary.start.col + primary.length - 1;
+            return primary.start.row == this.exit.row && pRightmostCol == this.exit.col;
+            int pRightmostCol = primary.start.col + primary.length - 1;
+            return primary.start.row == this.exit.row && pRightmostCol == this.exit.col;
         } else {
-            // Jika exit didefinisikan, periksa apakah mobil dapat mencapai exit
-            if (exit.row != row) return false;  // exit tidak di baris yang sama
-
-            // Periksa apakah jalur ke exit bebas hambatan
-            for (int col = rightEdge + 1; col <= exit.col; col++) {
-                if (grid[row][col] != '.' && grid[row][col] != 'K') {
-                    return false;
-                }
+            if (primary.start.row == this.exit.row) {
+                return primary.start.col == this.exit.col;
             }
-            return true;
+
+            int pBottommostRow = primary.start.row + primary.length - 1;
+            if (pBottommostRow == this.exit.row) {
+                return primary.start.col == this.exit.col;
+            }
+            return false;
         }
     }
 
