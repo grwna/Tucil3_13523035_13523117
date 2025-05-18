@@ -11,6 +11,11 @@ import model.State;
 
 public class GreedyBestFirst extends Pathfinder {
     private Heuristic heuristic;
+    private long runtimeNano = -1;
+
+    public long getRuntimeNano() {
+        return runtimeNano;
+    }
 
     public GreedyBestFirst(Heuristic heuristic) {
         this.heuristic = heuristic;
@@ -27,6 +32,7 @@ public class GreedyBestFirst extends Pathfinder {
         Set<String> visited = new HashSet<>();
 
         State start = new State(startBoard, "Start", null);
+        long startTime = System.nanoTime();
         int startH = heuristic.estimate(startBoard);
         openSet.add(new Node(start, startH));
         
@@ -46,6 +52,7 @@ public class GreedyBestFirst extends Pathfinder {
             }
 
             if (board.isSolved()) {
+                this.runtimeNano = System.nanoTime() - startTime;
                 System.out.println("Solution found after expanding " + expandedNodes + " nodes!");
                 return reconstructStatePath(currState);
             }
@@ -61,7 +68,7 @@ public class GreedyBestFirst extends Pathfinder {
                 }
             }
         }
-
+        this.runtimeNano = System.nanoTime() - startTime;
         System.out.println("No solution found after expanding " + expandedNodes + " nodes.");
         return new ArrayList<>();
     }

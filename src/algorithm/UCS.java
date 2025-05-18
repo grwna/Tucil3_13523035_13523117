@@ -12,6 +12,11 @@ import model.Board;
 import model.State;
 
 public class UCS extends Pathfinder {
+    private long runtimeNano = -1;
+
+    public long getRuntimeNano() {
+        return this.runtimeNano;
+    }
 
     @Override
     public String getName() {
@@ -25,6 +30,7 @@ public class UCS extends Pathfinder {
         Map<String, Integer> gScore = new HashMap<>();
 
         State start = new State(startBoard, "Start", null);
+        long startTime = System.nanoTime();
         openSet.add(new Node(start, 0));
         String startBoardKey = Pathfinder.boardToString(startBoard);
         gScore.put(startBoardKey, 0);
@@ -44,6 +50,7 @@ public class UCS extends Pathfinder {
             }
 
             if (board.isSolved()) {
+                this.runtimeNano = System.nanoTime() - startTime;
                 System.out.println("Solution found after expanding " + expandedNodes + " nodes!");
                 return reconstructStatePath(currState);
             }
@@ -62,7 +69,7 @@ public class UCS extends Pathfinder {
                 }
             }
         }
-
+        this.runtimeNano = System.nanoTime() - startTime;
         System.out.println("No solution found after expanding " + expandedNodes + " nodes.");
         return new ArrayList<>();
     }

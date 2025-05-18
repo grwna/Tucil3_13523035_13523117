@@ -48,6 +48,7 @@ public class GUI extends Application {
     public String heuristic;
     public String filePath;
     public Board board;
+    public Pathfinder solver;
     public List<State> solution;
     public Stage primaryStage;
     public StackPane boardDisplayArea;
@@ -380,7 +381,7 @@ public class GUI extends Application {
     }
 
     public void startSearch() {
-        Pathfinder solver = null;
+        this.solver = null;
         if ("Uniform Cost Search".equals(this.algorithm)) {
             solver = new UCS();
         } else if ("Greedy Best First Search".equals(this.algorithm)) {
@@ -398,7 +399,7 @@ public class GUI extends Application {
         } else if ("Iterative Deepening Search".equals(this.algorithm)){
             solver = new IDDFS();
         }
-        this.solution = solver.solve(this.board);
+        this.solution = this.solver.solve(this.board);
         if (this.solution.isEmpty()) {
             inputError("No solution found.", false);
             return;
@@ -442,10 +443,10 @@ public class GUI extends Application {
             this.boardDisplayArea.getChildren().add(finalBoardView);
         }
 
-        Label timeLabel = new Label("Execution time: " + "time");
+        Label timeLabel = new Label("Execution time: " + this.solver.getRuntimeNano()/1e6 + "ms");
         timeLabel.setFont(Font.font("Arial", FontWeight.NORMAL, 18));
 
-        Label nodesLabel = new Label("Nodes visited: " + "nodes");
+        Label nodesLabel = new Label("Nodes visited: " + this.solver.get);
         nodesLabel.setFont(Font.font("Arial", FontWeight.NORMAL, 18));
 
         VBox infoBox = new VBox(5);

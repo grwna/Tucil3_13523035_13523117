@@ -10,12 +10,17 @@ import model.Position;
 import model.State;
 
 public class Pathfinder {
+    private  long runtimeNano = -1;
     public List<State> solve(Board startBoard) {
         throw new UnsupportedOperationException("Method not implemented");
     }
 
     public String getName() {
         return "Abstract Pathfinder";
+    }
+
+    public long getRuntimeNano() {
+        return this.runtimeNano;
     }
 
     protected List<State> generateNeighbors(State current) {
