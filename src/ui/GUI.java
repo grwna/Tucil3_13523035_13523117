@@ -350,6 +350,7 @@ public class GUI extends Application {
         initialBoardLabel.setFont(Font.font("Arial", FontWeight.BOLD, 20));
         initialBoardLabel.setPadding(new Insets(0,0,10,0));
 
+        // below the above label and before the board is drawn add an input field for delay in ms, (make sure only double values are allowed)
 
         Button startSearchButton = createButton("Start Search", e -> {});
         Button backButton = createButton("Back to Inputs", e -> {userInputs();});
