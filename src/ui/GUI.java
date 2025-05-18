@@ -64,20 +64,6 @@ public class GUI extends Application {
     public StackPane boardDisplayArea;
 
     static int FILE_PATH_FIELD_WIDTH = 300;
-    static int INPUT_BTN_WIDTH = 120;
-    static int INPUT_BTN_HEIGHT = 30;
-    final static private Map<Character, Color> pieceColors = new HashMap<>();
-    static {
-        pieceColors.put('A', Color.CYAN); pieceColors.put('B', Color.MAGENTA); pieceColors.put('C', Color.YELLOW);
-        pieceColors.put('D', Color.ORANGE); pieceColors.put('E', Color.SPRINGGREEN); pieceColors.put('F', Color.DODGERBLUE);
-        pieceColors.put('G', Color.VIOLET); pieceColors.put('H', Color.GOLD); pieceColors.put('I', Color.LIGHTPINK);
-        pieceColors.put('J', Color.TURQUOISE); pieceColors.put('L', Color.SALMON); pieceColors.put('M', Color.KHAKI);  
-        pieceColors.put('N', Color.SKYBLUE); pieceColors.put('O', Color.PLUM); pieceColors.put('Q', Color.LIGHTGREEN);
-        pieceColors.put('R', Color.CORAL); pieceColors.put('S', Color.HOTPINK); pieceColors.put('T', Color.DARKVIOLET);
-        pieceColors.put('U', Color.BEIGE); pieceColors.put('V', Color.ORANGERED); pieceColors.put('W', Color.BROWN);
-        pieceColors.put('X', Color.BLUE); pieceColors.put('Y', Color.AZURE); pieceColors.put('Z', Color.OLIVEDRAB);
-    }
-
 
     @Override
     public void start(Stage primaryStage) {
@@ -197,11 +183,11 @@ public class GUI extends Application {
         TextField filePathField = new TextField();
         filePathField.setPromptText("e.g., /path/to/your/puzzle.txt");
         filePathField.setPrefWidth(FILE_PATH_FIELD_WIDTH);
-        filePathField.setPrefHeight(INPUT_BTN_HEIGHT);
+        filePathField.setPrefHeight(GUIHelper.INPUT_BTN_HEIGHT);
         filePathField.setEditable(false);
 
         
-        Button browseButton = createButton("Browse...", e -> {
+        Button browseButton = GUIHelper.createButton("Browse...", e -> {
             FileChooser fileChooser = new FileChooser();
             fileChooser.setTitle("Open Configuration File");
             fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Text Files", "*.txt"));
@@ -218,7 +204,7 @@ public class GUI extends Application {
         // End of File Input Elements
 
         
-        Button nextButton = createButton("Next", e -> {
+        Button nextButton = GUIHelper.createButton("Next", e -> {
              this.filePath = filePathField.getText();
 
             if (this.algorithm == null || this.algorithm.isEmpty()) {
@@ -237,7 +223,7 @@ public class GUI extends Application {
         });
 
         
-        Button backButton = createButton("Back", e-> {titleScreen();});
+        Button backButton = GUIHelper.createButton("Back", e-> {titleScreen();});
 
         HBox navigationButtonBox = new HBox(20, backButton, nextButton);
         navigationButtonBox.setAlignment(Pos.CENTER);
@@ -297,7 +283,7 @@ public class GUI extends Application {
         heuristicBox.setAlignment(Pos.CENTER);
         // End of Heuristic Elements
 
-        Button nextButton = createButton("Next", e->{
+        Button nextButton = GUIHelper.createButton("Next", e->{
             if (this.heuristic == null || this.heuristic.isEmpty()) {
                 System.out.println("Please select a heuristic.");
                 return;
@@ -305,7 +291,7 @@ public class GUI extends Application {
             processInput();
         });
 
-        Button backButton = createButton("Back", e->{userInputs();});
+        Button backButton = GUIHelper.createButton("Back", e->{userInputs();});
 
         HBox navigationButtonBox = new HBox(20, backButton, nextButton);
         navigationButtonBox.setAlignment(Pos.CENTER);
@@ -335,7 +321,7 @@ public class GUI extends Application {
     public void initSearch() {
         this.boardDisplayArea = new StackPane();
 
-        VBox boardViewFromDrawBoard = drawBoard(this.board);
+        VBox boardViewFromDrawBoard = GUIHelper.drawBoard(this.board);
         if (boardViewFromDrawBoard != null) {
             this.boardDisplayArea.getChildren().add(boardViewFromDrawBoard);
         }
@@ -402,8 +388,8 @@ public class GUI extends Application {
         delayInputBox.setAlignment(Pos.CENTER);
 
 
-        Button startSearchButton = createButton("Start Search", e -> {});
-        Button backButton = createButton("Back to Inputs", e -> {userInputs();});
+        Button startSearchButton = GUIHelper.createButton("Start Search", e -> {});
+        Button backButton = GUIHelper.createButton("Back to Inputs", e -> {userInputs();});
         startSearchButton.setOnAction(e -> {
             startSearchButton.setDisable(true);
             backButton.setDisable(true);
@@ -493,7 +479,7 @@ public class GUI extends Application {
                                 event -> {
                                     Board intermediateBoard = Board.createIntermediateBoard(prevState.board, currentState.board, pieceId, direction, currentStep, steps);
                                     
-                                    VBox newBoardView = drawBoard(intermediateBoard);
+                                    VBox newBoardView = GUIHelper.drawBoard(intermediateBoard);
                                     if (newBoardView != null) {
                                         this.boardDisplayArea.getChildren().clear();
                                         newBoardView.setAlignment(Pos.CENTER);
@@ -508,7 +494,7 @@ public class GUI extends Application {
                 }
             } else {
                 KeyFrame startFrame = new KeyFrame(Duration.ZERO, event -> {
-                    VBox newBoardView = drawBoard(currentState.board);
+                    VBox newBoardView = GUIHelper.drawBoard(currentState.board);
                     if (newBoardView != null) {
                         this.boardDisplayArea.getChildren().clear();
                         newBoardView.setAlignment(Pos.CENTER);
@@ -535,7 +521,7 @@ public class GUI extends Application {
     public void solutionsFound(){
         this.boardDisplayArea.getChildren().clear();
 
-        VBox finalBoardView = drawBoard(this.board);
+        VBox finalBoardView = GUIHelper.drawBoard(this.board);
         if (finalBoardView != null) {
             finalBoardView.setAlignment(Pos.CENTER);
             this.boardDisplayArea.getChildren().add(finalBoardView);
@@ -556,8 +542,8 @@ public class GUI extends Application {
         finalStateTitleLabel.setFont(Font.font("Arial", FontWeight.BOLD, 20));
         finalStateTitleLabel.setPadding(new Insets(10, 0, 0, 0));
         
-        Button backToTitleButton = createButton("Back to Inputs", e -> userInputs());
-        Button replayButton = createButton("Replay", e -> {
+        Button backToTitleButton = GUIHelper.createButton("Back to Inputs", e -> userInputs());
+        Button replayButton = GUIHelper.createButton("Replay", e -> {
             if (this.solution != null && !this.solution.isEmpty()) {
                 System.out.println("Replay button clicked!");
                 ((Button)e.getSource()).setDisable(true);
@@ -568,7 +554,7 @@ public class GUI extends Application {
                 inputError("No solution path available to replay.", false);
             }
         });
-        Button saveButton = createButton("Save Solution", e->{});
+        Button saveButton = GUIHelper.createButton("Save Solution", e->{});
         saveButton.setOnAction(e -> {saveToFile(solution, algorithm, animationDelay, saveButton);});
 
         HBox buttonControlBox = new HBox(20, backToTitleButton, replayButton, saveButton);
@@ -578,7 +564,7 @@ public class GUI extends Application {
         VBox solutionScreenLayout = new VBox(20);
         solutionScreenLayout.setAlignment(Pos.CENTER);
         solutionScreenLayout.setPadding(new Insets(20));
-        solutionScreenLayout.getChildren().addAll(finalStateTitleLabel,this.boardDisplayArea,infoBox,buttonControlBox);
+        solutionScreenLayout.getChildren().addAll(finalStateTitleLabel, this.boardDisplayArea, infoBox, buttonControlBox);
 
         double sceneWidth = 800;
         double sceneHeight = 700;
@@ -592,91 +578,12 @@ public class GUI extends Application {
         this.primaryStage.centerOnScreen();
     }
 
-    public VBox drawBoard(Board board) {
-        GridPane gridPane = new GridPane();
-        gridPane.setAlignment(Pos.CENTER);
-        gridPane.setPadding(new Insets(10));
-        gridPane.setHgap(1);
-        gridPane.setVgap(1);
-
-        int displayRows = board.rows;
-        int displayCols = board.cols;
-
-        double cellSize = 50;
-        gridPane.setMinSize(displayCols * cellSize, displayRows * cellSize);
-
-        for (int i = 0; i < displayRows; i++) {
-            for (int j = 0; j < displayCols; j++) {
-                StackPane cellPane = new StackPane();
-                cellPane.setPrefSize(cellSize, cellSize);
-
-                Rectangle cellRect = new Rectangle(cellSize, cellSize);
-                Label pieceLabel = new Label("");
-                pieceLabel.setFont(Font.font("Arial", FontWeight.BOLD, cellSize * 0.6));
-
-                char pieceChar = (board.grid != null && i < board.grid.length && j < board.grid[i].length)? board.grid[i][j] : '.';
-                pieceLabel.setText(String.valueOf(pieceChar));
-
-                if (pieceChar == '.') {
-                    pieceLabel.setText("");
-                    cellRect.setFill(Color.LIGHTGRAY);
-                    cellRect.setStroke(Color.DARKGRAY);
-                } else if (pieceChar == 'P') {
-                    cellRect.setFill(Color.RED);
-                    cellRect.setStroke(Color.DARKRED);
-                    pieceLabel.setTextFill(Color.WHITE);
-                } else if (pieceChar == 'K') {
-                    cellRect.setFill(Color.LIME);
-                    cellRect.setStroke(Color.GREEN);
-                    pieceLabel.setTextFill(Color.BLACK);
-                }else if (pieceChar == ' '){
-                    continue;
-                }else {
-                    Color pieceColor = pieceColors.get(pieceChar);
-                    cellRect.setFill(pieceColor);
-                    cellRect.setStroke(pieceColor.darker());
-
-                    // contrasting text color
-                    if (pieceColor.getBrightness() * pieceColor.getSaturation() < 0.15) {
-                        pieceLabel.setTextFill(Color.WHITE);
-                    } else {
-                        pieceLabel.setTextFill(Color.BLACK);
-                    }
-                }
-                cellPane.getChildren().addAll(cellRect, pieceLabel);
-                gridPane.add(cellPane, j, i);
-            }
-        }
-
-        VBox boardLayout = new VBox(20, gridPane);
-        boardLayout.setAlignment(Pos.CENTER);
-        boardLayout.setPadding(new Insets(20));
-
-        return boardLayout;
-    }
-
-    public Button createButton(String title, EventHandler<ActionEvent> action) {
-        Button button = new Button(title);
-        button.setPrefWidth(INPUT_BTN_WIDTH);
-        button.setPrefHeight(INPUT_BTN_HEIGHT);
-        button.setOnAction(action);
-        return button;
-    }
-
     public void saveToFile(List<State> solution, String algorithmName, double executionTime, Button callerButton){
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Save Solution As");
 
         // Default file name
-        String initialFileName = "solution_";
-        if (this.solver != null && this.solver.getName() != null && !this.solver.getName().isEmpty()) {
-            initialFileName += this.solver.getName().replaceAll("[^a-zA-Z0-9.-]", "_");
-        } else if (algorithmName != null && !algorithmName.isEmpty()){
-            initialFileName += algorithmName.replaceAll("[^a-zA-Z0-9.-]", "_");
-        } else {
-            initialFileName += "output";
-        }
-        initialFileName += ".txt";
+        String initialFileName = "solution.txt";
 
         fileChooser.setInitialFileName(initialFileName);
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Text Files (*.txt)", "*.txt"));
@@ -723,7 +630,7 @@ public class GUI extends Application {
         errorMessageLabel.setTextAlignment(TextAlignment.CENTER);
         errorMessageLabel.setMaxWidth(400);
 
-        Button backButton = createButton("Back to inputs", e-> {userInputs();});
+        Button backButton = GUIHelper.createButton("Back to inputs", e-> {userInputs();});
 
         VBox errorLayout = new VBox(30);
         errorLayout.getChildren().addAll(errorTitleLabel, errorMessageLabel, backButton);

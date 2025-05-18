@@ -10,9 +10,6 @@ build:
 run:
 	@java --module-path $(JAVAFX) --add-modules $(MODULES) -cp $(BIN_DIR)/classes Main
 
-run-ui:
-	@java --module-path $(JAVAFX) --add-modules $(MODULES) -cp $(BIN_DIR)/classes Main --gui
-
 clean:
 	@mvn clean
 
