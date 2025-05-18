@@ -106,7 +106,32 @@ public class InputParser {
                 actualRows++;
 
                 char[] lineChars;
+                String originalLine = currentLine;
                 currentLine = currentLine.replaceAll(" ", "");
+                
+                // Check for K at left side
+                boolean hasLeftK = false;
+                if (currentLine.length() > 0 && currentLine.charAt(0) == 'K') {
+                    if (totalKCount > 0) throw new IOException("Multiple K definitions found (total so far: " + totalKCount + ")");
+                    hasLeftK = true;
+                    exit = new Position(i + 1, 0);
+                    grid[i+1][0] = 'K';
+                    currentLine = currentLine.substring(1);
+                    totalKCount++;
+                }
+                
+                // Check for K at right side
+                boolean hasRightK = false;
+                if (currentLine.length() > 0 && currentLine.charAt(currentLine.length() - 1) == 'K') {
+                    if (totalKCount > 0) throw new IOException("Multiple K definitions found (total so far: " + totalKCount + ")");
+                    hasRightK = true;
+                    exit = new Position(i + 1, usableCols + 1);
+                    grid[i+1][usableCols+1] = 'K';
+                    currentLine = currentLine.substring(0, currentLine.length() - 1);
+                    totalKCount++;
+                }
+                
+                // Now check the board content length
                 if (currentLine.length() == usableCols) {
                     lineChars = currentLine.toCharArray();
                     for (int j = 0; j < usableCols; j++) {
@@ -119,33 +144,12 @@ public class InputParser {
                         if (c != ' ' && c != '.' && c != 'K') validSymbols.add(c);
                         grid[i+1][j+1] = c;
                     }
-                } else if (currentLine.length() == usableCols + 1) {
-                    if (totalKCount > 0) throw new IOException("Multiple K definitions found (total so far: " + totalKCount + ")");
-                    
-                    if (currentLine.charAt(0) == 'K') {
-                        exit = new Position(i + 1, 0);
-                        grid[i+1][0] = 'K';
-                        lineChars = currentLine.substring(1).toCharArray();
-                        totalKCount++;
-                    } else if (currentLine.charAt(usableCols) == 'K') {
-                        exit = new Position(i + 1, usableCols + 1);
-                        grid[i+1][usableCols+1] = 'K';
-                        lineChars = currentLine.substring(0, usableCols).toCharArray();
-                        totalKCount++;
-                    } else throw new IOException("Malformed line " + (i+1) + " (len " + (usableCols+1) + ", no K at ends).");
-
-                    for (int j = 0; j < usableCols; j++) {
-                        char c = lineChars[j];
-                        if (!isValidChar(c)) {
-                            throw new IOException("Invalid character '" + c + "' at (" + (i+1) + "," + (j+1) + "position)");
-                        }
-                        if (c == 'P') hasPrimaryPiece = true;
-                        if (c != ' ' && c != '.' && c != 'K') validSymbols.add(c);
-                        grid[i+1][j+1] = c;
-                    }
                 } else {
-                    throw new IOException("Row's length " + (i+1) + " (" + currentLine.length() + 
-                                         ") is not compatible with (" + usableCols + "board's width)");
+                    String errorMsg = "Row " + (i+1) + " has incorrect length. ";
+                    if (hasLeftK) errorMsg += "Found K at left, ";
+                    if (hasRightK) errorMsg += "Found K at right, ";
+                    errorMsg += "Current content length: " + currentLine.length() + ", expected: " + usableCols;
+                    throw new IOException(errorMsg);
                 }
             }
             
@@ -254,7 +258,7 @@ public class InputParser {
                 }
                 
                 if (!canReachExit) {
-                    throw new IOException(" Primary piece 'P' can't reach the exit 'K' because invalid orientation or position");
+                    throw new IOException("Primary piece 'P' can't reach the exit 'K' because invalid orientation or position");
                 }
             }
             

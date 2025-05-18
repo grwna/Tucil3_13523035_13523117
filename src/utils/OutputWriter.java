@@ -33,7 +33,6 @@ public class OutputWriter {
             writer.println("----------------------------------------------------------");
             State state = solution.get(0);
             writer.println("Start");
-            writer.println();
             for (int r = 0; r < state.board.rows; r++) {
                 for (int c = 0; c < state.board.cols; c++) {
                     writer.print(state.board.grid[r][c]);
@@ -42,8 +41,7 @@ public class OutputWriter {
             }
             writer.println("----------------------------------------------------------");
             state = solution.get(solution.size()-1);
-            writer.println("Finish State");
-            writer.println();
+            writer.println("Final State");
             for (int r = 0; r < state.board.rows; r++) {
                 for (int c = 0; c < state.board.cols; c++) {
                     writer.print(state.board.grid[r][c]);
