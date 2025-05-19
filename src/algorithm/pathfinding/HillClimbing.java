@@ -12,8 +12,8 @@ import model.State;
 
 public class HillClimbing extends Pathfinder {
     private Heuristic heuristic;
-    private static final int MAX_STEPS = 10000;
-    private static final int MAX_SIDEWAYS_MOVES = 10000; // kalo terlalu kecil cenderung no solutions found
+    private static final int MAX_STEPS = 1000000;
+    private static final int MAX_SIDEWAYS_MOVES = 1000000; // kalo terlalu kecil cenderung no solutions found
 
     public HillClimbing(Heuristic heuristic) {
         this.heuristic = heuristic;

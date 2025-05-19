@@ -261,7 +261,13 @@ public class InputParser {
                     throw new IOException("Primary piece 'P' can't reach the exit 'K' because invalid orientation or position");
                 }
             }
-            
+            for (char i = 'A'; i <= 'Z'; i++) {
+                if ((char) i != 'K' && pieces.containsKey((char)i)){
+                    if (pieces.get((char)i).length < 2 || pieces.get(i).length > 3){
+                        throw new IOException("Invalid piece length " + (char) i);
+                    }
+                }
+            }
             return new Board(usableRows + 2, usableCols + 2, grid, pieces, exit);
         } finally {
             br.close();
