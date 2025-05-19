@@ -1,16 +1,18 @@
 # <h1 align="center">Tugas Besar 2 IF2211 Strategi Algoritma</h1>
 <h2 align="center">Semester II tahun 2024/2025</h2>
-<h3 align="center">Recipe Search in Little Alchemy 2 Using BFS and DFS</h3>
+<h3 align="center">Rush Hour Puzzle Solver with Pathfinding Algorithms</h3>
 
 <p align="center">
-  <img src="doc/main.png" alt="Main" width="700">
+  <img src="doc/gambar.png" alt="Main" width="400">
 </p>
 
 ## Table of Contents
-- [Description](#description)
-- [DFS, BFS, & Bidirectional Search](#algorithms-implemented)
+- [Description](#-description)
+- [Features](#-features)
+- [Algorithms](#-algorithms)
+- [Heuristics](#-heuristics)
 - [Program Structure](#program-structure)
-- [Requirements & Installation](#requirements--installation)
+- [Usage](#usage)
 - [Author](#author)
 - [References](#references)
 
@@ -19,10 +21,13 @@
 - [Frontent Repository](https://github.com/azfaradhi/Tubes2_FE_Bolang)
 - [Youtube Demo](https://www.youtube.com/watch?v=Iq1JeTXSvfU)
 
-## Description
-This program is a web application for a Little Alchemy 2 element recipe finder. The application utilizes graph traversal methods such as Breadth-First Search, Depth-First Search, and Bidirectional Search to look for elements required to create your targe element. The resulting recipe will be visualized, with a live update visualization available as an option. 
+## 📖 Description
+This program is a Java application which is a solver for Rush Hour Puzzle. The application utilizes pathfinding algorithms such as A*, UCS, BFS and more, to look for valid solutions for a specific puzzle configuration. The resulting solution will be animated, with the ability to save the results into a text file. 
 
-## Algorithms Implemented
+## ✨ Features
+* asdasd
+
+## 🧠 Algorithms
 ### 1. BFS
 Breadth-First Search is implemented using search queues to keep track of nodes to visit, once the queues contain only basic elements, the recipe tree is saved.
 
@@ -32,10 +37,54 @@ Depth-First Search is implemented using recursion calls, where each valid nodes 
 ### 3. Bidirectional
 Bidirectional Search is done using BFS in two directions, forward search that starts with 4 basic elements, and backward search that starts at the target element. Once both directions meet, the nodes are combined to form the recipe tree
 
-## Program Structure
+## 🔢 Heuristics
 
-## Usage
-### - Dependencies -
+
+## Program Structure
+```
+├── bin
+├── doc
+│   └── LaporanTucil3_035_117
+├── LICENSE
+├── makefile
+├── pom.xml
+├── README.md
+├── src
+│   ├── algorithm
+│   │   ├── heuristic
+│   │   │   ├── BlockingCarsHeuristic.java
+│   │   │   ├── CombinedHeuristic.java
+│   │   │   ├── Heuristic.java
+│   │   │   └── ManhattanToExitHeuristic.java
+│   │   └── pathfinding
+│   │       ├── AStar.java
+│   │       ├── GreedyBestFirst.java
+│   │       ├── HillClimbing.java
+│   │       ├── IDDFS.java
+│   │       ├── Pathfinder.java
+│   │       └── UCS.java
+│   ├── Main.java
+│   ├── model
+│   │   ├── Board.java
+│   │   ├── Piece.java
+│   │   ├── Position.java
+│   │   └── State.java
+│   ├── parser
+│   │   └── InputParser.java
+│   ├── test
+│   │   └── java
+│   ├── ui
+│   │   ├── GUIHelper.java
+│   │   └── GUI.java
+│   └── utils
+│       ├── Direction.java
+│       └── OutputWriter.java
+└── test
+```
+
+
+## 🚀  Usage
+### Dependencies
 #### 1. Java Development Kit 
 * **Version** JDK 17 or newer
 * **Installation:** Get from [Oracle](https://www.oracle.com/id/java/technologies/downloads/).
@@ -55,16 +104,18 @@ Bidirectional Search is done using BFS in two directions, forward search that st
 
 ---
 
-###  - Installation -
+###  Installation
 #### Clone the Repository
 
 ```bash
 git clone https://github.com/grwna/Tucil3_13523035_13523117
+                        or 
+git clone git@github.com:grwna/Tucil3_13523035_13523117.git
 ```
 ---
 
-### 🚀 Running the Application
-Before compiling and running the application. Make sure to change `JAVAFX` path in makefile to your JavaFX installation path.
+### Running the Application
+**Before compiling and running the application. Make sure to change `JAVAFX` path in makefile to your JavaFX installation path.**
 
 Compile using `make build`
 
@@ -79,8 +130,6 @@ And use `make help` to see other available commands.
 | 13523117 | Ferdin Arsenarendra Purtadi    | [Ferdin-Arsenic](https://github.com/Ferdin-Arsenic) |
 
 ## References
-- [Spesifikasi Tugas Besar 2 Stima 2024/2025](https://docs.google.com/document/d/1aQB5USxfUCBfHmYjKl2wV5WdMBzDEyojE5yxvBO3pvc/edit?tab=t.0)
-- [Slide Kuliah IF2211 2024/2025 Algoritma BFS dan DFS (Bagian 1)](https://informatika.stei.itb.ac.id/~rinaldi.munir/Stmik/2024-2025/13-BFS-DFS-(2025)-Bagian1.pdf)
-- [Slide Kuliah IF2211 2024/2025 Algoritma BFS dan DFS (Bagian 2)](https://informatika.stei.itb.ac.id/~rinaldi.munir/Stmik/2024-2025/14-BFS-DFS-(2025)-Bagian2.pdf)
-- [Little Alchemy 2 Fandom](https://little-alchemy.fandom.com/wiki/Elements_(Little_Alchemy_2))
-- [Golang Documentation](https://go.dev/doc/)
+- [Spesifikasi Tugas Kecil 3 Stima 2024/2025](https://docs.google.com/document/d/1NXyjtIHs2_tWDD37MYtc0VhWtoU2wIH8A95ImttmMXk/edit?tab=t.0)
+- [Slide Kuliah IF2211 2024/2025 Penentuan Rute (Bagian 1)](https://informatika.stei.itb.ac.id/~rinaldi.munir/Stmik/2024-2025/21-Route-Planning-(2025)-Bagian1.pdf)
+- [Slide Kuliah IF2211 2024/2025 Penentuan Rute (Bagian 2)](https://informatika.stei.itb.ac.id/~rinaldi.munir/Stmik/2024-2025/22-Route-Planning-(2025)-Bagian2.pdf)
