@@ -2,24 +2,21 @@ package ui;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.function.UnaryOperator;
 
 import algorithm.AStar;
 import algorithm.BlockingCarsHeuristic;
+import algorithm.CombinedHeuristic;
 import algorithm.GreedyBestFirst;
+import algorithm.HillClimbing;
 import algorithm.IDDFS;
 import algorithm.ManhattanToExitHeuristic;
 import algorithm.Pathfinder;
 import algorithm.UCS;
-import algorithm.CombinedHeuristic;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -32,12 +29,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.TextAlignment;
@@ -153,6 +148,11 @@ public class GUI extends Application {
         iddfsRadio.setUserData("Iterative Deepening Search");
         iddfsRadio.setFont(Font.font("Arial", 16));
 
+        RadioButton hillClimbRadio = new RadioButton("Hill Climbing Search");
+        hillClimbRadio.setToggleGroup(algoToggleGroup);
+        hillClimbRadio.setUserData("Hill Climbing Search");
+        hillClimbRadio.setFont(Font.font("Arial", 16));
+
         aStarRadio.setSelected(true);
         this.algorithm = "A* Search";
 
@@ -163,7 +163,7 @@ public class GUI extends Application {
             }
         });
 
-        VBox radioButtonBox = new VBox(10, aStarRadio, greedyRadio, ucsRadio, iddfsRadio);
+        VBox radioButtonBox = new VBox(10, aStarRadio, greedyRadio, ucsRadio, iddfsRadio,hillClimbRadio);
         radioButtonBox.setAlignment(Pos.CENTER_LEFT);
 
         HBox radioContainer = new HBox(radioButtonBox);
@@ -215,7 +215,7 @@ public class GUI extends Application {
                 System.out.println("Please enter or browse for a configuration file.");
                 return;
             }
-            if (this.algorithm.equals("A* Search") || this.algorithm.equals("Greedy Best First Search")){
+            if (this.algorithm.equals("A* Search") || this.algorithm.equals("Greedy Best First Search") || this.algorithm.equals("Hill Climbing Search")){
                 heuristicInput();
             } else {
                 processInput();
@@ -333,7 +333,7 @@ public class GUI extends Application {
         infoBox.setAlignment(Pos.CENTER);
         infoBox.getChildren().add(algoDisplayLabel);
 
-        if (("A* Search".equals(this.algorithm) || "Greedy Best First Search".equals(this.algorithm))
+        if (("A* Search".equals(this.algorithm) || "Greedy Best First Search".equals(this.algorithm) || "Hill Climbing Search".equals(this.algorithm))
             && this.heuristic != null && !this.heuristic.isEmpty()) {
             Label heuristicDisplayLabel = new Label("Heuristic: " + this.heuristic);
             heuristicDisplayLabel.setFont(Font.font("Arial", FontWeight.NORMAL, 18));
@@ -377,17 +377,16 @@ public class GUI extends Application {
                 double delay = Double.parseDouble(newVal);
                 if (delay > 0) {
                     this.animationDelay = delay;
-                    System.out.println("Animation delay set to: " + this.animationDelay + " ms");
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Invalid delay input: " + newVal);
             }
         });
-
+        
         HBox delayInputBox = new HBox(10, delayInputLabel, delayTextField);
         delayInputBox.setAlignment(Pos.CENTER);
-
-
+        
+        
         Button startSearchButton = GUIHelper.createButton("Start Search", e -> {});
         Button backButton = GUIHelper.createButton("Back to Inputs", e -> {userInputs();});
         startSearchButton.setOnAction(e -> {
@@ -446,6 +445,14 @@ public class GUI extends Application {
             }
         } else if ("Iterative Deepening Search".equals(this.algorithm)){
             solver = new IDDFS();
+        } else if ("Hill Climbing Search".equals(this.algorithm)){
+             if ("Blocking Cars".equals(this.heuristic)) {
+                solver = new HillClimbing(new BlockingCarsHeuristic());
+            } else if ("Manhattan To Exit".equals(this.heuristic)) {
+                solver = new HillClimbing(new ManhattanToExitHeuristic());
+            } else if("Combined Heuristic".equals(this.heuristic)){
+                solver = new HillClimbing(new CombinedHeuristic());
+            }
         }
         this.solution = this.solver.solve(this.board);
         if (this.solution.isEmpty()) {
