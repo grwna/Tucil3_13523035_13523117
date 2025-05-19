@@ -14,6 +14,17 @@ public class HillClimbing extends Pathfinder {
     private Heuristic heuristic;
     private static final int MAX_STEPS = 1000000;
     private static final int MAX_SIDEWAYS_MOVES = 1000000; // kalo terlalu kecil cenderung no solutions found
+    private long runtimeNano = -1;
+    private int nodes;
+
+    public long getRuntimeNano() {
+        return this.runtimeNano;
+    }
+
+    public int getNodes(){
+        return this.nodes;
+    }
+
 
     public HillClimbing(Heuristic heuristic) {
         this.heuristic = heuristic;
@@ -27,12 +38,16 @@ public class HillClimbing extends Pathfinder {
     @Override
     public List<State> solve(Board startBoard) {
         System.out.println("Starting Hill Climbing search using " + heuristic.toString() + "...");
+
+        this.nodes = 0;
+        long startTime = System.nanoTime();
         
         State currentState = new State(startBoard, "Start", null);
         int currentHeuristicValue = heuristic.estimate(currentState.board);
         int stepsTaken = 0;
         int consecutiveSidewaysMoves = 0;
-        
+        this.nodes++;
+
         Set<String> visitedStatesThisAttempt = new HashSet<>(); 
 
         while (stepsTaken < MAX_STEPS) {
@@ -57,6 +72,7 @@ public class HillClimbing extends Pathfinder {
             }
 
             for (State neighbor : neighbors) {
+                this.nodes++;
                 String neighborBoardKey = boardToString(neighbor.board);
                 if (visitedStatesThisAttempt.contains(neighborBoardKey)) {continue;}
 
@@ -82,6 +98,8 @@ public class HillClimbing extends Pathfinder {
             }
             stepsTaken++;
         }
+
+        this.runtimeNano = System.nanoTime() - startTime;
 
         if (currentState.board.isSolved()) {
              System.out.println("Solution found at MAX_STEPS (" + stepsTaken + ").");

@@ -87,21 +87,13 @@ public class GUI extends Application {
         titleBox.getChildren().addAll(titleLabel, authorLabel);
         titleBox.setAlignment(Pos.CENTER);
 
-        Button startButton = new Button("Start");
+        Button startButton = GUIHelper.createButton("Start", e -> {userInputs();});
         startButton.setPrefWidth(170);
         startButton.setPrefHeight(40);
-        startButton.setOnAction(e -> {
-            System.out.println("Start button clicked on title screen!");
-            userInputs();
-        });
 
-        Button exitButton = new Button("Exit");
+        Button exitButton = GUIHelper.createButton("Exit", e -> {this.primaryStage.close();});
         exitButton.setPrefWidth(170);
         exitButton.setPrefHeight(40);
-        exitButton.setOnAction(e -> {
-            System.out.println("Exit button clicked!");
-            this.primaryStage.close();
-        });
 
         VBox buttonBox = new VBox(30);
         buttonBox.getChildren().addAll(startButton, exitButton);
