@@ -89,7 +89,7 @@ public class Pathfinder {
         int targetCol = (deltaCol > 0) ? 
         piece.start.col + piece.length + deltaCol - 1 : piece.start.col + deltaCol; 
         
-        if (targetCol < 0 || targetCol >= board.cols) {
+        if (targetCol < 1 || targetCol >= board.cols-1) {
             return false;
         }
         
@@ -127,7 +127,7 @@ public class Pathfinder {
         int targetRow = (deltaRow > 0) ? 
                         piece.start.row + piece.length + deltaRow - 1 : // untuk ke bawah
                         piece.start.row + deltaRow; // untuk ke atas
-        if (targetRow < 0 || targetRow >= board.rows) {
+        if (targetRow < 1 || targetRow >= board.rows-1) {
             return false;
         }
         

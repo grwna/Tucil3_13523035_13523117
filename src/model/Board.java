@@ -86,6 +86,12 @@ public class Board {
         return Arrays.deepHashCode(this.grid);
     }
 
+    public boolean isInEdge(Position pos){
+        if (pos.col == 0 || pos.row == 0) return true;
+        if (pos.col == this.cols-1 || pos.row == this.rows-1) return true;
+        return false;
+    }
+
     public void print() {
         for (int i = 0; i < this.rows; i++) {
             for (int j = 0; j < this.cols; j++) {
