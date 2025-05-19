@@ -1,7 +1,6 @@
 package parser;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -30,12 +29,6 @@ public class InputParser {
     }
 
     public static Board parseFromFile(String path) throws IOException {
-        // Validasi file ada
-        File inputFile = new File(path);
-        if (!inputFile.exists() || !inputFile.isFile()) {
-            throw new IOException("File is not found: " + path);
-        }
-
         BufferedReader br = new BufferedReader(new FileReader(path));
         Position exit = null;
         char[][] grid;
@@ -46,7 +39,6 @@ public class InputParser {
         boolean hasPrimaryPiece = false;
 
         try {
-            // Validasi 
             String dimsLine = br.readLine();
             if (dimsLine == null) throw new IOException("Missing dimensions line.");
             String[] sizeParts = dimsLine.split(" ");
@@ -99,7 +91,6 @@ public class InputParser {
             for (int i = 0; i < usableRows; i++) {
                 String currentLine = (i == 0 && lineForKAboveOrFirstGrid != null) ? lineForKAboveOrFirstGrid : br.readLine();
                 while (currentLine != null && currentLine.trim().isEmpty()) {
-                    // Lewati baris kosong
                     currentLine = br.readLine();
                 }
                 if (currentLine == null) throw new IOException("EOF: Expected " + usableRows + " grid rows, found " + i);
@@ -109,7 +100,7 @@ public class InputParser {
                 String originalLine = currentLine;
                 currentLine = currentLine.replaceAll(" ", "");
                 
-                // Check for K at left side
+                // K di kiri
                 boolean hasLeftK = false;
                 if (currentLine.length() > 0 && currentLine.charAt(0) == 'K') {
                     if (totalKCount > 0) throw new IOException("Multiple K definitions found (total so far: " + totalKCount + ")");
@@ -120,7 +111,7 @@ public class InputParser {
                     totalKCount++;
                 }
                 
-                // Check for K at right side
+                // K di kanan
                 boolean hasRightK = false;
                 if (currentLine.length() > 0 && currentLine.charAt(currentLine.length() - 1) == 'K') {
                     if (totalKCount > 0) throw new IOException("Multiple K definitions found (total so far: " + totalKCount + ")");
@@ -131,7 +122,6 @@ public class InputParser {
                     totalKCount++;
                 }
                 
-                // Now check the board content length
                 if (currentLine.length() == usableCols) {
                     lineChars = currentLine.toCharArray();
                     for (int j = 0; j < usableCols; j++) {
@@ -258,7 +248,7 @@ public class InputParser {
                 }
                 
                 if (!canReachExit) {
-                    throw new IOException("Primary piece 'P' can't reach the exit 'K' because invalid orientation or position");
+                    throw new IOException("Primary piece 'P' can't reach the exit 'K' (Make sure no extra whitespace on the board!)");
                 }
             }
             for (char i = 'A'; i <= 'Z'; i++) {

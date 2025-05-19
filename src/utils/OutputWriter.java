@@ -19,31 +19,25 @@ public class OutputWriter {
             writer.println("Execution time: " + String.format("%.3f ms", executionTime));
             writer.println();
             writer.println("----------------------------------------------------------");
-            State state = solution.get(0);
-            writer.println("Start");
-            for (int r = 0; r < state.board.rows; r++) {
-                for (int c = 0; c < state.board.cols; c++) {
-                    writer.print(state.board.grid[r][c]);
-                }
-                writer.println();
-            }
-            writer.println("----------------------------------------------------------");
-            state = solution.get(solution.size()-1);
-            writer.println("Final State");
-            for (int r = 0; r < state.board.rows; r++) {
-                for (int c = 0; c < state.board.cols; c++) {
-                    writer.print(state.board.grid[r][c]);
-                }
-                writer.println();
-            }
-            writer.println("----------------------------------------------------------");
             writer.println("SOLUTION STEPS:");
             writer.println("----------------------------------------------------------");
-            
+            State state;
             for (int i = 1; i < solution.size(); i++) {
                 state = solution.get(i);
                 writer.println("Move " + i + ": " + state.move);
             }
+            writer.println("\n");
+            for (int i = 0; i < solution.size(); i++){
+                state = solution.get(i);
+                writer.print("\nMove " + i + ": " + state.move);
+                for (int r = 0; r < state.board.rows; r++) {
+                    for (int c = 0; c < state.board.cols; c++) {
+                        writer.print(state.board.grid[r][c]);
+                    }
+                    writer.println();
+                }
+            }
+            writer.println("----------------------------------------------------------");
             writer.println("\nSolution finished. Game solved successfully!");
         }
         

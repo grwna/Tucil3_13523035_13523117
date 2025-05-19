@@ -40,20 +40,26 @@ public class Board {
         return new Board(rows, cols, copiedGrid, copiedPieces, exit.copy());
     }
 
-    public boolean isSolved() {
+   public boolean isSolved() {
         Piece primary = pieces.get('P');
         if (primary.isHorizontal) {
-            if (primary.start.row != this.exit.row) {
-                return false;
-            }
-            return (primary.start.col == this.exit.col || primary.start.col + primary.length - 1 == this.exit.col);
+            if (primary.start.row != this.exit.row) {return false;}
 
-        } else { // Vertical
-            if (primary.start.col != this.exit.col) {
-                return false;
+            for (int i = 0; i < primary.length; i++) {
+                if (primary.start.col + i == this.exit.col) {
+                    return true;
+                }
             }
-            return (primary.start.row == this.exit.row || primary.start.row + primary.length - 1 == this.exit.row);
+        } else {
+            if (primary.start.col != this.exit.col) {return false;}
+           
+            for (int i = 0; i < primary.length; i++) {
+                if (primary.start.row + i == this.exit.row) {
+                    return true;
+                }
+            }
         }
+        return false;
     }
 
     public Set<Position> getOccupiedPositions(Piece piece) {

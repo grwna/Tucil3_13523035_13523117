@@ -337,10 +337,10 @@ public class GUI extends Application {
 
         Label delayInputLabel = new Label("Animation Delay (ms):");
         delayInputLabel.setFont(Font.font("Arial", FontWeight.NORMAL, 16));
-        this.animationDelay = 500;
+        this.animationDelay = 100;
         TextField delayTextField = new TextField();
         delayTextField.setPrefWidth(80);
-        delayTextField.setPromptText("500");
+        delayTextField.setPromptText("100");
         UnaryOperator<TextFormatter.Change> filter = change -> {
             String newText = change.getControlNewText();
             if (newText.matches("\\d*\\.?\\d*")) { // digits and only one decimal point
