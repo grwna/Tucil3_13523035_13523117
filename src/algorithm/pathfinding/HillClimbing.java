@@ -12,8 +12,8 @@ import model.State;
 
 public class HillClimbing extends Pathfinder {
     private Heuristic heuristic;
-    private static final int MAX_STEPS = 1000000;
-    private static final int MAX_SIDEWAYS_MOVES = 1000000; // kalo terlalu kecil cenderung no solutions found
+    private static final int MAX_STEPS = 1000000000;
+    private static final int MAX_SIDEWAYS_MOVES = 1000000000; // kalo terlalu kecil cenderung no solutions found
     private long runtimeNano = -1;
     private int nodes;
 
@@ -52,6 +52,7 @@ public class HillClimbing extends Pathfinder {
 
         while (stepsTaken < MAX_STEPS) {
             if (currentState.board.isSolved()) {
+                this.runtimeNano = System.nanoTime() - startTime;
                 System.out.println("Solution found after " + stepsTaken + " steps (" + consecutiveSidewaysMoves + " final sideways).");
                 return reconstructStatePath(currentState);
             }
