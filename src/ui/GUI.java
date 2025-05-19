@@ -5,15 +5,15 @@ import java.io.IOException;
 import java.util.List;
 import java.util.function.UnaryOperator;
 
-import algorithm.AStar;
-import algorithm.BlockingCarsHeuristic;
-import algorithm.CombinedHeuristic;
-import algorithm.GreedyBestFirst;
-import algorithm.HillClimbing;
-import algorithm.IDDFS;
-import algorithm.ManhattanToExitHeuristic;
-import algorithm.Pathfinder;
-import algorithm.UCS;
+import algorithm.heuristic.BlockingCarsHeuristic;
+import algorithm.heuristic.CombinedHeuristic;
+import algorithm.heuristic.ManhattanToExitHeuristic;
+import algorithm.pathfinding.AStar;
+import algorithm.pathfinding.GreedyBestFirst;
+import algorithm.pathfinding.HillClimbing;
+import algorithm.pathfinding.IDDFS;
+import algorithm.pathfinding.Pathfinder;
+import algorithm.pathfinding.UCS;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
@@ -371,13 +371,10 @@ public class GUI extends Application {
                 }
             }, this.animationDelay, filter);
         delayTextField.setTextFormatter(delayFormatter);
-
         delayTextField.textProperty().addListener((obs, oldVal, newVal) -> {
             try {
                 double delay = Double.parseDouble(newVal);
-                if (delay > 0) {
-                    this.animationDelay = delay;
-                }
+                if (delay > 0) {this.animationDelay = delay;}
             } catch (NumberFormatException e) {
                 System.out.println("Invalid delay input: " + newVal);
             }
@@ -387,8 +384,8 @@ public class GUI extends Application {
         delayInputBox.setAlignment(Pos.CENTER);
         
         
-        Button startSearchButton = GUIHelper.createButton("Start Search", e -> {});
-        Button backButton = GUIHelper.createButton("Back to Inputs", e -> {userInputs();});
+        Button startSearchButton = GUIHelper.createButton("Start", e -> {});
+        Button backButton = GUIHelper.createButton("Back", e -> {userInputs();});
         startSearchButton.setOnAction(e -> {
             startSearchButton.setDisable(true);
             backButton.setDisable(true);
@@ -549,7 +546,7 @@ public class GUI extends Application {
         finalStateTitleLabel.setFont(Font.font("Arial", FontWeight.BOLD, 20));
         finalStateTitleLabel.setPadding(new Insets(10, 0, 0, 0));
         
-        Button backToTitleButton = GUIHelper.createButton("Back to Inputs", e -> userInputs());
+        Button backToTitleButton = GUIHelper.createButton("Back", e -> userInputs());
         Button replayButton = GUIHelper.createButton("Replay", e -> {
             if (this.solution != null && !this.solution.isEmpty()) {
                 System.out.println("Replay button clicked!");
@@ -561,8 +558,8 @@ public class GUI extends Application {
                 inputError("No solution path available to replay.", false);
             }
         });
-        Button saveButton = GUIHelper.createButton("Save Solution", e->{});
-        saveButton.setOnAction(e -> {saveToFile(solution, algorithm, animationDelay, saveButton);});
+        Button saveButton = GUIHelper.createButton("Save", e->{});
+        saveButton.setOnAction(e -> {saveToFile(this.solution, this.algorithm, this.solver.getRuntimeNano()/1e6 , saveButton);});
 
         HBox buttonControlBox = new HBox(20, backToTitleButton, replayButton, saveButton);
         buttonControlBox.setAlignment(Pos.CENTER);
@@ -637,7 +634,7 @@ public class GUI extends Application {
         errorMessageLabel.setTextAlignment(TextAlignment.CENTER);
         errorMessageLabel.setMaxWidth(400);
 
-        Button backButton = GUIHelper.createButton("Back to inputs", e-> {userInputs();});
+        Button backButton = GUIHelper.createButton("Back", e-> {userInputs();});
 
         VBox errorLayout = new VBox(30);
         errorLayout.getChildren().addAll(errorTitleLabel, errorMessageLabel, backButton);

@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.pathfinding;
 
 import java.util.ArrayList;
 import java.util.Collections;

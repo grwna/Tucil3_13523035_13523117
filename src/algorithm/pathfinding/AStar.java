@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.pathfinding;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,10 +8,12 @@ import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Set;
 
+import algorithm.heuristic.Heuristic;
 import model.Board;
 import model.State;
 
-public class UCS extends Pathfinder {
+public class AStar extends Pathfinder {
+    private Heuristic heuristic;
     private long runtimeNano = -1;
     private int nodes;
 
@@ -23,26 +25,32 @@ public class UCS extends Pathfinder {
         return this.nodes;
     }
 
+    public AStar(Heuristic heuristic) {
+        this.heuristic = heuristic;
+    }
+
     @Override
     public String getName() {
-        return "Uniform Cost Search";
+        return "A* Search with " + heuristic.toString();
     }
 
     @Override
     public List<State> solve(Board startBoard) {
         PriorityQueue<Node> openSet = new PriorityQueue<>();
-        Set<String> visited = new HashSet<>();
         Map<String, Integer> gScore = new HashMap<>();
+        Set<String> visited = new HashSet<>();
 
         State start = new State(startBoard, "Start", null);
         long startTime = System.nanoTime();
-        openSet.add(new Node(start, 0));
+        int startH = heuristic.estimate(start.board);
+        openSet.add(new Node(start, startH, 0));
         String startBoardKey = Pathfinder.boardToString(startBoard);
         gScore.put(startBoardKey, 0);
 
-        System.out.println("Starting UCS search...");
+        System.out.println("Starting A* search with " + heuristic.toString() + "...");
+        System.out.println("Initial heuristic value: " + startH);
         int expandedNodes = 0;
-        
+
         while (!openSet.isEmpty()) {
             Node current = openSet.poll();
             State currState = current.state;
@@ -68,10 +76,12 @@ public class UCS extends Pathfinder {
                 String neighborKey = Pathfinder.boardToString(neighbor.board);
                 if (visited.contains(neighborKey)) continue;
 
-                int tentativeG = current.cost + 1;
+                int tentativeG = current.gScore + 1;
                 if (!gScore.containsKey(neighborKey) || tentativeG < gScore.get(neighborKey)) {
                     gScore.put(neighborKey, tentativeG);
-                    openSet.add(new Node(neighbor, tentativeG));
+                    int h = heuristic.estimate(neighbor.board);
+                    int f = tentativeG + h;
+                    openSet.add(new Node(neighbor, f, tentativeG));
                 }
             }
         }
@@ -83,16 +93,18 @@ public class UCS extends Pathfinder {
     
     private static class Node implements Comparable<Node> {
         State state;
-        int cost;
+        int fScore;
+        int gScore;
 
-        public Node(State state, int cost) {
+        public Node(State state, int fScore, int gScore) {
             this.state = state;
-            this.cost = cost;
+            this.fScore = fScore;
+            this.gScore = gScore;
         }
 
         @Override
         public int compareTo(Node other) {
-            return Integer.compare(this.cost, other.cost);
+            return Integer.compare(this.fScore, other.fScore);
         }
     }
 }

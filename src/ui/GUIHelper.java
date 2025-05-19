@@ -38,6 +38,40 @@ public class GUIHelper {
         button.setPrefWidth(INPUT_BTN_WIDTH);
         button.setPrefHeight(INPUT_BTN_HEIGHT);
         button.setOnAction(action);
+
+        String modernStyle = "-fx-background-color:rgb(0, 128, 255); " +
+                             "-fx-text-fill: white; " +
+                             "-fx-font-size: 14px; " +
+                             "-fx-font-weight: bold; " +
+                             "-fx-background-radius: 5px; " +
+                             "-fx-border-radius: 5px; " +
+                             "-fx-padding: 8px 18px; " +
+                             "-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 1);";
+        button.setStyle(modernStyle);
+
+        String hoverStyle = "-fx-background-color:rgb(0, 81, 194); " +
+                            "-fx-text-fill: white; " +
+                            "-fx-font-size: 14px; " +
+                            "-fx-font-weight: bold; " +
+                            "-fx-background-radius: 5px; " +
+                            "-fx-border-radius: 5px; " +
+                            "-fx-padding: 8px 18px; " +
+                            "-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 1);";
+
+        String pressedStyle = "-fx-background-color:rgb(0, 98, 255); " +
+                              "-fx-text-fill: white; " +
+                              "-fx-font-size: 14px; " +
+                              "-fx-font-weight: bold; " +
+                              "-fx-background-radius: 5px; " +
+                              "-fx-border-radius: 5px; " +
+                              "-fx-padding: 8px 18px; " +
+                              "-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 3, 0, 0, 1);";
+
+        button.setOnMouseEntered(e -> button.setStyle(hoverStyle));
+        button.setOnMouseExited(e -> button.setStyle(modernStyle));
+        button.setOnMousePressed(e -> button.setStyle(pressedStyle));
+        button.setOnMouseReleased(e -> button.setStyle(hoverStyle)); // Or modernStyle if not hovering
+
         return button;
     }
 

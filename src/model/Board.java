@@ -97,6 +97,7 @@ public class Board {
         System.out.println();
     }
 
+    // Used for GUI animation
     public static Board createIntermediateBoard(Board startBoard, Board endBoard, char pieceId, String direction, int currentStep, int totalSteps) {
         Board intermediateBoard = startBoard.copy();
         Piece piece = intermediateBoard.pieces.get(pieceId);

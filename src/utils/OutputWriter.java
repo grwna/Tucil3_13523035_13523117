@@ -9,19 +9,7 @@ import java.util.List;
 import model.State;
 
 public class OutputWriter {
-    private static final String OUTPUT_FOLDER = "test";
-    
-    /**
-     * Writes the solution steps to a file in the test directory
-     * 
-     * @param solution The list of states representing the solution
-     * @param algorithmName The name of the algorithm used to find the solution
-     * @param executionTime The execution time in milliseconds
-     * @return The path of the created file
-     * @throws IOException If an I/O error occurs
-     */
     public static String writeSolution(List<State> solution, String algorithmName, double executionTime, String outputPath) throws IOException {
-        // Create the file and write the solution
         try (PrintWriter writer = new PrintWriter(new FileWriter(outputPath))) {
             writer.println("==========================================================");
             writer.println("  RUSH HOUR GAME SOLUTION USING " + algorithmName.toUpperCase());
