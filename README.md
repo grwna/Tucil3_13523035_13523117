@@ -88,8 +88,6 @@ Combined Heuristics merges both Blocking Cars and Manhattan Distance approaches 
 │   │   ├── Piece.java
 │   │   ├── Position.java
 │   │   └── State.java
-│   ├── test
-│   │   └── java
 │   ├── ui
 │   │   ├── GUIHelper.java
 │   │   └── GUI.java
