@@ -554,8 +554,11 @@ public class GUI extends Application {
         Label nodesLabel = new Label("Nodes visited: " + this.solver.getNodes());
         nodesLabel.setFont(Font.font("Arial", FontWeight.NORMAL, 18));
 
+        Label stepsLabel = new Label("Solution steps: " + this.solution.size());
+        stepsLabel.setFont(Font.font("Arial", FontWeight.NORMAL, 18));
+
         VBox infoBox = new VBox(5);
-        infoBox.getChildren().addAll(timeLabel, nodesLabel);
+        infoBox.getChildren().addAll(timeLabel, nodesLabel, stepsLabel);
         infoBox.setAlignment(Pos.CENTER);
 
 
