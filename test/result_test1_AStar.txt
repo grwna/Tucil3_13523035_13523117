@@ -3,7 +3,8 @@
 ==========================================================
 
 Number of moves: 4
-Execution time: 40,326 ms
+Execution time : 78,566 ms
+Nodes visited  : 518
 
 ----------------------------------------------------------
 SOLUTION STEPS:
@@ -15,7 +16,8 @@ Move 4: P-down-2
 
 
 
-Move 0: Start         
+Move 0: Start
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -24,7 +26,8 @@ Move 0: Start
  LLJMM.. 
   K      
 
-Move 1: M-right-2         
+Move 1: M-right-2
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -33,7 +36,8 @@ Move 1: M-right-2
  LLJ..MM 
   K      
 
-Move 2: J-up         
+Move 2: J-up
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -42,7 +46,8 @@ Move 2: J-up
  LL...MM 
   K      
 
-Move 3: L-right-2         
+Move 3: L-right-2
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -51,7 +56,8 @@ Move 3: L-right-2
  ..LL.MM 
   K      
 
-Move 4: P-down-2         
+Move 4: P-down-2
+         
  AAB..F. 
  ..BCDF. 
  ...CDF. 

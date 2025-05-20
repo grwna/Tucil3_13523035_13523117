@@ -2,26 +2,337 @@
   RUSH HOUR GAME SOLUTION USING HILL CLIMBING SEARCH
 ==========================================================
 
-Number of moves: 10
-Execution time: 0,953 ms
+Number of moves: 319
+Execution time : 10,809 ms
+Nodes visited  : 4505
 
 ----------------------------------------------------------
 SOLUTION STEPS:
 ----------------------------------------------------------
-Move 1: G-up
-Move 2: I-right
-Move 3: M-right
-Move 4: J-up
-Move 5: D-up
-Move 6: P-down
-Move 7: L-right
-Move 8: L-right
-Move 9: D-down
-Move 10: P-down
+Move 1: I-left
+Move 2: M-right
+Move 3: F-down-2
+Move 4: F-up
+Move 5: B-down
+Move 6: C-up
+Move 7: D-up
+Move 8: P-down
+Move 9: G-up
+Move 10: M-left
+Move 11: F-down-2
+Move 12: F-up
+Move 13: M-right
+Move 14: G-up
+Move 15: C-down
+Move 16: F-up-2
+Move 17: F-down
+Move 18: M-left
+Move 19: G-down
+Move 20: M-right-2
+Move 21: G-down
+Move 22: B-up
+Move 23: F-down
+Move 24: M-left
+Move 25: B-down
+Move 26: F-up
+Move 27: P-up
+Move 28: M-right
+Move 29: G-up-2
+Move 30: F-up
+Move 31: B-up
+Move 32: M-left
+Move 33: B-down
+Move 34: F-down-2
+Move 35: B-up
+Move 36: M-left
+Move 37: M-right-2
+Move 38: B-down
+Move 39: C-up
+Move 40: D-down
+Move 41: F-up-2
+Move 42: C-down
+Move 43: B-up
+Move 44: F-down-2
+Move 45: P-down
+Move 46: F-up
+Move 47: P-up
+Move 48: B-down
+Move 49: G-down-2
+Move 50: G-up
+Move 51: A-right
+Move 52: A-right-2
+Move 53: G-down
+Move 54: B-up
+Move 55: A-right-2
+Move 56: F-down
+Move 57: G-up-3
+Move 58: B-down
+Move 59: M-left-2
+Move 60: M-right
+Move 61: G-down-3
+Move 62: M-left
+Move 63: A-left-4
+Move 64: F-up-2
+Move 65: A-right
+Move 66: G-up
+Move 67: G-up-2
+Move 68: I-right
+Move 69: J-up
+Move 70: L-right
+Move 71: M-right
+Move 72: L-right
+Move 73: G-down-2
+Move 74: A-left-2
+Move 75: D-up
+Move 76: L-left-2
+Move 77: M-right
+Move 78: L-right-3
+Move 79: D-down
+Move 80: L-left-2
+Move 81: G-down
+Move 82: D-up
+Move 83: G-up
+Move 84: I-right
+Move 85: C-down-3
+Move 86: G-up
+Move 87: A-right-2
+Move 88: G-down
+Move 89: C-up
+Move 90: M-left-2
+Move 91: P-up
+Move 92: L-left
+Move 93: M-right-2
+Move 94: L-right-3
+Move 95: L-left-2
+Move 96: G-up
+Move 97: M-left-2
+Move 98: L-left
+Move 99: P-down-2
+Move 100: A-left
+Move 101: A-left
+Move 102: G-down-2
+Move 103: B-up
+Move 104: J-up
+Move 105: G-up
+Move 106: C-up
+Move 107: C-up
+Move 108: M-right
+Move 109: G-down
+Move 110: C-up
+Move 111: C-down-4
+Move 112: M-right
+Move 113: P-up
+Move 114: G-up-2
+Move 115: C-up
+Move 116: M-left
+Move 117: P-down
+Move 118: M-left
+Move 119: P-up
+Move 120: M-left
+Move 121: G-down-2
+Move 122: D-down
+Move 123: M-right
+Move 124: C-up-3
+Move 125: D-up
+Move 126: J-down-2
+Move 127: C-down-3
+Move 128: M-right
+Move 129: C-up-2
+Move 130: C-up
+Move 131: M-right
+Move 132: C-down-4
+Move 133: I-left
+Move 134: M-left
+Move 135: B-down-2
+Move 136: G-up-2
+Move 137: P-down
+Move 138: A-right-2
+Move 139: D-down
+Move 140: I-right
+Move 141: M-right
+Move 142: P-up
+Move 143: A-left
+Move 144: A-left
+Move 145: A-right-3
+Move 146: M-left
+Move 147: P-down
+Move 148: G-down
+Move 149: G-down
+Move 150: G-up-3
+Move 151: B-up
+Move 152: M-right
+Move 153: B-down
+Move 154: G-down-2
+Move 155: B-up
+Move 156: B-up
+Move 157: C-up-3
+Move 158: G-down
+Move 159: C-down-3
+Move 160: J-up
+Move 161: L-right
+Move 162: G-up
+Move 163: P-up-2
+Move 164: B-down
+Move 165: P-down
+Move 166: A-left
+Move 167: C-up-2
+Move 168: M-left
+Move 169: G-up
+Move 170: M-left
+Move 171: P-up
+Move 172: G-down-3
+Move 173: C-up
+Move 174: P-down-2
+Move 175: M-right-2
+Move 176: C-down-3
+Move 177: G-up
+Move 178: L-left
+Move 179: G-up-2
+Move 180: C-up
+Move 181: M-left-2
+Move 182: M-left
+Move 183: D-up
+Move 184: A-left
+Move 185: M-right-2
+Move 186: D-down
+Move 187: G-down
+Move 188: M-left
+Move 189: M-right-2
+Move 190: J-down
+Move 191: C-up-3
+Move 192: C-down
+Move 193: D-up
+Move 194: B-down
+Move 195: C-up
+Move 196: M-left-2
+Move 197: I-left
+Move 198: G-up
+Move 199: B-up
+Move 200: G-down
+Move 201: I-left
+Move 202: G-down
+Move 203: P-up
+Move 204: C-down
+Move 205: A-right
+Move 206: I-right-2
+Move 207: P-up
+Move 208: I-left-2
+Move 209: M-right
+Move 210: M-right
+Move 211: G-up-2
+Move 212: F-down-2
+Move 213: G-down-2
+Move 214: P-down-2
+Move 215: A-left-2
+Move 216: G-up
+Move 217: M-left
+Move 218: F-up
+Move 219: A-right-2
+Move 220: D-down
+Move 221: A-left-2
+Move 222: A-right
+Move 223: A-right-4
+Move 224: G-up
+Move 225: A-left-5
+Move 226: C-up
+Move 227: P-up
+Move 228: F-down
+Move 229: C-down
+Move 230: A-right
+Move 231: M-left
+Move 232: F-up
+Move 233: M-right
+Move 234: G-down-2
+Move 235: F-up
+Move 236: G-up-2
+Move 237: C-up
+Move 238: P-down
+Move 239: I-right
+Move 240: A-left
+Move 241: P-up
+Move 242: I-left
+Move 243: I-right-2
+Move 244: C-down-3
+Move 245: P-down
+Move 246: G-down-2
+Move 247: J-up
+Move 248: L-right
+Move 249: A-right-2
+Move 250: C-up-2
+Move 251: A-right
+Move 252: G-up
+Move 253: C-down-3
+Move 254: I-left
+Move 255: G-down-2
+Move 256: I-right
+Move 257: G-up-3
+Move 258: B-up
+Move 259: P-up
+Move 260: G-up
+Move 261: C-up-3
+Move 262: P-up
+Move 263: P-down-2
+Move 264: J-up
+Move 265: G-down
+Move 266: G-down-2
+Move 267: C-down-2
+Move 268: P-up-2
+Move 269: C-down
+Move 270: C-up-3
+Move 271: L-right
+Move 272: G-up-3
+Move 273: C-down-2
+Move 274: J-down
+Move 275: M-right
+Move 276: L-left
+Move 277: C-up-2
+Move 278: P-down
+Move 279: C-down-2
+Move 280: G-down-4
+Move 281: L-right
+Move 282: C-up
+Move 283: P-down
+Move 284: G-up
+Move 285: B-down
+Move 286: G-up-3
+Move 287: P-up
+Move 288: C-down
+Move 289: P-up
+Move 290: C-up
+Move 291: L-left
+Move 292: P-down-2
+Move 293: B-up
+Move 294: P-up-2
+Move 295: L-left
+Move 296: G-down
+Move 297: C-down
+Move 298: G-up
+Move 299: C-up-2
+Move 300: I-left
+Move 301: J-up
+Move 302: P-down
+Move 303: G-down
+Move 304: M-left
+Move 305: L-right-2
+Move 306: G-down
+Move 307: G-down-2
+Move 308: M-right
+Move 309: L-right
+Move 310: L-left-2
+Move 311: M-left
+Move 312: J-down
+Move 313: L-right
+Move 314: G-up-3
+Move 315: G-up
+Move 316: I-right
+Move 317: J-up
+Move 318: P-down
+Move 319: P-down
 
 
 
-Move 0: Start         
+Move 0: Start
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -30,93 +341,3193 @@ Move 0: Start
  LLJMM.. 
   K      
 
-Move 1: G-up         
+Move 1: I-left
+         
  AAB..F. 
  .PBCDF. 
- GP.CDF. 
- GP.III. 
- ..J.... 
+ .P.CDF. 
+ GPIII.. 
+ G.J.... 
  LLJMM.. 
   K      
 
-Move 2: I-right         
+Move 2: M-right
+         
  AAB..F. 
  .PBCDF. 
- GP.CDF. 
- GP..III 
- ..J.... 
+ .P.CDF. 
+ GPIII.. 
+ G.J.... 
+ LLJ.MM. 
+  K      
+
+Move 3: F-down-2
+         
+ AAB.... 
+ .PBCD.. 
+ .P.CDF. 
+ GPIIIF. 
+ G.J..F. 
+ LLJ.MM. 
+  K      
+
+Move 4: F-up
+         
+ AAB.... 
+ .PBCDF. 
+ .P.CDF. 
+ GPIIIF. 
+ G.J.... 
+ LLJ.MM. 
+  K      
+
+Move 5: B-down
+         
+ AA..... 
+ .PBCDF. 
+ .PBCDF. 
+ GPIIIF. 
+ G.J.... 
+ LLJ.MM. 
+  K      
+
+Move 6: C-up
+         
+ AA.C... 
+ .PBCDF. 
+ .PB.DF. 
+ GPIIIF. 
+ G.J.... 
+ LLJ.MM. 
+  K      
+
+Move 7: D-up
+         
+ AA.CD.. 
+ .PBCDF. 
+ .PB..F. 
+ GPIIIF. 
+ G.J.... 
+ LLJ.MM. 
+  K      
+
+Move 8: P-down
+         
+ AA.CD.. 
+ ..BCDF. 
+ .PB..F. 
+ GPIIIF. 
+ GPJ.... 
+ LLJ.MM. 
+  K      
+
+Move 9: G-up
+         
+ AA.CD.. 
+ ..BCDF. 
+ GPB..F. 
+ GPIIIF. 
+ .PJ.... 
+ LLJ.MM. 
+  K      
+
+Move 10: M-left
+         
+ AA.CD.. 
+ ..BCDF. 
+ GPB..F. 
+ GPIIIF. 
+ .PJ.... 
  LLJMM.. 
   K      
 
-Move 3: M-right         
- AAB..F. 
+Move 11: F-down-2
+         
+ AA.CD.. 
+ ..BCD.. 
+ GPB.... 
+ GPIIIF. 
+ .PJ..F. 
+ LLJMMF. 
+  K      
+
+Move 12: F-up
+         
+ AA.CD.. 
+ ..BCD.. 
+ GPB..F. 
+ GPIIIF. 
+ .PJ..F. 
+ LLJMM.. 
+  K      
+
+Move 13: M-right
+         
+ AA.CD.. 
+ ..BCD.. 
+ GPB..F. 
+ GPIIIF. 
+ .PJ..F. 
+ LLJ.MM. 
+  K      
+
+Move 14: G-up
+         
+ AA.CD.. 
+ G.BCD.. 
+ GPB..F. 
+ .PIIIF. 
+ .PJ..F. 
+ LLJ.MM. 
+  K      
+
+Move 15: C-down
+         
+ AA..D.. 
+ G.BCD.. 
+ GPBC.F. 
+ .PIIIF. 
+ .PJ..F. 
+ LLJ.MM. 
+  K      
+
+Move 16: F-up-2
+         
+ AA..DF. 
+ G.BCDF. 
+ GPBC.F. 
+ .PIII.. 
+ .PJ.... 
+ LLJ.MM. 
+  K      
+
+Move 17: F-down
+         
+ AA..D.. 
+ G.BCDF. 
+ GPBC.F. 
+ .PIIIF. 
+ .PJ.... 
+ LLJ.MM. 
+  K      
+
+Move 18: M-left
+         
+ AA..D.. 
+ G.BCDF. 
+ GPBC.F. 
+ .PIIIF. 
+ .PJ.... 
+ LLJMM.. 
+  K      
+
+Move 19: G-down
+         
+ AA..D.. 
+ ..BCDF. 
+ GPBC.F. 
+ GPIIIF. 
+ .PJ.... 
+ LLJMM.. 
+  K      
+
+Move 20: M-right-2
+         
+ AA..D.. 
+ ..BCDF. 
+ GPBC.F. 
+ GPIIIF. 
+ .PJ.... 
+ LLJ..MM 
+  K      
+
+Move 21: G-down
+         
+ AA..D.. 
+ ..BCDF. 
+ .PBC.F. 
+ GPIIIF. 
+ GPJ.... 
+ LLJ..MM 
+  K      
+
+Move 22: B-up
+         
+ AAB.D.. 
+ ..BCDF. 
+ .P.C.F. 
+ GPIIIF. 
+ GPJ.... 
+ LLJ..MM 
+  K      
+
+Move 23: F-down
+         
+ AAB.D.. 
+ ..BCD.. 
+ .P.C.F. 
+ GPIIIF. 
+ GPJ..F. 
+ LLJ..MM 
+  K      
+
+Move 24: M-left
+         
+ AAB.D.. 
+ ..BCD.. 
+ .P.C.F. 
+ GPIIIF. 
+ GPJ..F. 
+ LLJ.MM. 
+  K      
+
+Move 25: B-down
+         
+ AA..D.. 
+ ..BCD.. 
+ .PBC.F. 
+ GPIIIF. 
+ GPJ..F. 
+ LLJ.MM. 
+  K      
+
+Move 26: F-up
+         
+ AA..D.. 
+ ..BCDF. 
+ .PBC.F. 
+ GPIIIF. 
+ GPJ.... 
+ LLJ.MM. 
+  K      
+
+Move 27: P-up
+         
+ AA..D.. 
  .PBCDF. 
- GP.CDF. 
- GP..III 
+ .PBC.F. 
+ GPIIIF. 
+ G.J.... 
+ LLJ.MM. 
+  K      
+
+Move 28: M-right
+         
+ AA..D.. 
+ .PBCDF. 
+ .PBC.F. 
+ GPIIIF. 
+ G.J.... 
+ LLJ..MM 
+  K      
+
+Move 29: G-up-2
+         
+ AA..D.. 
+ GPBCDF. 
+ GPBC.F. 
+ .PIIIF. 
+ ..J.... 
+ LLJ..MM 
+  K      
+
+Move 30: F-up
+         
+ AA..DF. 
+ GPBCDF. 
+ GPBC.F. 
+ .PIII.. 
+ ..J.... 
+ LLJ..MM 
+  K      
+
+Move 31: B-up
+         
+ AAB.DF. 
+ GPBCDF. 
+ GP.C.F. 
+ .PIII.. 
+ ..J.... 
+ LLJ..MM 
+  K      
+
+Move 32: M-left
+         
+ AAB.DF. 
+ GPBCDF. 
+ GP.C.F. 
+ .PIII.. 
  ..J.... 
  LLJ.MM. 
   K      
 
-Move 4: J-up         
+Move 33: B-down
+         
+ AA..DF. 
+ GPBCDF. 
+ GPBC.F. 
+ .PIII.. 
+ ..J.... 
+ LLJ.MM. 
+  K      
+
+Move 34: F-down-2
+         
+ AA..D.. 
+ GPBCD.. 
+ GPBC.F. 
+ .PIIIF. 
+ ..J..F. 
+ LLJ.MM. 
+  K      
+
+Move 35: B-up
+         
+ AAB.D.. 
+ GPBCD.. 
+ GP.C.F. 
+ .PIIIF. 
+ ..J..F. 
+ LLJ.MM. 
+  K      
+
+Move 36: M-left
+         
+ AAB.D.. 
+ GPBCD.. 
+ GP.C.F. 
+ .PIIIF. 
+ ..J..F. 
+ LLJMM.. 
+  K      
+
+Move 37: M-right-2
+         
+ AAB.D.. 
+ GPBCD.. 
+ GP.C.F. 
+ .PIIIF. 
+ ..J..F. 
+ LLJ..MM 
+  K      
+
+Move 38: B-down
+         
+ AA..D.. 
+ GPBCD.. 
+ GPBC.F. 
+ .PIIIF. 
+ ..J..F. 
+ LLJ..MM 
+  K      
+
+Move 39: C-up
+         
+ AA.CD.. 
+ GPBCD.. 
+ GPB..F. 
+ .PIIIF. 
+ ..J..F. 
+ LLJ..MM 
+  K      
+
+Move 40: D-down
+         
+ AA.C... 
+ GPBCD.. 
+ GPB.DF. 
+ .PIIIF. 
+ ..J..F. 
+ LLJ..MM 
+  K      
+
+Move 41: F-up-2
+         
+ AA.C.F. 
+ GPBCDF. 
+ GPB.DF. 
+ .PIII.. 
+ ..J.... 
+ LLJ..MM 
+  K      
+
+Move 42: C-down
+         
+ AA...F. 
+ GPBCDF. 
+ GPBCDF. 
+ .PIII.. 
+ ..J.... 
+ LLJ..MM 
+  K      
+
+Move 43: B-up
+         
  AAB..F. 
- .PBCDF. 
+ GPBCDF. 
  GP.CDF. 
- GPJ.III 
+ .PIII.. 
+ ..J.... 
+ LLJ..MM 
+  K      
+
+Move 44: F-down-2
+         
+ AAB.... 
+ GPBCD.. 
+ GP.CDF. 
+ .PIIIF. 
+ ..J..F. 
+ LLJ..MM 
+  K      
+
+Move 45: P-down
+         
+ AAB.... 
+ G.BCD.. 
+ GP.CDF. 
+ .PIIIF. 
+ .PJ..F. 
+ LLJ..MM 
+  K      
+
+Move 46: F-up
+         
+ AAB.... 
+ G.BCDF. 
+ GP.CDF. 
+ .PIIIF. 
+ .PJ.... 
+ LLJ..MM 
+  K      
+
+Move 47: P-up
+         
+ AAB.... 
+ GPBCDF. 
+ GP.CDF. 
+ .PIIIF. 
+ ..J.... 
+ LLJ..MM 
+  K      
+
+Move 48: B-down
+         
+ AA..... 
+ GPBCDF. 
+ GPBCDF. 
+ .PIIIF. 
+ ..J.... 
+ LLJ..MM 
+  K      
+
+Move 49: G-down-2
+         
+ AA..... 
+ .PBCDF. 
+ .PBCDF. 
+ GPIIIF. 
+ G.J.... 
+ LLJ..MM 
+  K      
+
+Move 50: G-up
+         
+ AA..... 
+ .PBCDF. 
+ GPBCDF. 
+ GPIIIF. 
+ ..J.... 
+ LLJ..MM 
+  K      
+
+Move 51: A-right
+         
+ .AA.... 
+ .PBCDF. 
+ GPBCDF. 
+ GPIIIF. 
+ ..J.... 
+ LLJ..MM 
+  K      
+
+Move 52: A-right-2
+         
+ ...AA.. 
+ .PBCDF. 
+ GPBCDF. 
+ GPIIIF. 
+ ..J.... 
+ LLJ..MM 
+  K      
+
+Move 53: G-down
+         
+ ...AA.. 
+ .PBCDF. 
+ .PBCDF. 
+ GPIIIF. 
+ G.J.... 
+ LLJ..MM 
+  K      
+
+Move 54: B-up
+         
+ ..BAA.. 
+ .PBCDF. 
+ .P.CDF. 
+ GPIIIF. 
+ G.J.... 
+ LLJ..MM 
+  K      
+
+Move 55: A-right-2
+         
+ ..B..AA 
+ .PBCDF. 
+ .P.CDF. 
+ GPIIIF. 
+ G.J.... 
+ LLJ..MM 
+  K      
+
+Move 56: F-down
+         
+ ..B..AA 
+ .PBCD.. 
+ .P.CDF. 
+ GPIIIF. 
+ G.J..F. 
+ LLJ..MM 
+  K      
+
+Move 57: G-up-3
+         
+ G.B..AA 
+ GPBCD.. 
+ .P.CDF. 
+ .PIIIF. 
+ ..J..F. 
+ LLJ..MM 
+  K      
+
+Move 58: B-down
+         
+ G....AA 
+ GPBCD.. 
+ .PBCDF. 
+ .PIIIF. 
+ ..J..F. 
+ LLJ..MM 
+  K      
+
+Move 59: M-left-2
+         
+ G....AA 
+ GPBCD.. 
+ .PBCDF. 
+ .PIIIF. 
+ ..J..F. 
+ LLJMM.. 
+  K      
+
+Move 60: M-right
+         
+ G....AA 
+ GPBCD.. 
+ .PBCDF. 
+ .PIIIF. 
+ ..J..F. 
+ LLJ.MM. 
+  K      
+
+Move 61: G-down-3
+         
+ .....AA 
+ .PBCD.. 
+ .PBCDF. 
+ GPIIIF. 
+ G.J..F. 
+ LLJ.MM. 
+  K      
+
+Move 62: M-left
+         
+ .....AA 
+ .PBCD.. 
+ .PBCDF. 
+ GPIIIF. 
+ G.J..F. 
+ LLJMM.. 
+  K      
+
+Move 63: A-left-4
+         
+ .AA.... 
+ .PBCD.. 
+ .PBCDF. 
+ GPIIIF. 
+ G.J..F. 
+ LLJMM.. 
+  K      
+
+Move 64: F-up-2
+         
+ .AA..F. 
+ .PBCDF. 
+ .PBCDF. 
+ GPIII.. 
+ G.J.... 
+ LLJMM.. 
+  K      
+
+Move 65: A-right
+         
+ ..AA.F. 
+ .PBCDF. 
+ .PBCDF. 
+ GPIII.. 
+ G.J.... 
+ LLJMM.. 
+  K      
+
+Move 66: G-up
+         
+ ..AA.F. 
+ .PBCDF. 
+ GPBCDF. 
+ GPIII.. 
+ ..J.... 
+ LLJMM.. 
+  K      
+
+Move 67: G-up-2
+         
+ G.AA.F. 
+ GPBCDF. 
+ .PBCDF. 
+ .PIII.. 
+ ..J.... 
+ LLJMM.. 
+  K      
+
+Move 68: I-right
+         
+ G.AA.F. 
+ GPBCDF. 
+ .PBCDF. 
+ .P.III. 
+ ..J.... 
+ LLJMM.. 
+  K      
+
+Move 69: J-up
+         
+ G.AA.F. 
+ GPBCDF. 
+ .PBCDF. 
+ .PJIII. 
+ ..J.... 
+ LL.MM.. 
+  K      
+
+Move 70: L-right
+         
+ G.AA.F. 
+ GPBCDF. 
+ .PBCDF. 
+ .PJIII. 
+ ..J.... 
+ .LLMM.. 
+  K      
+
+Move 71: M-right
+         
+ G.AA.F. 
+ GPBCDF. 
+ .PBCDF. 
+ .PJIII. 
+ ..J.... 
+ .LL.MM. 
+  K      
+
+Move 72: L-right
+         
+ G.AA.F. 
+ GPBCDF. 
+ .PBCDF. 
+ .PJIII. 
+ ..J.... 
+ ..LLMM. 
+  K      
+
+Move 73: G-down-2
+         
+ ..AA.F. 
+ .PBCDF. 
+ GPBCDF. 
+ GPJIII. 
+ ..J.... 
+ ..LLMM. 
+  K      
+
+Move 74: A-left-2
+         
+ AA...F. 
+ .PBCDF. 
+ GPBCDF. 
+ GPJIII. 
+ ..J.... 
+ ..LLMM. 
+  K      
+
+Move 75: D-up
+         
+ AA..DF. 
+ .PBCDF. 
+ GPBC.F. 
+ GPJIII. 
+ ..J.... 
+ ..LLMM. 
+  K      
+
+Move 76: L-left-2
+         
+ AA..DF. 
+ .PBCDF. 
+ GPBC.F. 
+ GPJIII. 
  ..J.... 
  LL..MM. 
   K      
 
-Move 5: D-up         
+Move 77: M-right
+         
+ AA..DF. 
+ .PBCDF. 
+ GPBC.F. 
+ GPJIII. 
+ ..J.... 
+ LL...MM 
+  K      
+
+Move 78: L-right-3
+         
+ AA..DF. 
+ .PBCDF. 
+ GPBC.F. 
+ GPJIII. 
+ ..J.... 
+ ...LLMM 
+  K      
+
+Move 79: D-down
+         
+ AA...F. 
+ .PBCDF. 
+ GPBCDF. 
+ GPJIII. 
+ ..J.... 
+ ...LLMM 
+  K      
+
+Move 80: L-left-2
+         
+ AA...F. 
+ .PBCDF. 
+ GPBCDF. 
+ GPJIII. 
+ ..J.... 
+ .LL..MM 
+  K      
+
+Move 81: G-down
+         
+ AA...F. 
+ .PBCDF. 
+ .PBCDF. 
+ GPJIII. 
+ G.J.... 
+ .LL..MM 
+  K      
+
+Move 82: D-up
+         
+ AA..DF. 
+ .PBCDF. 
+ .PBC.F. 
+ GPJIII. 
+ G.J.... 
+ .LL..MM 
+  K      
+
+Move 83: G-up
+         
+ AA..DF. 
+ .PBCDF. 
+ GPBC.F. 
+ GPJIII. 
+ ..J.... 
+ .LL..MM 
+  K      
+
+Move 84: I-right
+         
+ AA..DF. 
+ .PBCDF. 
+ GPBC.F. 
+ GPJ.III 
+ ..J.... 
+ .LL..MM 
+  K      
+
+Move 85: C-down-3
+         
+ AA..DF. 
+ .PB.DF. 
+ GPB..F. 
+ GPJ.III 
+ ..JC... 
+ .LLC.MM 
+  K      
+
+Move 86: G-up
+         
+ AA..DF. 
+ GPB.DF. 
+ GPB..F. 
+ .PJ.III 
+ ..JC... 
+ .LLC.MM 
+  K      
+
+Move 87: A-right-2
+         
+ ..AADF. 
+ GPB.DF. 
+ GPB..F. 
+ .PJ.III 
+ ..JC... 
+ .LLC.MM 
+  K      
+
+Move 88: G-down
+         
+ ..AADF. 
+ .PB.DF. 
+ GPB..F. 
+ GPJ.III 
+ ..JC... 
+ .LLC.MM 
+  K      
+
+Move 89: C-up
+         
+ ..AADF. 
+ .PB.DF. 
+ GPB..F. 
+ GPJCIII 
+ ..JC... 
+ .LL..MM 
+  K      
+
+Move 90: M-left-2
+         
+ ..AADF. 
+ .PB.DF. 
+ GPB..F. 
+ GPJCIII 
+ ..JC... 
+ .LLMM.. 
+  K      
+
+Move 91: P-up
+         
+ .PAADF. 
+ .PB.DF. 
+ GPB..F. 
+ G.JCIII 
+ ..JC... 
+ .LLMM.. 
+  K      
+
+Move 92: L-left
+         
+ .PAADF. 
+ .PB.DF. 
+ GPB..F. 
+ G.JCIII 
+ ..JC... 
+ LL.MM.. 
+  K      
+
+Move 93: M-right-2
+         
+ .PAADF. 
+ .PB.DF. 
+ GPB..F. 
+ G.JCIII 
+ ..JC... 
+ LL...MM 
+  K      
+
+Move 94: L-right-3
+         
+ .PAADF. 
+ .PB.DF. 
+ GPB..F. 
+ G.JCIII 
+ ..JC... 
+ ...LLMM 
+  K      
+
+Move 95: L-left-2
+         
+ .PAADF. 
+ .PB.DF. 
+ GPB..F. 
+ G.JCIII 
+ ..JC... 
+ .LL..MM 
+  K      
+
+Move 96: G-up
+         
+ .PAADF. 
+ GPB.DF. 
+ GPB..F. 
+ ..JCIII 
+ ..JC... 
+ .LL..MM 
+  K      
+
+Move 97: M-left-2
+         
+ .PAADF. 
+ GPB.DF. 
+ GPB..F. 
+ ..JCIII 
+ ..JC... 
+ .LLMM.. 
+  K      
+
+Move 98: L-left
+         
+ .PAADF. 
+ GPB.DF. 
+ GPB..F. 
+ ..JCIII 
+ ..JC... 
+ LL.MM.. 
+  K      
+
+Move 99: P-down-2
+         
+ ..AADF. 
+ G.B.DF. 
+ GPB..F. 
+ .PJCIII 
+ .PJC... 
+ LL.MM.. 
+  K      
+
+Move 100: A-left
+         
+ .AA.DF. 
+ G.B.DF. 
+ GPB..F. 
+ .PJCIII 
+ .PJC... 
+ LL.MM.. 
+  K      
+
+Move 101: A-left
+         
+ AA..DF. 
+ G.B.DF. 
+ GPB..F. 
+ .PJCIII 
+ .PJC... 
+ LL.MM.. 
+  K      
+
+Move 102: G-down-2
+         
+ AA..DF. 
+ ..B.DF. 
+ .PB..F. 
+ GPJCIII 
+ GPJC... 
+ LL.MM.. 
+  K      
+
+Move 103: B-up
+         
+ AAB.DF. 
+ ..B.DF. 
+ .P...F. 
+ GPJCIII 
+ GPJC... 
+ LL.MM.. 
+  K      
+
+Move 104: J-up
+         
+ AAB.DF. 
+ ..B.DF. 
+ .PJ..F. 
+ GPJCIII 
+ GP.C... 
+ LL.MM.. 
+  K      
+
+Move 105: G-up
+         
+ AAB.DF. 
+ ..B.DF. 
+ GPJ..F. 
+ GPJCIII 
+ .P.C... 
+ LL.MM.. 
+  K      
+
+Move 106: C-up
+         
+ AAB.DF. 
+ ..B.DF. 
+ GPJC.F. 
+ GPJCIII 
+ .P..... 
+ LL.MM.. 
+  K      
+
+Move 107: C-up
+         
+ AAB.DF. 
+ ..BCDF. 
+ GPJC.F. 
+ GPJ.III 
+ .P..... 
+ LL.MM.. 
+  K      
+
+Move 108: M-right
+         
+ AAB.DF. 
+ ..BCDF. 
+ GPJC.F. 
+ GPJ.III 
+ .P..... 
+ LL..MM. 
+  K      
+
+Move 109: G-down
+         
+ AAB.DF. 
+ ..BCDF. 
+ .PJC.F. 
+ GPJ.III 
+ GP..... 
+ LL..MM. 
+  K      
+
+Move 110: C-up
+         
+ AABCDF. 
+ ..BCDF. 
+ .PJ..F. 
+ GPJ.III 
+ GP..... 
+ LL..MM. 
+  K      
+
+Move 111: C-down-4
+         
+ AAB.DF. 
+ ..B.DF. 
+ .PJ..F. 
+ GPJ.III 
+ GP.C... 
+ LL.CMM. 
+  K      
+
+Move 112: M-right
+         
+ AAB.DF. 
+ ..B.DF. 
+ .PJ..F. 
+ GPJ.III 
+ GP.C... 
+ LL.C.MM 
+  K      
+
+Move 113: P-up
+         
+ AAB.DF. 
+ .PB.DF. 
+ .PJ..F. 
+ GPJ.III 
+ G..C... 
+ LL.C.MM 
+  K      
+
+Move 114: G-up-2
+         
+ AAB.DF. 
+ GPB.DF. 
+ GPJ..F. 
+ .PJ.III 
+ ...C... 
+ LL.C.MM 
+  K      
+
+Move 115: C-up
+         
+ AAB.DF. 
+ GPB.DF. 
+ GPJ..F. 
+ .PJCIII 
+ ...C... 
+ LL...MM 
+  K      
+
+Move 116: M-left
+         
+ AAB.DF. 
+ GPB.DF. 
+ GPJ..F. 
+ .PJCIII 
+ ...C... 
+ LL..MM. 
+  K      
+
+Move 117: P-down
+         
+ AAB.DF. 
+ G.B.DF. 
+ GPJ..F. 
+ .PJCIII 
+ .P.C... 
+ LL..MM. 
+  K      
+
+Move 118: M-left
+         
+ AAB.DF. 
+ G.B.DF. 
+ GPJ..F. 
+ .PJCIII 
+ .P.C... 
+ LL.MM.. 
+  K      
+
+Move 119: P-up
+         
+ AAB.DF. 
+ GPB.DF. 
+ GPJ..F. 
+ .PJCIII 
+ ...C... 
+ LL.MM.. 
+  K      
+
+Move 120: M-left
+         
+ AAB.DF. 
+ GPB.DF. 
+ GPJ..F. 
+ .PJCIII 
+ ...C... 
+ LLMM... 
+  K      
+
+Move 121: G-down-2
+         
+ AAB.DF. 
+ .PB.DF. 
+ .PJ..F. 
+ GPJCIII 
+ G..C... 
+ LLMM... 
+  K      
+
+Move 122: D-down
+         
+ AAB..F. 
+ .PB.DF. 
+ .PJ.DF. 
+ GPJCIII 
+ G..C... 
+ LLMM... 
+  K      
+
+Move 123: M-right
+         
+ AAB..F. 
+ .PB.DF. 
+ .PJ.DF. 
+ GPJCIII 
+ G..C... 
+ LL.MM.. 
+  K      
+
+Move 124: C-up-3
+         
+ AABC.F. 
+ .PBCDF. 
+ .PJ.DF. 
+ GPJ.III 
+ G...... 
+ LL.MM.. 
+  K      
+
+Move 125: D-up
+         
+ AABCDF. 
+ .PBCDF. 
+ .PJ..F. 
+ GPJ.III 
+ G...... 
+ LL.MM.. 
+  K      
+
+Move 126: J-down-2
+         
+ AABCDF. 
+ .PBCDF. 
+ .P...F. 
+ GP..III 
+ G.J.... 
+ LLJMM.. 
+  K      
+
+Move 127: C-down-3
+         
+ AAB.DF. 
+ .PB.DF. 
+ .P...F. 
+ GP.CIII 
+ G.JC... 
+ LLJMM.. 
+  K      
+
+Move 128: M-right
+         
+ AAB.DF. 
+ .PB.DF. 
+ .P...F. 
+ GP.CIII 
+ G.JC... 
+ LLJ.MM. 
+  K      
+
+Move 129: C-up-2
+         
  AAB.DF. 
  .PBCDF. 
- GP.C.F. 
- GPJ.III 
- ..J.... 
- LL..MM. 
+ .P.C.F. 
+ GP..III 
+ G.J.... 
+ LLJ.MM. 
   K      
 
-Move 6: P-down         
+Move 130: C-up
+         
+ AABCDF. 
+ .PBCDF. 
+ .P...F. 
+ GP..III 
+ G.J.... 
+ LLJ.MM. 
+  K      
+
+Move 131: M-right
+         
+ AABCDF. 
+ .PBCDF. 
+ .P...F. 
+ GP..III 
+ G.J.... 
+ LLJ..MM 
+  K      
+
+Move 132: C-down-4
+         
  AAB.DF. 
+ .PB.DF. 
+ .P...F. 
+ GP..III 
+ G.JC... 
+ LLJC.MM 
+  K      
+
+Move 133: I-left
+         
+ AAB.DF. 
+ .PB.DF. 
+ .P...F. 
+ GP.III. 
+ G.JC... 
+ LLJC.MM 
+  K      
+
+Move 134: M-left
+         
+ AAB.DF. 
+ .PB.DF. 
+ .P...F. 
+ GP.III. 
+ G.JC... 
+ LLJCMM. 
+  K      
+
+Move 135: B-down-2
+         
+ AA..DF. 
+ .P..DF. 
+ .PB..F. 
+ GPBIII. 
+ G.JC... 
+ LLJCMM. 
+  K      
+
+Move 136: G-up-2
+         
+ AA..DF. 
+ GP..DF. 
+ GPB..F. 
+ .PBIII. 
+ ..JC... 
+ LLJCMM. 
+  K      
+
+Move 137: P-down
+         
+ AA..DF. 
+ G...DF. 
+ GPB..F. 
+ .PBIII. 
+ .PJC... 
+ LLJCMM. 
+  K      
+
+Move 138: A-right-2
+         
+ ..AADF. 
+ G...DF. 
+ GPB..F. 
+ .PBIII. 
+ .PJC... 
+ LLJCMM. 
+  K      
+
+Move 139: D-down
+         
+ ..AA.F. 
+ G...DF. 
+ GPB.DF. 
+ .PBIII. 
+ .PJC... 
+ LLJCMM. 
+  K      
+
+Move 140: I-right
+         
+ ..AA.F. 
+ G...DF. 
+ GPB.DF. 
+ .PB.III 
+ .PJC... 
+ LLJCMM. 
+  K      
+
+Move 141: M-right
+         
+ ..AA.F. 
+ G...DF. 
+ GPB.DF. 
+ .PB.III 
+ .PJC... 
+ LLJC.MM 
+  K      
+
+Move 142: P-up
+         
+ ..AA.F. 
+ GP..DF. 
+ GPB.DF. 
+ .PB.III 
+ ..JC... 
+ LLJC.MM 
+  K      
+
+Move 143: A-left
+         
+ .AA..F. 
+ GP..DF. 
+ GPB.DF. 
+ .PB.III 
+ ..JC... 
+ LLJC.MM 
+  K      
+
+Move 144: A-left
+         
+ AA...F. 
+ GP..DF. 
+ GPB.DF. 
+ .PB.III 
+ ..JC... 
+ LLJC.MM 
+  K      
+
+Move 145: A-right-3
+         
+ ...AAF. 
+ GP..DF. 
+ GPB.DF. 
+ .PB.III 
+ ..JC... 
+ LLJC.MM 
+  K      
+
+Move 146: M-left
+         
+ ...AAF. 
+ GP..DF. 
+ GPB.DF. 
+ .PB.III 
+ ..JC... 
+ LLJCMM. 
+  K      
+
+Move 147: P-down
+         
+ ...AAF. 
+ G...DF. 
+ GPB.DF. 
+ .PB.III 
+ .PJC... 
+ LLJCMM. 
+  K      
+
+Move 148: G-down
+         
+ ...AAF. 
+ ....DF. 
+ GPB.DF. 
+ GPB.III 
+ .PJC... 
+ LLJCMM. 
+  K      
+
+Move 149: G-down
+         
+ ...AAF. 
+ ....DF. 
+ .PB.DF. 
+ GPB.III 
+ GPJC... 
+ LLJCMM. 
+  K      
+
+Move 150: G-up-3
+         
+ G..AAF. 
+ G...DF. 
+ .PB.DF. 
+ .PB.III 
+ .PJC... 
+ LLJCMM. 
+  K      
+
+Move 151: B-up
+         
+ G..AAF. 
+ G.B.DF. 
+ .PB.DF. 
+ .P..III 
+ .PJC... 
+ LLJCMM. 
+  K      
+
+Move 152: M-right
+         
+ G..AAF. 
+ G.B.DF. 
+ .PB.DF. 
+ .P..III 
+ .PJC... 
+ LLJC.MM 
+  K      
+
+Move 153: B-down
+         
+ G..AAF. 
+ G...DF. 
+ .PB.DF. 
+ .PB.III 
+ .PJC... 
+ LLJC.MM 
+  K      
+
+Move 154: G-down-2
+         
+ ...AAF. 
+ ....DF. 
+ GPB.DF. 
+ GPB.III 
+ .PJC... 
+ LLJC.MM 
+  K      
+
+Move 155: B-up
+         
+ ...AAF. 
+ ..B.DF. 
+ GPB.DF. 
+ GP..III 
+ .PJC... 
+ LLJC.MM 
+  K      
+
+Move 156: B-up
+         
+ ..BAAF. 
+ ..B.DF. 
+ GP..DF. 
+ GP..III 
+ .PJC... 
+ LLJC.MM 
+  K      
+
+Move 157: C-up-3
+         
+ ..BAAF. 
  ..BCDF. 
- GP.C.F. 
- GPJ.III 
+ GP.CDF. 
+ GP..III 
  .PJ.... 
+ LLJ..MM 
+  K      
+
+Move 158: G-down
+         
+ ..BAAF. 
+ ..BCDF. 
+ .P.CDF. 
+ GP..III 
+ GPJ.... 
+ LLJ..MM 
+  K      
+
+Move 159: C-down-3
+         
+ ..BAAF. 
+ ..B.DF. 
+ .P..DF. 
+ GP..III 
+ GPJC... 
+ LLJC.MM 
+  K      
+
+Move 160: J-up
+         
+ ..BAAF. 
+ ..B.DF. 
+ .P..DF. 
+ GPJ.III 
+ GPJC... 
+ LL.C.MM 
+  K      
+
+Move 161: L-right
+         
+ ..BAAF. 
+ ..B.DF. 
+ .P..DF. 
+ GPJ.III 
+ GPJC... 
+ .LLC.MM 
+  K      
+
+Move 162: G-up
+         
+ ..BAAF. 
+ ..B.DF. 
+ GP..DF. 
+ GPJ.III 
+ .PJC... 
+ .LLC.MM 
+  K      
+
+Move 163: P-up-2
+         
+ .PBAAF. 
+ .PB.DF. 
+ GP..DF. 
+ G.J.III 
+ ..JC... 
+ .LLC.MM 
+  K      
+
+Move 164: B-down
+         
+ .P.AAF. 
+ .PB.DF. 
+ GPB.DF. 
+ G.J.III 
+ ..JC... 
+ .LLC.MM 
+  K      
+
+Move 165: P-down
+         
+ ...AAF. 
+ .PB.DF. 
+ GPB.DF. 
+ GPJ.III 
+ ..JC... 
+ .LLC.MM 
+  K      
+
+Move 166: A-left
+         
+ ..AA.F. 
+ .PB.DF. 
+ GPB.DF. 
+ GPJ.III 
+ ..JC... 
+ .LLC.MM 
+  K      
+
+Move 167: C-up-2
+         
+ ..AA.F. 
+ .PB.DF. 
+ GPBCDF. 
+ GPJCIII 
+ ..J.... 
+ .LL..MM 
+  K      
+
+Move 168: M-left
+         
+ ..AA.F. 
+ .PB.DF. 
+ GPBCDF. 
+ GPJCIII 
+ ..J.... 
+ .LL.MM. 
+  K      
+
+Move 169: G-up
+         
+ ..AA.F. 
+ GPB.DF. 
+ GPBCDF. 
+ .PJCIII 
+ ..J.... 
+ .LL.MM. 
+  K      
+
+Move 170: M-left
+         
+ ..AA.F. 
+ GPB.DF. 
+ GPBCDF. 
+ .PJCIII 
+ ..J.... 
+ .LLMM.. 
+  K      
+
+Move 171: P-up
+         
+ .PAA.F. 
+ GPB.DF. 
+ GPBCDF. 
+ ..JCIII 
+ ..J.... 
+ .LLMM.. 
+  K      
+
+Move 172: G-down-3
+         
+ .PAA.F. 
+ .PB.DF. 
+ .PBCDF. 
+ ..JCIII 
+ G.J.... 
+ GLLMM.. 
+  K      
+
+Move 173: C-up
+         
+ .PAA.F. 
+ .PBCDF. 
+ .PBCDF. 
+ ..J.III 
+ G.J.... 
+ GLLMM.. 
+  K      
+
+Move 174: P-down-2
+         
+ ..AA.F. 
+ ..BCDF. 
+ .PBCDF. 
+ .PJ.III 
+ GPJ.... 
+ GLLMM.. 
+  K      
+
+Move 175: M-right-2
+         
+ ..AA.F. 
+ ..BCDF. 
+ .PBCDF. 
+ .PJ.III 
+ GPJ.... 
+ GLL..MM 
+  K      
+
+Move 176: C-down-3
+         
+ ..AA.F. 
+ ..B.DF. 
+ .PB.DF. 
+ .PJ.III 
+ GPJC... 
+ GLLC.MM 
+  K      
+
+Move 177: G-up
+         
+ ..AA.F. 
+ ..B.DF. 
+ .PB.DF. 
+ GPJ.III 
+ GPJC... 
+ .LLC.MM 
+  K      
+
+Move 178: L-left
+         
+ ..AA.F. 
+ ..B.DF. 
+ .PB.DF. 
+ GPJ.III 
+ GPJC... 
+ LL.C.MM 
+  K      
+
+Move 179: G-up-2
+         
+ ..AA.F. 
+ G.B.DF. 
+ GPB.DF. 
+ .PJ.III 
+ .PJC... 
+ LL.C.MM 
+  K      
+
+Move 180: C-up
+         
+ ..AA.F. 
+ G.B.DF. 
+ GPB.DF. 
+ .PJCIII 
+ .PJC... 
+ LL...MM 
+  K      
+
+Move 181: M-left-2
+         
+ ..AA.F. 
+ G.B.DF. 
+ GPB.DF. 
+ .PJCIII 
+ .PJC... 
+ LL.MM.. 
+  K      
+
+Move 182: M-left
+         
+ ..AA.F. 
+ G.B.DF. 
+ GPB.DF. 
+ .PJCIII 
+ .PJC... 
+ LLMM... 
+  K      
+
+Move 183: D-up
+         
+ ..AADF. 
+ G.B.DF. 
+ GPB..F. 
+ .PJCIII 
+ .PJC... 
+ LLMM... 
+  K      
+
+Move 184: A-left
+         
+ .AA.DF. 
+ G.B.DF. 
+ GPB..F. 
+ .PJCIII 
+ .PJC... 
+ LLMM... 
+  K      
+
+Move 185: M-right-2
+         
+ .AA.DF. 
+ G.B.DF. 
+ GPB..F. 
+ .PJCIII 
+ .PJC... 
  LL..MM. 
   K      
 
-Move 7: L-right         
- AAB.DF. 
+Move 186: D-down
+         
+ .AA..F. 
+ G.B.DF. 
+ GPB.DF. 
+ .PJCIII 
+ .PJC... 
+ LL..MM. 
+  K      
+
+Move 187: G-down
+         
+ .AA..F. 
+ ..B.DF. 
+ GPB.DF. 
+ GPJCIII 
+ .PJC... 
+ LL..MM. 
+  K      
+
+Move 188: M-left
+         
+ .AA..F. 
+ ..B.DF. 
+ GPB.DF. 
+ GPJCIII 
+ .PJC... 
+ LL.MM.. 
+  K      
+
+Move 189: M-right-2
+         
+ .AA..F. 
+ ..B.DF. 
+ GPB.DF. 
+ GPJCIII 
+ .PJC... 
+ LL...MM 
+  K      
+
+Move 190: J-down
+         
+ .AA..F. 
+ ..B.DF. 
+ GPB.DF. 
+ GP.CIII 
+ .PJC... 
+ LLJ..MM 
+  K      
+
+Move 191: C-up-3
+         
+ .AAC.F. 
  ..BCDF. 
- GP.C.F. 
+ GPB.DF. 
+ GP..III 
+ .PJ.... 
+ LLJ..MM 
+  K      
+
+Move 192: C-down
+         
+ .AA..F. 
+ ..BCDF. 
+ GPBCDF. 
+ GP..III 
+ .PJ.... 
+ LLJ..MM 
+  K      
+
+Move 193: D-up
+         
+ .AA.DF. 
+ ..BCDF. 
+ GPBC.F. 
+ GP..III 
+ .PJ.... 
+ LLJ..MM 
+  K      
+
+Move 194: B-down
+         
+ .AA.DF. 
+ ...CDF. 
+ GPBC.F. 
+ GPB.III 
+ .PJ.... 
+ LLJ..MM 
+  K      
+
+Move 195: C-up
+         
+ .AACDF. 
+ ...CDF. 
+ GPB..F. 
+ GPB.III 
+ .PJ.... 
+ LLJ..MM 
+  K      
+
+Move 196: M-left-2
+         
+ .AACDF. 
+ ...CDF. 
+ GPB..F. 
+ GPB.III 
+ .PJ.... 
+ LLJMM.. 
+  K      
+
+Move 197: I-left
+         
+ .AACDF. 
+ ...CDF. 
+ GPB..F. 
+ GPBIII. 
+ .PJ.... 
+ LLJMM.. 
+  K      
+
+Move 198: G-up
+         
+ .AACDF. 
+ G..CDF. 
+ GPB..F. 
+ .PBIII. 
+ .PJ.... 
+ LLJMM.. 
+  K      
+
+Move 199: B-up
+         
+ .AACDF. 
+ G.BCDF. 
+ GPB..F. 
+ .P.III. 
+ .PJ.... 
+ LLJMM.. 
+  K      
+
+Move 200: G-down
+         
+ .AACDF. 
+ ..BCDF. 
+ GPB..F. 
+ GP.III. 
+ .PJ.... 
+ LLJMM.. 
+  K      
+
+Move 201: I-left
+         
+ .AACDF. 
+ ..BCDF. 
+ GPB..F. 
+ GPIII.. 
+ .PJ.... 
+ LLJMM.. 
+  K      
+
+Move 202: G-down
+         
+ .AACDF. 
+ ..BCDF. 
+ .PB..F. 
+ GPIII.. 
+ GPJ.... 
+ LLJMM.. 
+  K      
+
+Move 203: P-up
+         
+ .AACDF. 
+ .PBCDF. 
+ .PB..F. 
+ GPIII.. 
+ G.J.... 
+ LLJMM.. 
+  K      
+
+Move 204: C-down
+         
+ .AA.DF. 
+ .PBCDF. 
+ .PBC.F. 
+ GPIII.. 
+ G.J.... 
+ LLJMM.. 
+  K      
+
+Move 205: A-right
+         
+ ..AADF. 
+ .PBCDF. 
+ .PBC.F. 
+ GPIII.. 
+ G.J.... 
+ LLJMM.. 
+  K      
+
+Move 206: I-right-2
+         
+ ..AADF. 
+ .PBCDF. 
+ .PBC.F. 
+ GP..III 
+ G.J.... 
+ LLJMM.. 
+  K      
+
+Move 207: P-up
+         
+ .PAADF. 
+ .PBCDF. 
+ .PBC.F. 
+ G...III 
+ G.J.... 
+ LLJMM.. 
+  K      
+
+Move 208: I-left-2
+         
+ .PAADF. 
+ .PBCDF. 
+ .PBC.F. 
+ G.III.. 
+ G.J.... 
+ LLJMM.. 
+  K      
+
+Move 209: M-right
+         
+ .PAADF. 
+ .PBCDF. 
+ .PBC.F. 
+ G.III.. 
+ G.J.... 
+ LLJ.MM. 
+  K      
+
+Move 210: M-right
+         
+ .PAADF. 
+ .PBCDF. 
+ .PBC.F. 
+ G.III.. 
+ G.J.... 
+ LLJ..MM 
+  K      
+
+Move 211: G-up-2
+         
+ .PAADF. 
+ GPBCDF. 
+ GPBC.F. 
+ ..III.. 
+ ..J.... 
+ LLJ..MM 
+  K      
+
+Move 212: F-down-2
+         
+ .PAAD.. 
+ GPBCD.. 
+ GPBC.F. 
+ ..IIIF. 
+ ..J..F. 
+ LLJ..MM 
+  K      
+
+Move 213: G-down-2
+         
+ .PAAD.. 
+ .PBCD.. 
+ .PBC.F. 
+ G.IIIF. 
+ G.J..F. 
+ LLJ..MM 
+  K      
+
+Move 214: P-down-2
+         
+ ..AAD.. 
+ ..BCD.. 
+ .PBC.F. 
+ GPIIIF. 
+ GPJ..F. 
+ LLJ..MM 
+  K      
+
+Move 215: A-left-2
+         
+ AA..D.. 
+ ..BCD.. 
+ .PBC.F. 
+ GPIIIF. 
+ GPJ..F. 
+ LLJ..MM 
+  K      
+
+Move 216: G-up
+         
+ AA..D.. 
+ ..BCD.. 
+ GPBC.F. 
+ GPIIIF. 
+ .PJ..F. 
+ LLJ..MM 
+  K      
+
+Move 217: M-left
+         
+ AA..D.. 
+ ..BCD.. 
+ GPBC.F. 
+ GPIIIF. 
+ .PJ..F. 
+ LLJ.MM. 
+  K      
+
+Move 218: F-up
+         
+ AA..D.. 
+ ..BCDF. 
+ GPBC.F. 
+ GPIIIF. 
+ .PJ.... 
+ LLJ.MM. 
+  K      
+
+Move 219: A-right-2
+         
+ ..AAD.. 
+ ..BCDF. 
+ GPBC.F. 
+ GPIIIF. 
+ .PJ.... 
+ LLJ.MM. 
+  K      
+
+Move 220: D-down
+         
+ ..AA... 
+ ..BCDF. 
+ GPBCDF. 
+ GPIIIF. 
+ .PJ.... 
+ LLJ.MM. 
+  K      
+
+Move 221: A-left-2
+         
+ AA..... 
+ ..BCDF. 
+ GPBCDF. 
+ GPIIIF. 
+ .PJ.... 
+ LLJ.MM. 
+  K      
+
+Move 222: A-right
+         
+ .AA.... 
+ ..BCDF. 
+ GPBCDF. 
+ GPIIIF. 
+ .PJ.... 
+ LLJ.MM. 
+  K      
+
+Move 223: A-right-4
+         
+ .....AA 
+ ..BCDF. 
+ GPBCDF. 
+ GPIIIF. 
+ .PJ.... 
+ LLJ.MM. 
+  K      
+
+Move 224: G-up
+         
+ .....AA 
+ G.BCDF. 
+ GPBCDF. 
+ .PIIIF. 
+ .PJ.... 
+ LLJ.MM. 
+  K      
+
+Move 225: A-left-5
+         
+ AA..... 
+ G.BCDF. 
+ GPBCDF. 
+ .PIIIF. 
+ .PJ.... 
+ LLJ.MM. 
+  K      
+
+Move 226: C-up
+         
+ AA.C... 
+ G.BCDF. 
+ GPB.DF. 
+ .PIIIF. 
+ .PJ.... 
+ LLJ.MM. 
+  K      
+
+Move 227: P-up
+         
+ AA.C... 
+ GPBCDF. 
+ GPB.DF. 
+ .PIIIF. 
+ ..J.... 
+ LLJ.MM. 
+  K      
+
+Move 228: F-down
+         
+ AA.C... 
+ GPBCD.. 
+ GPB.DF. 
+ .PIIIF. 
+ ..J..F. 
+ LLJ.MM. 
+  K      
+
+Move 229: C-down
+         
+ AA..... 
+ GPBCD.. 
+ GPBCDF. 
+ .PIIIF. 
+ ..J..F. 
+ LLJ.MM. 
+  K      
+
+Move 230: A-right
+         
+ .AA.... 
+ GPBCD.. 
+ GPBCDF. 
+ .PIIIF. 
+ ..J..F. 
+ LLJ.MM. 
+  K      
+
+Move 231: M-left
+         
+ .AA.... 
+ GPBCD.. 
+ GPBCDF. 
+ .PIIIF. 
+ ..J..F. 
+ LLJMM.. 
+  K      
+
+Move 232: F-up
+         
+ .AA.... 
+ GPBCDF. 
+ GPBCDF. 
+ .PIIIF. 
+ ..J.... 
+ LLJMM.. 
+  K      
+
+Move 233: M-right
+         
+ .AA.... 
+ GPBCDF. 
+ GPBCDF. 
+ .PIIIF. 
+ ..J.... 
+ LLJ.MM. 
+  K      
+
+Move 234: G-down-2
+         
+ .AA.... 
+ .PBCDF. 
+ .PBCDF. 
+ GPIIIF. 
+ G.J.... 
+ LLJ.MM. 
+  K      
+
+Move 235: F-up
+         
+ .AA..F. 
+ .PBCDF. 
+ .PBCDF. 
+ GPIII.. 
+ G.J.... 
+ LLJ.MM. 
+  K      
+
+Move 236: G-up-2
+         
+ .AA..F. 
+ GPBCDF. 
+ GPBCDF. 
+ .PIII.. 
+ ..J.... 
+ LLJ.MM. 
+  K      
+
+Move 237: C-up
+         
+ .AAC.F. 
+ GPBCDF. 
+ GPB.DF. 
+ .PIII.. 
+ ..J.... 
+ LLJ.MM. 
+  K      
+
+Move 238: P-down
+         
+ .AAC.F. 
+ G.BCDF. 
+ GPB.DF. 
+ .PIII.. 
+ .PJ.... 
+ LLJ.MM. 
+  K      
+
+Move 239: I-right
+         
+ .AAC.F. 
+ G.BCDF. 
+ GPB.DF. 
+ .P.III. 
+ .PJ.... 
+ LLJ.MM. 
+  K      
+
+Move 240: A-left
+         
+ AA.C.F. 
+ G.BCDF. 
+ GPB.DF. 
+ .P.III. 
+ .PJ.... 
+ LLJ.MM. 
+  K      
+
+Move 241: P-up
+         
+ AA.C.F. 
+ GPBCDF. 
+ GPB.DF. 
+ .P.III. 
+ ..J.... 
+ LLJ.MM. 
+  K      
+
+Move 242: I-left
+         
+ AA.C.F. 
+ GPBCDF. 
+ GPB.DF. 
+ .PIII.. 
+ ..J.... 
+ LLJ.MM. 
+  K      
+
+Move 243: I-right-2
+         
+ AA.C.F. 
+ GPBCDF. 
+ GPB.DF. 
+ .P..III 
+ ..J.... 
+ LLJ.MM. 
+  K      
+
+Move 244: C-down-3
+         
+ AA...F. 
+ GPB.DF. 
+ GPB.DF. 
+ .P.CIII 
+ ..JC... 
+ LLJ.MM. 
+  K      
+
+Move 245: P-down
+         
+ AA...F. 
+ G.B.DF. 
+ GPB.DF. 
+ .P.CIII 
+ .PJC... 
+ LLJ.MM. 
+  K      
+
+Move 246: G-down-2
+         
+ AA...F. 
+ ..B.DF. 
+ .PB.DF. 
+ GP.CIII 
+ GPJC... 
+ LLJ.MM. 
+  K      
+
+Move 247: J-up
+         
+ AA...F. 
+ ..B.DF. 
+ .PB.DF. 
+ GPJCIII 
+ GPJC... 
+ LL..MM. 
+  K      
+
+Move 248: L-right
+         
+ AA...F. 
+ ..B.DF. 
+ .PB.DF. 
+ GPJCIII 
+ GPJC... 
+ .LL.MM. 
+  K      
+
+Move 249: A-right-2
+         
+ ..AA.F. 
+ ..B.DF. 
+ .PB.DF. 
+ GPJCIII 
+ GPJC... 
+ .LL.MM. 
+  K      
+
+Move 250: C-up-2
+         
+ ..AA.F. 
+ ..BCDF. 
+ .PBCDF. 
+ GPJ.III 
+ GPJ.... 
+ .LL.MM. 
+  K      
+
+Move 251: A-right
+         
+ ...AAF. 
+ ..BCDF. 
+ .PBCDF. 
+ GPJ.III 
+ GPJ.... 
+ .LL.MM. 
+  K      
+
+Move 252: G-up
+         
+ ...AAF. 
+ ..BCDF. 
+ GPBCDF. 
  GPJ.III 
  .PJ.... 
  .LL.MM. 
   K      
 
-Move 8: L-right         
- AAB.DF. 
- ..BCDF. 
- GP.C.F. 
+Move 253: C-down-3
+         
+ ...AAF. 
+ ..B.DF. 
+ GPB.DF. 
  GPJ.III 
+ .PJC... 
+ .LLCMM. 
+  K      
+
+Move 254: I-left
+         
+ ...AAF. 
+ ..B.DF. 
+ GPB.DF. 
+ GPJIII. 
+ .PJC... 
+ .LLCMM. 
+  K      
+
+Move 255: G-down-2
+         
+ ...AAF. 
+ ..B.DF. 
+ .PB.DF. 
+ .PJIII. 
+ GPJC... 
+ GLLCMM. 
+  K      
+
+Move 256: I-right
+         
+ ...AAF. 
+ ..B.DF. 
+ .PB.DF. 
+ .PJ.III 
+ GPJC... 
+ GLLCMM. 
+  K      
+
+Move 257: G-up-3
+         
+ ...AAF. 
+ G.B.DF. 
+ GPB.DF. 
+ .PJ.III 
+ .PJC... 
+ .LLCMM. 
+  K      
+
+Move 258: B-up
+         
+ ..BAAF. 
+ G.B.DF. 
+ GP..DF. 
+ .PJ.III 
+ .PJC... 
+ .LLCMM. 
+  K      
+
+Move 259: P-up
+         
+ ..BAAF. 
+ GPB.DF. 
+ GP..DF. 
+ .PJ.III 
+ ..JC... 
+ .LLCMM. 
+  K      
+
+Move 260: G-up
+         
+ G.BAAF. 
+ GPB.DF. 
+ .P..DF. 
+ .PJ.III 
+ ..JC... 
+ .LLCMM. 
+  K      
+
+Move 261: C-up-3
+         
+ G.BAAF. 
+ GPBCDF. 
+ .P.CDF. 
+ .PJ.III 
+ ..J.... 
+ .LL.MM. 
+  K      
+
+Move 262: P-up
+         
+ GPBAAF. 
+ GPBCDF. 
+ .P.CDF. 
+ ..J.III 
+ ..J.... 
+ .LL.MM. 
+  K      
+
+Move 263: P-down-2
+         
+ G.BAAF. 
+ G.BCDF. 
+ .P.CDF. 
+ .PJ.III 
  .PJ.... 
+ .LL.MM. 
+  K      
+
+Move 264: J-up
+         
+ G.BAAF. 
+ G.BCDF. 
+ .PJCDF. 
+ .PJ.III 
+ .P..... 
+ .LL.MM. 
+  K      
+
+Move 265: G-down
+         
+ ..BAAF. 
+ G.BCDF. 
+ GPJCDF. 
+ .PJ.III 
+ .P..... 
+ .LL.MM. 
+  K      
+
+Move 266: G-down-2
+         
+ ..BAAF. 
+ ..BCDF. 
+ .PJCDF. 
+ GPJ.III 
+ GP..... 
+ .LL.MM. 
+  K      
+
+Move 267: C-down-2
+         
+ ..BAAF. 
+ ..B.DF. 
+ .PJ.DF. 
+ GPJCIII 
+ GP.C... 
+ .LL.MM. 
+  K      
+
+Move 268: P-up-2
+         
+ .PBAAF. 
+ .PB.DF. 
+ .PJ.DF. 
+ G.JCIII 
+ G..C... 
+ .LL.MM. 
+  K      
+
+Move 269: C-down
+         
+ .PBAAF. 
+ .PB.DF. 
+ .PJ.DF. 
+ G.J.III 
+ G..C... 
+ .LLCMM. 
+  K      
+
+Move 270: C-up-3
+         
+ .PBAAF. 
+ .PBCDF. 
+ .PJCDF. 
+ G.J.III 
+ G...... 
+ .LL.MM. 
+  K      
+
+Move 271: L-right
+         
+ .PBAAF. 
+ .PBCDF. 
+ .PJCDF. 
+ G.J.III 
+ G...... 
  ..LLMM. 
   K      
 
-Move 9: D-down         
- AAB..F. 
- ..BCDF. 
+Move 272: G-up-3
+         
+ GPBAAF. 
+ GPBCDF. 
+ .PJCDF. 
+ ..J.III 
+ ....... 
+ ..LLMM. 
+  K      
+
+Move 273: C-down-2
+         
+ GPBAAF. 
+ GPB.DF. 
+ .PJ.DF. 
+ ..JCIII 
+ ...C... 
+ ..LLMM. 
+  K      
+
+Move 274: J-down
+         
+ GPBAAF. 
+ GPB.DF. 
+ .P..DF. 
+ ..JCIII 
+ ..JC... 
+ ..LLMM. 
+  K      
+
+Move 275: M-right
+         
+ GPBAAF. 
+ GPB.DF. 
+ .P..DF. 
+ ..JCIII 
+ ..JC... 
+ ..LL.MM 
+  K      
+
+Move 276: L-left
+         
+ GPBAAF. 
+ GPB.DF. 
+ .P..DF. 
+ ..JCIII 
+ ..JC... 
+ .LL..MM 
+  K      
+
+Move 277: C-up-2
+         
+ GPBAAF. 
+ GPBCDF. 
+ .P.CDF. 
+ ..J.III 
+ ..J.... 
+ .LL..MM 
+  K      
+
+Move 278: P-down
+         
+ G.BAAF. 
+ GPBCDF. 
+ .P.CDF. 
+ .PJ.III 
+ ..J.... 
+ .LL..MM 
+  K      
+
+Move 279: C-down-2
+         
+ G.BAAF. 
+ GPB.DF. 
+ .P..DF. 
+ .PJCIII 
+ ..JC... 
+ .LL..MM 
+  K      
+
+Move 280: G-down-4
+         
+ ..BAAF. 
+ .PB.DF. 
+ .P..DF. 
+ .PJCIII 
+ G.JC... 
+ GLL..MM 
+  K      
+
+Move 281: L-right
+         
+ ..BAAF. 
+ .PB.DF. 
+ .P..DF. 
+ .PJCIII 
+ G.JC... 
+ G.LL.MM 
+  K      
+
+Move 282: C-up
+         
+ ..BAAF. 
+ .PB.DF. 
+ .P.CDF. 
+ .PJCIII 
+ G.J.... 
+ G.LL.MM 
+  K      
+
+Move 283: P-down
+         
+ ..BAAF. 
+ ..B.DF. 
+ .P.CDF. 
+ .PJCIII 
+ GPJ.... 
+ G.LL.MM 
+  K      
+
+Move 284: G-up
+         
+ ..BAAF. 
+ ..B.DF. 
+ .P.CDF. 
+ GPJCIII 
+ GPJ.... 
+ ..LL.MM 
+  K      
+
+Move 285: B-down
+         
+ ...AAF. 
+ ..B.DF. 
+ .PBCDF. 
+ GPJCIII 
+ GPJ.... 
+ ..LL.MM 
+  K      
+
+Move 286: G-up-3
+         
+ G..AAF. 
+ G.B.DF. 
+ .PBCDF. 
+ .PJCIII 
+ .PJ.... 
+ ..LL.MM 
+  K      
+
+Move 287: P-up
+         
+ G..AAF. 
+ GPB.DF. 
+ .PBCDF. 
+ .PJCIII 
+ ..J.... 
+ ..LL.MM 
+  K      
+
+Move 288: C-down
+         
+ G..AAF. 
+ GPB.DF. 
+ .PB.DF. 
+ .PJCIII 
+ ..JC... 
+ ..LL.MM 
+  K      
+
+Move 289: P-up
+         
+ GP.AAF. 
+ GPB.DF. 
+ .PB.DF. 
+ ..JCIII 
+ ..JC... 
+ ..LL.MM 
+  K      
+
+Move 290: C-up
+         
+ GP.AAF. 
+ GPB.DF. 
+ .PBCDF. 
+ ..JCIII 
+ ..J.... 
+ ..LL.MM 
+  K      
+
+Move 291: L-left
+         
+ GP.AAF. 
+ GPB.DF. 
+ .PBCDF. 
+ ..JCIII 
+ ..J.... 
+ .LL..MM 
+  K      
+
+Move 292: P-down-2
+         
+ G..AAF. 
+ G.B.DF. 
+ .PBCDF. 
+ .PJCIII 
+ .PJ.... 
+ .LL..MM 
+  K      
+
+Move 293: B-up
+         
+ G.BAAF. 
+ G.B.DF. 
+ .P.CDF. 
+ .PJCIII 
+ .PJ.... 
+ .LL..MM 
+  K      
+
+Move 294: P-up-2
+         
+ GPBAAF. 
+ GPB.DF. 
+ .P.CDF. 
+ ..JCIII 
+ ..J.... 
+ .LL..MM 
+  K      
+
+Move 295: L-left
+         
+ GPBAAF. 
+ GPB.DF. 
+ .P.CDF. 
+ ..JCIII 
+ ..J.... 
+ LL...MM 
+  K      
+
+Move 296: G-down
+         
+ .PBAAF. 
+ GPB.DF. 
  GP.CDF. 
- GPJ.III 
- .PJ.... 
+ ..JCIII 
+ ..J.... 
+ LL...MM 
+  K      
+
+Move 297: C-down
+         
+ .PBAAF. 
+ GPB.DF. 
+ GP..DF. 
+ ..JCIII 
+ ..JC... 
+ LL...MM 
+  K      
+
+Move 298: G-up
+         
+ GPBAAF. 
+ GPB.DF. 
+ .P..DF. 
+ ..JCIII 
+ ..JC... 
+ LL...MM 
+  K      
+
+Move 299: C-up-2
+         
+ GPBAAF. 
+ GPBCDF. 
+ .P.CDF. 
+ ..J.III 
+ ..J.... 
+ LL...MM 
+  K      
+
+Move 300: I-left
+         
+ GPBAAF. 
+ GPBCDF. 
+ .P.CDF. 
+ ..JIII. 
+ ..J.... 
+ LL...MM 
+  K      
+
+Move 301: J-up
+         
+ GPBAAF. 
+ GPBCDF. 
+ .PJCDF. 
+ ..JIII. 
+ ....... 
+ LL...MM 
+  K      
+
+Move 302: P-down
+         
+ G.BAAF. 
+ GPBCDF. 
+ .PJCDF. 
+ .PJIII. 
+ ....... 
+ LL...MM 
+  K      
+
+Move 303: G-down
+         
+ ..BAAF. 
+ GPBCDF. 
+ GPJCDF. 
+ .PJIII. 
+ ....... 
+ LL...MM 
+  K      
+
+Move 304: M-left
+         
+ ..BAAF. 
+ GPBCDF. 
+ GPJCDF. 
+ .PJIII. 
+ ....... 
+ LL..MM. 
+  K      
+
+Move 305: L-right-2
+         
+ ..BAAF. 
+ GPBCDF. 
+ GPJCDF. 
+ .PJIII. 
+ ....... 
  ..LLMM. 
   K      
 
-Move 10: P-down         
- AAB..F. 
- ..BCDF. 
- G..CDF. 
- GPJ.III 
- .PJ.... 
+Move 306: G-down
+         
+ ..BAAF. 
+ .PBCDF. 
+ GPJCDF. 
+ GPJIII. 
+ ....... 
+ ..LLMM. 
+  K      
+
+Move 307: G-down-2
+         
+ ..BAAF. 
+ .PBCDF. 
+ .PJCDF. 
+ .PJIII. 
+ G...... 
+ G.LLMM. 
+  K      
+
+Move 308: M-right
+         
+ ..BAAF. 
+ .PBCDF. 
+ .PJCDF. 
+ .PJIII. 
+ G...... 
+ G.LL.MM 
+  K      
+
+Move 309: L-right
+         
+ ..BAAF. 
+ .PBCDF. 
+ .PJCDF. 
+ .PJIII. 
+ G...... 
+ G..LLMM 
+  K      
+
+Move 310: L-left-2
+         
+ ..BAAF. 
+ .PBCDF. 
+ .PJCDF. 
+ .PJIII. 
+ G...... 
+ GLL..MM 
+  K      
+
+Move 311: M-left
+         
+ ..BAAF. 
+ .PBCDF. 
+ .PJCDF. 
+ .PJIII. 
+ G...... 
+ GLL.MM. 
+  K      
+
+Move 312: J-down
+         
+ ..BAAF. 
+ .PBCDF. 
+ .P.CDF. 
+ .PJIII. 
+ G.J.... 
+ GLL.MM. 
+  K      
+
+Move 313: L-right
+         
+ ..BAAF. 
+ .PBCDF. 
+ .P.CDF. 
+ .PJIII. 
+ G.J.... 
+ G.LLMM. 
+  K      
+
+Move 314: G-up-3
+         
+ ..BAAF. 
+ GPBCDF. 
+ GP.CDF. 
+ .PJIII. 
+ ..J.... 
+ ..LLMM. 
+  K      
+
+Move 315: G-up
+         
+ G.BAAF. 
+ GPBCDF. 
+ .P.CDF. 
+ .PJIII. 
+ ..J.... 
+ ..LLMM. 
+  K      
+
+Move 316: I-right
+         
+ G.BAAF. 
+ GPBCDF. 
+ .P.CDF. 
+ .PJ.III 
+ ..J.... 
+ ..LLMM. 
+  K      
+
+Move 317: J-up
+         
+ G.BAAF. 
+ GPBCDF. 
+ .PJCDF. 
+ .PJ.III 
+ ....... 
+ ..LLMM. 
+  K      
+
+Move 318: P-down
+         
+ G.BAAF. 
+ G.BCDF. 
+ .PJCDF. 
+ .PJ.III 
+ .P..... 
+ ..LLMM. 
+  K      
+
+Move 319: P-down
+         
+ G.BAAF. 
+ G.BCDF. 
+ ..JCDF. 
+ .PJ.III 
+ .P..... 
  .PLLMM. 
   K      
 ----------------------------------------------------------

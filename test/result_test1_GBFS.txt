@@ -3,7 +3,8 @@
 ==========================================================
 
 Number of moves: 609
-Execution time: 63,261 ms
+Execution time : 88,517 ms
+Nodes visited  : 1219
 
 ----------------------------------------------------------
 SOLUTION STEPS:
@@ -620,7 +621,8 @@ Move 609: P-down-2
 
 
 
-Move 0: Start         
+Move 0: Start
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -629,7 +631,8 @@ Move 0: Start
  LLJMM.. 
   K      
 
-Move 1: M-right-2         
+Move 1: M-right-2
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -638,7 +641,8 @@ Move 1: M-right-2
  LLJ..MM 
   K      
 
-Move 2: M-left         
+Move 2: M-left
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -647,7 +651,8 @@ Move 2: M-left
  LLJ.MM. 
   K      
 
-Move 3: J-up-2         
+Move 3: J-up-2
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -656,7 +661,8 @@ Move 3: J-up-2
  LL..MM. 
   K      
 
-Move 4: M-right         
+Move 4: M-right
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -665,7 +671,8 @@ Move 4: M-right
  LL...MM 
   K      
 
-Move 5: M-left-3         
+Move 5: M-left-3
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -674,7 +681,8 @@ Move 5: M-left-3
  LLMM... 
   K      
 
-Move 6: M-right         
+Move 6: M-right
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -683,7 +691,8 @@ Move 6: M-right
  LL.MM.. 
   K      
 
-Move 7: L-right         
+Move 7: L-right
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -692,7 +701,8 @@ Move 7: L-right
  .LLMM.. 
   K      
 
-Move 8: M-right-2         
+Move 8: M-right-2
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -701,7 +711,8 @@ Move 8: M-right-2
  .LL..MM 
   K      
 
-Move 9: M-left         
+Move 9: M-left
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -710,7 +721,8 @@ Move 9: M-left
  .LL.MM. 
   K      
 
-Move 10: L-right         
+Move 10: L-right
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -719,7 +731,8 @@ Move 10: L-right
  ..LLMM. 
   K      
 
-Move 11: M-right         
+Move 11: M-right
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -728,7 +741,8 @@ Move 11: M-right
  ..LL.MM 
   K      
 
-Move 12: L-right         
+Move 12: L-right
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -737,7 +751,8 @@ Move 12: L-right
  ...LLMM 
   K      
 
-Move 13: J-down-2         
+Move 13: J-down-2
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -746,7 +761,8 @@ Move 13: J-down-2
  ..JLLMM 
   K      
 
-Move 14: J-up         
+Move 14: J-up
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -755,7 +771,8 @@ Move 14: J-up
  ...LLMM 
   K      
 
-Move 15: L-left-3         
+Move 15: L-left-3
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -764,7 +781,8 @@ Move 15: L-left-3
  LL...MM 
   K      
 
-Move 16: M-left-3         
+Move 16: M-left-3
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -773,7 +791,8 @@ Move 16: M-left-3
  LLMM... 
   K      
 
-Move 17: M-right-2         
+Move 17: M-right-2
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -782,7 +801,8 @@ Move 17: M-right-2
  LL..MM. 
   K      
 
-Move 18: M-left         
+Move 18: M-left
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -791,7 +811,8 @@ Move 18: M-left
  LL.MM.. 
   K      
 
-Move 19: L-right         
+Move 19: L-right
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -800,7 +821,8 @@ Move 19: L-right
  .LLMM.. 
   K      
 
-Move 20: M-right-2         
+Move 20: M-right-2
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -809,7 +831,8 @@ Move 20: M-right-2
  .LL..MM 
   K      
 
-Move 21: M-left         
+Move 21: M-left
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -818,7 +841,8 @@ Move 21: M-left
  .LL.MM. 
   K      
 
-Move 22: L-right         
+Move 22: L-right
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -827,7 +851,8 @@ Move 22: L-right
  ..LLMM. 
   K      
 
-Move 23: M-right         
+Move 23: M-right
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -836,7 +861,8 @@ Move 23: M-right
  ..LL.MM 
   K      
 
-Move 24: I-right         
+Move 24: I-right
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -845,7 +871,8 @@ Move 24: I-right
  ..LL.MM 
   K      
 
-Move 25: M-left         
+Move 25: M-left
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -854,7 +881,8 @@ Move 25: M-left
  ..LLMM. 
   K      
 
-Move 26: L-left-2         
+Move 26: L-left-2
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -863,7 +891,8 @@ Move 26: L-left-2
  LL..MM. 
   K      
 
-Move 27: M-right         
+Move 27: M-right
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -872,7 +901,8 @@ Move 27: M-right
  LL...MM 
   K      
 
-Move 28: M-left-3         
+Move 28: M-left-3
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -881,7 +911,8 @@ Move 28: M-left-3
  LLMM... 
   K      
 
-Move 29: M-right         
+Move 29: M-right
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -890,7 +921,8 @@ Move 29: M-right
  LL.MM.. 
   K      
 
-Move 30: L-right         
+Move 30: L-right
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -899,7 +931,8 @@ Move 30: L-right
  .LLMM.. 
   K      
 
-Move 31: M-right-2         
+Move 31: M-right-2
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -908,7 +941,8 @@ Move 31: M-right-2
  .LL..MM 
   K      
 
-Move 32: M-left         
+Move 32: M-left
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -917,7 +951,8 @@ Move 32: M-left
  .LL.MM. 
   K      
 
-Move 33: J-up         
+Move 33: J-up
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -926,7 +961,8 @@ Move 33: J-up
  .LL.MM. 
   K      
 
-Move 34: M-right         
+Move 34: M-right
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -935,7 +971,8 @@ Move 34: M-right
  .LL..MM 
   K      
 
-Move 35: M-left-2         
+Move 35: M-left-2
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -944,7 +981,8 @@ Move 35: M-left-2
  .LLMM.. 
   K      
 
-Move 36: L-left         
+Move 36: L-left
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -953,7 +991,8 @@ Move 36: L-left
  LL.MM.. 
   K      
 
-Move 37: M-right-2         
+Move 37: M-right-2
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -962,7 +1001,8 @@ Move 37: M-right-2
  LL...MM 
   K      
 
-Move 38: M-left-3         
+Move 38: M-left-3
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -971,7 +1011,8 @@ Move 38: M-left-3
  LLMM... 
   K      
 
-Move 39: M-right-2         
+Move 39: M-right-2
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -980,7 +1021,8 @@ Move 39: M-right-2
  LL..MM. 
   K      
 
-Move 40: L-right-2         
+Move 40: L-right-2
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -989,7 +1031,8 @@ Move 40: L-right-2
  ..LLMM. 
   K      
 
-Move 41: M-right         
+Move 41: M-right
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -998,7 +1041,8 @@ Move 41: M-right
  ..LL.MM 
   K      
 
-Move 42: L-right         
+Move 42: L-right
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -1007,7 +1051,8 @@ Move 42: L-right
  ...LLMM 
   K      
 
-Move 43: J-down-2         
+Move 43: J-down-2
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -1016,7 +1061,8 @@ Move 43: J-down-2
  ..JLLMM 
   K      
 
-Move 44: J-up         
+Move 44: J-up
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -1025,7 +1071,8 @@ Move 44: J-up
  ...LLMM 
   K      
 
-Move 45: G-down         
+Move 45: G-down
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -1034,7 +1081,8 @@ Move 45: G-down
  G..LLMM 
   K      
 
-Move 46: L-left-2         
+Move 46: L-left-2
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -1043,7 +1091,8 @@ Move 46: L-left-2
  GLL..MM 
   K      
 
-Move 47: M-left-2         
+Move 47: M-left-2
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -1052,7 +1101,8 @@ Move 47: M-left-2
  GLLMM.. 
   K      
 
-Move 48: M-right         
+Move 48: M-right
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -1061,7 +1111,8 @@ Move 48: M-right
  GLL.MM. 
   K      
 
-Move 49: L-right         
+Move 49: L-right
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -1070,7 +1121,8 @@ Move 49: L-right
  G.LLMM. 
   K      
 
-Move 50: M-right         
+Move 50: M-right
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -1079,7 +1131,8 @@ Move 50: M-right
  G.LL.MM 
   K      
 
-Move 51: J-up         
+Move 51: J-up
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -1088,7 +1141,8 @@ Move 51: J-up
  G.LL.MM 
   K      
 
-Move 52: M-left         
+Move 52: M-left
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -1097,7 +1151,8 @@ Move 52: M-left
  G.LLMM. 
   K      
 
-Move 53: L-left         
+Move 53: L-left
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -1106,7 +1161,8 @@ Move 53: L-left
  GLL.MM. 
   K      
 
-Move 54: M-right         
+Move 54: M-right
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -1115,7 +1171,8 @@ Move 54: M-right
  GLL..MM 
   K      
 
-Move 55: M-left-2         
+Move 55: M-left-2
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -1124,7 +1181,8 @@ Move 55: M-left-2
  GLLMM.. 
   K      
 
-Move 56: I-left         
+Move 56: I-left
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -1133,7 +1191,8 @@ Move 56: I-left
  GLLMM.. 
   K      
 
-Move 57: M-right-2         
+Move 57: M-right-2
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -1142,7 +1201,8 @@ Move 57: M-right-2
  GLL..MM 
   K      
 
-Move 58: M-left         
+Move 58: M-left
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -1151,7 +1211,8 @@ Move 58: M-left
  GLL.MM. 
   K      
 
-Move 59: L-right         
+Move 59: L-right
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -1160,7 +1221,8 @@ Move 59: L-right
  G.LLMM. 
   K      
 
-Move 60: M-right         
+Move 60: M-right
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -1169,7 +1231,8 @@ Move 60: M-right
  G.LL.MM 
   K      
 
-Move 61: L-right         
+Move 61: L-right
+         
  AAB..F. 
  .PBCDF. 
  .PJCDF. 
@@ -1178,7 +1241,8 @@ Move 61: L-right
  G..LLMM 
   K      
 
-Move 62: J-down-2         
+Move 62: J-down-2
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -1187,7 +1251,8 @@ Move 62: J-down-2
  G.JLLMM 
   K      
 
-Move 63: J-up         
+Move 63: J-up
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -1196,7 +1261,8 @@ Move 63: J-up
  G..LLMM 
   K      
 
-Move 64: L-left-2         
+Move 64: L-left-2
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -1205,7 +1271,8 @@ Move 64: L-left-2
  GLL..MM 
   K      
 
-Move 65: M-left-2         
+Move 65: M-left-2
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -1214,7 +1281,8 @@ Move 65: M-left-2
  GLLMM.. 
   K      
 
-Move 66: M-right         
+Move 66: M-right
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -1223,7 +1291,8 @@ Move 66: M-right
  GLL.MM. 
   K      
 
-Move 67: L-right         
+Move 67: L-right
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -1232,7 +1301,8 @@ Move 67: L-right
  G.LLMM. 
   K      
 
-Move 68: M-right         
+Move 68: M-right
+         
  AAB..F. 
  .PBCDF. 
  .P.CDF. 
@@ -1241,7 +1311,8 @@ Move 68: M-right
  G.LL.MM 
   K      
 
-Move 69: G-up-3         
+Move 69: G-up-3
+         
  AAB..F. 
  GPBCDF. 
  GP.CDF. 
@@ -1250,7 +1321,8 @@ Move 69: G-up-3
  ..LL.MM 
   K      
 
-Move 70: M-left         
+Move 70: M-left
+         
  AAB..F. 
  GPBCDF. 
  GP.CDF. 
@@ -1259,7 +1331,8 @@ Move 70: M-left
  ..LLMM. 
   K      
 
-Move 71: L-left-2         
+Move 71: L-left-2
+         
  AAB..F. 
  GPBCDF. 
  GP.CDF. 
@@ -1268,7 +1341,8 @@ Move 71: L-left-2
  LL..MM. 
   K      
 
-Move 72: M-right         
+Move 72: M-right
+         
  AAB..F. 
  GPBCDF. 
  GP.CDF. 
@@ -1277,7 +1351,8 @@ Move 72: M-right
  LL...MM 
   K      
 
-Move 73: M-left-3         
+Move 73: M-left-3
+         
  AAB..F. 
  GPBCDF. 
  GP.CDF. 
@@ -1286,7 +1361,8 @@ Move 73: M-left-3
  LLMM... 
   K      
 
-Move 74: M-right         
+Move 74: M-right
+         
  AAB..F. 
  GPBCDF. 
  GP.CDF. 
@@ -1295,7 +1371,8 @@ Move 74: M-right
  LL.MM.. 
   K      
 
-Move 75: L-right         
+Move 75: L-right
+         
  AAB..F. 
  GPBCDF. 
  GP.CDF. 
@@ -1304,7 +1381,8 @@ Move 75: L-right
  .LLMM.. 
   K      
 
-Move 76: M-right-2         
+Move 76: M-right-2
+         
  AAB..F. 
  GPBCDF. 
  GP.CDF. 
@@ -1313,7 +1391,8 @@ Move 76: M-right-2
  .LL..MM 
   K      
 
-Move 77: M-left         
+Move 77: M-left
+         
  AAB..F. 
  GPBCDF. 
  GP.CDF. 
@@ -1322,7 +1401,8 @@ Move 77: M-left
  .LL.MM. 
   K      
 
-Move 78: J-up         
+Move 78: J-up
+         
  AAB..F. 
  GPBCDF. 
  GPJCDF. 
@@ -1331,7 +1411,8 @@ Move 78: J-up
  .LL.MM. 
   K      
 
-Move 79: M-right         
+Move 79: M-right
+         
  AAB..F. 
  GPBCDF. 
  GPJCDF. 
@@ -1340,7 +1421,8 @@ Move 79: M-right
  .LL..MM 
   K      
 
-Move 80: M-left-2         
+Move 80: M-left-2
+         
  AAB..F. 
  GPBCDF. 
  GPJCDF. 
@@ -1349,7 +1431,8 @@ Move 80: M-left-2
  .LLMM.. 
   K      
 
-Move 81: L-left         
+Move 81: L-left
+         
  AAB..F. 
  GPBCDF. 
  GPJCDF. 
@@ -1358,7 +1441,8 @@ Move 81: L-left
  LL.MM.. 
   K      
 
-Move 82: M-right-2         
+Move 82: M-right-2
+         
  AAB..F. 
  GPBCDF. 
  GPJCDF. 
@@ -1367,7 +1451,8 @@ Move 82: M-right-2
  LL...MM 
   K      
 
-Move 83: M-left-3         
+Move 83: M-left-3
+         
  AAB..F. 
  GPBCDF. 
  GPJCDF. 
@@ -1376,7 +1461,8 @@ Move 83: M-left-3
  LLMM... 
   K      
 
-Move 84: M-right-2         
+Move 84: M-right-2
+         
  AAB..F. 
  GPBCDF. 
  GPJCDF. 
@@ -1385,7 +1471,8 @@ Move 84: M-right-2
  LL..MM. 
   K      
 
-Move 85: L-right-2         
+Move 85: L-right-2
+         
  AAB..F. 
  GPBCDF. 
  GPJCDF. 
@@ -1394,7 +1481,8 @@ Move 85: L-right-2
  ..LLMM. 
   K      
 
-Move 86: M-right         
+Move 86: M-right
+         
  AAB..F. 
  GPBCDF. 
  GPJCDF. 
@@ -1403,7 +1491,8 @@ Move 86: M-right
  ..LL.MM 
   K      
 
-Move 87: L-right         
+Move 87: L-right
+         
  AAB..F. 
  GPBCDF. 
  GPJCDF. 
@@ -1412,7 +1501,8 @@ Move 87: L-right
  ...LLMM 
   K      
 
-Move 88: J-down-2         
+Move 88: J-down-2
+         
  AAB..F. 
  GPBCDF. 
  GP.CDF. 
@@ -1421,7 +1511,8 @@ Move 88: J-down-2
  ..JLLMM 
   K      
 
-Move 89: J-up         
+Move 89: J-up
+         
  AAB..F. 
  GPBCDF. 
  GP.CDF. 
@@ -1430,7 +1521,8 @@ Move 89: J-up
  ...LLMM 
   K      
 
-Move 90: I-right         
+Move 90: I-right
+         
  AAB..F. 
  GPBCDF. 
  GP.CDF. 
@@ -1439,7 +1531,8 @@ Move 90: I-right
  ...LLMM 
   K      
 
-Move 91: L-left-3         
+Move 91: L-left-3
+         
  AAB..F. 
  GPBCDF. 
  GP.CDF. 
@@ -1448,7 +1541,8 @@ Move 91: L-left-3
  LL...MM 
   K      
 
-Move 92: M-left-3         
+Move 92: M-left-3
+         
  AAB..F. 
  GPBCDF. 
  GP.CDF. 
@@ -1457,7 +1551,8 @@ Move 92: M-left-3
  LLMM... 
   K      
 
-Move 93: M-right-2         
+Move 93: M-right-2
+         
  AAB..F. 
  GPBCDF. 
  GP.CDF. 
@@ -1466,7 +1561,8 @@ Move 93: M-right-2
  LL..MM. 
   K      
 
-Move 94: M-left         
+Move 94: M-left
+         
  AAB..F. 
  GPBCDF. 
  GP.CDF. 
@@ -1475,7 +1571,8 @@ Move 94: M-left
  LL.MM.. 
   K      
 
-Move 95: L-right         
+Move 95: L-right
+         
  AAB..F. 
  GPBCDF. 
  GP.CDF. 
@@ -1484,7 +1581,8 @@ Move 95: L-right
  .LLMM.. 
   K      
 
-Move 96: M-right-2         
+Move 96: M-right-2
+         
  AAB..F. 
  GPBCDF. 
  GP.CDF. 
@@ -1493,7 +1591,8 @@ Move 96: M-right-2
  .LL..MM 
   K      
 
-Move 97: M-left         
+Move 97: M-left
+         
  AAB..F. 
  GPBCDF. 
  GP.CDF. 
@@ -1502,7 +1601,8 @@ Move 97: M-left
  .LL.MM. 
   K      
 
-Move 98: L-right         
+Move 98: L-right
+         
  AAB..F. 
  GPBCDF. 
  GP.CDF. 
@@ -1511,7 +1611,8 @@ Move 98: L-right
  ..LLMM. 
   K      
 
-Move 99: M-right         
+Move 99: M-right
+         
  AAB..F. 
  GPBCDF. 
  GP.CDF. 
@@ -1520,7 +1621,8 @@ Move 99: M-right
  ..LL.MM 
   K      
 
-Move 100: J-up         
+Move 100: J-up
+         
  AAB..F. 
  GPBCDF. 
  GPJCDF. 
@@ -1529,7 +1631,8 @@ Move 100: J-up
  ..LL.MM 
   K      
 
-Move 101: M-left         
+Move 101: M-left
+         
  AAB..F. 
  GPBCDF. 
  GPJCDF. 
@@ -1538,7 +1641,8 @@ Move 101: M-left
  ..LLMM. 
   K      
 
-Move 102: L-left-2         
+Move 102: L-left-2
+         
  AAB..F. 
  GPBCDF. 
  GPJCDF. 
@@ -1547,7 +1651,8 @@ Move 102: L-left-2
  LL..MM. 
   K      
 
-Move 103: M-right         
+Move 103: M-right
+         
  AAB..F. 
  GPBCDF. 
  GPJCDF. 
@@ -1556,7 +1661,8 @@ Move 103: M-right
  LL...MM 
   K      
 
-Move 104: M-left-3         
+Move 104: M-left-3
+         
  AAB..F. 
  GPBCDF. 
  GPJCDF. 
@@ -1565,7 +1671,8 @@ Move 104: M-left-3
  LLMM... 
   K      
 
-Move 105: M-right         
+Move 105: M-right
+         
  AAB..F. 
  GPBCDF. 
  GPJCDF. 
@@ -1574,7 +1681,8 @@ Move 105: M-right
  LL.MM.. 
   K      
 
-Move 106: L-right         
+Move 106: L-right
+         
  AAB..F. 
  GPBCDF. 
  GPJCDF. 
@@ -1583,7 +1691,8 @@ Move 106: L-right
  .LLMM.. 
   K      
 
-Move 107: M-right-2         
+Move 107: M-right-2
+         
  AAB..F. 
  GPBCDF. 
  GPJCDF. 
@@ -1592,7 +1701,8 @@ Move 107: M-right-2
  .LL..MM 
   K      
 
-Move 108: M-left         
+Move 108: M-left
+         
  AAB..F. 
  GPBCDF. 
  GPJCDF. 
@@ -1601,7 +1711,8 @@ Move 108: M-left
  .LL.MM. 
   K      
 
-Move 109: G-down         
+Move 109: G-down
+         
  AAB..F. 
  .PBCDF. 
  GPJCDF. 
@@ -1610,7 +1721,8 @@ Move 109: G-down
  .LL.MM. 
   K      
 
-Move 110: M-right         
+Move 110: M-right
+         
  AAB..F. 
  .PBCDF. 
  GPJCDF. 
@@ -1619,7 +1731,8 @@ Move 110: M-right
  .LL..MM 
   K      
 
-Move 111: M-left-2         
+Move 111: M-left-2
+         
  AAB..F. 
  .PBCDF. 
  GPJCDF. 
@@ -1628,7 +1741,8 @@ Move 111: M-left-2
  .LLMM.. 
   K      
 
-Move 112: L-left         
+Move 112: L-left
+         
  AAB..F. 
  .PBCDF. 
  GPJCDF. 
@@ -1637,7 +1751,8 @@ Move 112: L-left
  LL.MM.. 
   K      
 
-Move 113: M-right-2         
+Move 113: M-right-2
+         
  AAB..F. 
  .PBCDF. 
  GPJCDF. 
@@ -1646,7 +1761,8 @@ Move 113: M-right-2
  LL...MM 
   K      
 
-Move 114: M-left-3         
+Move 114: M-left-3
+         
  AAB..F. 
  .PBCDF. 
  GPJCDF. 
@@ -1655,7 +1771,8 @@ Move 114: M-left-3
  LLMM... 
   K      
 
-Move 115: M-right-2         
+Move 115: M-right-2
+         
  AAB..F. 
  .PBCDF. 
  GPJCDF. 
@@ -1664,7 +1781,8 @@ Move 115: M-right-2
  LL..MM. 
   K      
 
-Move 116: L-right-2         
+Move 116: L-right-2
+         
  AAB..F. 
  .PBCDF. 
  GPJCDF. 
@@ -1673,7 +1791,8 @@ Move 116: L-right-2
  ..LLMM. 
   K      
 
-Move 117: M-right         
+Move 117: M-right
+         
  AAB..F. 
  .PBCDF. 
  GPJCDF. 
@@ -1682,7 +1801,8 @@ Move 117: M-right
  ..LL.MM 
   K      
 
-Move 118: L-right         
+Move 118: L-right
+         
  AAB..F. 
  .PBCDF. 
  GPJCDF. 
@@ -1691,7 +1811,8 @@ Move 118: L-right
  ...LLMM 
   K      
 
-Move 119: J-down-2         
+Move 119: J-down-2
+         
  AAB..F. 
  .PBCDF. 
  GP.CDF. 
@@ -1700,7 +1821,8 @@ Move 119: J-down-2
  ..JLLMM 
   K      
 
-Move 120: J-up         
+Move 120: J-up
+         
  AAB..F. 
  .PBCDF. 
  GP.CDF. 
@@ -1709,7 +1831,8 @@ Move 120: J-up
  ...LLMM 
   K      
 
-Move 121: L-left-3         
+Move 121: L-left-3
+         
  AAB..F. 
  .PBCDF. 
  GP.CDF. 
@@ -1718,7 +1841,8 @@ Move 121: L-left-3
  LL...MM 
   K      
 
-Move 122: M-left-3         
+Move 122: M-left-3
+         
  AAB..F. 
  .PBCDF. 
  GP.CDF. 
@@ -1727,7 +1851,8 @@ Move 122: M-left-3
  LLMM... 
   K      
 
-Move 123: M-right-2         
+Move 123: M-right-2
+         
  AAB..F. 
  .PBCDF. 
  GP.CDF. 
@@ -1736,7 +1861,8 @@ Move 123: M-right-2
  LL..MM. 
   K      
 
-Move 124: M-left         
+Move 124: M-left
+         
  AAB..F. 
  .PBCDF. 
  GP.CDF. 
@@ -1745,7 +1871,8 @@ Move 124: M-left
  LL.MM.. 
   K      
 
-Move 125: L-right         
+Move 125: L-right
+         
  AAB..F. 
  .PBCDF. 
  GP.CDF. 
@@ -1754,7 +1881,8 @@ Move 125: L-right
  .LLMM.. 
   K      
 
-Move 126: M-right-2         
+Move 126: M-right-2
+         
  AAB..F. 
  .PBCDF. 
  GP.CDF. 
@@ -1763,7 +1891,8 @@ Move 126: M-right-2
  .LL..MM 
   K      
 
-Move 127: M-left         
+Move 127: M-left
+         
  AAB..F. 
  .PBCDF. 
  GP.CDF. 
@@ -1772,7 +1901,8 @@ Move 127: M-left
  .LL.MM. 
   K      
 
-Move 128: L-right         
+Move 128: L-right
+         
  AAB..F. 
  .PBCDF. 
  GP.CDF. 
@@ -1781,7 +1911,8 @@ Move 128: L-right
  ..LLMM. 
   K      
 
-Move 129: M-right         
+Move 129: M-right
+         
  AAB..F. 
  .PBCDF. 
  GP.CDF. 
@@ -1790,7 +1921,8 @@ Move 129: M-right
  ..LL.MM 
   K      
 
-Move 130: I-left         
+Move 130: I-left
+         
  AAB..F. 
  .PBCDF. 
  GP.CDF. 
@@ -1799,7 +1931,8 @@ Move 130: I-left
  ..LL.MM 
   K      
 
-Move 131: M-left         
+Move 131: M-left
+         
  AAB..F. 
  .PBCDF. 
  GP.CDF. 
@@ -1808,7 +1941,8 @@ Move 131: M-left
  ..LLMM. 
   K      
 
-Move 132: L-left-2         
+Move 132: L-left-2
+         
  AAB..F. 
  .PBCDF. 
  GP.CDF. 
@@ -1817,7 +1951,8 @@ Move 132: L-left-2
  LL..MM. 
   K      
 
-Move 133: M-right         
+Move 133: M-right
+         
  AAB..F. 
  .PBCDF. 
  GP.CDF. 
@@ -1826,7 +1961,8 @@ Move 133: M-right
  LL...MM 
   K      
 
-Move 134: M-left-3         
+Move 134: M-left-3
+         
  AAB..F. 
  .PBCDF. 
  GP.CDF. 
@@ -1835,7 +1971,8 @@ Move 134: M-left-3
  LLMM... 
   K      
 
-Move 135: M-right         
+Move 135: M-right
+         
  AAB..F. 
  .PBCDF. 
  GP.CDF. 
@@ -1844,7 +1981,8 @@ Move 135: M-right
  LL.MM.. 
   K      
 
-Move 136: L-right         
+Move 136: L-right
+         
  AAB..F. 
  .PBCDF. 
  GP.CDF. 
@@ -1853,7 +1991,8 @@ Move 136: L-right
  .LLMM.. 
   K      
 
-Move 137: M-right-2         
+Move 137: M-right-2
+         
  AAB..F. 
  .PBCDF. 
  GP.CDF. 
@@ -1862,7 +2001,8 @@ Move 137: M-right-2
  .LL..MM 
   K      
 
-Move 138: M-left         
+Move 138: M-left
+         
  AAB..F. 
  .PBCDF. 
  GP.CDF. 
@@ -1871,7 +2011,8 @@ Move 138: M-left
  .LL.MM. 
   K      
 
-Move 139: J-up         
+Move 139: J-up
+         
  AAB..F. 
  .PBCDF. 
  GPJCDF. 
@@ -1880,7 +2021,8 @@ Move 139: J-up
  .LL.MM. 
   K      
 
-Move 140: M-right         
+Move 140: M-right
+         
  AAB..F. 
  .PBCDF. 
  GPJCDF. 
@@ -1889,7 +2031,8 @@ Move 140: M-right
  .LL..MM 
   K      
 
-Move 141: M-left-2         
+Move 141: M-left-2
+         
  AAB..F. 
  .PBCDF. 
  GPJCDF. 
@@ -1898,7 +2041,8 @@ Move 141: M-left-2
  .LLMM.. 
   K      
 
-Move 142: L-left         
+Move 142: L-left
+         
  AAB..F. 
  .PBCDF. 
  GPJCDF. 
@@ -1907,7 +2051,8 @@ Move 142: L-left
  LL.MM.. 
   K      
 
-Move 143: M-right-2         
+Move 143: M-right-2
+         
  AAB..F. 
  .PBCDF. 
  GPJCDF. 
@@ -1916,7 +2061,8 @@ Move 143: M-right-2
  LL...MM 
   K      
 
-Move 144: M-left-3         
+Move 144: M-left-3
+         
  AAB..F. 
  .PBCDF. 
  GPJCDF. 
@@ -1925,7 +2071,8 @@ Move 144: M-left-3
  LLMM... 
   K      
 
-Move 145: M-right-2         
+Move 145: M-right-2
+         
  AAB..F. 
  .PBCDF. 
  GPJCDF. 
@@ -1934,7 +2081,8 @@ Move 145: M-right-2
  LL..MM. 
   K      
 
-Move 146: L-right-2         
+Move 146: L-right-2
+         
  AAB..F. 
  .PBCDF. 
  GPJCDF. 
@@ -1943,7 +2091,8 @@ Move 146: L-right-2
  ..LLMM. 
   K      
 
-Move 147: M-right         
+Move 147: M-right
+         
  AAB..F. 
  .PBCDF. 
  GPJCDF. 
@@ -1952,7 +2101,8 @@ Move 147: M-right
  ..LL.MM 
   K      
 
-Move 148: L-right         
+Move 148: L-right
+         
  AAB..F. 
  .PBCDF. 
  GPJCDF. 
@@ -1961,7 +2111,8 @@ Move 148: L-right
  ...LLMM 
   K      
 
-Move 149: J-down-2         
+Move 149: J-down-2
+         
  AAB..F. 
  .PBCDF. 
  GP.CDF. 
@@ -1970,7 +2121,8 @@ Move 149: J-down-2
  ..JLLMM 
   K      
 
-Move 150: J-up         
+Move 150: J-up
+         
  AAB..F. 
  .PBCDF. 
  GP.CDF. 
@@ -1979,7 +2131,8 @@ Move 150: J-up
  ...LLMM 
   K      
 
-Move 151: D-up         
+Move 151: D-up
+         
  AAB.DF. 
  .PBCDF. 
  GP.C.F. 
@@ -1988,7 +2141,8 @@ Move 151: D-up
  ...LLMM 
   K      
 
-Move 152: L-left-3         
+Move 152: L-left-3
+         
  AAB.DF. 
  .PBCDF. 
  GP.C.F. 
@@ -1997,7 +2151,8 @@ Move 152: L-left-3
  LL...MM 
   K      
 
-Move 153: M-left-3         
+Move 153: M-left-3
+         
  AAB.DF. 
  .PBCDF. 
  GP.C.F. 
@@ -2006,7 +2161,8 @@ Move 153: M-left-3
  LLMM... 
   K      
 
-Move 154: M-right-2         
+Move 154: M-right-2
+         
  AAB.DF. 
  .PBCDF. 
  GP.C.F. 
@@ -2015,7 +2171,8 @@ Move 154: M-right-2
  LL..MM. 
   K      
 
-Move 155: M-left         
+Move 155: M-left
+         
  AAB.DF. 
  .PBCDF. 
  GP.C.F. 
@@ -2024,7 +2181,8 @@ Move 155: M-left
  LL.MM.. 
   K      
 
-Move 156: L-right         
+Move 156: L-right
+         
  AAB.DF. 
  .PBCDF. 
  GP.C.F. 
@@ -2033,7 +2191,8 @@ Move 156: L-right
  .LLMM.. 
   K      
 
-Move 157: M-right-2         
+Move 157: M-right-2
+         
  AAB.DF. 
  .PBCDF. 
  GP.C.F. 
@@ -2042,7 +2201,8 @@ Move 157: M-right-2
  .LL..MM 
   K      
 
-Move 158: M-left         
+Move 158: M-left
+         
  AAB.DF. 
  .PBCDF. 
  GP.C.F. 
@@ -2051,7 +2211,8 @@ Move 158: M-left
  .LL.MM. 
   K      
 
-Move 159: L-right         
+Move 159: L-right
+         
  AAB.DF. 
  .PBCDF. 
  GP.C.F. 
@@ -2060,7 +2221,8 @@ Move 159: L-right
  ..LLMM. 
   K      
 
-Move 160: M-right         
+Move 160: M-right
+         
  AAB.DF. 
  .PBCDF. 
  GP.C.F. 
@@ -2069,7 +2231,8 @@ Move 160: M-right
  ..LL.MM 
   K      
 
-Move 161: J-up         
+Move 161: J-up
+         
  AAB.DF. 
  .PBCDF. 
  GPJC.F. 
@@ -2078,7 +2241,8 @@ Move 161: J-up
  ..LL.MM 
   K      
 
-Move 162: M-left         
+Move 162: M-left
+         
  AAB.DF. 
  .PBCDF. 
  GPJC.F. 
@@ -2087,7 +2251,8 @@ Move 162: M-left
  ..LLMM. 
   K      
 
-Move 163: L-left-2         
+Move 163: L-left-2
+         
  AAB.DF. 
  .PBCDF. 
  GPJC.F. 
@@ -2096,7 +2261,8 @@ Move 163: L-left-2
  LL..MM. 
   K      
 
-Move 164: M-right         
+Move 164: M-right
+         
  AAB.DF. 
  .PBCDF. 
  GPJC.F. 
@@ -2105,7 +2271,8 @@ Move 164: M-right
  LL...MM 
   K      
 
-Move 165: M-left-3         
+Move 165: M-left-3
+         
  AAB.DF. 
  .PBCDF. 
  GPJC.F. 
@@ -2114,7 +2281,8 @@ Move 165: M-left-3
  LLMM... 
   K      
 
-Move 166: M-right         
+Move 166: M-right
+         
  AAB.DF. 
  .PBCDF. 
  GPJC.F. 
@@ -2123,7 +2291,8 @@ Move 166: M-right
  LL.MM.. 
   K      
 
-Move 167: L-right         
+Move 167: L-right
+         
  AAB.DF. 
  .PBCDF. 
  GPJC.F. 
@@ -2132,7 +2301,8 @@ Move 167: L-right
  .LLMM.. 
   K      
 
-Move 168: M-right-2         
+Move 168: M-right-2
+         
  AAB.DF. 
  .PBCDF. 
  GPJC.F. 
@@ -2141,7 +2311,8 @@ Move 168: M-right-2
  .LL..MM 
   K      
 
-Move 169: M-left         
+Move 169: M-left
+         
  AAB.DF. 
  .PBCDF. 
  GPJC.F. 
@@ -2150,7 +2321,8 @@ Move 169: M-left
  .LL.MM. 
   K      
 
-Move 170: I-right         
+Move 170: I-right
+         
  AAB.DF. 
  .PBCDF. 
  GPJC.F. 
@@ -2159,7 +2331,8 @@ Move 170: I-right
  .LL.MM. 
   K      
 
-Move 171: M-right         
+Move 171: M-right
+         
  AAB.DF. 
  .PBCDF. 
  GPJC.F. 
@@ -2168,7 +2341,8 @@ Move 171: M-right
  .LL..MM 
   K      
 
-Move 172: M-left-2         
+Move 172: M-left-2
+         
  AAB.DF. 
  .PBCDF. 
  GPJC.F. 
@@ -2177,7 +2351,8 @@ Move 172: M-left-2
  .LLMM.. 
   K      
 
-Move 173: L-left         
+Move 173: L-left
+         
  AAB.DF. 
  .PBCDF. 
  GPJC.F. 
@@ -2186,7 +2361,8 @@ Move 173: L-left
  LL.MM.. 
   K      
 
-Move 174: M-right-2         
+Move 174: M-right-2
+         
  AAB.DF. 
  .PBCDF. 
  GPJC.F. 
@@ -2195,7 +2371,8 @@ Move 174: M-right-2
  LL...MM 
   K      
 
-Move 175: M-left-3         
+Move 175: M-left-3
+         
  AAB.DF. 
  .PBCDF. 
  GPJC.F. 
@@ -2204,7 +2381,8 @@ Move 175: M-left-3
  LLMM... 
   K      
 
-Move 176: M-right-2         
+Move 176: M-right-2
+         
  AAB.DF. 
  .PBCDF. 
  GPJC.F. 
@@ -2213,7 +2391,8 @@ Move 176: M-right-2
  LL..MM. 
   K      
 
-Move 177: L-right-2         
+Move 177: L-right-2
+         
  AAB.DF. 
  .PBCDF. 
  GPJC.F. 
@@ -2222,7 +2401,8 @@ Move 177: L-right-2
  ..LLMM. 
   K      
 
-Move 178: M-right         
+Move 178: M-right
+         
  AAB.DF. 
  .PBCDF. 
  GPJC.F. 
@@ -2231,7 +2411,8 @@ Move 178: M-right
  ..LL.MM 
   K      
 
-Move 179: L-right         
+Move 179: L-right
+         
  AAB.DF. 
  .PBCDF. 
  GPJC.F. 
@@ -2240,7 +2421,8 @@ Move 179: L-right
  ...LLMM 
   K      
 
-Move 180: J-down-2         
+Move 180: J-down-2
+         
  AAB.DF. 
  .PBCDF. 
  GP.C.F. 
@@ -2249,7 +2431,8 @@ Move 180: J-down-2
  ..JLLMM 
   K      
 
-Move 181: J-up         
+Move 181: J-up
+         
  AAB.DF. 
  .PBCDF. 
  GP.C.F. 
@@ -2258,7 +2441,8 @@ Move 181: J-up
  ...LLMM 
   K      
 
-Move 182: L-left-3         
+Move 182: L-left-3
+         
  AAB.DF. 
  .PBCDF. 
  GP.C.F. 
@@ -2267,7 +2451,8 @@ Move 182: L-left-3
  LL...MM 
   K      
 
-Move 183: M-left-3         
+Move 183: M-left-3
+         
  AAB.DF. 
  .PBCDF. 
  GP.C.F. 
@@ -2276,7 +2461,8 @@ Move 183: M-left-3
  LLMM... 
   K      
 
-Move 184: M-right-2         
+Move 184: M-right-2
+         
  AAB.DF. 
  .PBCDF. 
  GP.C.F. 
@@ -2285,7 +2471,8 @@ Move 184: M-right-2
  LL..MM. 
   K      
 
-Move 185: M-left         
+Move 185: M-left
+         
  AAB.DF. 
  .PBCDF. 
  GP.C.F. 
@@ -2294,7 +2481,8 @@ Move 185: M-left
  LL.MM.. 
   K      
 
-Move 186: L-right         
+Move 186: L-right
+         
  AAB.DF. 
  .PBCDF. 
  GP.C.F. 
@@ -2303,7 +2491,8 @@ Move 186: L-right
  .LLMM.. 
   K      
 
-Move 187: M-right-2         
+Move 187: M-right-2
+         
  AAB.DF. 
  .PBCDF. 
  GP.C.F. 
@@ -2312,7 +2501,8 @@ Move 187: M-right-2
  .LL..MM 
   K      
 
-Move 188: M-left         
+Move 188: M-left
+         
  AAB.DF. 
  .PBCDF. 
  GP.C.F. 
@@ -2321,7 +2511,8 @@ Move 188: M-left
  .LL.MM. 
   K      
 
-Move 189: L-right         
+Move 189: L-right
+         
  AAB.DF. 
  .PBCDF. 
  GP.C.F. 
@@ -2330,7 +2521,8 @@ Move 189: L-right
  ..LLMM. 
   K      
 
-Move 190: M-right         
+Move 190: M-right
+         
  AAB.DF. 
  .PBCDF. 
  GP.C.F. 
@@ -2339,7 +2531,8 @@ Move 190: M-right
  ..LL.MM 
   K      
 
-Move 191: G-down-2         
+Move 191: G-down-2
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -2348,7 +2541,8 @@ Move 191: G-down-2
  G.LL.MM 
   K      
 
-Move 192: M-left         
+Move 192: M-left
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -2357,7 +2551,8 @@ Move 192: M-left
  G.LLMM. 
   K      
 
-Move 193: L-left         
+Move 193: L-left
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -2366,7 +2561,8 @@ Move 193: L-left
  GLL.MM. 
   K      
 
-Move 194: M-right         
+Move 194: M-right
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -2375,7 +2571,8 @@ Move 194: M-right
  GLL..MM 
   K      
 
-Move 195: M-left-2         
+Move 195: M-left-2
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -2384,7 +2581,8 @@ Move 195: M-left-2
  GLLMM.. 
   K      
 
-Move 196: J-up         
+Move 196: J-up
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -2393,7 +2591,8 @@ Move 196: J-up
  GLLMM.. 
   K      
 
-Move 197: M-right-2         
+Move 197: M-right-2
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -2402,7 +2601,8 @@ Move 197: M-right-2
  GLL..MM 
   K      
 
-Move 198: M-left         
+Move 198: M-left
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -2411,7 +2611,8 @@ Move 198: M-left
  GLL.MM. 
   K      
 
-Move 199: L-right         
+Move 199: L-right
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -2420,7 +2621,8 @@ Move 199: L-right
  G.LLMM. 
   K      
 
-Move 200: M-right         
+Move 200: M-right
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -2429,7 +2631,8 @@ Move 200: M-right
  G.LL.MM 
   K      
 
-Move 201: L-right         
+Move 201: L-right
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -2438,7 +2641,8 @@ Move 201: L-right
  G..LLMM 
   K      
 
-Move 202: J-down-2         
+Move 202: J-down-2
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -2447,7 +2651,8 @@ Move 202: J-down-2
  G.JLLMM 
   K      
 
-Move 203: J-up         
+Move 203: J-up
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -2456,7 +2661,8 @@ Move 203: J-up
  G..LLMM 
   K      
 
-Move 204: I-left         
+Move 204: I-left
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -2465,7 +2671,8 @@ Move 204: I-left
  G..LLMM 
   K      
 
-Move 205: L-left-2         
+Move 205: L-left-2
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -2474,7 +2681,8 @@ Move 205: L-left-2
  GLL..MM 
   K      
 
-Move 206: M-left-2         
+Move 206: M-left-2
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -2483,7 +2691,8 @@ Move 206: M-left-2
  GLLMM.. 
   K      
 
-Move 207: M-right         
+Move 207: M-right
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -2492,7 +2701,8 @@ Move 207: M-right
  GLL.MM. 
   K      
 
-Move 208: L-right         
+Move 208: L-right
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -2501,7 +2711,8 @@ Move 208: L-right
  G.LLMM. 
   K      
 
-Move 209: M-right         
+Move 209: M-right
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -2510,7 +2721,8 @@ Move 209: M-right
  G.LL.MM 
   K      
 
-Move 210: J-up         
+Move 210: J-up
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -2519,7 +2731,8 @@ Move 210: J-up
  G.LL.MM 
   K      
 
-Move 211: M-left         
+Move 211: M-left
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -2528,7 +2741,8 @@ Move 211: M-left
  G.LLMM. 
   K      
 
-Move 212: L-left         
+Move 212: L-left
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -2537,7 +2751,8 @@ Move 212: L-left
  GLL.MM. 
   K      
 
-Move 213: M-right         
+Move 213: M-right
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -2546,7 +2761,8 @@ Move 213: M-right
  GLL..MM 
   K      
 
-Move 214: M-left-2         
+Move 214: M-left-2
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -2555,7 +2771,8 @@ Move 214: M-left-2
  GLLMM.. 
   K      
 
-Move 215: G-up-3         
+Move 215: G-up-3
+         
  AAB.DF. 
  GPBCDF. 
  GPJC.F. 
@@ -2564,7 +2781,8 @@ Move 215: G-up-3
  .LLMM.. 
   K      
 
-Move 216: M-right-2         
+Move 216: M-right-2
+         
  AAB.DF. 
  GPBCDF. 
  GPJC.F. 
@@ -2573,7 +2791,8 @@ Move 216: M-right-2
  .LL..MM 
   K      
 
-Move 217: M-left         
+Move 217: M-left
+         
  AAB.DF. 
  GPBCDF. 
  GPJC.F. 
@@ -2582,7 +2801,8 @@ Move 217: M-left
  .LL.MM. 
   K      
 
-Move 218: L-right         
+Move 218: L-right
+         
  AAB.DF. 
  GPBCDF. 
  GPJC.F. 
@@ -2591,7 +2811,8 @@ Move 218: L-right
  ..LLMM. 
   K      
 
-Move 219: M-right         
+Move 219: M-right
+         
  AAB.DF. 
  GPBCDF. 
  GPJC.F. 
@@ -2600,7 +2821,8 @@ Move 219: M-right
  ..LL.MM 
   K      
 
-Move 220: L-right         
+Move 220: L-right
+         
  AAB.DF. 
  GPBCDF. 
  GPJC.F. 
@@ -2609,7 +2831,8 @@ Move 220: L-right
  ...LLMM 
   K      
 
-Move 221: L-left-3         
+Move 221: L-left-3
+         
  AAB.DF. 
  GPBCDF. 
  GPJC.F. 
@@ -2618,7 +2841,8 @@ Move 221: L-left-3
  LL...MM 
   K      
 
-Move 222: M-left-3         
+Move 222: M-left-3
+         
  AAB.DF. 
  GPBCDF. 
  GPJC.F. 
@@ -2627,7 +2851,8 @@ Move 222: M-left-3
  LLMM... 
   K      
 
-Move 223: M-right-2         
+Move 223: M-right-2
+         
  AAB.DF. 
  GPBCDF. 
  GPJC.F. 
@@ -2636,7 +2861,8 @@ Move 223: M-right-2
  LL..MM. 
   K      
 
-Move 224: M-left         
+Move 224: M-left
+         
  AAB.DF. 
  GPBCDF. 
  GPJC.F. 
@@ -2645,7 +2871,8 @@ Move 224: M-left
  LL.MM.. 
   K      
 
-Move 225: J-down-2         
+Move 225: J-down-2
+         
  AAB.DF. 
  GPBCDF. 
  GP.C.F. 
@@ -2654,7 +2881,8 @@ Move 225: J-down-2
  LLJMM.. 
   K      
 
-Move 226: M-right-2         
+Move 226: M-right-2
+         
  AAB.DF. 
  GPBCDF. 
  GP.C.F. 
@@ -2663,7 +2891,8 @@ Move 226: M-right-2
  LLJ..MM 
   K      
 
-Move 227: M-left         
+Move 227: M-left
+         
  AAB.DF. 
  GPBCDF. 
  GP.C.F. 
@@ -2672,7 +2901,8 @@ Move 227: M-left
  LLJ.MM. 
   K      
 
-Move 228: J-up         
+Move 228: J-up
+         
  AAB.DF. 
  GPBCDF. 
  GP.C.F. 
@@ -2681,7 +2911,8 @@ Move 228: J-up
  LL..MM. 
   K      
 
-Move 229: M-right         
+Move 229: M-right
+         
  AAB.DF. 
  GPBCDF. 
  GP.C.F. 
@@ -2690,7 +2921,8 @@ Move 229: M-right
  LL...MM 
   K      
 
-Move 230: M-left-3         
+Move 230: M-left-3
+         
  AAB.DF. 
  GPBCDF. 
  GP.C.F. 
@@ -2699,7 +2931,8 @@ Move 230: M-left-3
  LLMM... 
   K      
 
-Move 231: M-right         
+Move 231: M-right
+         
  AAB.DF. 
  GPBCDF. 
  GP.C.F. 
@@ -2708,7 +2941,8 @@ Move 231: M-right
  LL.MM.. 
   K      
 
-Move 232: L-right         
+Move 232: L-right
+         
  AAB.DF. 
  GPBCDF. 
  GP.C.F. 
@@ -2717,7 +2951,8 @@ Move 232: L-right
  .LLMM.. 
   K      
 
-Move 233: M-right-2         
+Move 233: M-right-2
+         
  AAB.DF. 
  GPBCDF. 
  GP.C.F. 
@@ -2726,7 +2961,8 @@ Move 233: M-right-2
  .LL..MM 
   K      
 
-Move 234: M-left         
+Move 234: M-left
+         
  AAB.DF. 
  GPBCDF. 
  GP.C.F. 
@@ -2735,7 +2971,8 @@ Move 234: M-left
  .LL.MM. 
   K      
 
-Move 235: L-right         
+Move 235: L-right
+         
  AAB.DF. 
  GPBCDF. 
  GP.C.F. 
@@ -2744,7 +2981,8 @@ Move 235: L-right
  ..LLMM. 
   K      
 
-Move 236: M-right         
+Move 236: M-right
+         
  AAB.DF. 
  GPBCDF. 
  GP.C.F. 
@@ -2753,7 +2991,8 @@ Move 236: M-right
  ..LL.MM 
   K      
 
-Move 237: L-right         
+Move 237: L-right
+         
  AAB.DF. 
  GPBCDF. 
  GP.C.F. 
@@ -2762,7 +3001,8 @@ Move 237: L-right
  ...LLMM 
   K      
 
-Move 238: J-down         
+Move 238: J-down
+         
  AAB.DF. 
  GPBCDF. 
  GP.C.F. 
@@ -2771,7 +3011,8 @@ Move 238: J-down
  ..JLLMM 
   K      
 
-Move 239: I-right         
+Move 239: I-right
+         
  AAB.DF. 
  GPBCDF. 
  GP.C.F. 
@@ -2780,7 +3021,8 @@ Move 239: I-right
  ..JLLMM 
   K      
 
-Move 240: J-up-2         
+Move 240: J-up-2
+         
  AAB.DF. 
  GPBCDF. 
  GPJC.F. 
@@ -2789,7 +3031,8 @@ Move 240: J-up-2
  ...LLMM 
   K      
 
-Move 241: L-left-3         
+Move 241: L-left-3
+         
  AAB.DF. 
  GPBCDF. 
  GPJC.F. 
@@ -2798,7 +3041,8 @@ Move 241: L-left-3
  LL...MM 
   K      
 
-Move 242: M-left-3         
+Move 242: M-left-3
+         
  AAB.DF. 
  GPBCDF. 
  GPJC.F. 
@@ -2807,7 +3051,8 @@ Move 242: M-left-3
  LLMM... 
   K      
 
-Move 243: M-right-2         
+Move 243: M-right-2
+         
  AAB.DF. 
  GPBCDF. 
  GPJC.F. 
@@ -2816,7 +3061,8 @@ Move 243: M-right-2
  LL..MM. 
   K      
 
-Move 244: M-left         
+Move 244: M-left
+         
  AAB.DF. 
  GPBCDF. 
  GPJC.F. 
@@ -2825,7 +3071,8 @@ Move 244: M-left
  LL.MM.. 
   K      
 
-Move 245: L-right         
+Move 245: L-right
+         
  AAB.DF. 
  GPBCDF. 
  GPJC.F. 
@@ -2834,7 +3081,8 @@ Move 245: L-right
  .LLMM.. 
   K      
 
-Move 246: M-right-2         
+Move 246: M-right-2
+         
  AAB.DF. 
  GPBCDF. 
  GPJC.F. 
@@ -2843,7 +3091,8 @@ Move 246: M-right-2
  .LL..MM 
   K      
 
-Move 247: M-left         
+Move 247: M-left
+         
  AAB.DF. 
  GPBCDF. 
  GPJC.F. 
@@ -2852,7 +3101,8 @@ Move 247: M-left
  .LL.MM. 
   K      
 
-Move 248: L-right         
+Move 248: L-right
+         
  AAB.DF. 
  GPBCDF. 
  GPJC.F. 
@@ -2861,7 +3111,8 @@ Move 248: L-right
  ..LLMM. 
   K      
 
-Move 249: M-right         
+Move 249: M-right
+         
  AAB.DF. 
  GPBCDF. 
  GPJC.F. 
@@ -2870,7 +3121,8 @@ Move 249: M-right
  ..LL.MM 
   K      
 
-Move 250: J-down         
+Move 250: J-down
+         
  AAB.DF. 
  GPBCDF. 
  GP.C.F. 
@@ -2879,7 +3131,8 @@ Move 250: J-down
  ..LL.MM 
   K      
 
-Move 251: M-left         
+Move 251: M-left
+         
  AAB.DF. 
  GPBCDF. 
  GP.C.F. 
@@ -2888,7 +3141,8 @@ Move 251: M-left
  ..LLMM. 
   K      
 
-Move 252: L-left-2         
+Move 252: L-left-2
+         
  AAB.DF. 
  GPBCDF. 
  GP.C.F. 
@@ -2897,7 +3151,8 @@ Move 252: L-left-2
  LL..MM. 
   K      
 
-Move 253: M-right         
+Move 253: M-right
+         
  AAB.DF. 
  GPBCDF. 
  GP.C.F. 
@@ -2906,7 +3161,8 @@ Move 253: M-right
  LL...MM 
   K      
 
-Move 254: M-left-3         
+Move 254: M-left-3
+         
  AAB.DF. 
  GPBCDF. 
  GP.C.F. 
@@ -2915,7 +3171,8 @@ Move 254: M-left-3
  LLMM... 
   K      
 
-Move 255: M-right         
+Move 255: M-right
+         
  AAB.DF. 
  GPBCDF. 
  GP.C.F. 
@@ -2924,7 +3181,8 @@ Move 255: M-right
  LL.MM.. 
   K      
 
-Move 256: L-right         
+Move 256: L-right
+         
  AAB.DF. 
  GPBCDF. 
  GP.C.F. 
@@ -2933,7 +3191,8 @@ Move 256: L-right
  .LLMM.. 
   K      
 
-Move 257: M-right-2         
+Move 257: M-right-2
+         
  AAB.DF. 
  GPBCDF. 
  GP.C.F. 
@@ -2942,7 +3201,8 @@ Move 257: M-right-2
  .LL..MM 
   K      
 
-Move 258: M-left         
+Move 258: M-left
+         
  AAB.DF. 
  GPBCDF. 
  GP.C.F. 
@@ -2951,7 +3211,8 @@ Move 258: M-left
  .LL.MM. 
   K      
 
-Move 259: G-down-2         
+Move 259: G-down-2
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -2960,7 +3221,8 @@ Move 259: G-down-2
  .LL.MM. 
   K      
 
-Move 260: M-right         
+Move 260: M-right
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -2969,7 +3231,8 @@ Move 260: M-right
  .LL..MM 
   K      
 
-Move 261: M-left-2         
+Move 261: M-left-2
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -2978,7 +3241,8 @@ Move 261: M-left-2
  .LLMM.. 
   K      
 
-Move 262: L-left         
+Move 262: L-left
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -2987,7 +3251,8 @@ Move 262: L-left
  LL.MM.. 
   K      
 
-Move 263: M-right-2         
+Move 263: M-right-2
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -2996,7 +3261,8 @@ Move 263: M-right-2
  LL...MM 
   K      
 
-Move 264: M-left-3         
+Move 264: M-left-3
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -3005,7 +3271,8 @@ Move 264: M-left-3
  LLMM... 
   K      
 
-Move 265: M-right-2         
+Move 265: M-right-2
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -3014,7 +3281,8 @@ Move 265: M-right-2
  LL..MM. 
   K      
 
-Move 266: L-right-2         
+Move 266: L-right-2
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -3023,7 +3291,8 @@ Move 266: L-right-2
  ..LLMM. 
   K      
 
-Move 267: M-right         
+Move 267: M-right
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -3032,7 +3301,8 @@ Move 267: M-right
  ..LL.MM 
   K      
 
-Move 268: L-right         
+Move 268: L-right
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -3041,7 +3311,8 @@ Move 268: L-right
  ...LLMM 
   K      
 
-Move 269: J-down         
+Move 269: J-down
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -3050,7 +3321,8 @@ Move 269: J-down
  ..JLLMM 
   K      
 
-Move 270: J-up-2         
+Move 270: J-up-2
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -3059,7 +3331,8 @@ Move 270: J-up-2
  ...LLMM 
   K      
 
-Move 271: L-left-3         
+Move 271: L-left-3
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -3068,7 +3341,8 @@ Move 271: L-left-3
  LL...MM 
   K      
 
-Move 272: M-left-3         
+Move 272: M-left-3
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -3077,7 +3351,8 @@ Move 272: M-left-3
  LLMM... 
   K      
 
-Move 273: M-right-2         
+Move 273: M-right-2
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -3086,7 +3361,8 @@ Move 273: M-right-2
  LL..MM. 
   K      
 
-Move 274: M-left         
+Move 274: M-left
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -3095,7 +3371,8 @@ Move 274: M-left
  LL.MM.. 
   K      
 
-Move 275: L-right         
+Move 275: L-right
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -3104,7 +3381,8 @@ Move 275: L-right
  .LLMM.. 
   K      
 
-Move 276: M-right-2         
+Move 276: M-right-2
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -3113,7 +3391,8 @@ Move 276: M-right-2
  .LL..MM 
   K      
 
-Move 277: M-left         
+Move 277: M-left
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -3122,7 +3401,8 @@ Move 277: M-left
  .LL.MM. 
   K      
 
-Move 278: L-right         
+Move 278: L-right
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -3131,7 +3411,8 @@ Move 278: L-right
  ..LLMM. 
   K      
 
-Move 279: M-right         
+Move 279: M-right
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -3140,7 +3421,8 @@ Move 279: M-right
  ..LL.MM 
   K      
 
-Move 280: I-left         
+Move 280: I-left
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -3149,7 +3431,8 @@ Move 280: I-left
  ..LL.MM 
   K      
 
-Move 281: M-left         
+Move 281: M-left
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -3158,7 +3441,8 @@ Move 281: M-left
  ..LLMM. 
   K      
 
-Move 282: L-left-2         
+Move 282: L-left-2
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -3167,7 +3451,8 @@ Move 282: L-left-2
  LL..MM. 
   K      
 
-Move 283: M-right         
+Move 283: M-right
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -3176,7 +3461,8 @@ Move 283: M-right
  LL...MM 
   K      
 
-Move 284: M-left-3         
+Move 284: M-left-3
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -3185,7 +3471,8 @@ Move 284: M-left-3
  LLMM... 
   K      
 
-Move 285: M-right         
+Move 285: M-right
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -3194,7 +3481,8 @@ Move 285: M-right
  LL.MM.. 
   K      
 
-Move 286: L-right         
+Move 286: L-right
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -3203,7 +3491,8 @@ Move 286: L-right
  .LLMM.. 
   K      
 
-Move 287: M-right-2         
+Move 287: M-right-2
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -3212,7 +3501,8 @@ Move 287: M-right-2
  .LL..MM 
   K      
 
-Move 288: M-left         
+Move 288: M-left
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -3221,7 +3511,8 @@ Move 288: M-left
  .LL.MM. 
   K      
 
-Move 289: J-down         
+Move 289: J-down
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -3230,7 +3521,8 @@ Move 289: J-down
  .LL.MM. 
   K      
 
-Move 290: M-right         
+Move 290: M-right
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -3239,7 +3531,8 @@ Move 290: M-right
  .LL..MM 
   K      
 
-Move 291: M-left-2         
+Move 291: M-left-2
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -3248,7 +3541,8 @@ Move 291: M-left-2
  .LLMM.. 
   K      
 
-Move 292: L-left         
+Move 292: L-left
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -3257,7 +3551,8 @@ Move 292: L-left
  LL.MM.. 
   K      
 
-Move 293: M-right-2         
+Move 293: M-right-2
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -3266,7 +3561,8 @@ Move 293: M-right-2
  LL...MM 
   K      
 
-Move 294: M-left-3         
+Move 294: M-left-3
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -3275,7 +3571,8 @@ Move 294: M-left-3
  LLMM... 
   K      
 
-Move 295: M-right-2         
+Move 295: M-right-2
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -3284,7 +3581,8 @@ Move 295: M-right-2
  LL..MM. 
   K      
 
-Move 296: L-right-2         
+Move 296: L-right-2
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -3293,7 +3591,8 @@ Move 296: L-right-2
  ..LLMM. 
   K      
 
-Move 297: M-right         
+Move 297: M-right
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -3302,7 +3601,8 @@ Move 297: M-right
  ..LL.MM 
   K      
 
-Move 298: L-right         
+Move 298: L-right
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -3311,7 +3611,8 @@ Move 298: L-right
  ...LLMM 
   K      
 
-Move 299: J-down         
+Move 299: J-down
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -3320,7 +3621,8 @@ Move 299: J-down
  ..JLLMM 
   K      
 
-Move 300: J-up-2         
+Move 300: J-up-2
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -3329,7 +3631,8 @@ Move 300: J-up-2
  ...LLMM 
   K      
 
-Move 301: G-down         
+Move 301: G-down
+         
  AAB.DF. 
  .PBCDF. 
  .PJC.F. 
@@ -3338,7 +3641,8 @@ Move 301: G-down
  G..LLMM 
   K      
 
-Move 302: J-down-2         
+Move 302: J-down-2
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -3347,7 +3651,8 @@ Move 302: J-down-2
  G.JLLMM 
   K      
 
-Move 303: I-left         
+Move 303: I-left
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -3356,7 +3661,8 @@ Move 303: I-left
  G.JLLMM 
   K      
 
-Move 304: G-up-3         
+Move 304: G-up-3
+         
  AAB.DF. 
  GPBCDF. 
  GP.C.F. 
@@ -3365,7 +3671,8 @@ Move 304: G-up-3
  ..JLLMM 
   K      
 
-Move 305: G-down-2         
+Move 305: G-down-2
+         
  AAB.DF. 
  .PBCDF. 
  .P.C.F. 
@@ -3374,7 +3681,8 @@ Move 305: G-down-2
  ..JLLMM 
   K      
 
-Move 306: G-up         
+Move 306: G-up
+         
  AAB.DF. 
  .PBCDF. 
  GP.C.F. 
@@ -3383,7 +3691,8 @@ Move 306: G-up
  ..JLLMM 
   K      
 
-Move 307: I-right         
+Move 307: I-right
+         
  AAB.DF. 
  .PBCDF. 
  GP.C.F. 
@@ -3392,7 +3701,8 @@ Move 307: I-right
  ..JLLMM 
   K      
 
-Move 308: J-up-2         
+Move 308: J-up-2
+         
  AAB.DF. 
  .PBCDF. 
  GPJC.F. 
@@ -3401,7 +3711,8 @@ Move 308: J-up-2
  ...LLMM 
   K      
 
-Move 309: C-up         
+Move 309: C-up
+         
  AABCDF. 
  .PBCDF. 
  GPJ..F. 
@@ -3410,7 +3721,8 @@ Move 309: C-up
  ...LLMM 
   K      
 
-Move 310: L-left-3         
+Move 310: L-left-3
+         
  AABCDF. 
  .PBCDF. 
  GPJ..F. 
@@ -3419,7 +3731,8 @@ Move 310: L-left-3
  LL...MM 
   K      
 
-Move 311: M-left-3         
+Move 311: M-left-3
+         
  AABCDF. 
  .PBCDF. 
  GPJ..F. 
@@ -3428,7 +3741,8 @@ Move 311: M-left-3
  LLMM... 
   K      
 
-Move 312: M-right-2         
+Move 312: M-right-2
+         
  AABCDF. 
  .PBCDF. 
  GPJ..F. 
@@ -3437,7 +3751,8 @@ Move 312: M-right-2
  LL..MM. 
   K      
 
-Move 313: M-left         
+Move 313: M-left
+         
  AABCDF. 
  .PBCDF. 
  GPJ..F. 
@@ -3446,7 +3761,8 @@ Move 313: M-left
  LL.MM.. 
   K      
 
-Move 314: L-right         
+Move 314: L-right
+         
  AABCDF. 
  .PBCDF. 
  GPJ..F. 
@@ -3455,7 +3771,8 @@ Move 314: L-right
  .LLMM.. 
   K      
 
-Move 315: M-right-2         
+Move 315: M-right-2
+         
  AABCDF. 
  .PBCDF. 
  GPJ..F. 
@@ -3464,7 +3781,8 @@ Move 315: M-right-2
  .LL..MM 
   K      
 
-Move 316: M-left         
+Move 316: M-left
+         
  AABCDF. 
  .PBCDF. 
  GPJ..F. 
@@ -3473,7 +3791,8 @@ Move 316: M-left
  .LL.MM. 
   K      
 
-Move 317: L-right         
+Move 317: L-right
+         
  AABCDF. 
  .PBCDF. 
  GPJ..F. 
@@ -3482,7 +3801,8 @@ Move 317: L-right
  ..LLMM. 
   K      
 
-Move 318: M-right         
+Move 318: M-right
+         
  AABCDF. 
  .PBCDF. 
  GPJ..F. 
@@ -3491,7 +3811,8 @@ Move 318: M-right
  ..LL.MM 
   K      
 
-Move 319: J-down         
+Move 319: J-down
+         
  AABCDF. 
  .PBCDF. 
  GP...F. 
@@ -3500,7 +3821,8 @@ Move 319: J-down
  ..LL.MM 
   K      
 
-Move 320: M-left         
+Move 320: M-left
+         
  AABCDF. 
  .PBCDF. 
  GP...F. 
@@ -3509,7 +3831,8 @@ Move 320: M-left
  ..LLMM. 
   K      
 
-Move 321: L-left-2         
+Move 321: L-left-2
+         
  AABCDF. 
  .PBCDF. 
  GP...F. 
@@ -3518,7 +3841,8 @@ Move 321: L-left-2
  LL..MM. 
   K      
 
-Move 322: M-right         
+Move 322: M-right
+         
  AABCDF. 
  .PBCDF. 
  GP...F. 
@@ -3527,7 +3851,8 @@ Move 322: M-right
  LL...MM 
   K      
 
-Move 323: M-left-3         
+Move 323: M-left-3
+         
  AABCDF. 
  .PBCDF. 
  GP...F. 
@@ -3536,7 +3861,8 @@ Move 323: M-left-3
  LLMM... 
   K      
 
-Move 324: M-right         
+Move 324: M-right
+         
  AABCDF. 
  .PBCDF. 
  GP...F. 
@@ -3545,7 +3871,8 @@ Move 324: M-right
  LL.MM.. 
   K      
 
-Move 325: L-right         
+Move 325: L-right
+         
  AABCDF. 
  .PBCDF. 
  GP...F. 
@@ -3554,7 +3881,8 @@ Move 325: L-right
  .LLMM.. 
   K      
 
-Move 326: M-right-2         
+Move 326: M-right-2
+         
  AABCDF. 
  .PBCDF. 
  GP...F. 
@@ -3563,7 +3891,8 @@ Move 326: M-right-2
  .LL..MM 
   K      
 
-Move 327: M-left         
+Move 327: M-left
+         
  AABCDF. 
  .PBCDF. 
  GP...F. 
@@ -3572,7 +3901,8 @@ Move 327: M-left
  .LL.MM. 
   K      
 
-Move 328: I-right         
+Move 328: I-right
+         
  AABCDF. 
  .PBCDF. 
  GP...F. 
@@ -3581,7 +3911,8 @@ Move 328: I-right
  .LL.MM. 
   K      
 
-Move 329: M-right         
+Move 329: M-right
+         
  AABCDF. 
  .PBCDF. 
  GP...F. 
@@ -3590,7 +3921,8 @@ Move 329: M-right
  .LL..MM 
   K      
 
-Move 330: M-left-2         
+Move 330: M-left-2
+         
  AABCDF. 
  .PBCDF. 
  GP...F. 
@@ -3599,7 +3931,8 @@ Move 330: M-left-2
  .LLMM.. 
   K      
 
-Move 331: L-left         
+Move 331: L-left
+         
  AABCDF. 
  .PBCDF. 
  GP...F. 
@@ -3608,7 +3941,8 @@ Move 331: L-left
  LL.MM.. 
   K      
 
-Move 332: M-right-2         
+Move 332: M-right-2
+         
  AABCDF. 
  .PBCDF. 
  GP...F. 
@@ -3617,7 +3951,8 @@ Move 332: M-right-2
  LL...MM 
   K      
 
-Move 333: M-left-3         
+Move 333: M-left-3
+         
  AABCDF. 
  .PBCDF. 
  GP...F. 
@@ -3626,7 +3961,8 @@ Move 333: M-left-3
  LLMM... 
   K      
 
-Move 334: M-right-2         
+Move 334: M-right-2
+         
  AABCDF. 
  .PBCDF. 
  GP...F. 
@@ -3635,7 +3971,8 @@ Move 334: M-right-2
  LL..MM. 
   K      
 
-Move 335: L-right-2         
+Move 335: L-right-2
+         
  AABCDF. 
  .PBCDF. 
  GP...F. 
@@ -3644,7 +3981,8 @@ Move 335: L-right-2
  ..LLMM. 
   K      
 
-Move 336: M-right         
+Move 336: M-right
+         
  AABCDF. 
  .PBCDF. 
  GP...F. 
@@ -3653,7 +3991,8 @@ Move 336: M-right
  ..LL.MM 
   K      
 
-Move 337: L-right         
+Move 337: L-right
+         
  AABCDF. 
  .PBCDF. 
  GP...F. 
@@ -3662,7 +4001,8 @@ Move 337: L-right
  ...LLMM 
   K      
 
-Move 338: J-down         
+Move 338: J-down
+         
  AABCDF. 
  .PBCDF. 
  GP...F. 
@@ -3671,7 +4011,8 @@ Move 338: J-down
  ..JLLMM 
   K      
 
-Move 339: J-up-2         
+Move 339: J-up-2
+         
  AABCDF. 
  .PBCDF. 
  GPJ..F. 
@@ -3680,7 +4021,8 @@ Move 339: J-up-2
  ...LLMM 
   K      
 
-Move 340: L-left-3         
+Move 340: L-left-3
+         
  AABCDF. 
  .PBCDF. 
  GPJ..F. 
@@ -3689,7 +4031,8 @@ Move 340: L-left-3
  LL...MM 
   K      
 
-Move 341: M-left-3         
+Move 341: M-left-3
+         
  AABCDF. 
  .PBCDF. 
  GPJ..F. 
@@ -3698,7 +4041,8 @@ Move 341: M-left-3
  LLMM... 
   K      
 
-Move 342: M-right-2         
+Move 342: M-right-2
+         
  AABCDF. 
  .PBCDF. 
  GPJ..F. 
@@ -3707,7 +4051,8 @@ Move 342: M-right-2
  LL..MM. 
   K      
 
-Move 343: M-left         
+Move 343: M-left
+         
  AABCDF. 
  .PBCDF. 
  GPJ..F. 
@@ -3716,7 +4061,8 @@ Move 343: M-left
  LL.MM.. 
   K      
 
-Move 344: L-right         
+Move 344: L-right
+         
  AABCDF. 
  .PBCDF. 
  GPJ..F. 
@@ -3725,7 +4071,8 @@ Move 344: L-right
  .LLMM.. 
   K      
 
-Move 345: M-right-2         
+Move 345: M-right-2
+         
  AABCDF. 
  .PBCDF. 
  GPJ..F. 
@@ -3734,7 +4081,8 @@ Move 345: M-right-2
  .LL..MM 
   K      
 
-Move 346: M-left         
+Move 346: M-left
+         
  AABCDF. 
  .PBCDF. 
  GPJ..F. 
@@ -3743,7 +4091,8 @@ Move 346: M-left
  .LL.MM. 
   K      
 
-Move 347: L-right         
+Move 347: L-right
+         
  AABCDF. 
  .PBCDF. 
  GPJ..F. 
@@ -3752,7 +4101,8 @@ Move 347: L-right
  ..LLMM. 
   K      
 
-Move 348: M-right         
+Move 348: M-right
+         
  AABCDF. 
  .PBCDF. 
  GPJ..F. 
@@ -3761,7 +4111,8 @@ Move 348: M-right
  ..LL.MM 
   K      
 
-Move 349: G-down-2         
+Move 349: G-down-2
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -3770,7 +4121,8 @@ Move 349: G-down-2
  G.LL.MM 
   K      
 
-Move 350: M-left         
+Move 350: M-left
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -3779,7 +4131,8 @@ Move 350: M-left
  G.LLMM. 
   K      
 
-Move 351: L-left         
+Move 351: L-left
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -3788,7 +4141,8 @@ Move 351: L-left
  GLL.MM. 
   K      
 
-Move 352: M-right         
+Move 352: M-right
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -3797,7 +4151,8 @@ Move 352: M-right
  GLL..MM 
   K      
 
-Move 353: M-left-2         
+Move 353: M-left-2
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -3806,7 +4161,8 @@ Move 353: M-left-2
  GLLMM.. 
   K      
 
-Move 354: J-down         
+Move 354: J-down
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -3815,7 +4171,8 @@ Move 354: J-down
  GLLMM.. 
   K      
 
-Move 355: M-right-2         
+Move 355: M-right-2
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -3824,7 +4181,8 @@ Move 355: M-right-2
  GLL..MM 
   K      
 
-Move 356: M-left         
+Move 356: M-left
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -3833,7 +4191,8 @@ Move 356: M-left
  GLL.MM. 
   K      
 
-Move 357: L-right         
+Move 357: L-right
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -3842,7 +4201,8 @@ Move 357: L-right
  G.LLMM. 
   K      
 
-Move 358: M-right         
+Move 358: M-right
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -3851,7 +4211,8 @@ Move 358: M-right
  G.LL.MM 
   K      
 
-Move 359: L-right         
+Move 359: L-right
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -3860,7 +4221,8 @@ Move 359: L-right
  G..LLMM 
   K      
 
-Move 360: J-down         
+Move 360: J-down
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -3869,7 +4231,8 @@ Move 360: J-down
  G.JLLMM 
   K      
 
-Move 361: J-up-2         
+Move 361: J-up-2
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -3878,7 +4241,8 @@ Move 361: J-up-2
  G..LLMM 
   K      
 
-Move 362: I-left         
+Move 362: I-left
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -3887,7 +4251,8 @@ Move 362: I-left
  G..LLMM 
   K      
 
-Move 363: L-left-2         
+Move 363: L-left-2
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -3896,7 +4261,8 @@ Move 363: L-left-2
  GLL..MM 
   K      
 
-Move 364: M-left-2         
+Move 364: M-left-2
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -3905,7 +4271,8 @@ Move 364: M-left-2
  GLLMM.. 
   K      
 
-Move 365: M-right         
+Move 365: M-right
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -3914,7 +4281,8 @@ Move 365: M-right
  GLL.MM. 
   K      
 
-Move 366: L-right         
+Move 366: L-right
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -3923,7 +4291,8 @@ Move 366: L-right
  G.LLMM. 
   K      
 
-Move 367: M-right         
+Move 367: M-right
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -3932,7 +4301,8 @@ Move 367: M-right
  G.LL.MM 
   K      
 
-Move 368: J-down         
+Move 368: J-down
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -3941,7 +4311,8 @@ Move 368: J-down
  G.LL.MM 
   K      
 
-Move 369: M-left         
+Move 369: M-left
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -3950,7 +4321,8 @@ Move 369: M-left
  G.LLMM. 
   K      
 
-Move 370: L-left         
+Move 370: L-left
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -3959,7 +4331,8 @@ Move 370: L-left
  GLL.MM. 
   K      
 
-Move 371: M-right         
+Move 371: M-right
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -3968,7 +4341,8 @@ Move 371: M-right
  GLL..MM 
   K      
 
-Move 372: M-left-2         
+Move 372: M-left-2
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -3977,7 +4351,8 @@ Move 372: M-left-2
  GLLMM.. 
   K      
 
-Move 373: G-up-3         
+Move 373: G-up-3
+         
  AABCDF. 
  GPBCDF. 
  GP...F. 
@@ -3986,7 +4361,8 @@ Move 373: G-up-3
  .LLMM.. 
   K      
 
-Move 374: M-right-2         
+Move 374: M-right-2
+         
  AABCDF. 
  GPBCDF. 
  GP...F. 
@@ -3995,7 +4371,8 @@ Move 374: M-right-2
  .LL..MM 
   K      
 
-Move 375: M-left         
+Move 375: M-left
+         
  AABCDF. 
  GPBCDF. 
  GP...F. 
@@ -4004,7 +4381,8 @@ Move 375: M-left
  .LL.MM. 
   K      
 
-Move 376: L-right         
+Move 376: L-right
+         
  AABCDF. 
  GPBCDF. 
  GP...F. 
@@ -4013,7 +4391,8 @@ Move 376: L-right
  ..LLMM. 
   K      
 
-Move 377: M-right         
+Move 377: M-right
+         
  AABCDF. 
  GPBCDF. 
  GP...F. 
@@ -4022,7 +4401,8 @@ Move 377: M-right
  ..LL.MM 
   K      
 
-Move 378: L-right         
+Move 378: L-right
+         
  AABCDF. 
  GPBCDF. 
  GP...F. 
@@ -4031,7 +4411,8 @@ Move 378: L-right
  ...LLMM 
   K      
 
-Move 379: L-left-3         
+Move 379: L-left-3
+         
  AABCDF. 
  GPBCDF. 
  GP...F. 
@@ -4040,7 +4421,8 @@ Move 379: L-left-3
  LL...MM 
   K      
 
-Move 380: M-left-3         
+Move 380: M-left-3
+         
  AABCDF. 
  GPBCDF. 
  GP...F. 
@@ -4049,7 +4431,8 @@ Move 380: M-left-3
  LLMM... 
   K      
 
-Move 381: M-right-2         
+Move 381: M-right-2
+         
  AABCDF. 
  GPBCDF. 
  GP...F. 
@@ -4058,7 +4441,8 @@ Move 381: M-right-2
  LL..MM. 
   K      
 
-Move 382: M-left         
+Move 382: M-left
+         
  AABCDF. 
  GPBCDF. 
  GP...F. 
@@ -4067,7 +4451,8 @@ Move 382: M-left
  LL.MM.. 
   K      
 
-Move 383: J-down         
+Move 383: J-down
+         
  AABCDF. 
  GPBCDF. 
  GP...F. 
@@ -4076,7 +4461,8 @@ Move 383: J-down
  LLJMM.. 
   K      
 
-Move 384: M-right-2         
+Move 384: M-right-2
+         
  AABCDF. 
  GPBCDF. 
  GP...F. 
@@ -4085,7 +4471,8 @@ Move 384: M-right-2
  LLJ..MM 
   K      
 
-Move 385: M-left         
+Move 385: M-left
+         
  AABCDF. 
  GPBCDF. 
  GP...F. 
@@ -4094,7 +4481,8 @@ Move 385: M-left
  LLJ.MM. 
   K      
 
-Move 386: J-up-2         
+Move 386: J-up-2
+         
  AABCDF. 
  GPBCDF. 
  GPJ..F. 
@@ -4103,7 +4491,8 @@ Move 386: J-up-2
  LL..MM. 
   K      
 
-Move 387: M-right         
+Move 387: M-right
+         
  AABCDF. 
  GPBCDF. 
  GPJ..F. 
@@ -4112,7 +4501,8 @@ Move 387: M-right
  LL...MM 
   K      
 
-Move 388: M-left-3         
+Move 388: M-left-3
+         
  AABCDF. 
  GPBCDF. 
  GPJ..F. 
@@ -4121,7 +4511,8 @@ Move 388: M-left-3
  LLMM... 
   K      
 
-Move 389: M-right         
+Move 389: M-right
+         
  AABCDF. 
  GPBCDF. 
  GPJ..F. 
@@ -4130,7 +4521,8 @@ Move 389: M-right
  LL.MM.. 
   K      
 
-Move 390: L-right         
+Move 390: L-right
+         
  AABCDF. 
  GPBCDF. 
  GPJ..F. 
@@ -4139,7 +4531,8 @@ Move 390: L-right
  .LLMM.. 
   K      
 
-Move 391: M-right-2         
+Move 391: M-right-2
+         
  AABCDF. 
  GPBCDF. 
  GPJ..F. 
@@ -4148,7 +4541,8 @@ Move 391: M-right-2
  .LL..MM 
   K      
 
-Move 392: M-left         
+Move 392: M-left
+         
  AABCDF. 
  GPBCDF. 
  GPJ..F. 
@@ -4157,7 +4551,8 @@ Move 392: M-left
  .LL.MM. 
   K      
 
-Move 393: L-right         
+Move 393: L-right
+         
  AABCDF. 
  GPBCDF. 
  GPJ..F. 
@@ -4166,7 +4561,8 @@ Move 393: L-right
  ..LLMM. 
   K      
 
-Move 394: M-right         
+Move 394: M-right
+         
  AABCDF. 
  GPBCDF. 
  GPJ..F. 
@@ -4175,7 +4571,8 @@ Move 394: M-right
  ..LL.MM 
   K      
 
-Move 395: L-right         
+Move 395: L-right
+         
  AABCDF. 
  GPBCDF. 
  GPJ..F. 
@@ -4184,7 +4581,8 @@ Move 395: L-right
  ...LLMM 
   K      
 
-Move 396: J-down-2         
+Move 396: J-down-2
+         
  AABCDF. 
  GPBCDF. 
  GP...F. 
@@ -4193,7 +4591,8 @@ Move 396: J-down-2
  ..JLLMM 
   K      
 
-Move 397: I-right         
+Move 397: I-right
+         
  AABCDF. 
  GPBCDF. 
  GP...F. 
@@ -4202,7 +4601,8 @@ Move 397: I-right
  ..JLLMM 
   K      
 
-Move 398: J-up-2         
+Move 398: J-up-2
+         
  AABCDF. 
  GPBCDF. 
  GPJ..F. 
@@ -4211,7 +4611,8 @@ Move 398: J-up-2
  ...LLMM 
   K      
 
-Move 399: L-left-3         
+Move 399: L-left-3
+         
  AABCDF. 
  GPBCDF. 
  GPJ..F. 
@@ -4220,7 +4621,8 @@ Move 399: L-left-3
  LL...MM 
   K      
 
-Move 400: M-left-3         
+Move 400: M-left-3
+         
  AABCDF. 
  GPBCDF. 
  GPJ..F. 
@@ -4229,7 +4631,8 @@ Move 400: M-left-3
  LLMM... 
   K      
 
-Move 401: M-right-2         
+Move 401: M-right-2
+         
  AABCDF. 
  GPBCDF. 
  GPJ..F. 
@@ -4238,7 +4641,8 @@ Move 401: M-right-2
  LL..MM. 
   K      
 
-Move 402: M-left         
+Move 402: M-left
+         
  AABCDF. 
  GPBCDF. 
  GPJ..F. 
@@ -4247,7 +4651,8 @@ Move 402: M-left
  LL.MM.. 
   K      
 
-Move 403: L-right         
+Move 403: L-right
+         
  AABCDF. 
  GPBCDF. 
  GPJ..F. 
@@ -4256,7 +4661,8 @@ Move 403: L-right
  .LLMM.. 
   K      
 
-Move 404: M-right-2         
+Move 404: M-right-2
+         
  AABCDF. 
  GPBCDF. 
  GPJ..F. 
@@ -4265,7 +4671,8 @@ Move 404: M-right-2
  .LL..MM 
   K      
 
-Move 405: M-left         
+Move 405: M-left
+         
  AABCDF. 
  GPBCDF. 
  GPJ..F. 
@@ -4274,7 +4681,8 @@ Move 405: M-left
  .LL.MM. 
   K      
 
-Move 406: L-right         
+Move 406: L-right
+         
  AABCDF. 
  GPBCDF. 
  GPJ..F. 
@@ -4283,7 +4691,8 @@ Move 406: L-right
  ..LLMM. 
   K      
 
-Move 407: M-right         
+Move 407: M-right
+         
  AABCDF. 
  GPBCDF. 
  GPJ..F. 
@@ -4292,7 +4701,8 @@ Move 407: M-right
  ..LL.MM 
   K      
 
-Move 408: J-down         
+Move 408: J-down
+         
  AABCDF. 
  GPBCDF. 
  GP...F. 
@@ -4301,7 +4711,8 @@ Move 408: J-down
  ..LL.MM 
   K      
 
-Move 409: M-left         
+Move 409: M-left
+         
  AABCDF. 
  GPBCDF. 
  GP...F. 
@@ -4310,7 +4721,8 @@ Move 409: M-left
  ..LLMM. 
   K      
 
-Move 410: L-left-2         
+Move 410: L-left-2
+         
  AABCDF. 
  GPBCDF. 
  GP...F. 
@@ -4319,7 +4731,8 @@ Move 410: L-left-2
  LL..MM. 
   K      
 
-Move 411: M-right         
+Move 411: M-right
+         
  AABCDF. 
  GPBCDF. 
  GP...F. 
@@ -4328,7 +4741,8 @@ Move 411: M-right
  LL...MM 
   K      
 
-Move 412: M-left-3         
+Move 412: M-left-3
+         
  AABCDF. 
  GPBCDF. 
  GP...F. 
@@ -4337,7 +4751,8 @@ Move 412: M-left-3
  LLMM... 
   K      
 
-Move 413: M-right         
+Move 413: M-right
+         
  AABCDF. 
  GPBCDF. 
  GP...F. 
@@ -4346,7 +4761,8 @@ Move 413: M-right
  LL.MM.. 
   K      
 
-Move 414: L-right         
+Move 414: L-right
+         
  AABCDF. 
  GPBCDF. 
  GP...F. 
@@ -4355,7 +4771,8 @@ Move 414: L-right
  .LLMM.. 
   K      
 
-Move 415: M-right-2         
+Move 415: M-right-2
+         
  AABCDF. 
  GPBCDF. 
  GP...F. 
@@ -4364,7 +4781,8 @@ Move 415: M-right-2
  .LL..MM 
   K      
 
-Move 416: M-left         
+Move 416: M-left
+         
  AABCDF. 
  GPBCDF. 
  GP...F. 
@@ -4373,7 +4791,8 @@ Move 416: M-left
  .LL.MM. 
   K      
 
-Move 417: G-down-2         
+Move 417: G-down-2
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -4382,7 +4801,8 @@ Move 417: G-down-2
  .LL.MM. 
   K      
 
-Move 418: M-right         
+Move 418: M-right
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -4391,7 +4811,8 @@ Move 418: M-right
  .LL..MM 
   K      
 
-Move 419: M-left-2         
+Move 419: M-left-2
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -4400,7 +4821,8 @@ Move 419: M-left-2
  .LLMM.. 
   K      
 
-Move 420: L-left         
+Move 420: L-left
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -4409,7 +4831,8 @@ Move 420: L-left
  LL.MM.. 
   K      
 
-Move 421: M-right-2         
+Move 421: M-right-2
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -4418,7 +4841,8 @@ Move 421: M-right-2
  LL...MM 
   K      
 
-Move 422: M-left-3         
+Move 422: M-left-3
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -4427,7 +4851,8 @@ Move 422: M-left-3
  LLMM... 
   K      
 
-Move 423: M-right-2         
+Move 423: M-right-2
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -4436,7 +4861,8 @@ Move 423: M-right-2
  LL..MM. 
   K      
 
-Move 424: L-right-2         
+Move 424: L-right-2
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -4445,7 +4871,8 @@ Move 424: L-right-2
  ..LLMM. 
   K      
 
-Move 425: M-right         
+Move 425: M-right
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -4454,7 +4881,8 @@ Move 425: M-right
  ..LL.MM 
   K      
 
-Move 426: L-right         
+Move 426: L-right
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -4463,7 +4891,8 @@ Move 426: L-right
  ...LLMM 
   K      
 
-Move 427: J-down         
+Move 427: J-down
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -4472,7 +4901,8 @@ Move 427: J-down
  ..JLLMM 
   K      
 
-Move 428: J-up-2         
+Move 428: J-up-2
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -4481,7 +4911,8 @@ Move 428: J-up-2
  ...LLMM 
   K      
 
-Move 429: L-left-3         
+Move 429: L-left-3
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -4490,7 +4921,8 @@ Move 429: L-left-3
  LL...MM 
   K      
 
-Move 430: M-left-3         
+Move 430: M-left-3
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -4499,7 +4931,8 @@ Move 430: M-left-3
  LLMM... 
   K      
 
-Move 431: M-right-2         
+Move 431: M-right-2
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -4508,7 +4941,8 @@ Move 431: M-right-2
  LL..MM. 
   K      
 
-Move 432: M-left         
+Move 432: M-left
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -4517,7 +4951,8 @@ Move 432: M-left
  LL.MM.. 
   K      
 
-Move 433: L-right         
+Move 433: L-right
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -4526,7 +4961,8 @@ Move 433: L-right
  .LLMM.. 
   K      
 
-Move 434: M-right-2         
+Move 434: M-right-2
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -4535,7 +4971,8 @@ Move 434: M-right-2
  .LL..MM 
   K      
 
-Move 435: M-left         
+Move 435: M-left
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -4544,7 +4981,8 @@ Move 435: M-left
  .LL.MM. 
   K      
 
-Move 436: L-right         
+Move 436: L-right
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -4553,7 +4991,8 @@ Move 436: L-right
  ..LLMM. 
   K      
 
-Move 437: M-right         
+Move 437: M-right
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -4562,7 +5001,8 @@ Move 437: M-right
  ..LL.MM 
   K      
 
-Move 438: I-left         
+Move 438: I-left
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -4571,7 +5011,8 @@ Move 438: I-left
  ..LL.MM 
   K      
 
-Move 439: M-left         
+Move 439: M-left
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -4580,7 +5021,8 @@ Move 439: M-left
  ..LLMM. 
   K      
 
-Move 440: L-left-2         
+Move 440: L-left-2
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -4589,7 +5031,8 @@ Move 440: L-left-2
  LL..MM. 
   K      
 
-Move 441: M-right         
+Move 441: M-right
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -4598,7 +5041,8 @@ Move 441: M-right
  LL...MM 
   K      
 
-Move 442: M-left-3         
+Move 442: M-left-3
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -4607,7 +5051,8 @@ Move 442: M-left-3
  LLMM... 
   K      
 
-Move 443: M-right         
+Move 443: M-right
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -4616,7 +5061,8 @@ Move 443: M-right
  LL.MM.. 
   K      
 
-Move 444: L-right         
+Move 444: L-right
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -4625,7 +5071,8 @@ Move 444: L-right
  .LLMM.. 
   K      
 
-Move 445: M-right-2         
+Move 445: M-right-2
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -4634,7 +5081,8 @@ Move 445: M-right-2
  .LL..MM 
   K      
 
-Move 446: M-left         
+Move 446: M-left
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -4643,7 +5091,8 @@ Move 446: M-left
  .LL.MM. 
   K      
 
-Move 447: J-down         
+Move 447: J-down
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -4652,7 +5101,8 @@ Move 447: J-down
  .LL.MM. 
   K      
 
-Move 448: M-right         
+Move 448: M-right
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -4661,7 +5111,8 @@ Move 448: M-right
  .LL..MM 
   K      
 
-Move 449: M-left-2         
+Move 449: M-left-2
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -4670,7 +5121,8 @@ Move 449: M-left-2
  .LLMM.. 
   K      
 
-Move 450: L-left         
+Move 450: L-left
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -4679,7 +5131,8 @@ Move 450: L-left
  LL.MM.. 
   K      
 
-Move 451: M-right-2         
+Move 451: M-right-2
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -4688,7 +5141,8 @@ Move 451: M-right-2
  LL...MM 
   K      
 
-Move 452: M-left-3         
+Move 452: M-left-3
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -4697,7 +5151,8 @@ Move 452: M-left-3
  LLMM... 
   K      
 
-Move 453: M-right-2         
+Move 453: M-right-2
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -4706,7 +5161,8 @@ Move 453: M-right-2
  LL..MM. 
   K      
 
-Move 454: L-right-2         
+Move 454: L-right-2
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -4715,7 +5171,8 @@ Move 454: L-right-2
  ..LLMM. 
   K      
 
-Move 455: M-right         
+Move 455: M-right
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -4724,7 +5181,8 @@ Move 455: M-right
  ..LL.MM 
   K      
 
-Move 456: L-right         
+Move 456: L-right
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -4733,7 +5191,8 @@ Move 456: L-right
  ...LLMM 
   K      
 
-Move 457: J-down         
+Move 457: J-down
+         
  AABCDF. 
  .PBCDF. 
  .P...F. 
@@ -4742,7 +5201,8 @@ Move 457: J-down
  ..JLLMM 
   K      
 
-Move 458: J-up-2         
+Move 458: J-up-2
+         
  AABCDF. 
  .PBCDF. 
  .PJ..F. 
@@ -4751,7 +5211,8 @@ Move 458: J-up-2
  ...LLMM 
   K      
 
-Move 459: D-down         
+Move 459: D-down
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -4760,7 +5221,8 @@ Move 459: D-down
  ...LLMM 
   K      
 
-Move 460: L-left-3         
+Move 460: L-left-3
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -4769,7 +5231,8 @@ Move 460: L-left-3
  LL...MM 
   K      
 
-Move 461: M-left-3         
+Move 461: M-left-3
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -4778,7 +5241,8 @@ Move 461: M-left-3
  LLMM... 
   K      
 
-Move 462: M-right-2         
+Move 462: M-right-2
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -4787,7 +5251,8 @@ Move 462: M-right-2
  LL..MM. 
   K      
 
-Move 463: M-left         
+Move 463: M-left
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -4796,7 +5261,8 @@ Move 463: M-left
  LL.MM.. 
   K      
 
-Move 464: L-right         
+Move 464: L-right
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -4805,7 +5271,8 @@ Move 464: L-right
  .LLMM.. 
   K      
 
-Move 465: M-right-2         
+Move 465: M-right-2
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -4814,7 +5281,8 @@ Move 465: M-right-2
  .LL..MM 
   K      
 
-Move 466: M-left         
+Move 466: M-left
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -4823,7 +5291,8 @@ Move 466: M-left
  .LL.MM. 
   K      
 
-Move 467: L-right         
+Move 467: L-right
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -4832,7 +5301,8 @@ Move 467: L-right
  ..LLMM. 
   K      
 
-Move 468: M-right         
+Move 468: M-right
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -4841,7 +5311,8 @@ Move 468: M-right
  ..LL.MM 
   K      
 
-Move 469: J-down         
+Move 469: J-down
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -4850,7 +5321,8 @@ Move 469: J-down
  ..LL.MM 
   K      
 
-Move 470: M-left         
+Move 470: M-left
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -4859,7 +5331,8 @@ Move 470: M-left
  ..LLMM. 
   K      
 
-Move 471: L-left-2         
+Move 471: L-left-2
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -4868,7 +5341,8 @@ Move 471: L-left-2
  LL..MM. 
   K      
 
-Move 472: M-right         
+Move 472: M-right
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -4877,7 +5351,8 @@ Move 472: M-right
  LL...MM 
   K      
 
-Move 473: M-left-3         
+Move 473: M-left-3
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -4886,7 +5361,8 @@ Move 473: M-left-3
  LLMM... 
   K      
 
-Move 474: M-right         
+Move 474: M-right
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -4895,7 +5371,8 @@ Move 474: M-right
  LL.MM.. 
   K      
 
-Move 475: L-right         
+Move 475: L-right
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -4904,7 +5381,8 @@ Move 475: L-right
  .LLMM.. 
   K      
 
-Move 476: M-right-2         
+Move 476: M-right-2
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -4913,7 +5391,8 @@ Move 476: M-right-2
  .LL..MM 
   K      
 
-Move 477: M-left         
+Move 477: M-left
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -4922,7 +5401,8 @@ Move 477: M-left
  .LL.MM. 
   K      
 
-Move 478: I-right         
+Move 478: I-right
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -4931,7 +5411,8 @@ Move 478: I-right
  .LL.MM. 
   K      
 
-Move 479: M-right         
+Move 479: M-right
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -4940,7 +5421,8 @@ Move 479: M-right
  .LL..MM 
   K      
 
-Move 480: M-left-2         
+Move 480: M-left-2
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -4949,7 +5431,8 @@ Move 480: M-left-2
  .LLMM.. 
   K      
 
-Move 481: L-left         
+Move 481: L-left
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -4958,7 +5441,8 @@ Move 481: L-left
  LL.MM.. 
   K      
 
-Move 482: M-right-2         
+Move 482: M-right-2
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -4967,7 +5451,8 @@ Move 482: M-right-2
  LL...MM 
   K      
 
-Move 483: M-left-3         
+Move 483: M-left-3
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -4976,7 +5461,8 @@ Move 483: M-left-3
  LLMM... 
   K      
 
-Move 484: M-right-2         
+Move 484: M-right-2
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -4985,7 +5471,8 @@ Move 484: M-right-2
  LL..MM. 
   K      
 
-Move 485: L-right-2         
+Move 485: L-right-2
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -4994,7 +5481,8 @@ Move 485: L-right-2
  ..LLMM. 
   K      
 
-Move 486: M-right         
+Move 486: M-right
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -5003,7 +5491,8 @@ Move 486: M-right
  ..LL.MM 
   K      
 
-Move 487: L-right         
+Move 487: L-right
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -5012,7 +5501,8 @@ Move 487: L-right
  ...LLMM 
   K      
 
-Move 488: J-down         
+Move 488: J-down
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -5021,7 +5511,8 @@ Move 488: J-down
  ..JLLMM 
   K      
 
-Move 489: J-up-2         
+Move 489: J-up-2
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -5030,7 +5521,8 @@ Move 489: J-up-2
  ...LLMM 
   K      
 
-Move 490: L-left-3         
+Move 490: L-left-3
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -5039,7 +5531,8 @@ Move 490: L-left-3
  LL...MM 
   K      
 
-Move 491: M-left-3         
+Move 491: M-left-3
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -5048,7 +5541,8 @@ Move 491: M-left-3
  LLMM... 
   K      
 
-Move 492: M-right-2         
+Move 492: M-right-2
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -5057,7 +5551,8 @@ Move 492: M-right-2
  LL..MM. 
   K      
 
-Move 493: M-left         
+Move 493: M-left
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -5066,7 +5561,8 @@ Move 493: M-left
  LL.MM.. 
   K      
 
-Move 494: L-right         
+Move 494: L-right
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -5075,7 +5571,8 @@ Move 494: L-right
  .LLMM.. 
   K      
 
-Move 495: M-right-2         
+Move 495: M-right-2
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -5084,7 +5581,8 @@ Move 495: M-right-2
  .LL..MM 
   K      
 
-Move 496: M-left         
+Move 496: M-left
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -5093,7 +5591,8 @@ Move 496: M-left
  .LL.MM. 
   K      
 
-Move 497: L-right         
+Move 497: L-right
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -5102,7 +5601,8 @@ Move 497: L-right
  ..LLMM. 
   K      
 
-Move 498: M-right         
+Move 498: M-right
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -5111,7 +5611,8 @@ Move 498: M-right
  ..LL.MM 
   K      
 
-Move 499: G-down         
+Move 499: G-down
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -5120,7 +5621,8 @@ Move 499: G-down
  G.LL.MM 
   K      
 
-Move 500: M-left         
+Move 500: M-left
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -5129,7 +5631,8 @@ Move 500: M-left
  G.LLMM. 
   K      
 
-Move 501: L-left         
+Move 501: L-left
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -5138,7 +5641,8 @@ Move 501: L-left
  GLL.MM. 
   K      
 
-Move 502: M-right         
+Move 502: M-right
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -5147,7 +5651,8 @@ Move 502: M-right
  GLL..MM 
   K      
 
-Move 503: M-left-2         
+Move 503: M-left-2
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -5156,7 +5661,8 @@ Move 503: M-left-2
  GLLMM.. 
   K      
 
-Move 504: J-down         
+Move 504: J-down
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -5165,7 +5671,8 @@ Move 504: J-down
  GLLMM.. 
   K      
 
-Move 505: M-right-2         
+Move 505: M-right-2
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -5174,7 +5681,8 @@ Move 505: M-right-2
  GLL..MM 
   K      
 
-Move 506: M-left         
+Move 506: M-left
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -5183,7 +5691,8 @@ Move 506: M-left
  GLL.MM. 
   K      
 
-Move 507: L-right         
+Move 507: L-right
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -5192,7 +5701,8 @@ Move 507: L-right
  G.LLMM. 
   K      
 
-Move 508: M-right         
+Move 508: M-right
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -5201,7 +5711,8 @@ Move 508: M-right
  G.LL.MM 
   K      
 
-Move 509: L-right         
+Move 509: L-right
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -5210,7 +5721,8 @@ Move 509: L-right
  G..LLMM 
   K      
 
-Move 510: J-down         
+Move 510: J-down
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -5219,7 +5731,8 @@ Move 510: J-down
  G.JLLMM 
   K      
 
-Move 511: J-up-2         
+Move 511: J-up-2
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -5228,7 +5741,8 @@ Move 511: J-up-2
  G..LLMM 
   K      
 
-Move 512: I-left         
+Move 512: I-left
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -5237,7 +5751,8 @@ Move 512: I-left
  G..LLMM 
   K      
 
-Move 513: L-left-2         
+Move 513: L-left-2
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -5246,7 +5761,8 @@ Move 513: L-left-2
  GLL..MM 
   K      
 
-Move 514: M-left-2         
+Move 514: M-left-2
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -5255,7 +5771,8 @@ Move 514: M-left-2
  GLLMM.. 
   K      
 
-Move 515: M-right         
+Move 515: M-right
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -5264,7 +5781,8 @@ Move 515: M-right
  GLL.MM. 
   K      
 
-Move 516: L-right         
+Move 516: L-right
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -5273,7 +5791,8 @@ Move 516: L-right
  G.LLMM. 
   K      
 
-Move 517: M-right         
+Move 517: M-right
+         
  AABC.F. 
  .PBCDF. 
  .PJ.DF. 
@@ -5282,7 +5801,8 @@ Move 517: M-right
  G.LL.MM 
   K      
 
-Move 518: J-down         
+Move 518: J-down
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -5291,7 +5811,8 @@ Move 518: J-down
  G.LL.MM 
   K      
 
-Move 519: M-left         
+Move 519: M-left
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -5300,7 +5821,8 @@ Move 519: M-left
  G.LLMM. 
   K      
 
-Move 520: L-left         
+Move 520: L-left
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -5309,7 +5831,8 @@ Move 520: L-left
  GLL.MM. 
   K      
 
-Move 521: M-right         
+Move 521: M-right
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -5318,7 +5841,8 @@ Move 521: M-right
  GLL..MM 
   K      
 
-Move 522: M-left-2         
+Move 522: M-left-2
+         
  AABC.F. 
  .PBCDF. 
  .P..DF. 
@@ -5327,7 +5851,8 @@ Move 522: M-left-2
  GLLMM.. 
   K      
 
-Move 523: G-up-3         
+Move 523: G-up-3
+         
  AABC.F. 
  GPBCDF. 
  GP..DF. 
@@ -5336,7 +5861,8 @@ Move 523: G-up-3
  .LLMM.. 
   K      
 
-Move 524: M-right-2         
+Move 524: M-right-2
+         
  AABC.F. 
  GPBCDF. 
  GP..DF. 
@@ -5345,7 +5871,8 @@ Move 524: M-right-2
  .LL..MM 
   K      
 
-Move 525: M-left         
+Move 525: M-left
+         
  AABC.F. 
  GPBCDF. 
  GP..DF. 
@@ -5354,7 +5881,8 @@ Move 525: M-left
  .LL.MM. 
   K      
 
-Move 526: L-right         
+Move 526: L-right
+         
  AABC.F. 
  GPBCDF. 
  GP..DF. 
@@ -5363,7 +5891,8 @@ Move 526: L-right
  ..LLMM. 
   K      
 
-Move 527: M-right         
+Move 527: M-right
+         
  AABC.F. 
  GPBCDF. 
  GP..DF. 
@@ -5372,7 +5901,8 @@ Move 527: M-right
  ..LL.MM 
   K      
 
-Move 528: L-right         
+Move 528: L-right
+         
  AABC.F. 
  GPBCDF. 
  GP..DF. 
@@ -5381,7 +5911,8 @@ Move 528: L-right
  ...LLMM 
   K      
 
-Move 529: L-left-3         
+Move 529: L-left-3
+         
  AABC.F. 
  GPBCDF. 
  GP..DF. 
@@ -5390,7 +5921,8 @@ Move 529: L-left-3
  LL...MM 
   K      
 
-Move 530: M-left-3         
+Move 530: M-left-3
+         
  AABC.F. 
  GPBCDF. 
  GP..DF. 
@@ -5399,7 +5931,8 @@ Move 530: M-left-3
  LLMM... 
   K      
 
-Move 531: M-right-2         
+Move 531: M-right-2
+         
  AABC.F. 
  GPBCDF. 
  GP..DF. 
@@ -5408,7 +5941,8 @@ Move 531: M-right-2
  LL..MM. 
   K      
 
-Move 532: M-left         
+Move 532: M-left
+         
  AABC.F. 
  GPBCDF. 
  GP..DF. 
@@ -5417,7 +5951,8 @@ Move 532: M-left
  LL.MM.. 
   K      
 
-Move 533: J-down         
+Move 533: J-down
+         
  AABC.F. 
  GPBCDF. 
  GP..DF. 
@@ -5426,7 +5961,8 @@ Move 533: J-down
  LLJMM.. 
   K      
 
-Move 534: M-right-2         
+Move 534: M-right-2
+         
  AABC.F. 
  GPBCDF. 
  GP..DF. 
@@ -5435,7 +5971,8 @@ Move 534: M-right-2
  LLJ..MM 
   K      
 
-Move 535: M-left         
+Move 535: M-left
+         
  AABC.F. 
  GPBCDF. 
  GP..DF. 
@@ -5444,7 +5981,8 @@ Move 535: M-left
  LLJ.MM. 
   K      
 
-Move 536: J-up-2         
+Move 536: J-up-2
+         
  AABC.F. 
  GPBCDF. 
  GPJ.DF. 
@@ -5453,7 +5991,8 @@ Move 536: J-up-2
  LL..MM. 
   K      
 
-Move 537: M-right         
+Move 537: M-right
+         
  AABC.F. 
  GPBCDF. 
  GPJ.DF. 
@@ -5462,7 +6001,8 @@ Move 537: M-right
  LL...MM 
   K      
 
-Move 538: M-left-3         
+Move 538: M-left-3
+         
  AABC.F. 
  GPBCDF. 
  GPJ.DF. 
@@ -5471,7 +6011,8 @@ Move 538: M-left-3
  LLMM... 
   K      
 
-Move 539: M-right         
+Move 539: M-right
+         
  AABC.F. 
  GPBCDF. 
  GPJ.DF. 
@@ -5480,7 +6021,8 @@ Move 539: M-right
  LL.MM.. 
   K      
 
-Move 540: L-right         
+Move 540: L-right
+         
  AABC.F. 
  GPBCDF. 
  GPJ.DF. 
@@ -5489,7 +6031,8 @@ Move 540: L-right
  .LLMM.. 
   K      
 
-Move 541: M-right-2         
+Move 541: M-right-2
+         
  AABC.F. 
  GPBCDF. 
  GPJ.DF. 
@@ -5498,7 +6041,8 @@ Move 541: M-right-2
  .LL..MM 
   K      
 
-Move 542: M-left         
+Move 542: M-left
+         
  AABC.F. 
  GPBCDF. 
  GPJ.DF. 
@@ -5507,7 +6051,8 @@ Move 542: M-left
  .LL.MM. 
   K      
 
-Move 543: L-right         
+Move 543: L-right
+         
  AABC.F. 
  GPBCDF. 
  GPJ.DF. 
@@ -5516,7 +6061,8 @@ Move 543: L-right
  ..LLMM. 
   K      
 
-Move 544: M-right         
+Move 544: M-right
+         
  AABC.F. 
  GPBCDF. 
  GPJ.DF. 
@@ -5525,7 +6071,8 @@ Move 544: M-right
  ..LL.MM 
   K      
 
-Move 545: L-right         
+Move 545: L-right
+         
  AABC.F. 
  GPBCDF. 
  GPJ.DF. 
@@ -5534,7 +6081,8 @@ Move 545: L-right
  ...LLMM 
   K      
 
-Move 546: J-down-2         
+Move 546: J-down-2
+         
  AABC.F. 
  GPBCDF. 
  GP..DF. 
@@ -5543,7 +6091,8 @@ Move 546: J-down-2
  ..JLLMM 
   K      
 
-Move 547: I-right         
+Move 547: I-right
+         
  AABC.F. 
  GPBCDF. 
  GP..DF. 
@@ -5552,7 +6101,8 @@ Move 547: I-right
  ..JLLMM 
   K      
 
-Move 548: J-up-2         
+Move 548: J-up-2
+         
  AABC.F. 
  GPBCDF. 
  GPJ.DF. 
@@ -5561,7 +6111,8 @@ Move 548: J-up-2
  ...LLMM 
   K      
 
-Move 549: L-left-3         
+Move 549: L-left-3
+         
  AABC.F. 
  GPBCDF. 
  GPJ.DF. 
@@ -5570,7 +6121,8 @@ Move 549: L-left-3
  LL...MM 
   K      
 
-Move 550: M-left-3         
+Move 550: M-left-3
+         
  AABC.F. 
  GPBCDF. 
  GPJ.DF. 
@@ -5579,7 +6131,8 @@ Move 550: M-left-3
  LLMM... 
   K      
 
-Move 551: M-right-2         
+Move 551: M-right-2
+         
  AABC.F. 
  GPBCDF. 
  GPJ.DF. 
@@ -5588,7 +6141,8 @@ Move 551: M-right-2
  LL..MM. 
   K      
 
-Move 552: M-left         
+Move 552: M-left
+         
  AABC.F. 
  GPBCDF. 
  GPJ.DF. 
@@ -5597,7 +6151,8 @@ Move 552: M-left
  LL.MM.. 
   K      
 
-Move 553: L-right         
+Move 553: L-right
+         
  AABC.F. 
  GPBCDF. 
  GPJ.DF. 
@@ -5606,7 +6161,8 @@ Move 553: L-right
  .LLMM.. 
   K      
 
-Move 554: M-right-2         
+Move 554: M-right-2
+         
  AABC.F. 
  GPBCDF. 
  GPJ.DF. 
@@ -5615,7 +6171,8 @@ Move 554: M-right-2
  .LL..MM 
   K      
 
-Move 555: M-left         
+Move 555: M-left
+         
  AABC.F. 
  GPBCDF. 
  GPJ.DF. 
@@ -5624,7 +6181,8 @@ Move 555: M-left
  .LL.MM. 
   K      
 
-Move 556: L-right         
+Move 556: L-right
+         
  AABC.F. 
  GPBCDF. 
  GPJ.DF. 
@@ -5633,7 +6191,8 @@ Move 556: L-right
  ..LLMM. 
   K      
 
-Move 557: M-right         
+Move 557: M-right
+         
  AABC.F. 
  GPBCDF. 
  GPJ.DF. 
@@ -5642,7 +6201,8 @@ Move 557: M-right
  ..LL.MM 
   K      
 
-Move 558: J-down         
+Move 558: J-down
+         
  AABC.F. 
  GPBCDF. 
  GP..DF. 
@@ -5651,7 +6211,8 @@ Move 558: J-down
  ..LL.MM 
   K      
 
-Move 559: M-left         
+Move 559: M-left
+         
  AABC.F. 
  GPBCDF. 
  GP..DF. 
@@ -5660,7 +6221,8 @@ Move 559: M-left
  ..LLMM. 
   K      
 
-Move 560: L-left-2         
+Move 560: L-left-2
+         
  AABC.F. 
  GPBCDF. 
  GP..DF. 
@@ -5669,7 +6231,8 @@ Move 560: L-left-2
  LL..MM. 
   K      
 
-Move 561: M-right         
+Move 561: M-right
+         
  AABC.F. 
  GPBCDF. 
  GP..DF. 
@@ -5678,7 +6241,8 @@ Move 561: M-right
  LL...MM 
   K      
 
-Move 562: M-left-3         
+Move 562: M-left-3
+         
  AABC.F. 
  GPBCDF. 
  GP..DF. 
@@ -5687,7 +6251,8 @@ Move 562: M-left-3
  LLMM... 
   K      
 
-Move 563: M-right         
+Move 563: M-right
+         
  AABC.F. 
  GPBCDF. 
  GP..DF. 
@@ -5696,7 +6261,8 @@ Move 563: M-right
  LL.MM.. 
   K      
 
-Move 564: L-right         
+Move 564: L-right
+         
  AABC.F. 
  GPBCDF. 
  GP..DF. 
@@ -5705,7 +6271,8 @@ Move 564: L-right
  .LLMM.. 
   K      
 
-Move 565: M-right-2         
+Move 565: M-right-2
+         
  AABC.F. 
  GPBCDF. 
  GP..DF. 
@@ -5714,7 +6281,8 @@ Move 565: M-right-2
  .LL..MM 
   K      
 
-Move 566: M-left         
+Move 566: M-left
+         
  AABC.F. 
  GPBCDF. 
  GP..DF. 
@@ -5723,7 +6291,8 @@ Move 566: M-left
  .LL.MM. 
   K      
 
-Move 567: G-down         
+Move 567: G-down
+         
  AABC.F. 
  .PBCDF. 
  GP..DF. 
@@ -5732,7 +6301,8 @@ Move 567: G-down
  .LL.MM. 
   K      
 
-Move 568: M-right         
+Move 568: M-right
+         
  AABC.F. 
  .PBCDF. 
  GP..DF. 
@@ -5741,7 +6311,8 @@ Move 568: M-right
  .LL..MM 
   K      
 
-Move 569: M-left-2         
+Move 569: M-left-2
+         
  AABC.F. 
  .PBCDF. 
  GP..DF. 
@@ -5750,7 +6321,8 @@ Move 569: M-left-2
  .LLMM.. 
   K      
 
-Move 570: L-left         
+Move 570: L-left
+         
  AABC.F. 
  .PBCDF. 
  GP..DF. 
@@ -5759,7 +6331,8 @@ Move 570: L-left
  LL.MM.. 
   K      
 
-Move 571: M-right-2         
+Move 571: M-right-2
+         
  AABC.F. 
  .PBCDF. 
  GP..DF. 
@@ -5768,7 +6341,8 @@ Move 571: M-right-2
  LL...MM 
   K      
 
-Move 572: M-left-3         
+Move 572: M-left-3
+         
  AABC.F. 
  .PBCDF. 
  GP..DF. 
@@ -5777,7 +6351,8 @@ Move 572: M-left-3
  LLMM... 
   K      
 
-Move 573: M-right-2         
+Move 573: M-right-2
+         
  AABC.F. 
  .PBCDF. 
  GP..DF. 
@@ -5786,7 +6361,8 @@ Move 573: M-right-2
  LL..MM. 
   K      
 
-Move 574: L-right-2         
+Move 574: L-right-2
+         
  AABC.F. 
  .PBCDF. 
  GP..DF. 
@@ -5795,7 +6371,8 @@ Move 574: L-right-2
  ..LLMM. 
   K      
 
-Move 575: M-right         
+Move 575: M-right
+         
  AABC.F. 
  .PBCDF. 
  GP..DF. 
@@ -5804,7 +6381,8 @@ Move 575: M-right
  ..LL.MM 
   K      
 
-Move 576: L-right         
+Move 576: L-right
+         
  AABC.F. 
  .PBCDF. 
  GP..DF. 
@@ -5813,7 +6391,8 @@ Move 576: L-right
  ...LLMM 
   K      
 
-Move 577: J-down         
+Move 577: J-down
+         
  AABC.F. 
  .PBCDF. 
  GP..DF. 
@@ -5822,7 +6401,8 @@ Move 577: J-down
  ..JLLMM 
   K      
 
-Move 578: J-up-2         
+Move 578: J-up-2
+         
  AABC.F. 
  .PBCDF. 
  GPJ.DF. 
@@ -5831,7 +6411,8 @@ Move 578: J-up-2
  ...LLMM 
   K      
 
-Move 579: L-left-3         
+Move 579: L-left-3
+         
  AABC.F. 
  .PBCDF. 
  GPJ.DF. 
@@ -5840,7 +6421,8 @@ Move 579: L-left-3
  LL...MM 
   K      
 
-Move 580: M-left-3         
+Move 580: M-left-3
+         
  AABC.F. 
  .PBCDF. 
  GPJ.DF. 
@@ -5849,7 +6431,8 @@ Move 580: M-left-3
  LLMM... 
   K      
 
-Move 581: M-right-2         
+Move 581: M-right-2
+         
  AABC.F. 
  .PBCDF. 
  GPJ.DF. 
@@ -5858,7 +6441,8 @@ Move 581: M-right-2
  LL..MM. 
   K      
 
-Move 582: M-left         
+Move 582: M-left
+         
  AABC.F. 
  .PBCDF. 
  GPJ.DF. 
@@ -5867,7 +6451,8 @@ Move 582: M-left
  LL.MM.. 
   K      
 
-Move 583: L-right         
+Move 583: L-right
+         
  AABC.F. 
  .PBCDF. 
  GPJ.DF. 
@@ -5876,7 +6461,8 @@ Move 583: L-right
  .LLMM.. 
   K      
 
-Move 584: M-right-2         
+Move 584: M-right-2
+         
  AABC.F. 
  .PBCDF. 
  GPJ.DF. 
@@ -5885,7 +6471,8 @@ Move 584: M-right-2
  .LL..MM 
   K      
 
-Move 585: M-left         
+Move 585: M-left
+         
  AABC.F. 
  .PBCDF. 
  GPJ.DF. 
@@ -5894,7 +6481,8 @@ Move 585: M-left
  .LL.MM. 
   K      
 
-Move 586: L-right         
+Move 586: L-right
+         
  AABC.F. 
  .PBCDF. 
  GPJ.DF. 
@@ -5903,7 +6491,8 @@ Move 586: L-right
  ..LLMM. 
   K      
 
-Move 587: M-right         
+Move 587: M-right
+         
  AABC.F. 
  .PBCDF. 
  GPJ.DF. 
@@ -5912,7 +6501,8 @@ Move 587: M-right
  ..LL.MM 
   K      
 
-Move 588: I-left         
+Move 588: I-left
+         
  AABC.F. 
  .PBCDF. 
  GPJ.DF. 
@@ -5921,7 +6511,8 @@ Move 588: I-left
  ..LL.MM 
   K      
 
-Move 589: M-left         
+Move 589: M-left
+         
  AABC.F. 
  .PBCDF. 
  GPJ.DF. 
@@ -5930,7 +6521,8 @@ Move 589: M-left
  ..LLMM. 
   K      
 
-Move 590: L-left-2         
+Move 590: L-left-2
+         
  AABC.F. 
  .PBCDF. 
  GPJ.DF. 
@@ -5939,7 +6531,8 @@ Move 590: L-left-2
  LL..MM. 
   K      
 
-Move 591: M-right         
+Move 591: M-right
+         
  AABC.F. 
  .PBCDF. 
  GPJ.DF. 
@@ -5948,7 +6541,8 @@ Move 591: M-right
  LL...MM 
   K      
 
-Move 592: M-left-3         
+Move 592: M-left-3
+         
  AABC.F. 
  .PBCDF. 
  GPJ.DF. 
@@ -5957,7 +6551,8 @@ Move 592: M-left-3
  LLMM... 
   K      
 
-Move 593: M-right         
+Move 593: M-right
+         
  AABC.F. 
  .PBCDF. 
  GPJ.DF. 
@@ -5966,7 +6561,8 @@ Move 593: M-right
  LL.MM.. 
   K      
 
-Move 594: L-right         
+Move 594: L-right
+         
  AABC.F. 
  .PBCDF. 
  GPJ.DF. 
@@ -5975,7 +6571,8 @@ Move 594: L-right
  .LLMM.. 
   K      
 
-Move 595: M-right-2         
+Move 595: M-right-2
+         
  AABC.F. 
  .PBCDF. 
  GPJ.DF. 
@@ -5984,7 +6581,8 @@ Move 595: M-right-2
  .LL..MM 
   K      
 
-Move 596: M-left         
+Move 596: M-left
+         
  AABC.F. 
  .PBCDF. 
  GPJ.DF. 
@@ -5993,7 +6591,8 @@ Move 596: M-left
  .LL.MM. 
   K      
 
-Move 597: J-down         
+Move 597: J-down
+         
  AABC.F. 
  .PBCDF. 
  GP..DF. 
@@ -6002,7 +6601,8 @@ Move 597: J-down
  .LL.MM. 
   K      
 
-Move 598: M-right         
+Move 598: M-right
+         
  AABC.F. 
  .PBCDF. 
  GP..DF. 
@@ -6011,7 +6611,8 @@ Move 598: M-right
  .LL..MM 
   K      
 
-Move 599: M-left-2         
+Move 599: M-left-2
+         
  AABC.F. 
  .PBCDF. 
  GP..DF. 
@@ -6020,7 +6621,8 @@ Move 599: M-left-2
  .LLMM.. 
   K      
 
-Move 600: L-left         
+Move 600: L-left
+         
  AABC.F. 
  .PBCDF. 
  GP..DF. 
@@ -6029,7 +6631,8 @@ Move 600: L-left
  LL.MM.. 
   K      
 
-Move 601: M-right-2         
+Move 601: M-right-2
+         
  AABC.F. 
  .PBCDF. 
  GP..DF. 
@@ -6038,7 +6641,8 @@ Move 601: M-right-2
  LL...MM 
   K      
 
-Move 602: M-left-3         
+Move 602: M-left-3
+         
  AABC.F. 
  .PBCDF. 
  GP..DF. 
@@ -6047,7 +6651,8 @@ Move 602: M-left-3
  LLMM... 
   K      
 
-Move 603: M-right-2         
+Move 603: M-right-2
+         
  AABC.F. 
  .PBCDF. 
  GP..DF. 
@@ -6056,7 +6661,8 @@ Move 603: M-right-2
  LL..MM. 
   K      
 
-Move 604: L-right-2         
+Move 604: L-right-2
+         
  AABC.F. 
  .PBCDF. 
  GP..DF. 
@@ -6065,7 +6671,8 @@ Move 604: L-right-2
  ..LLMM. 
   K      
 
-Move 605: M-right         
+Move 605: M-right
+         
  AABC.F. 
  .PBCDF. 
  GP..DF. 
@@ -6074,7 +6681,8 @@ Move 605: M-right
  ..LL.MM 
   K      
 
-Move 606: L-right         
+Move 606: L-right
+         
  AABC.F. 
  .PBCDF. 
  GP..DF. 
@@ -6083,7 +6691,8 @@ Move 606: L-right
  ...LLMM 
   K      
 
-Move 607: J-down         
+Move 607: J-down
+         
  AABC.F. 
  .PBCDF. 
  GP..DF. 
@@ -6092,7 +6701,8 @@ Move 607: J-down
  ..JLLMM 
   K      
 
-Move 608: J-up-2         
+Move 608: J-up-2
+         
  AABC.F. 
  .PBCDF. 
  GPJ.DF. 
@@ -6101,7 +6711,8 @@ Move 608: J-up-2
  ...LLMM 
   K      
 
-Move 609: P-down-2         
+Move 609: P-down-2
+         
  AABC.F. 
  ..BCDF. 
  G.J.DF. 
