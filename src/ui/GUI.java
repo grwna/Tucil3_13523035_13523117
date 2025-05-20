@@ -554,7 +554,7 @@ public class GUI extends Application {
         Label nodesLabel = new Label("Nodes visited: " + this.solver.getNodes());
         nodesLabel.setFont(Font.font("Arial", FontWeight.NORMAL, 18));
 
-        Label stepsLabel = new Label("Solution steps: " + this.solution.size() - 1);
+        Label stepsLabel = new Label("Solution steps: " + (this.solution.size()-1));
         stepsLabel.setFont(Font.font("Arial", FontWeight.NORMAL, 18));
 
         VBox infoBox = new VBox(5);
