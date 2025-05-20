@@ -131,7 +131,7 @@ git clone git@github.com:grwna/Tucil3_13523035_13523117.git
 ---
 
 ### Running the Application
-**Before compiling and running the application. Make sure to change `JAVAFX` path in makefile to your JavaFX installation path.**
+❗❗❗**Before compiling and running the application. Make sure to change `JAVAFX` path in makefile to your JavaFX installation path.**
 
 Compile using `make build`
 
