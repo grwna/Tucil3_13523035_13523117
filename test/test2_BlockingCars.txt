@@ -1,0 +1,74 @@
+==========================================================
+  RUSH HOUR GAME SOLUTION USING A* SEARCH
+==========================================================
+
+Number of moves: 5
+Execution time: 31,253 ms
+
+----------------------------------------------------------
+SOLUTION STEPS:
+----------------------------------------------------------
+Move 1: C-up
+Move 2: D-up
+Move 3: I-left
+Move 4: F-down-3
+Move 5: P-right-4
+
+
+
+Move 0: Start         
+ AAB..F. 
+ ..BCDF. 
+ .PPCDF.K
+ GH.III. 
+ GHJ.... 
+ LLJMM.. 
+         
+
+Move 1: C-up         
+ AABC.F. 
+ ..BCDF. 
+ .PP.DF.K
+ GH.III. 
+ GHJ.... 
+ LLJMM.. 
+         
+
+Move 2: D-up         
+ AABCDF. 
+ ..BCDF. 
+ .PP..F.K
+ GH.III. 
+ GHJ.... 
+ LLJMM.. 
+         
+
+Move 3: I-left         
+ AABCDF. 
+ ..BCDF. 
+ .PP..F.K
+ GHIII.. 
+ GHJ.... 
+ LLJMM.. 
+         
+
+Move 4: F-down-3         
+ AABCD.. 
+ ..BCD.. 
+ .PP....K
+ GHIIIF. 
+ GHJ..F. 
+ LLJMMF. 
+         
+
+Move 5: P-right-4         
+ AABCD.. 
+ ..BCD.. 
+ .....PPK
+ GHIIIF. 
+ GHJ..F. 
+ LLJMMF. 
+         
+----------------------------------------------------------
+
+Solution finished. Game solved successfully!
