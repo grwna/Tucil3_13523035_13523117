@@ -464,14 +464,14 @@ public class GUI extends Application {
         }
         try {
             this.solution = this.solver.solve(this.board);
+            if (this.solution.isEmpty()) {
+                inputError("No solution found.", false);
+                return;
+            }
+            animateSolution();
         } catch (OutOfMemoryError e){
             inputError("Out of memory!", true);
         }
-        if (this.solution.isEmpty()) {
-            inputError("No solution found.", false);
-            return;
-        }
-        animateSolution();
     }
 
 

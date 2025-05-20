@@ -29,7 +29,7 @@ public class OutputWriter {
             writer.println("\n");
             for (int i = 0; i < solution.size(); i++){
                 state = solution.get(i);
-                writer.print("\nMove " + i + ": " + state.move);
+                writer.print("\nMove " + i + ": " + state.move + "\n");
                 for (int r = 0; r < state.board.rows; r++) {
                     for (int c = 0; c < state.board.cols; c++) {
                         writer.print(state.board.grid[r][c]);

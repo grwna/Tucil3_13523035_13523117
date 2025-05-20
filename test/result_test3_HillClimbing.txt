@@ -1,0 +1,4865 @@
+==========================================================
+  RUSH HOUR GAME SOLUTION USING HILL CLIMBING SEARCH
+==========================================================
+
+Number of moves: 440
+Execution time: 21.008 ms
+
+----------------------------------------------------------
+SOLUTION STEPS:
+----------------------------------------------------------
+Move 1: A-left
+Move 2: H-left
+Move 3: F-down
+Move 4: J-left
+Move 5: H-right-3
+Move 6: F-up-3
+Move 7: J-right-2
+Move 8: G-left-2
+Move 9: I-up
+Move 10: E-right-3
+Move 11: H-left
+Move 12: J-left
+Move 13: J-left
+Move 14: E-left-2
+Move 15: L-down-2
+Move 16: E-left
+Move 17: J-right-5
+Move 18: L-down
+Move 19: P-left
+Move 20: A-right
+Move 21: P-right
+Move 22: L-up-2
+Move 23: J-left-2
+Move 24: E-right-2
+Move 25: E-right
+Move 26: H-right
+Move 27: E-left-2
+Move 28: J-left-2
+Move 29: J-right-3
+Move 30: J-left-4
+Move 31: E-left
+Move 32: J-right-5
+Move 33: J-left-3
+Move 34: L-down
+Move 35: P-left
+Move 36: I-down
+Move 37: A-left
+Move 38: E-right-2
+Move 39: L-down
+Move 40: A-right
+Move 41: E-left
+Move 42: G-right
+Move 43: H-left
+Move 44: J-left
+Move 45: E-left
+Move 46: P-right
+Move 47: J-left
+Move 48: J-right-2
+Move 49: G-left
+Move 50: L-up
+Move 51: L-up
+Move 52: J-right
+Move 53: J-left-3
+Move 54: E-right-2
+Move 55: H-right
+Move 56: J-right-3
+Move 57: L-up
+Move 58: L-down-2
+Move 59: I-up
+Move 60: E-left
+Move 61: J-right-2
+Move 62: J-left-4
+Move 63: L-up-2
+Move 64: B-up
+Move 65: L-down
+Move 66: L-up-2
+Move 67: E-right-2
+Move 68: G-right
+Move 69: J-left
+Move 70: E-left-3
+Move 71: C-right
+Move 72: B-down
+Move 73: J-right
+Move 74: B-up
+Move 75: J-right-4
+Move 76: J-left
+Move 77: J-left
+Move 78: E-right
+Move 79: P-left
+Move 80: J-right-2
+Move 81: E-right
+Move 82: B-down-3
+Move 83: B-up-2
+Move 84: E-right
+Move 85: B-up
+Move 86: B-down-4
+Move 87: J-left
+Move 88: J-left
+Move 89: J-left-2
+Move 90: B-up-4
+Move 91: I-down
+Move 92: E-left-2
+Move 93: C-left
+Move 94: G-left
+Move 95: G-right-2
+Move 96: F-down
+Move 97: P-right
+Move 98: J-right
+Move 99: F-down
+Move 100: J-left-2
+Move 101: E-left
+Move 102: J-right-3
+Move 103: P-left
+Move 104: F-up-2
+Move 105: G-right
+Move 106: C-right
+Move 107: E-right
+Move 108: G-left
+Move 109: B-down-3
+Move 110: F-down-2
+Move 111: A-right
+Move 112: B-up-2
+Move 113: A-left-2
+Move 114: F-up
+Move 115: J-left
+Move 116: J-left-2
+Move 117: E-right
+Move 118: B-down-2
+Move 119: E-left
+Move 120: J-right-2
+Move 121: B-down
+Move 122: G-right
+Move 123: E-right
+Move 124: J-right
+Move 125: P-right
+Move 126: B-up-3
+Move 127: E-right
+Move 128: B-down
+Move 129: L-down-2
+Move 130: H-left-2
+Move 131: J-left
+Move 132: E-left-2
+Move 133: H-left
+Move 134: L-up-2
+Move 135: P-left
+Move 136: B-down-2
+Move 137: P-right
+Move 138: L-down-3
+Move 139: P-left
+Move 140: F-down
+Move 141: B-up-3
+Move 142: B-down-2
+Move 143: D-right-4
+Move 144: B-down
+Move 145: C-left
+Move 146: D-left-2
+Move 147: L-down
+Move 148: G-left
+Move 149: H-right-3
+Move 150: H-left
+Move 151: G-right
+Move 152: D-right-2
+Move 153: F-up-2
+Move 154: G-left-3
+Move 155: I-up
+Move 156: A-right
+Move 157: D-left
+Move 158: G-right
+Move 159: D-right
+Move 160: P-right
+Move 161: G-left
+Move 162: H-right
+Move 163: D-left
+Move 164: L-up-2
+Move 165: L-down
+Move 166: D-right
+Move 167: L-up
+Move 168: J-right-2
+Move 169: E-right
+Move 170: L-up
+Move 171: E-left
+Move 172: J-left-2
+Move 173: L-up
+Move 174: E-right
+Move 175: J-right
+Move 176: L-down
+Move 177: L-down
+Move 178: A-left
+Move 179: H-left
+Move 180: I-down
+Move 181: D-left
+Move 182: H-right
+Move 183: E-left
+Move 184: A-right
+Move 185: L-down
+Move 186: J-left
+Move 187: L-down
+Move 188: A-left
+Move 189: I-up
+Move 190: J-left
+Move 191: L-up-2
+Move 192: H-left
+Move 193: I-down
+Move 194: D-right
+Move 195: L-down-2
+Move 196: D-left
+Move 197: H-right
+Move 198: L-up
+Move 199: L-up
+Move 200: A-right
+Move 201: E-right-2
+Move 202: A-left
+Move 203: E-left
+Move 204: I-up
+Move 205: H-left
+Move 206: J-right-3
+Move 207: H-right
+Move 208: J-left
+Move 209: E-right
+Move 210: I-down
+Move 211: J-left
+Move 212: E-left-2
+Move 213: A-right
+Move 214: D-right
+Move 215: L-up-2
+Move 216: L-down-4
+Move 217: L-up
+Move 218: L-up-2
+Move 219: E-right-2
+Move 220: J-right
+Move 221: G-right
+Move 222: I-up
+Move 223: A-left
+Move 224: J-left
+Move 225: H-left
+Move 226: J-right-3
+Move 227: J-left
+Move 228: J-left-3
+Move 229: H-right
+Move 230: L-up
+Move 231: J-right-3
+Move 232: P-left
+Move 233: G-left
+Move 234: J-left-2
+Move 235: J-left
+Move 236: G-right
+Move 237: A-right
+Move 238: E-left-2
+Move 239: C-right
+Move 240: P-right
+Move 241: J-right-4
+Move 242: L-down
+Move 243: E-right-2
+Move 244: B-up-4
+Move 245: E-left
+Move 246: B-down-4
+Move 247: H-left
+Move 248: E-left
+Move 249: J-left-2
+Move 250: J-left
+Move 251: C-left
+Move 252: J-right
+Move 253: E-right-2
+Move 254: J-right
+Move 255: H-right
+Move 256: G-left
+Move 257: J-right
+Move 258: H-left
+Move 259: E-left
+Move 260: L-down-2
+Move 261: E-left
+Move 262: J-left-3
+Move 263: J-left
+Move 264: D-left
+Move 265: L-up
+Move 266: D-right
+Move 267: H-right
+Move 268: J-right-2
+Move 269: L-up-2
+Move 270: J-left-2
+Move 271: A-left
+Move 272: E-right-2
+Move 273: J-right-2
+Move 274: L-down
+Move 275: J-right
+Move 276: J-left-2
+Move 277: L-up
+Move 278: E-left
+Move 279: J-left
+Move 280: L-down
+Move 281: E-left
+Move 282: J-right-4
+Move 283: E-right-2
+Move 284: L-up
+Move 285: L-down-2
+Move 286: D-left
+Move 287: H-left
+Move 288: J-left-2
+Move 289: J-right
+Move 290: A-right
+Move 291: J-right
+Move 292: J-left-3
+Move 293: H-right
+Move 294: A-left
+Move 295: J-right-2
+Move 296: J-left-3
+Move 297: H-left
+Move 298: I-down
+Move 299: J-right
+Move 300: J-right
+Move 301: E-left-2
+Move 302: I-up
+Move 303: A-right
+Move 304: E-right
+Move 305: L-down
+Move 306: A-left
+Move 307: L-up
+Move 308: J-right-2
+Move 309: J-left-3
+Move 310: E-left
+Move 311: L-down-2
+Move 312: L-up
+Move 313: H-right
+Move 314: L-up
+Move 315: J-right-3
+Move 316: J-left-2
+Move 317: J-right
+Move 318: H-left
+Move 319: J-right
+Move 320: L-down
+Move 321: J-left
+Move 322: J-left
+Move 323: A-right
+Move 324: D-right
+Move 325: I-down
+Move 326: L-up-2
+Move 327: G-right-3
+Move 328: L-down-2
+Move 329: E-right
+Move 330: J-left-2
+Move 331: J-right
+Move 332: C-right
+Move 333: D-left
+Move 334: F-down
+Move 335: A-right
+Move 336: L-down
+Move 337: G-left
+Move 338: J-left
+Move 339: B-up-4
+Move 340: B-down-2
+Move 341: H-right
+Move 342: B-down
+Move 343: A-left
+Move 344: H-left
+Move 345: H-left
+Move 346: E-left
+Move 347: F-down
+Move 348: P-left
+Move 349: D-left
+Move 350: P-right
+Move 351: J-left
+Move 352: P-left
+Move 353: B-up-3
+Move 354: D-right
+Move 355: D-left-2
+Move 356: B-down
+Move 357: C-left
+Move 358: D-right
+Move 359: P-right
+Move 360: D-left
+Move 361: H-right
+Move 362: G-right
+Move 363: L-up-2
+Move 364: B-up
+Move 365: A-right
+Move 366: D-right
+Move 367: J-right-3
+Move 368: J-left-2
+Move 369: H-right
+Move 370: J-right-2
+Move 371: D-left
+Move 372: D-left
+Move 373: E-left
+Move 374: J-left
+Move 375: B-down
+Move 376: J-right
+Move 377: E-right
+Move 378: D-right-4
+Move 379: J-left-3
+Move 380: D-left-3
+Move 381: L-down
+Move 382: P-left
+Move 383: D-right-2
+Move 384: A-right
+Move 385: J-right-3
+Move 386: D-left-2
+Move 387: J-left
+Move 388: D-right-2
+Move 389: D-left
+Move 390: J-left-2
+Move 391: D-left-2
+Move 392: F-down
+Move 393: D-right-3
+Move 394: L-down
+Move 395: F-up-2
+Move 396: A-left-2
+Move 397: G-left
+Move 398: F-down
+Move 399: P-right
+Move 400: F-up
+Move 401: A-left
+Move 402: H-left-2
+Move 403: E-right
+Move 404: J-right-2
+Move 405: J-left
+Move 406: H-right-2
+Move 407: D-right
+Move 408: P-left
+Move 409: F-up
+Move 410: A-right
+Move 411: C-right
+Move 412: A-left
+Move 413: P-right
+Move 414: B-down-3
+Move 415: B-up-2
+Move 416: E-left-2
+Move 417: A-right
+Move 418: E-right-2
+Move 419: B-down
+Move 420: C-right
+Move 421: B-up-3
+Move 422: G-right
+Move 423: E-left-2
+Move 424: G-left
+Move 425: J-right
+Move 426: C-left-2
+Move 427: P-left
+Move 428: F-down-2
+Move 429: J-left
+Move 430: J-left
+Move 431: F-down
+Move 432: C-right
+Move 433: B-down-2
+Move 434: A-left
+Move 435: D-left-2
+Move 436: B-up
+Move 437: A-right
+Move 438: B-up
+Move 439: J-right
+Move 440: P-left-4
+
+
+
+Move 0: Start
+         
+ .AAHH.. 
+ BDD.L.. 
+KB..FLPP 
+ CC.FGG. 
+ EE.F.I. 
+ .JJ..I. 
+         
+
+Move 1: A-left
+         
+ AA.HH.. 
+ BDD.L.. 
+KB..FLPP 
+ CC.FGG. 
+ EE.F.I. 
+ .JJ..I. 
+         
+
+Move 2: H-left
+         
+ AAHH... 
+ BDD.L.. 
+KB..FLPP 
+ CC.FGG. 
+ EE.F.I. 
+ .JJ..I. 
+         
+
+Move 3: F-down
+         
+ AAHH... 
+ BDD.L.. 
+KB...LPP 
+ CC.FGG. 
+ EE.F.I. 
+ .JJF.I. 
+         
+
+Move 4: J-left
+         
+ AAHH... 
+ BDD.L.. 
+KB...LPP 
+ CC.FGG. 
+ EE.F.I. 
+ JJ.F.I. 
+         
+
+Move 5: H-right-3
+         
+ AA...HH 
+ BDD.L.. 
+KB...LPP 
+ CC.FGG. 
+ EE.F.I. 
+ JJ.F.I. 
+         
+
+Move 6: F-up-3
+         
+ AA.F.HH 
+ BDDFL.. 
+KB..FLPP 
+ CC..GG. 
+ EE...I. 
+ JJ...I. 
+         
+
+Move 7: J-right-2
+         
+ AA.F.HH 
+ BDDFL.. 
+KB..FLPP 
+ CC..GG. 
+ EE...I. 
+ ..JJ.I. 
+         
+
+Move 8: G-left-2
+         
+ AA.F.HH 
+ BDDFL.. 
+KB..FLPP 
+ CCGG... 
+ EE...I. 
+ ..JJ.I. 
+         
+
+Move 9: I-up
+         
+ AA.F.HH 
+ BDDFL.. 
+KB..FLPP 
+ CCGG.I. 
+ EE...I. 
+ ..JJ... 
+         
+
+Move 10: E-right-3
+         
+ AA.F.HH 
+ BDDFL.. 
+KB..FLPP 
+ CCGG.I. 
+ ...EEI. 
+ ..JJ... 
+         
+
+Move 11: H-left
+         
+ AA.FHH. 
+ BDDFL.. 
+KB..FLPP 
+ CCGG.I. 
+ ...EEI. 
+ ..JJ... 
+         
+
+Move 12: J-left
+         
+ AA.FHH. 
+ BDDFL.. 
+KB..FLPP 
+ CCGG.I. 
+ ...EEI. 
+ .JJ.... 
+         
+
+Move 13: J-left
+         
+ AA.FHH. 
+ BDDFL.. 
+KB..FLPP 
+ CCGG.I. 
+ ...EEI. 
+ JJ..... 
+         
+
+Move 14: E-left-2
+         
+ AA.FHH. 
+ BDDFL.. 
+KB..FLPP 
+ CCGG.I. 
+ .EE..I. 
+ JJ..... 
+         
+
+Move 15: L-down-2
+         
+ AA.FHH. 
+ BDDF... 
+KB..F.PP 
+ CCGGLI. 
+ .EE.LI. 
+ JJ..... 
+         
+
+Move 16: E-left
+         
+ AA.FHH. 
+ BDDF... 
+KB..F.PP 
+ CCGGLI. 
+ EE..LI. 
+ JJ..... 
+         
+
+Move 17: J-right-5
+         
+ AA.FHH. 
+ BDDF... 
+KB..F.PP 
+ CCGGLI. 
+ EE..LI. 
+ .....JJ 
+         
+
+Move 18: L-down
+         
+ AA.FHH. 
+ BDDF... 
+KB..F.PP 
+ CCGG.I. 
+ EE..LI. 
+ ....LJJ 
+         
+
+Move 19: P-left
+         
+ AA.FHH. 
+ BDDF... 
+KB..FPP. 
+ CCGG.I. 
+ EE..LI. 
+ ....LJJ 
+         
+
+Move 20: A-right
+         
+ .AAFHH. 
+ BDDF... 
+KB..FPP. 
+ CCGG.I. 
+ EE..LI. 
+ ....LJJ 
+         
+
+Move 21: P-right
+         
+ .AAFHH. 
+ BDDF... 
+KB..F.PP 
+ CCGG.I. 
+ EE..LI. 
+ ....LJJ 
+         
+
+Move 22: L-up-2
+         
+ .AAFHH. 
+ BDDF... 
+KB..FLPP 
+ CCGGLI. 
+ EE...I. 
+ .....JJ 
+         
+
+Move 23: J-left-2
+         
+ .AAFHH. 
+ BDDF... 
+KB..FLPP 
+ CCGGLI. 
+ EE...I. 
+ ...JJ.. 
+         
+
+Move 24: E-right-2
+         
+ .AAFHH. 
+ BDDF... 
+KB..FLPP 
+ CCGGLI. 
+ ..EE.I. 
+ ...JJ.. 
+         
+
+Move 25: E-right
+         
+ .AAFHH. 
+ BDDF... 
+KB..FLPP 
+ CCGGLI. 
+ ...EEI. 
+ ...JJ.. 
+         
+
+Move 26: H-right
+         
+ .AAF.HH 
+ BDDF... 
+KB..FLPP 
+ CCGGLI. 
+ ...EEI. 
+ ...JJ.. 
+         
+
+Move 27: E-left-2
+         
+ .AAF.HH 
+ BDDF... 
+KB..FLPP 
+ CCGGLI. 
+ .EE..I. 
+ ...JJ.. 
+         
+
+Move 28: J-left-2
+         
+ .AAF.HH 
+ BDDF... 
+KB..FLPP 
+ CCGGLI. 
+ .EE..I. 
+ .JJ.... 
+         
+
+Move 29: J-right-3
+         
+ .AAF.HH 
+ BDDF... 
+KB..FLPP 
+ CCGGLI. 
+ .EE..I. 
+ ....JJ. 
+         
+
+Move 30: J-left-4
+         
+ .AAF.HH 
+ BDDF... 
+KB..FLPP 
+ CCGGLI. 
+ .EE..I. 
+ JJ..... 
+         
+
+Move 31: E-left
+         
+ .AAF.HH 
+ BDDF... 
+KB..FLPP 
+ CCGGLI. 
+ EE...I. 
+ JJ..... 
+         
+
+Move 32: J-right-5
+         
+ .AAF.HH 
+ BDDF... 
+KB..FLPP 
+ CCGGLI. 
+ EE...I. 
+ .....JJ 
+         
+
+Move 33: J-left-3
+         
+ .AAF.HH 
+ BDDF... 
+KB..FLPP 
+ CCGGLI. 
+ EE...I. 
+ ..JJ... 
+         
+
+Move 34: L-down
+         
+ .AAF.HH 
+ BDDF... 
+KB..F.PP 
+ CCGGLI. 
+ EE..LI. 
+ ..JJ... 
+         
+
+Move 35: P-left
+         
+ .AAF.HH 
+ BDDF... 
+KB..FPP. 
+ CCGGLI. 
+ EE..LI. 
+ ..JJ... 
+         
+
+Move 36: I-down
+         
+ .AAF.HH 
+ BDDF... 
+KB..FPP. 
+ CCGGL.. 
+ EE..LI. 
+ ..JJ.I. 
+         
+
+Move 37: A-left
+         
+ AA.F.HH 
+ BDDF... 
+KB..FPP. 
+ CCGGL.. 
+ EE..LI. 
+ ..JJ.I. 
+         
+
+Move 38: E-right-2
+         
+ AA.F.HH 
+ BDDF... 
+KB..FPP. 
+ CCGGL.. 
+ ..EELI. 
+ ..JJ.I. 
+         
+
+Move 39: L-down
+         
+ AA.F.HH 
+ BDDF... 
+KB..FPP. 
+ CCGG... 
+ ..EELI. 
+ ..JJLI. 
+         
+
+Move 40: A-right
+         
+ .AAF.HH 
+ BDDF... 
+KB..FPP. 
+ CCGG... 
+ ..EELI. 
+ ..JJLI. 
+         
+
+Move 41: E-left
+         
+ .AAF.HH 
+ BDDF... 
+KB..FPP. 
+ CCGG... 
+ .EE.LI. 
+ ..JJLI. 
+         
+
+Move 42: G-right
+         
+ .AAF.HH 
+ BDDF... 
+KB..FPP. 
+ CC.GG.. 
+ .EE.LI. 
+ ..JJLI. 
+         
+
+Move 43: H-left
+         
+ .AAFHH. 
+ BDDF... 
+KB..FPP. 
+ CC.GG.. 
+ .EE.LI. 
+ ..JJLI. 
+         
+
+Move 44: J-left
+         
+ .AAFHH. 
+ BDDF... 
+KB..FPP. 
+ CC.GG.. 
+ .EE.LI. 
+ .JJ.LI. 
+         
+
+Move 45: E-left
+         
+ .AAFHH. 
+ BDDF... 
+KB..FPP. 
+ CC.GG.. 
+ EE..LI. 
+ .JJ.LI. 
+         
+
+Move 46: P-right
+         
+ .AAFHH. 
+ BDDF... 
+KB..F.PP 
+ CC.GG.. 
+ EE..LI. 
+ .JJ.LI. 
+         
+
+Move 47: J-left
+         
+ .AAFHH. 
+ BDDF... 
+KB..F.PP 
+ CC.GG.. 
+ EE..LI. 
+ JJ..LI. 
+         
+
+Move 48: J-right-2
+         
+ .AAFHH. 
+ BDDF... 
+KB..F.PP 
+ CC.GG.. 
+ EE..LI. 
+ ..JJLI. 
+         
+
+Move 49: G-left
+         
+ .AAFHH. 
+ BDDF... 
+KB..F.PP 
+ CCGG... 
+ EE..LI. 
+ ..JJLI. 
+         
+
+Move 50: L-up
+         
+ .AAFHH. 
+ BDDF... 
+KB..F.PP 
+ CCGGL.. 
+ EE..LI. 
+ ..JJ.I. 
+         
+
+Move 51: L-up
+         
+ .AAFHH. 
+ BDDF... 
+KB..FLPP 
+ CCGGL.. 
+ EE...I. 
+ ..JJ.I. 
+         
+
+Move 52: J-right
+         
+ .AAFHH. 
+ BDDF... 
+KB..FLPP 
+ CCGGL.. 
+ EE...I. 
+ ...JJI. 
+         
+
+Move 53: J-left-3
+         
+ .AAFHH. 
+ BDDF... 
+KB..FLPP 
+ CCGGL.. 
+ EE...I. 
+ JJ...I. 
+         
+
+Move 54: E-right-2
+         
+ .AAFHH. 
+ BDDF... 
+KB..FLPP 
+ CCGGL.. 
+ ..EE.I. 
+ JJ...I. 
+         
+
+Move 55: H-right
+         
+ .AAF.HH 
+ BDDF... 
+KB..FLPP 
+ CCGGL.. 
+ ..EE.I. 
+ JJ...I. 
+         
+
+Move 56: J-right-3
+         
+ .AAF.HH 
+ BDDF... 
+KB..FLPP 
+ CCGGL.. 
+ ..EE.I. 
+ ...JJI. 
+         
+
+Move 57: L-up
+         
+ .AAF.HH 
+ BDDFL.. 
+KB..FLPP 
+ CCGG... 
+ ..EE.I. 
+ ...JJI. 
+         
+
+Move 58: L-down-2
+         
+ .AAF.HH 
+ BDDF... 
+KB..F.PP 
+ CCGGL.. 
+ ..EELI. 
+ ...JJI. 
+         
+
+Move 59: I-up
+         
+ .AAF.HH 
+ BDDF... 
+KB..F.PP 
+ CCGGLI. 
+ ..EELI. 
+ ...JJ.. 
+         
+
+Move 60: E-left
+         
+ .AAF.HH 
+ BDDF... 
+KB..F.PP 
+ CCGGLI. 
+ .EE.LI. 
+ ...JJ.. 
+         
+
+Move 61: J-right-2
+         
+ .AAF.HH 
+ BDDF... 
+KB..F.PP 
+ CCGGLI. 
+ .EE.LI. 
+ .....JJ 
+         
+
+Move 62: J-left-4
+         
+ .AAF.HH 
+ BDDF... 
+KB..F.PP 
+ CCGGLI. 
+ .EE.LI. 
+ .JJ.... 
+         
+
+Move 63: L-up-2
+         
+ .AAF.HH 
+ BDDFL.. 
+KB..FLPP 
+ CCGG.I. 
+ .EE..I. 
+ .JJ.... 
+         
+
+Move 64: B-up
+         
+ BAAF.HH 
+ BDDFL.. 
+K...FLPP 
+ CCGG.I. 
+ .EE..I. 
+ .JJ.... 
+         
+
+Move 65: L-down
+         
+ BAAF.HH 
+ BDDF... 
+K...FLPP 
+ CCGGLI. 
+ .EE..I. 
+ .JJ.... 
+         
+
+Move 66: L-up-2
+         
+ BAAFLHH 
+ BDDFL.. 
+K...F.PP 
+ CCGG.I. 
+ .EE..I. 
+ .JJ.... 
+         
+
+Move 67: E-right-2
+         
+ BAAFLHH 
+ BDDFL.. 
+K...F.PP 
+ CCGG.I. 
+ ...EEI. 
+ .JJ.... 
+         
+
+Move 68: G-right
+         
+ BAAFLHH 
+ BDDFL.. 
+K...F.PP 
+ CC.GGI. 
+ ...EEI. 
+ .JJ.... 
+         
+
+Move 69: J-left
+         
+ BAAFLHH 
+ BDDFL.. 
+K...F.PP 
+ CC.GGI. 
+ ...EEI. 
+ JJ..... 
+         
+
+Move 70: E-left-3
+         
+ BAAFLHH 
+ BDDFL.. 
+K...F.PP 
+ CC.GGI. 
+ EE...I. 
+ JJ..... 
+         
+
+Move 71: C-right
+         
+ BAAFLHH 
+ BDDFL.. 
+K...F.PP 
+ .CCGGI. 
+ EE...I. 
+ JJ..... 
+         
+
+Move 72: B-down
+         
+ .AAFLHH 
+ BDDFL.. 
+KB..F.PP 
+ .CCGGI. 
+ EE...I. 
+ JJ..... 
+         
+
+Move 73: J-right
+         
+ .AAFLHH 
+ BDDFL.. 
+KB..F.PP 
+ .CCGGI. 
+ EE...I. 
+ .JJ.... 
+         
+
+Move 74: B-up
+         
+ BAAFLHH 
+ BDDFL.. 
+K...F.PP 
+ .CCGGI. 
+ EE...I. 
+ .JJ.... 
+         
+
+Move 75: J-right-4
+         
+ BAAFLHH 
+ BDDFL.. 
+K...F.PP 
+ .CCGGI. 
+ EE...I. 
+ .....JJ 
+         
+
+Move 76: J-left
+         
+ BAAFLHH 
+ BDDFL.. 
+K...F.PP 
+ .CCGGI. 
+ EE...I. 
+ ....JJ. 
+         
+
+Move 77: J-left
+         
+ BAAFLHH 
+ BDDFL.. 
+K...F.PP 
+ .CCGGI. 
+ EE...I. 
+ ...JJ.. 
+         
+
+Move 78: E-right
+         
+ BAAFLHH 
+ BDDFL.. 
+K...F.PP 
+ .CCGGI. 
+ .EE..I. 
+ ...JJ.. 
+         
+
+Move 79: P-left
+         
+ BAAFLHH 
+ BDDFL.. 
+K...FPP. 
+ .CCGGI. 
+ .EE..I. 
+ ...JJ.. 
+         
+
+Move 80: J-right-2
+         
+ BAAFLHH 
+ BDDFL.. 
+K...FPP. 
+ .CCGGI. 
+ .EE..I. 
+ .....JJ 
+         
+
+Move 81: E-right
+         
+ BAAFLHH 
+ BDDFL.. 
+K...FPP. 
+ .CCGGI. 
+ ..EE.I. 
+ .....JJ 
+         
+
+Move 82: B-down-3
+         
+ .AAFLHH 
+ .DDFL.. 
+K...FPP. 
+ BCCGGI. 
+ B.EE.I. 
+ .....JJ 
+         
+
+Move 83: B-up-2
+         
+ .AAFLHH 
+ BDDFL.. 
+KB..FPP. 
+ .CCGGI. 
+ ..EE.I. 
+ .....JJ 
+         
+
+Move 84: E-right
+         
+ .AAFLHH 
+ BDDFL.. 
+KB..FPP. 
+ .CCGGI. 
+ ...EEI. 
+ .....JJ 
+         
+
+Move 85: B-up
+         
+ BAAFLHH 
+ BDDFL.. 
+K...FPP. 
+ .CCGGI. 
+ ...EEI. 
+ .....JJ 
+         
+
+Move 86: B-down-4
+         
+ .AAFLHH 
+ .DDFL.. 
+K...FPP. 
+ .CCGGI. 
+ B..EEI. 
+ B....JJ 
+         
+
+Move 87: J-left
+         
+ .AAFLHH 
+ .DDFL.. 
+K...FPP. 
+ .CCGGI. 
+ B..EEI. 
+ B...JJ. 
+         
+
+Move 88: J-left
+         
+ .AAFLHH 
+ .DDFL.. 
+K...FPP. 
+ .CCGGI. 
+ B..EEI. 
+ B..JJ.. 
+         
+
+Move 89: J-left-2
+         
+ .AAFLHH 
+ .DDFL.. 
+K...FPP. 
+ .CCGGI. 
+ B..EEI. 
+ BJJ.... 
+         
+
+Move 90: B-up-4
+         
+ BAAFLHH 
+ BDDFL.. 
+K...FPP. 
+ .CCGGI. 
+ ...EEI. 
+ .JJ.... 
+         
+
+Move 91: I-down
+         
+ BAAFLHH 
+ BDDFL.. 
+K...FPP. 
+ .CCGG.. 
+ ...EEI. 
+ .JJ..I. 
+         
+
+Move 92: E-left-2
+         
+ BAAFLHH 
+ BDDFL.. 
+K...FPP. 
+ .CCGG.. 
+ .EE..I. 
+ .JJ..I. 
+         
+
+Move 93: C-left
+         
+ BAAFLHH 
+ BDDFL.. 
+K...FPP. 
+ CC.GG.. 
+ .EE..I. 
+ .JJ..I. 
+         
+
+Move 94: G-left
+         
+ BAAFLHH 
+ BDDFL.. 
+K...FPP. 
+ CCGG... 
+ .EE..I. 
+ .JJ..I. 
+         
+
+Move 95: G-right-2
+         
+ BAAFLHH 
+ BDDFL.. 
+K...FPP. 
+ CC..GG. 
+ .EE..I. 
+ .JJ..I. 
+         
+
+Move 96: F-down
+         
+ BAA.LHH 
+ BDDFL.. 
+K...FPP. 
+ CC.FGG. 
+ .EE..I. 
+ .JJ..I. 
+         
+
+Move 97: P-right
+         
+ BAA.LHH 
+ BDDFL.. 
+K...F.PP 
+ CC.FGG. 
+ .EE..I. 
+ .JJ..I. 
+         
+
+Move 98: J-right
+         
+ BAA.LHH 
+ BDDFL.. 
+K...F.PP 
+ CC.FGG. 
+ .EE..I. 
+ ..JJ.I. 
+         
+
+Move 99: F-down
+         
+ BAA.LHH 
+ BDD.L.. 
+K...F.PP 
+ CC.FGG. 
+ .EEF.I. 
+ ..JJ.I. 
+         
+
+Move 100: J-left-2
+         
+ BAA.LHH 
+ BDD.L.. 
+K...F.PP 
+ CC.FGG. 
+ .EEF.I. 
+ JJ...I. 
+         
+
+Move 101: E-left
+         
+ BAA.LHH 
+ BDD.L.. 
+K...F.PP 
+ CC.FGG. 
+ EE.F.I. 
+ JJ...I. 
+         
+
+Move 102: J-right-3
+         
+ BAA.LHH 
+ BDD.L.. 
+K...F.PP 
+ CC.FGG. 
+ EE.F.I. 
+ ...JJI. 
+         
+
+Move 103: P-left
+         
+ BAA.LHH 
+ BDD.L.. 
+K...FPP. 
+ CC.FGG. 
+ EE.F.I. 
+ ...JJI. 
+         
+
+Move 104: F-up-2
+         
+ BAAFLHH 
+ BDDFL.. 
+K...FPP. 
+ CC..GG. 
+ EE...I. 
+ ...JJI. 
+         
+
+Move 105: G-right
+         
+ BAAFLHH 
+ BDDFL.. 
+K...FPP. 
+ CC...GG 
+ EE...I. 
+ ...JJI. 
+         
+
+Move 106: C-right
+         
+ BAAFLHH 
+ BDDFL.. 
+K...FPP. 
+ .CC..GG 
+ EE...I. 
+ ...JJI. 
+         
+
+Move 107: E-right
+         
+ BAAFLHH 
+ BDDFL.. 
+K...FPP. 
+ .CC..GG 
+ .EE..I. 
+ ...JJI. 
+         
+
+Move 108: G-left
+         
+ BAAFLHH 
+ BDDFL.. 
+K...FPP. 
+ .CC.GG. 
+ .EE..I. 
+ ...JJI. 
+         
+
+Move 109: B-down-3
+         
+ .AAFLHH 
+ .DDFL.. 
+K...FPP. 
+ BCC.GG. 
+ BEE..I. 
+ ...JJI. 
+         
+
+Move 110: F-down-2
+         
+ .AA.LHH 
+ .DD.L.. 
+K...FPP. 
+ BCCFGG. 
+ BEEF.I. 
+ ...JJI. 
+         
+
+Move 111: A-right
+         
+ ..AALHH 
+ .DD.L.. 
+K...FPP. 
+ BCCFGG. 
+ BEEF.I. 
+ ...JJI. 
+         
+
+Move 112: B-up-2
+         
+ ..AALHH 
+ BDD.L.. 
+KB..FPP. 
+ .CCFGG. 
+ .EEF.I. 
+ ...JJI. 
+         
+
+Move 113: A-left-2
+         
+ AA..LHH 
+ BDD.L.. 
+KB..FPP. 
+ .CCFGG. 
+ .EEF.I. 
+ ...JJI. 
+         
+
+Move 114: F-up
+         
+ AA..LHH 
+ BDDFL.. 
+KB..FPP. 
+ .CCFGG. 
+ .EE..I. 
+ ...JJI. 
+         
+
+Move 115: J-left
+         
+ AA..LHH 
+ BDDFL.. 
+KB..FPP. 
+ .CCFGG. 
+ .EE..I. 
+ ..JJ.I. 
+         
+
+Move 116: J-left-2
+         
+ AA..LHH 
+ BDDFL.. 
+KB..FPP. 
+ .CCFGG. 
+ .EE..I. 
+ JJ...I. 
+         
+
+Move 117: E-right
+         
+ AA..LHH 
+ BDDFL.. 
+KB..FPP. 
+ .CCFGG. 
+ ..EE.I. 
+ JJ...I. 
+         
+
+Move 118: B-down-2
+         
+ AA..LHH 
+ .DDFL.. 
+K...FPP. 
+ BCCFGG. 
+ B.EE.I. 
+ JJ...I. 
+         
+
+Move 119: E-left
+         
+ AA..LHH 
+ .DDFL.. 
+K...FPP. 
+ BCCFGG. 
+ BEE..I. 
+ JJ...I. 
+         
+
+Move 120: J-right-2
+         
+ AA..LHH 
+ .DDFL.. 
+K...FPP. 
+ BCCFGG. 
+ BEE..I. 
+ ..JJ.I. 
+         
+
+Move 121: B-down
+         
+ AA..LHH 
+ .DDFL.. 
+K...FPP. 
+ .CCFGG. 
+ BEE..I. 
+ B.JJ.I. 
+         
+
+Move 122: G-right
+         
+ AA..LHH 
+ .DDFL.. 
+K...FPP. 
+ .CCF.GG 
+ BEE..I. 
+ B.JJ.I. 
+         
+
+Move 123: E-right
+         
+ AA..LHH 
+ .DDFL.. 
+K...FPP. 
+ .CCF.GG 
+ B.EE.I. 
+ B.JJ.I. 
+         
+
+Move 124: J-right
+         
+ AA..LHH 
+ .DDFL.. 
+K...FPP. 
+ .CCF.GG 
+ B.EE.I. 
+ B..JJI. 
+         
+
+Move 125: P-right
+         
+ AA..LHH 
+ .DDFL.. 
+K...F.PP 
+ .CCF.GG 
+ B.EE.I. 
+ B..JJI. 
+         
+
+Move 126: B-up-3
+         
+ AA..LHH 
+ BDDFL.. 
+KB..F.PP 
+ .CCF.GG 
+ ..EE.I. 
+ ...JJI. 
+         
+
+Move 127: E-right
+         
+ AA..LHH 
+ BDDFL.. 
+KB..F.PP 
+ .CCF.GG 
+ ...EEI. 
+ ...JJI. 
+         
+
+Move 128: B-down
+         
+ AA..LHH 
+ .DDFL.. 
+KB..F.PP 
+ BCCF.GG 
+ ...EEI. 
+ ...JJI. 
+         
+
+Move 129: L-down-2
+         
+ AA...HH 
+ .DDF... 
+KB..FLPP 
+ BCCFLGG 
+ ...EEI. 
+ ...JJI. 
+         
+
+Move 130: H-left-2
+         
+ AA.HH.. 
+ .DDF... 
+KB..FLPP 
+ BCCFLGG 
+ ...EEI. 
+ ...JJI. 
+         
+
+Move 131: J-left
+         
+ AA.HH.. 
+ .DDF... 
+KB..FLPP 
+ BCCFLGG 
+ ...EEI. 
+ ..JJ.I. 
+         
+
+Move 132: E-left-2
+         
+ AA.HH.. 
+ .DDF... 
+KB..FLPP 
+ BCCFLGG 
+ .EE..I. 
+ ..JJ.I. 
+         
+
+Move 133: H-left
+         
+ AAHH... 
+ .DDF... 
+KB..FLPP 
+ BCCFLGG 
+ .EE..I. 
+ ..JJ.I. 
+         
+
+Move 134: L-up-2
+         
+ AAHHL.. 
+ .DDFL.. 
+KB..F.PP 
+ BCCF.GG 
+ .EE..I. 
+ ..JJ.I. 
+         
+
+Move 135: P-left
+         
+ AAHHL.. 
+ .DDFL.. 
+KB..FPP. 
+ BCCF.GG 
+ .EE..I. 
+ ..JJ.I. 
+         
+
+Move 136: B-down-2
+         
+ AAHHL.. 
+ .DDFL.. 
+K...FPP. 
+ .CCF.GG 
+ BEE..I. 
+ B.JJ.I. 
+         
+
+Move 137: P-right
+         
+ AAHHL.. 
+ .DDFL.. 
+K...F.PP 
+ .CCF.GG 
+ BEE..I. 
+ B.JJ.I. 
+         
+
+Move 138: L-down-3
+         
+ AAHH... 
+ .DDF... 
+K...F.PP 
+ .CCFLGG 
+ BEE.LI. 
+ B.JJ.I. 
+         
+
+Move 139: P-left
+         
+ AAHH... 
+ .DDF... 
+K...FPP. 
+ .CCFLGG 
+ BEE.LI. 
+ B.JJ.I. 
+         
+
+Move 140: F-down
+         
+ AAHH... 
+ .DD.... 
+K...FPP. 
+ .CCFLGG 
+ BEEFLI. 
+ B.JJ.I. 
+         
+
+Move 141: B-up-3
+         
+ AAHH... 
+ BDD.... 
+KB..FPP. 
+ .CCFLGG 
+ .EEFLI. 
+ ..JJ.I. 
+         
+
+Move 142: B-down-2
+         
+ AAHH... 
+ .DD.... 
+K...FPP. 
+ BCCFLGG 
+ BEEFLI. 
+ ..JJ.I. 
+         
+
+Move 143: D-right-4
+         
+ AAHH... 
+ .....DD 
+K...FPP. 
+ BCCFLGG 
+ BEEFLI. 
+ ..JJ.I. 
+         
+
+Move 144: B-down
+         
+ AAHH... 
+ .....DD 
+K...FPP. 
+ .CCFLGG 
+ BEEFLI. 
+ B.JJ.I. 
+         
+
+Move 145: C-left
+         
+ AAHH... 
+ .....DD 
+K...FPP. 
+ CC.FLGG 
+ BEEFLI. 
+ B.JJ.I. 
+         
+
+Move 146: D-left-2
+         
+ AAHH... 
+ ...DD.. 
+K...FPP. 
+ CC.FLGG 
+ BEEFLI. 
+ B.JJ.I. 
+         
+
+Move 147: L-down
+         
+ AAHH... 
+ ...DD.. 
+K...FPP. 
+ CC.F.GG 
+ BEEFLI. 
+ B.JJLI. 
+         
+
+Move 148: G-left
+         
+ AAHH... 
+ ...DD.. 
+K...FPP. 
+ CC.FGG. 
+ BEEFLI. 
+ B.JJLI. 
+         
+
+Move 149: H-right-3
+         
+ AA...HH 
+ ...DD.. 
+K...FPP. 
+ CC.FGG. 
+ BEEFLI. 
+ B.JJLI. 
+         
+
+Move 150: H-left
+         
+ AA..HH. 
+ ...DD.. 
+K...FPP. 
+ CC.FGG. 
+ BEEFLI. 
+ B.JJLI. 
+         
+
+Move 151: G-right
+         
+ AA..HH. 
+ ...DD.. 
+K...FPP. 
+ CC.F.GG 
+ BEEFLI. 
+ B.JJLI. 
+         
+
+Move 152: D-right-2
+         
+ AA..HH. 
+ .....DD 
+K...FPP. 
+ CC.F.GG 
+ BEEFLI. 
+ B.JJLI. 
+         
+
+Move 153: F-up-2
+         
+ AA.FHH. 
+ ...F.DD 
+K...FPP. 
+ CC...GG 
+ BEE.LI. 
+ B.JJLI. 
+         
+
+Move 154: G-left-3
+         
+ AA.FHH. 
+ ...F.DD 
+K...FPP. 
+ CCGG... 
+ BEE.LI. 
+ B.JJLI. 
+         
+
+Move 155: I-up
+         
+ AA.FHH. 
+ ...F.DD 
+K...FPP. 
+ CCGG.I. 
+ BEE.LI. 
+ B.JJL.. 
+         
+
+Move 156: A-right
+         
+ .AAFHH. 
+ ...F.DD 
+K...FPP. 
+ CCGG.I. 
+ BEE.LI. 
+ B.JJL.. 
+         
+
+Move 157: D-left
+         
+ .AAFHH. 
+ ...FDD. 
+K...FPP. 
+ CCGG.I. 
+ BEE.LI. 
+ B.JJL.. 
+         
+
+Move 158: G-right
+         
+ .AAFHH. 
+ ...FDD. 
+K...FPP. 
+ CC.GGI. 
+ BEE.LI. 
+ B.JJL.. 
+         
+
+Move 159: D-right
+         
+ .AAFHH. 
+ ...F.DD 
+K...FPP. 
+ CC.GGI. 
+ BEE.LI. 
+ B.JJL.. 
+         
+
+Move 160: P-right
+         
+ .AAFHH. 
+ ...F.DD 
+K...F.PP 
+ CC.GGI. 
+ BEE.LI. 
+ B.JJL.. 
+         
+
+Move 161: G-left
+         
+ .AAFHH. 
+ ...F.DD 
+K...F.PP 
+ CCGG.I. 
+ BEE.LI. 
+ B.JJL.. 
+         
+
+Move 162: H-right
+         
+ .AAF.HH 
+ ...F.DD 
+K...F.PP 
+ CCGG.I. 
+ BEE.LI. 
+ B.JJL.. 
+         
+
+Move 163: D-left
+         
+ .AAF.HH 
+ ...FDD. 
+K...F.PP 
+ CCGG.I. 
+ BEE.LI. 
+ B.JJL.. 
+         
+
+Move 164: L-up-2
+         
+ .AAF.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ BEE..I. 
+ B.JJ... 
+         
+
+Move 165: L-down
+         
+ .AAF.HH 
+ ...FDD. 
+K...F.PP 
+ CCGGLI. 
+ BEE.LI. 
+ B.JJ... 
+         
+
+Move 166: D-right
+         
+ .AAF.HH 
+ ...F.DD 
+K...F.PP 
+ CCGGLI. 
+ BEE.LI. 
+ B.JJ... 
+         
+
+Move 167: L-up
+         
+ .AAF.HH 
+ ...F.DD 
+K...FLPP 
+ CCGGLI. 
+ BEE..I. 
+ B.JJ... 
+         
+
+Move 168: J-right-2
+         
+ .AAF.HH 
+ ...F.DD 
+K...FLPP 
+ CCGGLI. 
+ BEE..I. 
+ B...JJ. 
+         
+
+Move 169: E-right
+         
+ .AAF.HH 
+ ...F.DD 
+K...FLPP 
+ CCGGLI. 
+ B.EE.I. 
+ B...JJ. 
+         
+
+Move 170: L-up
+         
+ .AAF.HH 
+ ...FLDD 
+K...FLPP 
+ CCGG.I. 
+ B.EE.I. 
+ B...JJ. 
+         
+
+Move 171: E-left
+         
+ .AAF.HH 
+ ...FLDD 
+K...FLPP 
+ CCGG.I. 
+ BEE..I. 
+ B...JJ. 
+         
+
+Move 172: J-left-2
+         
+ .AAF.HH 
+ ...FLDD 
+K...FLPP 
+ CCGG.I. 
+ BEE..I. 
+ B.JJ... 
+         
+
+Move 173: L-up
+         
+ .AAFLHH 
+ ...FLDD 
+K...F.PP 
+ CCGG.I. 
+ BEE..I. 
+ B.JJ... 
+         
+
+Move 174: E-right
+         
+ .AAFLHH 
+ ...FLDD 
+K...F.PP 
+ CCGG.I. 
+ B.EE.I. 
+ B.JJ... 
+         
+
+Move 175: J-right
+         
+ .AAFLHH 
+ ...FLDD 
+K...F.PP 
+ CCGG.I. 
+ B.EE.I. 
+ B..JJ.. 
+         
+
+Move 176: L-down
+         
+ .AAF.HH 
+ ...FLDD 
+K...FLPP 
+ CCGG.I. 
+ B.EE.I. 
+ B..JJ.. 
+         
+
+Move 177: L-down
+         
+ .AAF.HH 
+ ...F.DD 
+K...FLPP 
+ CCGGLI. 
+ B.EE.I. 
+ B..JJ.. 
+         
+
+Move 178: A-left
+         
+ AA.F.HH 
+ ...F.DD 
+K...FLPP 
+ CCGGLI. 
+ B.EE.I. 
+ B..JJ.. 
+         
+
+Move 179: H-left
+         
+ AA.FHH. 
+ ...F.DD 
+K...FLPP 
+ CCGGLI. 
+ B.EE.I. 
+ B..JJ.. 
+         
+
+Move 180: I-down
+         
+ AA.FHH. 
+ ...F.DD 
+K...FLPP 
+ CCGGL.. 
+ B.EE.I. 
+ B..JJI. 
+         
+
+Move 181: D-left
+         
+ AA.FHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGL.. 
+ B.EE.I. 
+ B..JJI. 
+         
+
+Move 182: H-right
+         
+ AA.F.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGL.. 
+ B.EE.I. 
+ B..JJI. 
+         
+
+Move 183: E-left
+         
+ AA.F.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGL.. 
+ BEE..I. 
+ B..JJI. 
+         
+
+Move 184: A-right
+         
+ .AAF.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGL.. 
+ BEE..I. 
+ B..JJI. 
+         
+
+Move 185: L-down
+         
+ .AAF.HH 
+ ...FDD. 
+K...F.PP 
+ CCGGL.. 
+ BEE.LI. 
+ B..JJI. 
+         
+
+Move 186: J-left
+         
+ .AAF.HH 
+ ...FDD. 
+K...F.PP 
+ CCGGL.. 
+ BEE.LI. 
+ B.JJ.I. 
+         
+
+Move 187: L-down
+         
+ .AAF.HH 
+ ...FDD. 
+K...F.PP 
+ CCGG... 
+ BEE.LI. 
+ B.JJLI. 
+         
+
+Move 188: A-left
+         
+ AA.F.HH 
+ ...FDD. 
+K...F.PP 
+ CCGG... 
+ BEE.LI. 
+ B.JJLI. 
+         
+
+Move 189: I-up
+         
+ AA.F.HH 
+ ...FDD. 
+K...F.PP 
+ CCGG.I. 
+ BEE.LI. 
+ B.JJL.. 
+         
+
+Move 190: J-left
+         
+ AA.F.HH 
+ ...FDD. 
+K...F.PP 
+ CCGG.I. 
+ BEE.LI. 
+ BJJ.L.. 
+         
+
+Move 191: L-up-2
+         
+ AA.F.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ BEE..I. 
+ BJJ.... 
+         
+
+Move 192: H-left
+         
+ AA.FHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ BEE..I. 
+ BJJ.... 
+         
+
+Move 193: I-down
+         
+ AA.FHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGL.. 
+ BEE..I. 
+ BJJ..I. 
+         
+
+Move 194: D-right
+         
+ AA.FHH. 
+ ...F.DD 
+K...FLPP 
+ CCGGL.. 
+ BEE..I. 
+ BJJ..I. 
+         
+
+Move 195: L-down-2
+         
+ AA.FHH. 
+ ...F.DD 
+K...F.PP 
+ CCGG... 
+ BEE.LI. 
+ BJJ.LI. 
+         
+
+Move 196: D-left
+         
+ AA.FHH. 
+ ...FDD. 
+K...F.PP 
+ CCGG... 
+ BEE.LI. 
+ BJJ.LI. 
+         
+
+Move 197: H-right
+         
+ AA.F.HH 
+ ...FDD. 
+K...F.PP 
+ CCGG... 
+ BEE.LI. 
+ BJJ.LI. 
+         
+
+Move 198: L-up
+         
+ AA.F.HH 
+ ...FDD. 
+K...F.PP 
+ CCGGL.. 
+ BEE.LI. 
+ BJJ..I. 
+         
+
+Move 199: L-up
+         
+ AA.F.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGL.. 
+ BEE..I. 
+ BJJ..I. 
+         
+
+Move 200: A-right
+         
+ .AAF.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGL.. 
+ BEE..I. 
+ BJJ..I. 
+         
+
+Move 201: E-right-2
+         
+ .AAF.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGL.. 
+ B..EEI. 
+ BJJ..I. 
+         
+
+Move 202: A-left
+         
+ AA.F.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGL.. 
+ B..EEI. 
+ BJJ..I. 
+         
+
+Move 203: E-left
+         
+ AA.F.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGL.. 
+ B.EE.I. 
+ BJJ..I. 
+         
+
+Move 204: I-up
+         
+ AA.F.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ B.EE.I. 
+ BJJ.... 
+         
+
+Move 205: H-left
+         
+ AA.FHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ B.EE.I. 
+ BJJ.... 
+         
+
+Move 206: J-right-3
+         
+ AA.FHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ B.EE.I. 
+ B...JJ. 
+         
+
+Move 207: H-right
+         
+ AA.F.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ B.EE.I. 
+ B...JJ. 
+         
+
+Move 208: J-left
+         
+ AA.F.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ B.EE.I. 
+ B..JJ.. 
+         
+
+Move 209: E-right
+         
+ AA.F.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ B..EEI. 
+ B..JJ.. 
+         
+
+Move 210: I-down
+         
+ AA.F.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGL.. 
+ B..EEI. 
+ B..JJI. 
+         
+
+Move 211: J-left
+         
+ AA.F.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGL.. 
+ B..EEI. 
+ B.JJ.I. 
+         
+
+Move 212: E-left-2
+         
+ AA.F.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGL.. 
+ BEE..I. 
+ B.JJ.I. 
+         
+
+Move 213: A-right
+         
+ .AAF.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGL.. 
+ BEE..I. 
+ B.JJ.I. 
+         
+
+Move 214: D-right
+         
+ .AAF.HH 
+ ...F.DD 
+K...FLPP 
+ CCGGL.. 
+ BEE..I. 
+ B.JJ.I. 
+         
+
+Move 215: L-up-2
+         
+ .AAFLHH 
+ ...FLDD 
+K...F.PP 
+ CCGG... 
+ BEE..I. 
+ B.JJ.I. 
+         
+
+Move 216: L-down-4
+         
+ .AAF.HH 
+ ...F.DD 
+K...F.PP 
+ CCGG... 
+ BEE.LI. 
+ B.JJLI. 
+         
+
+Move 217: L-up
+         
+ .AAF.HH 
+ ...F.DD 
+K...F.PP 
+ CCGGL.. 
+ BEE.LI. 
+ B.JJ.I. 
+         
+
+Move 218: L-up-2
+         
+ .AAF.HH 
+ ...FLDD 
+K...FLPP 
+ CCGG... 
+ BEE..I. 
+ B.JJ.I. 
+         
+
+Move 219: E-right-2
+         
+ .AAF.HH 
+ ...FLDD 
+K...FLPP 
+ CCGG... 
+ B..EEI. 
+ B.JJ.I. 
+         
+
+Move 220: J-right
+         
+ .AAF.HH 
+ ...FLDD 
+K...FLPP 
+ CCGG... 
+ B..EEI. 
+ B..JJI. 
+         
+
+Move 221: G-right
+         
+ .AAF.HH 
+ ...FLDD 
+K...FLPP 
+ CC.GG.. 
+ B..EEI. 
+ B..JJI. 
+         
+
+Move 222: I-up
+         
+ .AAF.HH 
+ ...FLDD 
+K...FLPP 
+ CC.GGI. 
+ B..EEI. 
+ B..JJ.. 
+         
+
+Move 223: A-left
+         
+ AA.F.HH 
+ ...FLDD 
+K...FLPP 
+ CC.GGI. 
+ B..EEI. 
+ B..JJ.. 
+         
+
+Move 224: J-left
+         
+ AA.F.HH 
+ ...FLDD 
+K...FLPP 
+ CC.GGI. 
+ B..EEI. 
+ B.JJ... 
+         
+
+Move 225: H-left
+         
+ AA.FHH. 
+ ...FLDD 
+K...FLPP 
+ CC.GGI. 
+ B..EEI. 
+ B.JJ... 
+         
+
+Move 226: J-right-3
+         
+ AA.FHH. 
+ ...FLDD 
+K...FLPP 
+ CC.GGI. 
+ B..EEI. 
+ B....JJ 
+         
+
+Move 227: J-left
+         
+ AA.FHH. 
+ ...FLDD 
+K...FLPP 
+ CC.GGI. 
+ B..EEI. 
+ B...JJ. 
+         
+
+Move 228: J-left-3
+         
+ AA.FHH. 
+ ...FLDD 
+K...FLPP 
+ CC.GGI. 
+ B..EEI. 
+ BJJ.... 
+         
+
+Move 229: H-right
+         
+ AA.F.HH 
+ ...FLDD 
+K...FLPP 
+ CC.GGI. 
+ B..EEI. 
+ BJJ.... 
+         
+
+Move 230: L-up
+         
+ AA.FLHH 
+ ...FLDD 
+K...F.PP 
+ CC.GGI. 
+ B..EEI. 
+ BJJ.... 
+         
+
+Move 231: J-right-3
+         
+ AA.FLHH 
+ ...FLDD 
+K...F.PP 
+ CC.GGI. 
+ B..EEI. 
+ B...JJ. 
+         
+
+Move 232: P-left
+         
+ AA.FLHH 
+ ...FLDD 
+K...FPP. 
+ CC.GGI. 
+ B..EEI. 
+ B...JJ. 
+         
+
+Move 233: G-left
+         
+ AA.FLHH 
+ ...FLDD 
+K...FPP. 
+ CCGG.I. 
+ B..EEI. 
+ B...JJ. 
+         
+
+Move 234: J-left-2
+         
+ AA.FLHH 
+ ...FLDD 
+K...FPP. 
+ CCGG.I. 
+ B..EEI. 
+ B.JJ... 
+         
+
+Move 235: J-left
+         
+ AA.FLHH 
+ ...FLDD 
+K...FPP. 
+ CCGG.I. 
+ B..EEI. 
+ BJJ.... 
+         
+
+Move 236: G-right
+         
+ AA.FLHH 
+ ...FLDD 
+K...FPP. 
+ CC.GGI. 
+ B..EEI. 
+ BJJ.... 
+         
+
+Move 237: A-right
+         
+ .AAFLHH 
+ ...FLDD 
+K...FPP. 
+ CC.GGI. 
+ B..EEI. 
+ BJJ.... 
+         
+
+Move 238: E-left-2
+         
+ .AAFLHH 
+ ...FLDD 
+K...FPP. 
+ CC.GGI. 
+ BEE..I. 
+ BJJ.... 
+         
+
+Move 239: C-right
+         
+ .AAFLHH 
+ ...FLDD 
+K...FPP. 
+ .CCGGI. 
+ BEE..I. 
+ BJJ.... 
+         
+
+Move 240: P-right
+         
+ .AAFLHH 
+ ...FLDD 
+K...F.PP 
+ .CCGGI. 
+ BEE..I. 
+ BJJ.... 
+         
+
+Move 241: J-right-4
+         
+ .AAFLHH 
+ ...FLDD 
+K...F.PP 
+ .CCGGI. 
+ BEE..I. 
+ B....JJ 
+         
+
+Move 242: L-down
+         
+ .AAF.HH 
+ ...FLDD 
+K...FLPP 
+ .CCGGI. 
+ BEE..I. 
+ B....JJ 
+         
+
+Move 243: E-right-2
+         
+ .AAF.HH 
+ ...FLDD 
+K...FLPP 
+ .CCGGI. 
+ B..EEI. 
+ B....JJ 
+         
+
+Move 244: B-up-4
+         
+ BAAF.HH 
+ B..FLDD 
+K...FLPP 
+ .CCGGI. 
+ ...EEI. 
+ .....JJ 
+         
+
+Move 245: E-left
+         
+ BAAF.HH 
+ B..FLDD 
+K...FLPP 
+ .CCGGI. 
+ ..EE.I. 
+ .....JJ 
+         
+
+Move 246: B-down-4
+         
+ .AAF.HH 
+ ...FLDD 
+K...FLPP 
+ .CCGGI. 
+ B.EE.I. 
+ B....JJ 
+         
+
+Move 247: H-left
+         
+ .AAFHH. 
+ ...FLDD 
+K...FLPP 
+ .CCGGI. 
+ B.EE.I. 
+ B....JJ 
+         
+
+Move 248: E-left
+         
+ .AAFHH. 
+ ...FLDD 
+K...FLPP 
+ .CCGGI. 
+ BEE..I. 
+ B....JJ 
+         
+
+Move 249: J-left-2
+         
+ .AAFHH. 
+ ...FLDD 
+K...FLPP 
+ .CCGGI. 
+ BEE..I. 
+ B..JJ.. 
+         
+
+Move 250: J-left
+         
+ .AAFHH. 
+ ...FLDD 
+K...FLPP 
+ .CCGGI. 
+ BEE..I. 
+ B.JJ... 
+         
+
+Move 251: C-left
+         
+ .AAFHH. 
+ ...FLDD 
+K...FLPP 
+ CC.GGI. 
+ BEE..I. 
+ B.JJ... 
+         
+
+Move 252: J-right
+         
+ .AAFHH. 
+ ...FLDD 
+K...FLPP 
+ CC.GGI. 
+ BEE..I. 
+ B..JJ.. 
+         
+
+Move 253: E-right-2
+         
+ .AAFHH. 
+ ...FLDD 
+K...FLPP 
+ CC.GGI. 
+ B..EEI. 
+ B..JJ.. 
+         
+
+Move 254: J-right
+         
+ .AAFHH. 
+ ...FLDD 
+K...FLPP 
+ CC.GGI. 
+ B..EEI. 
+ B...JJ. 
+         
+
+Move 255: H-right
+         
+ .AAF.HH 
+ ...FLDD 
+K...FLPP 
+ CC.GGI. 
+ B..EEI. 
+ B...JJ. 
+         
+
+Move 256: G-left
+         
+ .AAF.HH 
+ ...FLDD 
+K...FLPP 
+ CCGG.I. 
+ B..EEI. 
+ B...JJ. 
+         
+
+Move 257: J-right
+         
+ .AAF.HH 
+ ...FLDD 
+K...FLPP 
+ CCGG.I. 
+ B..EEI. 
+ B....JJ 
+         
+
+Move 258: H-left
+         
+ .AAFHH. 
+ ...FLDD 
+K...FLPP 
+ CCGG.I. 
+ B..EEI. 
+ B....JJ 
+         
+
+Move 259: E-left
+         
+ .AAFHH. 
+ ...FLDD 
+K...FLPP 
+ CCGG.I. 
+ B.EE.I. 
+ B....JJ 
+         
+
+Move 260: L-down-2
+         
+ .AAFHH. 
+ ...F.DD 
+K...F.PP 
+ CCGGLI. 
+ B.EELI. 
+ B....JJ 
+         
+
+Move 261: E-left
+         
+ .AAFHH. 
+ ...F.DD 
+K...F.PP 
+ CCGGLI. 
+ BEE.LI. 
+ B....JJ 
+         
+
+Move 262: J-left-3
+         
+ .AAFHH. 
+ ...F.DD 
+K...F.PP 
+ CCGGLI. 
+ BEE.LI. 
+ B.JJ... 
+         
+
+Move 263: J-left
+         
+ .AAFHH. 
+ ...F.DD 
+K...F.PP 
+ CCGGLI. 
+ BEE.LI. 
+ BJJ.... 
+         
+
+Move 264: D-left
+         
+ .AAFHH. 
+ ...FDD. 
+K...F.PP 
+ CCGGLI. 
+ BEE.LI. 
+ BJJ.... 
+         
+
+Move 265: L-up
+         
+ .AAFHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ BEE..I. 
+ BJJ.... 
+         
+
+Move 266: D-right
+         
+ .AAFHH. 
+ ...F.DD 
+K...FLPP 
+ CCGGLI. 
+ BEE..I. 
+ BJJ.... 
+         
+
+Move 267: H-right
+         
+ .AAF.HH 
+ ...F.DD 
+K...FLPP 
+ CCGGLI. 
+ BEE..I. 
+ BJJ.... 
+         
+
+Move 268: J-right-2
+         
+ .AAF.HH 
+ ...F.DD 
+K...FLPP 
+ CCGGLI. 
+ BEE..I. 
+ B..JJ.. 
+         
+
+Move 269: L-up-2
+         
+ .AAFLHH 
+ ...FLDD 
+K...F.PP 
+ CCGG.I. 
+ BEE..I. 
+ B..JJ.. 
+         
+
+Move 270: J-left-2
+         
+ .AAFLHH 
+ ...FLDD 
+K...F.PP 
+ CCGG.I. 
+ BEE..I. 
+ BJJ.... 
+         
+
+Move 271: A-left
+         
+ AA.FLHH 
+ ...FLDD 
+K...F.PP 
+ CCGG.I. 
+ BEE..I. 
+ BJJ.... 
+         
+
+Move 272: E-right-2
+         
+ AA.FLHH 
+ ...FLDD 
+K...F.PP 
+ CCGG.I. 
+ B..EEI. 
+ BJJ.... 
+         
+
+Move 273: J-right-2
+         
+ AA.FLHH 
+ ...FLDD 
+K...F.PP 
+ CCGG.I. 
+ B..EEI. 
+ B..JJ.. 
+         
+
+Move 274: L-down
+         
+ AA.F.HH 
+ ...FLDD 
+K...FLPP 
+ CCGG.I. 
+ B..EEI. 
+ B..JJ.. 
+         
+
+Move 275: J-right
+         
+ AA.F.HH 
+ ...FLDD 
+K...FLPP 
+ CCGG.I. 
+ B..EEI. 
+ B...JJ. 
+         
+
+Move 276: J-left-2
+         
+ AA.F.HH 
+ ...FLDD 
+K...FLPP 
+ CCGG.I. 
+ B..EEI. 
+ B.JJ... 
+         
+
+Move 277: L-up
+         
+ AA.FLHH 
+ ...FLDD 
+K...F.PP 
+ CCGG.I. 
+ B..EEI. 
+ B.JJ... 
+         
+
+Move 278: E-left
+         
+ AA.FLHH 
+ ...FLDD 
+K...F.PP 
+ CCGG.I. 
+ B.EE.I. 
+ B.JJ... 
+         
+
+Move 279: J-left
+         
+ AA.FLHH 
+ ...FLDD 
+K...F.PP 
+ CCGG.I. 
+ B.EE.I. 
+ BJJ.... 
+         
+
+Move 280: L-down
+         
+ AA.F.HH 
+ ...FLDD 
+K...FLPP 
+ CCGG.I. 
+ B.EE.I. 
+ BJJ.... 
+         
+
+Move 281: E-left
+         
+ AA.F.HH 
+ ...FLDD 
+K...FLPP 
+ CCGG.I. 
+ BEE..I. 
+ BJJ.... 
+         
+
+Move 282: J-right-4
+         
+ AA.F.HH 
+ ...FLDD 
+K...FLPP 
+ CCGG.I. 
+ BEE..I. 
+ B....JJ 
+         
+
+Move 283: E-right-2
+         
+ AA.F.HH 
+ ...FLDD 
+K...FLPP 
+ CCGG.I. 
+ B..EEI. 
+ B....JJ 
+         
+
+Move 284: L-up
+         
+ AA.FLHH 
+ ...FLDD 
+K...F.PP 
+ CCGG.I. 
+ B..EEI. 
+ B....JJ 
+         
+
+Move 285: L-down-2
+         
+ AA.F.HH 
+ ...F.DD 
+K...FLPP 
+ CCGGLI. 
+ B..EEI. 
+ B....JJ 
+         
+
+Move 286: D-left
+         
+ AA.F.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ B..EEI. 
+ B....JJ 
+         
+
+Move 287: H-left
+         
+ AA.FHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ B..EEI. 
+ B....JJ 
+         
+
+Move 288: J-left-2
+         
+ AA.FHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ B..EEI. 
+ B..JJ.. 
+         
+
+Move 289: J-right
+         
+ AA.FHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ B..EEI. 
+ B...JJ. 
+         
+
+Move 290: A-right
+         
+ .AAFHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ B..EEI. 
+ B...JJ. 
+         
+
+Move 291: J-right
+         
+ .AAFHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ B..EEI. 
+ B....JJ 
+         
+
+Move 292: J-left-3
+         
+ .AAFHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ B..EEI. 
+ B.JJ... 
+         
+
+Move 293: H-right
+         
+ .AAF.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ B..EEI. 
+ B.JJ... 
+         
+
+Move 294: A-left
+         
+ AA.F.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ B..EEI. 
+ B.JJ... 
+         
+
+Move 295: J-right-2
+         
+ AA.F.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ B..EEI. 
+ B...JJ. 
+         
+
+Move 296: J-left-3
+         
+ AA.F.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ B..EEI. 
+ BJJ.... 
+         
+
+Move 297: H-left
+         
+ AA.FHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ B..EEI. 
+ BJJ.... 
+         
+
+Move 298: I-down
+         
+ AA.FHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGL.. 
+ B..EEI. 
+ BJJ..I. 
+         
+
+Move 299: J-right
+         
+ AA.FHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGL.. 
+ B..EEI. 
+ B.JJ.I. 
+         
+
+Move 300: J-right
+         
+ AA.FHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGL.. 
+ B..EEI. 
+ B..JJI. 
+         
+
+Move 301: E-left-2
+         
+ AA.FHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGL.. 
+ BEE..I. 
+ B..JJI. 
+         
+
+Move 302: I-up
+         
+ AA.FHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ BEE..I. 
+ B..JJ.. 
+         
+
+Move 303: A-right
+         
+ .AAFHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ BEE..I. 
+ B..JJ.. 
+         
+
+Move 304: E-right
+         
+ .AAFHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ B.EE.I. 
+ B..JJ.. 
+         
+
+Move 305: L-down
+         
+ .AAFHH. 
+ ...FDD. 
+K...F.PP 
+ CCGGLI. 
+ B.EELI. 
+ B..JJ.. 
+         
+
+Move 306: A-left
+         
+ AA.FHH. 
+ ...FDD. 
+K...F.PP 
+ CCGGLI. 
+ B.EELI. 
+ B..JJ.. 
+         
+
+Move 307: L-up
+         
+ AA.FHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ B.EE.I. 
+ B..JJ.. 
+         
+
+Move 308: J-right-2
+         
+ AA.FHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ B.EE.I. 
+ B....JJ 
+         
+
+Move 309: J-left-3
+         
+ AA.FHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ B.EE.I. 
+ B.JJ... 
+         
+
+Move 310: E-left
+         
+ AA.FHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ BEE..I. 
+ B.JJ... 
+         
+
+Move 311: L-down-2
+         
+ AA.FHH. 
+ ...FDD. 
+K...F.PP 
+ CCGG.I. 
+ BEE.LI. 
+ B.JJL.. 
+         
+
+Move 312: L-up
+         
+ AA.FHH. 
+ ...FDD. 
+K...F.PP 
+ CCGGLI. 
+ BEE.LI. 
+ B.JJ... 
+         
+
+Move 313: H-right
+         
+ AA.F.HH 
+ ...FDD. 
+K...F.PP 
+ CCGGLI. 
+ BEE.LI. 
+ B.JJ... 
+         
+
+Move 314: L-up
+         
+ AA.F.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ BEE..I. 
+ B.JJ... 
+         
+
+Move 315: J-right-3
+         
+ AA.F.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ BEE..I. 
+ B....JJ 
+         
+
+Move 316: J-left-2
+         
+ AA.F.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ BEE..I. 
+ B..JJ.. 
+         
+
+Move 317: J-right
+         
+ AA.F.HH 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ BEE..I. 
+ B...JJ. 
+         
+
+Move 318: H-left
+         
+ AA.FHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ BEE..I. 
+ B...JJ. 
+         
+
+Move 319: J-right
+         
+ AA.FHH. 
+ ...FDD. 
+K...FLPP 
+ CCGGLI. 
+ BEE..I. 
+ B....JJ 
+         
+
+Move 320: L-down
+         
+ AA.FHH. 
+ ...FDD. 
+K...F.PP 
+ CCGGLI. 
+ BEE.LI. 
+ B....JJ 
+         
+
+Move 321: J-left
+         
+ AA.FHH. 
+ ...FDD. 
+K...F.PP 
+ CCGGLI. 
+ BEE.LI. 
+ B...JJ. 
+         
+
+Move 322: J-left
+         
+ AA.FHH. 
+ ...FDD. 
+K...F.PP 
+ CCGGLI. 
+ BEE.LI. 
+ B..JJ.. 
+         
+
+Move 323: A-right
+         
+ .AAFHH. 
+ ...FDD. 
+K...F.PP 
+ CCGGLI. 
+ BEE.LI. 
+ B..JJ.. 
+         
+
+Move 324: D-right
+         
+ .AAFHH. 
+ ...F.DD 
+K...F.PP 
+ CCGGLI. 
+ BEE.LI. 
+ B..JJ.. 
+         
+
+Move 325: I-down
+         
+ .AAFHH. 
+ ...F.DD 
+K...F.PP 
+ CCGGL.. 
+ BEE.LI. 
+ B..JJI. 
+         
+
+Move 326: L-up-2
+         
+ .AAFHH. 
+ ...FLDD 
+K...FLPP 
+ CCGG... 
+ BEE..I. 
+ B..JJI. 
+         
+
+Move 327: G-right-3
+         
+ .AAFHH. 
+ ...FLDD 
+K...FLPP 
+ CC...GG 
+ BEE..I. 
+ B..JJI. 
+         
+
+Move 328: L-down-2
+         
+ .AAFHH. 
+ ...F.DD 
+K...F.PP 
+ CC..LGG 
+ BEE.LI. 
+ B..JJI. 
+         
+
+Move 329: E-right
+         
+ .AAFHH. 
+ ...F.DD 
+K...F.PP 
+ CC..LGG 
+ B.EELI. 
+ B..JJI. 
+         
+
+Move 330: J-left-2
+         
+ .AAFHH. 
+ ...F.DD 
+K...F.PP 
+ CC..LGG 
+ B.EELI. 
+ BJJ..I. 
+         
+
+Move 331: J-right
+         
+ .AAFHH. 
+ ...F.DD 
+K...F.PP 
+ CC..LGG 
+ B.EELI. 
+ B.JJ.I. 
+         
+
+Move 332: C-right
+         
+ .AAFHH. 
+ ...F.DD 
+K...F.PP 
+ .CC.LGG 
+ B.EELI. 
+ B.JJ.I. 
+         
+
+Move 333: D-left
+         
+ .AAFHH. 
+ ...FDD. 
+K...F.PP 
+ .CC.LGG 
+ B.EELI. 
+ B.JJ.I. 
+         
+
+Move 334: F-down
+         
+ .AA.HH. 
+ ...FDD. 
+K...F.PP 
+ .CCFLGG 
+ B.EELI. 
+ B.JJ.I. 
+         
+
+Move 335: A-right
+         
+ ..AAHH. 
+ ...FDD. 
+K...F.PP 
+ .CCFLGG 
+ B.EELI. 
+ B.JJ.I. 
+         
+
+Move 336: L-down
+         
+ ..AAHH. 
+ ...FDD. 
+K...F.PP 
+ .CCF.GG 
+ B.EELI. 
+ B.JJLI. 
+         
+
+Move 337: G-left
+         
+ ..AAHH. 
+ ...FDD. 
+K...F.PP 
+ .CCFGG. 
+ B.EELI. 
+ B.JJLI. 
+         
+
+Move 338: J-left
+         
+ ..AAHH. 
+ ...FDD. 
+K...F.PP 
+ .CCFGG. 
+ B.EELI. 
+ BJJ.LI. 
+         
+
+Move 339: B-up-4
+         
+ B.AAHH. 
+ B..FDD. 
+K...F.PP 
+ .CCFGG. 
+ ..EELI. 
+ .JJ.LI. 
+         
+
+Move 340: B-down-2
+         
+ ..AAHH. 
+ ...FDD. 
+KB..F.PP 
+ BCCFGG. 
+ ..EELI. 
+ .JJ.LI. 
+         
+
+Move 341: H-right
+         
+ ..AA.HH 
+ ...FDD. 
+KB..F.PP 
+ BCCFGG. 
+ ..EELI. 
+ .JJ.LI. 
+         
+
+Move 342: B-down
+         
+ ..AA.HH 
+ ...FDD. 
+K...F.PP 
+ BCCFGG. 
+ B.EELI. 
+ .JJ.LI. 
+         
+
+Move 343: A-left
+         
+ .AA..HH 
+ ...FDD. 
+K...F.PP 
+ BCCFGG. 
+ B.EELI. 
+ .JJ.LI. 
+         
+
+Move 344: H-left
+         
+ .AA.HH. 
+ ...FDD. 
+K...F.PP 
+ BCCFGG. 
+ B.EELI. 
+ .JJ.LI. 
+         
+
+Move 345: H-left
+         
+ .AAHH.. 
+ ...FDD. 
+K...F.PP 
+ BCCFGG. 
+ B.EELI. 
+ .JJ.LI. 
+         
+
+Move 346: E-left
+         
+ .AAHH.. 
+ ...FDD. 
+K...F.PP 
+ BCCFGG. 
+ BEE.LI. 
+ .JJ.LI. 
+         
+
+Move 347: F-down
+         
+ .AAHH.. 
+ ....DD. 
+K...F.PP 
+ BCCFGG. 
+ BEEFLI. 
+ .JJ.LI. 
+         
+
+Move 348: P-left
+         
+ .AAHH.. 
+ ....DD. 
+K...FPP. 
+ BCCFGG. 
+ BEEFLI. 
+ .JJ.LI. 
+         
+
+Move 349: D-left
+         
+ .AAHH.. 
+ ...DD.. 
+K...FPP. 
+ BCCFGG. 
+ BEEFLI. 
+ .JJ.LI. 
+         
+
+Move 350: P-right
+         
+ .AAHH.. 
+ ...DD.. 
+K...F.PP 
+ BCCFGG. 
+ BEEFLI. 
+ .JJ.LI. 
+         
+
+Move 351: J-left
+         
+ .AAHH.. 
+ ...DD.. 
+K...F.PP 
+ BCCFGG. 
+ BEEFLI. 
+ JJ..LI. 
+         
+
+Move 352: P-left
+         
+ .AAHH.. 
+ ...DD.. 
+K...FPP. 
+ BCCFGG. 
+ BEEFLI. 
+ JJ..LI. 
+         
+
+Move 353: B-up-3
+         
+ BAAHH.. 
+ B..DD.. 
+K...FPP. 
+ .CCFGG. 
+ .EEFLI. 
+ JJ..LI. 
+         
+
+Move 354: D-right
+         
+ BAAHH.. 
+ B...DD. 
+K...FPP. 
+ .CCFGG. 
+ .EEFLI. 
+ JJ..LI. 
+         
+
+Move 355: D-left-2
+         
+ BAAHH.. 
+ B.DD... 
+K...FPP. 
+ .CCFGG. 
+ .EEFLI. 
+ JJ..LI. 
+         
+
+Move 356: B-down
+         
+ .AAHH.. 
+ B.DD... 
+KB..FPP. 
+ .CCFGG. 
+ .EEFLI. 
+ JJ..LI. 
+         
+
+Move 357: C-left
+         
+ .AAHH.. 
+ B.DD... 
+KB..FPP. 
+ CC.FGG. 
+ .EEFLI. 
+ JJ..LI. 
+         
+
+Move 358: D-right
+         
+ .AAHH.. 
+ B..DD.. 
+KB..FPP. 
+ CC.FGG. 
+ .EEFLI. 
+ JJ..LI. 
+         
+
+Move 359: P-right
+         
+ .AAHH.. 
+ B..DD.. 
+KB..F.PP 
+ CC.FGG. 
+ .EEFLI. 
+ JJ..LI. 
+         
+
+Move 360: D-left
+         
+ .AAHH.. 
+ B.DD... 
+KB..F.PP 
+ CC.FGG. 
+ .EEFLI. 
+ JJ..LI. 
+         
+
+Move 361: H-right
+         
+ .AA.HH. 
+ B.DD... 
+KB..F.PP 
+ CC.FGG. 
+ .EEFLI. 
+ JJ..LI. 
+         
+
+Move 362: G-right
+         
+ .AA.HH. 
+ B.DD... 
+KB..F.PP 
+ CC.F.GG 
+ .EEFLI. 
+ JJ..LI. 
+         
+
+Move 363: L-up-2
+         
+ .AA.HH. 
+ B.DD... 
+KB..FLPP 
+ CC.FLGG 
+ .EEF.I. 
+ JJ...I. 
+         
+
+Move 364: B-up
+         
+ BAA.HH. 
+ B.DD... 
+K...FLPP 
+ CC.FLGG 
+ .EEF.I. 
+ JJ...I. 
+         
+
+Move 365: A-right
+         
+ B.AAHH. 
+ B.DD... 
+K...FLPP 
+ CC.FLGG 
+ .EEF.I. 
+ JJ...I. 
+         
+
+Move 366: D-right
+         
+ B.AAHH. 
+ B..DD.. 
+K...FLPP 
+ CC.FLGG 
+ .EEF.I. 
+ JJ...I. 
+         
+
+Move 367: J-right-3
+         
+ B.AAHH. 
+ B..DD.. 
+K...FLPP 
+ CC.FLGG 
+ .EEF.I. 
+ ...JJI. 
+         
+
+Move 368: J-left-2
+         
+ B.AAHH. 
+ B..DD.. 
+K...FLPP 
+ CC.FLGG 
+ .EEF.I. 
+ .JJ..I. 
+         
+
+Move 369: H-right
+         
+ B.AA.HH 
+ B..DD.. 
+K...FLPP 
+ CC.FLGG 
+ .EEF.I. 
+ .JJ..I. 
+         
+
+Move 370: J-right-2
+         
+ B.AA.HH 
+ B..DD.. 
+K...FLPP 
+ CC.FLGG 
+ .EEF.I. 
+ ...JJI. 
+         
+
+Move 371: D-left
+         
+ B.AA.HH 
+ B.DD... 
+K...FLPP 
+ CC.FLGG 
+ .EEF.I. 
+ ...JJI. 
+         
+
+Move 372: D-left
+         
+ B.AA.HH 
+ BDD.... 
+K...FLPP 
+ CC.FLGG 
+ .EEF.I. 
+ ...JJI. 
+         
+
+Move 373: E-left
+         
+ B.AA.HH 
+ BDD.... 
+K...FLPP 
+ CC.FLGG 
+ EE.F.I. 
+ ...JJI. 
+         
+
+Move 374: J-left
+         
+ B.AA.HH 
+ BDD.... 
+K...FLPP 
+ CC.FLGG 
+ EE.F.I. 
+ ..JJ.I. 
+         
+
+Move 375: B-down
+         
+ ..AA.HH 
+ BDD.... 
+KB..FLPP 
+ CC.FLGG 
+ EE.F.I. 
+ ..JJ.I. 
+         
+
+Move 376: J-right
+         
+ ..AA.HH 
+ BDD.... 
+KB..FLPP 
+ CC.FLGG 
+ EE.F.I. 
+ ...JJI. 
+         
+
+Move 377: E-right
+         
+ ..AA.HH 
+ BDD.... 
+KB..FLPP 
+ CC.FLGG 
+ .EEF.I. 
+ ...JJI. 
+         
+
+Move 378: D-right-4
+         
+ ..AA.HH 
+ B....DD 
+KB..FLPP 
+ CC.FLGG 
+ .EEF.I. 
+ ...JJI. 
+         
+
+Move 379: J-left-3
+         
+ ..AA.HH 
+ B....DD 
+KB..FLPP 
+ CC.FLGG 
+ .EEF.I. 
+ JJ...I. 
+         
+
+Move 380: D-left-3
+         
+ ..AA.HH 
+ B.DD... 
+KB..FLPP 
+ CC.FLGG 
+ .EEF.I. 
+ JJ...I. 
+         
+
+Move 381: L-down
+         
+ ..AA.HH 
+ B.DD... 
+KB..F.PP 
+ CC.FLGG 
+ .EEFLI. 
+ JJ...I. 
+         
+
+Move 382: P-left
+         
+ ..AA.HH 
+ B.DD... 
+KB..FPP. 
+ CC.FLGG 
+ .EEFLI. 
+ JJ...I. 
+         
+
+Move 383: D-right-2
+         
+ ..AA.HH 
+ B...DD. 
+KB..FPP. 
+ CC.FLGG 
+ .EEFLI. 
+ JJ...I. 
+         
+
+Move 384: A-right
+         
+ ...AAHH 
+ B...DD. 
+KB..FPP. 
+ CC.FLGG 
+ .EEFLI. 
+ JJ...I. 
+         
+
+Move 385: J-right-3
+         
+ ...AAHH 
+ B...DD. 
+KB..FPP. 
+ CC.FLGG 
+ .EEFLI. 
+ ...JJI. 
+         
+
+Move 386: D-left-2
+         
+ ...AAHH 
+ B.DD... 
+KB..FPP. 
+ CC.FLGG 
+ .EEFLI. 
+ ...JJI. 
+         
+
+Move 387: J-left
+         
+ ...AAHH 
+ B.DD... 
+KB..FPP. 
+ CC.FLGG 
+ .EEFLI. 
+ ..JJ.I. 
+         
+
+Move 388: D-right-2
+         
+ ...AAHH 
+ B...DD. 
+KB..FPP. 
+ CC.FLGG 
+ .EEFLI. 
+ ..JJ.I. 
+         
+
+Move 389: D-left
+         
+ ...AAHH 
+ B..DD.. 
+KB..FPP. 
+ CC.FLGG 
+ .EEFLI. 
+ ..JJ.I. 
+         
+
+Move 390: J-left-2
+         
+ ...AAHH 
+ B..DD.. 
+KB..FPP. 
+ CC.FLGG 
+ .EEFLI. 
+ JJ...I. 
+         
+
+Move 391: D-left-2
+         
+ ...AAHH 
+ BDD.... 
+KB..FPP. 
+ CC.FLGG 
+ .EEFLI. 
+ JJ...I. 
+         
+
+Move 392: F-down
+         
+ ...AAHH 
+ BDD.... 
+KB...PP. 
+ CC.FLGG 
+ .EEFLI. 
+ JJ.F.I. 
+         
+
+Move 393: D-right-3
+         
+ ...AAHH 
+ B...DD. 
+KB...PP. 
+ CC.FLGG 
+ .EEFLI. 
+ JJ.F.I. 
+         
+
+Move 394: L-down
+         
+ ...AAHH 
+ B...DD. 
+KB...PP. 
+ CC.F.GG 
+ .EEFLI. 
+ JJ.FLI. 
+         
+
+Move 395: F-up-2
+         
+ ...AAHH 
+ B..FDD. 
+KB..FPP. 
+ CC.F.GG 
+ .EE.LI. 
+ JJ..LI. 
+         
+
+Move 396: A-left-2
+         
+ .AA..HH 
+ B..FDD. 
+KB..FPP. 
+ CC.F.GG 
+ .EE.LI. 
+ JJ..LI. 
+         
+
+Move 397: G-left
+         
+ .AA..HH 
+ B..FDD. 
+KB..FPP. 
+ CC.FGG. 
+ .EE.LI. 
+ JJ..LI. 
+         
+
+Move 398: F-down
+         
+ .AA..HH 
+ B...DD. 
+KB..FPP. 
+ CC.FGG. 
+ .EEFLI. 
+ JJ..LI. 
+         
+
+Move 399: P-right
+         
+ .AA..HH 
+ B...DD. 
+KB..F.PP 
+ CC.FGG. 
+ .EEFLI. 
+ JJ..LI. 
+         
+
+Move 400: F-up
+         
+ .AA..HH 
+ B..FDD. 
+KB..F.PP 
+ CC.FGG. 
+ .EE.LI. 
+ JJ..LI. 
+         
+
+Move 401: A-left
+         
+ AA...HH 
+ B..FDD. 
+KB..F.PP 
+ CC.FGG. 
+ .EE.LI. 
+ JJ..LI. 
+         
+
+Move 402: H-left-2
+         
+ AA.HH.. 
+ B..FDD. 
+KB..F.PP 
+ CC.FGG. 
+ .EE.LI. 
+ JJ..LI. 
+         
+
+Move 403: E-right
+         
+ AA.HH.. 
+ B..FDD. 
+KB..F.PP 
+ CC.FGG. 
+ ..EELI. 
+ JJ..LI. 
+         
+
+Move 404: J-right-2
+         
+ AA.HH.. 
+ B..FDD. 
+KB..F.PP 
+ CC.FGG. 
+ ..EELI. 
+ ..JJLI. 
+         
+
+Move 405: J-left
+         
+ AA.HH.. 
+ B..FDD. 
+KB..F.PP 
+ CC.FGG. 
+ ..EELI. 
+ .JJ.LI. 
+         
+
+Move 406: H-right-2
+         
+ AA...HH 
+ B..FDD. 
+KB..F.PP 
+ CC.FGG. 
+ ..EELI. 
+ .JJ.LI. 
+         
+
+Move 407: D-right
+         
+ AA...HH 
+ B..F.DD 
+KB..F.PP 
+ CC.FGG. 
+ ..EELI. 
+ .JJ.LI. 
+         
+
+Move 408: P-left
+         
+ AA...HH 
+ B..F.DD 
+KB..FPP. 
+ CC.FGG. 
+ ..EELI. 
+ .JJ.LI. 
+         
+
+Move 409: F-up
+         
+ AA.F.HH 
+ B..F.DD 
+KB..FPP. 
+ CC..GG. 
+ ..EELI. 
+ .JJ.LI. 
+         
+
+Move 410: A-right
+         
+ .AAF.HH 
+ B..F.DD 
+KB..FPP. 
+ CC..GG. 
+ ..EELI. 
+ .JJ.LI. 
+         
+
+Move 411: C-right
+         
+ .AAF.HH 
+ B..F.DD 
+KB..FPP. 
+ .CC.GG. 
+ ..EELI. 
+ .JJ.LI. 
+         
+
+Move 412: A-left
+         
+ AA.F.HH 
+ B..F.DD 
+KB..FPP. 
+ .CC.GG. 
+ ..EELI. 
+ .JJ.LI. 
+         
+
+Move 413: P-right
+         
+ AA.F.HH 
+ B..F.DD 
+KB..F.PP 
+ .CC.GG. 
+ ..EELI. 
+ .JJ.LI. 
+         
+
+Move 414: B-down-3
+         
+ AA.F.HH 
+ ...F.DD 
+K...F.PP 
+ .CC.GG. 
+ B.EELI. 
+ BJJ.LI. 
+         
+
+Move 415: B-up-2
+         
+ AA.F.HH 
+ ...F.DD 
+KB..F.PP 
+ BCC.GG. 
+ ..EELI. 
+ .JJ.LI. 
+         
+
+Move 416: E-left-2
+         
+ AA.F.HH 
+ ...F.DD 
+KB..F.PP 
+ BCC.GG. 
+ EE..LI. 
+ .JJ.LI. 
+         
+
+Move 417: A-right
+         
+ .AAF.HH 
+ ...F.DD 
+KB..F.PP 
+ BCC.GG. 
+ EE..LI. 
+ .JJ.LI. 
+         
+
+Move 418: E-right-2
+         
+ .AAF.HH 
+ ...F.DD 
+KB..F.PP 
+ BCC.GG. 
+ ..EELI. 
+ .JJ.LI. 
+         
+
+Move 419: B-down
+         
+ .AAF.HH 
+ ...F.DD 
+K...F.PP 
+ BCC.GG. 
+ B.EELI. 
+ .JJ.LI. 
+         
+
+Move 420: C-right
+         
+ .AAF.HH 
+ ...F.DD 
+K...F.PP 
+ B.CCGG. 
+ B.EELI. 
+ .JJ.LI. 
+         
+
+Move 421: B-up-3
+         
+ BAAF.HH 
+ B..F.DD 
+K...F.PP 
+ ..CCGG. 
+ ..EELI. 
+ .JJ.LI. 
+         
+
+Move 422: G-right
+         
+ BAAF.HH 
+ B..F.DD 
+K...F.PP 
+ ..CC.GG 
+ ..EELI. 
+ .JJ.LI. 
+         
+
+Move 423: E-left-2
+         
+ BAAF.HH 
+ B..F.DD 
+K...F.PP 
+ ..CC.GG 
+ EE..LI. 
+ .JJ.LI. 
+         
+
+Move 424: G-left
+         
+ BAAF.HH 
+ B..F.DD 
+K...F.PP 
+ ..CCGG. 
+ EE..LI. 
+ .JJ.LI. 
+         
+
+Move 425: J-right
+         
+ BAAF.HH 
+ B..F.DD 
+K...F.PP 
+ ..CCGG. 
+ EE..LI. 
+ ..JJLI. 
+         
+
+Move 426: C-left-2
+         
+ BAAF.HH 
+ B..F.DD 
+K...F.PP 
+ CC..GG. 
+ EE..LI. 
+ ..JJLI. 
+         
+
+Move 427: P-left
+         
+ BAAF.HH 
+ B..F.DD 
+K...FPP. 
+ CC..GG. 
+ EE..LI. 
+ ..JJLI. 
+         
+
+Move 428: F-down-2
+         
+ BAA..HH 
+ B....DD 
+K...FPP. 
+ CC.FGG. 
+ EE.FLI. 
+ ..JJLI. 
+         
+
+Move 429: J-left
+         
+ BAA..HH 
+ B....DD 
+K...FPP. 
+ CC.FGG. 
+ EE.FLI. 
+ .JJ.LI. 
+         
+
+Move 430: J-left
+         
+ BAA..HH 
+ B....DD 
+K...FPP. 
+ CC.FGG. 
+ EE.FLI. 
+ JJ..LI. 
+         
+
+Move 431: F-down
+         
+ BAA..HH 
+ B....DD 
+K....PP. 
+ CC.FGG. 
+ EE.FLI. 
+ JJ.FLI. 
+         
+
+Move 432: C-right
+         
+ BAA..HH 
+ B....DD 
+K....PP. 
+ .CCFGG. 
+ EE.FLI. 
+ JJ.FLI. 
+         
+
+Move 433: B-down-2
+         
+ .AA..HH 
+ .....DD 
+KB...PP. 
+ BCCFGG. 
+ EE.FLI. 
+ JJ.FLI. 
+         
+
+Move 434: A-left
+         
+ AA...HH 
+ .....DD 
+KB...PP. 
+ BCCFGG. 
+ EE.FLI. 
+ JJ.FLI. 
+         
+
+Move 435: D-left-2
+         
+ AA...HH 
+ ...DD.. 
+KB...PP. 
+ BCCFGG. 
+ EE.FLI. 
+ JJ.FLI. 
+         
+
+Move 436: B-up
+         
+ AA...HH 
+ B..DD.. 
+KB...PP. 
+ .CCFGG. 
+ EE.FLI. 
+ JJ.FLI. 
+         
+
+Move 437: A-right
+         
+ .AA..HH 
+ B..DD.. 
+KB...PP. 
+ .CCFGG. 
+ EE.FLI. 
+ JJ.FLI. 
+         
+
+Move 438: B-up
+         
+ BAA..HH 
+ B..DD.. 
+K....PP. 
+ .CCFGG. 
+ EE.FLI. 
+ JJ.FLI. 
+         
+
+Move 439: J-right
+         
+ BAA..HH 
+ B..DD.. 
+K....PP. 
+ .CCFGG. 
+ EE.FLI. 
+ .JJFLI. 
+         
+
+Move 440: P-left-4
+         
+ BAA..HH 
+ B..DD.. 
+KPP..... 
+ .CCFGG. 
+ EE.FLI. 
+ .JJFLI. 
+         
+----------------------------------------------------------
+
+Solution finished. Game solved successfully!
