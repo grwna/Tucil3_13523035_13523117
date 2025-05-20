@@ -73,7 +73,7 @@ public class GUI extends Application {
         mainScrollPane.setFitToWidth(true); 
         mainScrollPane.setFitToHeight(true);
 
-        Scene scene = new Scene(mainScrollPane, 800, 600);
+        Scene scene = new Scene(mainScrollPane, 1200, 800);
         this.primaryStage.setScene(scene);
 
         initGui();
@@ -82,7 +82,7 @@ public class GUI extends Application {
         this.primaryStage.centerOnScreen();
     }
 
-        private void setMainContent(Pane content) {
+    private void setMainContent(Pane content) {
         if (mainScrollPane != null) {
             mainScrollPane.setContent(content);
         } else {
@@ -462,7 +462,11 @@ public class GUI extends Application {
                 solver = new HillClimbing(new CombinedHeuristic());
             }
         }
-        this.solution = this.solver.solve(this.board);
+        try {
+            this.solution = this.solver.solve(this.board);
+        } catch (OutOfMemoryError e){
+            inputError("Out of memory!", true);
+        }
         if (this.solution.isEmpty()) {
             inputError("No solution found.", false);
             return;

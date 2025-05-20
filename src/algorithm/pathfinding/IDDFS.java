@@ -21,6 +21,7 @@ public class IDDFS extends Pathfinder {
         int totalNodesExpandedEstimate = 0;
 
         for (int depthLimit = 0; ; depthLimit++) {
+            System.out.println("Exploring Depth: " + depthLimit );
             State startState = new State(startBoard, "Start", null);
             Set<String> visitedInCurrentPath = new HashSet<>(); 
             
