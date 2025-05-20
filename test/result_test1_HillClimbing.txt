@@ -1,0 +1,124 @@
+==========================================================
+  RUSH HOUR GAME SOLUTION USING HILL CLIMBING SEARCH
+==========================================================
+
+Number of moves: 10
+Execution time: 0,953 ms
+
+----------------------------------------------------------
+SOLUTION STEPS:
+----------------------------------------------------------
+Move 1: G-up
+Move 2: I-right
+Move 3: M-right
+Move 4: J-up
+Move 5: D-up
+Move 6: P-down
+Move 7: L-right
+Move 8: L-right
+Move 9: D-down
+Move 10: P-down
+
+
+
+Move 0: Start         
+ AAB..F. 
+ .PBCDF. 
+ .P.CDF. 
+ GP.III. 
+ G.J.... 
+ LLJMM.. 
+  K      
+
+Move 1: G-up         
+ AAB..F. 
+ .PBCDF. 
+ GP.CDF. 
+ GP.III. 
+ ..J.... 
+ LLJMM.. 
+  K      
+
+Move 2: I-right         
+ AAB..F. 
+ .PBCDF. 
+ GP.CDF. 
+ GP..III 
+ ..J.... 
+ LLJMM.. 
+  K      
+
+Move 3: M-right         
+ AAB..F. 
+ .PBCDF. 
+ GP.CDF. 
+ GP..III 
+ ..J.... 
+ LLJ.MM. 
+  K      
+
+Move 4: J-up         
+ AAB..F. 
+ .PBCDF. 
+ GP.CDF. 
+ GPJ.III 
+ ..J.... 
+ LL..MM. 
+  K      
+
+Move 5: D-up         
+ AAB.DF. 
+ .PBCDF. 
+ GP.C.F. 
+ GPJ.III 
+ ..J.... 
+ LL..MM. 
+  K      
+
+Move 6: P-down         
+ AAB.DF. 
+ ..BCDF. 
+ GP.C.F. 
+ GPJ.III 
+ .PJ.... 
+ LL..MM. 
+  K      
+
+Move 7: L-right         
+ AAB.DF. 
+ ..BCDF. 
+ GP.C.F. 
+ GPJ.III 
+ .PJ.... 
+ .LL.MM. 
+  K      
+
+Move 8: L-right         
+ AAB.DF. 
+ ..BCDF. 
+ GP.C.F. 
+ GPJ.III 
+ .PJ.... 
+ ..LLMM. 
+  K      
+
+Move 9: D-down         
+ AAB..F. 
+ ..BCDF. 
+ GP.CDF. 
+ GPJ.III 
+ .PJ.... 
+ ..LLMM. 
+  K      
+
+Move 10: P-down         
+ AAB..F. 
+ ..BCDF. 
+ G..CDF. 
+ GPJ.III 
+ .PJ.... 
+ .PLLMM. 
+  K      
+----------------------------------------------------------
+
+Solution finished. Game solved successfully!
