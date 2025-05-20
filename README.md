@@ -16,10 +16,6 @@
 - [Author](#-author)
 - [References](#-references)
 
-## Resources
-- [Backend Repository](https://github.com/Ferdin-Arsenic/Tubes2_BE_Bolang)
-- [Frontent Repository](https://github.com/azfaradhi/Tubes2_FE_Bolang)
-- [Youtube Demo](https://www.youtube.com/watch?v=Iq1JeTXSvfU)
 
 ## 📖 Description
 This program is a Java application which is a solver for Rush Hour Puzzle. The application utilizes pathfinding algorithms such as A*, UCS, BFS and more, to look for valid solutions for a specific puzzle configuration. The resulting solution will be animated, with the ability to save the results into a text file. 
@@ -131,7 +127,7 @@ git clone git@github.com:grwna/Tucil3_13523035_13523117.git
 ---
 
 ### Running the Application
-❗❗❗**Before compiling and running the application. Make sure to change `JAVAFX` path in makefile to your JavaFX installation path.**
+❗**Before compiling and running the application. Make sure to change `JAVAFX` path in makefile to your JavaFX installation path.**❗
 
 Compile using `make build`
 
