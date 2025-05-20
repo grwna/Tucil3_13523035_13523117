@@ -1,0 +1,74 @@
+==========================================================
+  RUSH HOUR GAME SOLUTION USING UNIFORM COST SEARCH
+==========================================================
+
+Number of moves: 5
+Execution time: 79,914 ms
+
+----------------------------------------------------------
+SOLUTION STEPS:
+----------------------------------------------------------
+Move 1: B-up
+Move 2: F-down
+Move 3: G-right
+Move 4: L-down-2
+Move 5: P-left-5
+
+
+
+Move 0: Start         
+ .AAHH.. 
+ BDD.L.. 
+KB..FLPP 
+ CC.FGG. 
+ EE.F.I. 
+ .JJ..I. 
+         
+
+Move 1: B-up         
+ BAAHH.. 
+ BDD.L.. 
+K...FLPP 
+ CC.FGG. 
+ EE.F.I. 
+ .JJ..I. 
+         
+
+Move 2: F-down         
+ BAAHH.. 
+ BDD.L.. 
+K....LPP 
+ CC.FGG. 
+ EE.F.I. 
+ .JJF.I. 
+         
+
+Move 3: G-right         
+ BAAHH.. 
+ BDD.L.. 
+K....LPP 
+ CC.F.GG 
+ EE.F.I. 
+ .JJF.I. 
+         
+
+Move 4: L-down-2         
+ BAAHH.. 
+ BDD.... 
+K.....PP 
+ CC.FLGG 
+ EE.FLI. 
+ .JJF.I. 
+         
+
+Move 5: P-left-5         
+ BAAHH.. 
+ BDD.... 
+KPP..... 
+ CC.FLGG 
+ EE.FLI. 
+ .JJF.I. 
+         
+----------------------------------------------------------
+
+Solution finished. Game solved successfully!
