@@ -25,11 +25,13 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
@@ -56,6 +58,7 @@ public class GUI extends Application {
     public double animationDelay; 
 
     public Stage primaryStage;
+    public ScrollPane mainScrollPane;
     public StackPane boardDisplayArea;
 
     static int FILE_PATH_FIELD_WIDTH = 300;
@@ -65,11 +68,27 @@ public class GUI extends Application {
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Rush Hour Solver");
+
+        mainScrollPane = new ScrollPane();
+        mainScrollPane.setFitToWidth(true); 
+        mainScrollPane.setFitToHeight(true);
+
+        Scene scene = new Scene(mainScrollPane, 800, 600);
+        this.primaryStage.setScene(scene);
+
         initGui();
+
         this.primaryStage.show();
         this.primaryStage.centerOnScreen();
     }
 
+        private void setMainContent(Pane content) {
+        if (mainScrollPane != null) {
+            mainScrollPane.setContent(content);
+        } else {
+            System.err.println("Error: mainScrollPane is not initialized!");
+        }
+    }
 
     public void initGui(){
         Timeline timeline = new Timeline(new KeyFrame(
@@ -111,9 +130,7 @@ public class GUI extends Application {
         mainLayout.setCenter(buttonBox);
         BorderPane.setAlignment(buttonBox, Pos.CENTER);
 
-        Scene scene = new Scene(mainLayout, 800, 600);
-        this.primaryStage.setScene(scene);
-        this.primaryStage.centerOnScreen(); 
+         setMainContent(mainLayout);
     }
 
 
@@ -229,9 +246,7 @@ public class GUI extends Application {
         userInputLayout.setAlignment(Pos.CENTER);
         userInputLayout.getChildren().addAll(algoBox, fileLabel, fileInputBox, navigationButtonBox);
 
-        Scene userInputScene = new Scene(userInputLayout, 800, 600);
-        this.primaryStage.setScene(userInputScene);
-        this.primaryStage.centerOnScreen(); 
+         setMainContent(userInputLayout);
     }
 
 
@@ -298,9 +313,7 @@ public class GUI extends Application {
         userInputLayout.setAlignment(Pos.CENTER);
         userInputLayout.getChildren().addAll(heuristicBox, navigationButtonBox);
 
-        Scene userInputScene = new Scene(userInputLayout, 800, 600);
-        this.primaryStage.setScene(userInputScene);
-        this.primaryStage.centerOnScreen(); 
+        setMainContent(userInputLayout);
     }
 
 
@@ -414,9 +427,7 @@ public class GUI extends Application {
             sceneHeight = Math.max(sceneHeight, this.primaryStage.getScene().getHeight());
         }
 
-        Scene searchScene = new Scene(searchScreenLayout, sceneWidth, sceneHeight);
-        this.primaryStage.setScene(searchScene);
-        this.primaryStage.centerOnScreen();
+        setMainContent(searchScreenLayout);
     }
 
 
@@ -579,9 +590,7 @@ public class GUI extends Application {
             sceneHeight = Math.max(sceneHeight, this.primaryStage.getScene().getHeight());
         }
 
-        Scene solutionScene = new Scene(solutionScreenLayout, sceneWidth, sceneHeight);
-        this.primaryStage.setScene(solutionScene);
-        this.primaryStage.centerOnScreen();
+        setMainContent(solutionScreenLayout);
     }
 
 
@@ -645,9 +654,7 @@ public class GUI extends Application {
         errorLayout.setAlignment(Pos.CENTER);
         errorLayout.setPadding(new Insets(40));
 
-        Scene errorScene = new Scene(errorLayout, 500, 300);
-        this.primaryStage.setScene(errorScene);
-        this.primaryStage.centerOnScreen();
+         setMainContent(errorLayout);
     }
     public static void main(String[] args) {
         launch(args);
