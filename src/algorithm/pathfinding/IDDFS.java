@@ -9,17 +9,6 @@ import model.Board;
 import model.State;
 
 public class IDDFS extends Pathfinder {
-    private long runtimeNano = -1;
-    private int nodes;
-
-    public long getRuntimeNano() {
-        return this.runtimeNano;
-    }
-
-    public int getNodes(){
-        return this.nodes;
-    }
-
     @Override
     public String getName() {
         return "Iterative Deepening Search (IDS)";
@@ -66,7 +55,7 @@ public class IDDFS extends Pathfinder {
         String currentBoardKey = Pathfinder.boardToString(currentState.board);
 
         if (currentState.board.isSolved()) {
-            return reconstructStatePath(currentState); // Found goal
+            return reconstructStatePath(currentState);
         }
 
         if (currentDepth >= maxDepth) {

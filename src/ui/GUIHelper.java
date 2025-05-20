@@ -70,7 +70,7 @@ public class GUIHelper {
         button.setOnMouseEntered(e -> button.setStyle(hoverStyle));
         button.setOnMouseExited(e -> button.setStyle(modernStyle));
         button.setOnMousePressed(e -> button.setStyle(pressedStyle));
-        button.setOnMouseReleased(e -> button.setStyle(hoverStyle)); // Or modernStyle if not hovering
+        button.setOnMouseReleased(e -> button.setStyle(hoverStyle));
 
         return button;
     }

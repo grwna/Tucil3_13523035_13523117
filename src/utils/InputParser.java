@@ -1,4 +1,4 @@
-package parser;
+package utils;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -16,7 +16,6 @@ import model.Piece;
 import model.Position;
 
 public class InputParser {
-
     private static int getKColIdx(String line) {
         if (line == null) return -1;
         int kPos = -1, kCount = 0;
@@ -27,6 +26,7 @@ public class InputParser {
         }
         return (kCount == 1) ? kPos : -1;
     }
+
 
     public static Board parseFromFile(String path) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(path));
@@ -251,6 +251,13 @@ public class InputParser {
                     throw new IOException("Primary piece 'P' can't reach the exit 'K' (Make sure no extra whitespace on the board!)");
                 }
             }
+            for (char[] row : grid){
+                for (char col : row){
+                    if (((int)col < 65 || (int)col > 90) && col != '.' && col != ' ' ){
+                        throw new IOException("Invalid piece found! " + col);
+                    }
+                }
+            }
             for (char i = 'A'; i <= 'Z'; i++) {
                 if ((char) i != 'K' && pieces.containsKey((char)i)){
                     if (pieces.get((char)i).length < 2 || pieces.get(i).length > 3){
@@ -264,6 +271,7 @@ public class InputParser {
         }
     }
     
+
     private static boolean isValidChar(char c) {
         return Character.isLetterOrDigit(c) || c == ' ' || c == '.' || c == 'K';
     }

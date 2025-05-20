@@ -4,14 +4,16 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import algorithm.heuristic.Heuristic;
 import model.Board;
 import model.Piece;
 import model.Position;
 import model.State;
 
 public class Pathfinder {
-    private  long runtimeNano = -1;
-    private int nodes;
+    protected Heuristic heuristic;
+    protected  long runtimeNano = -1;
+    protected int nodes;
     public List<State> solve(Board startBoard) {
         throw new UnsupportedOperationException("Method not implemented");
     }
@@ -27,6 +29,7 @@ public class Pathfinder {
     public int getNodes(){
         return this.nodes;
     }
+
 
     protected List<State> generateNeighbors(State current) {
         List<State> result = new ArrayList<>();
@@ -82,6 +85,7 @@ public class Pathfinder {
         return result;
     }
 
+
     private boolean canMovePieceHorizontal(Board board, Piece piece, int deltaCol) {
         if (!piece.isHorizontal) return false;
         
@@ -93,7 +97,7 @@ public class Pathfinder {
             return false;
         }
         
-        if (deltaCol > 0) { // Moving right
+        if (deltaCol > 0) { // kanan
             for (int c = piece.start.col + piece.length; c <= piece.start.col + piece.length + deltaCol - 1; c++) {
                 if (c >= 0 && c < board.cols) {
                     char cell = board.grid[row][c];
@@ -104,7 +108,7 @@ public class Pathfinder {
                     return false;
                 }
             }
-        } else { // Moving left
+        } else { // kiri
             for (int c = piece.start.col - 1; c >= piece.start.col + deltaCol; c--) {
                 if (c >= 0 && c < board.cols) {
                     char cell = board.grid[row][c];
@@ -120,18 +124,19 @@ public class Pathfinder {
         return true;
     }
     
+
     private boolean canMovePieceVertical(Board board, Piece piece, int deltaRow) {
         if (piece.isHorizontal) return false;
         
         int col = piece.start.col;
         int targetRow = (deltaRow > 0) ? 
-                        piece.start.row + piece.length + deltaRow - 1 : // untuk ke bawah
-                        piece.start.row + deltaRow; // untuk ke atas
+                        piece.start.row + piece.length + deltaRow - 1 : // bawah
+                        piece.start.row + deltaRow; // atas
         if (targetRow < 1 || targetRow >= board.rows-1) {
             return false;
         }
         
-        if (deltaRow > 0) { // Moving down
+        if (deltaRow > 0) { // bawah
             for (int r = piece.start.row + piece.length; r <= piece.start.row + piece.length + deltaRow - 1; r++) {
                 if (r >= 0 && r < board.rows) {
                     char cell = board.grid[r][col];
@@ -142,7 +147,7 @@ public class Pathfinder {
                     return false;
                 }
             }
-        } else { // Moving up
+        } else { // atas
             for (int r = piece.start.row - 1; r >= piece.start.row + deltaRow; r--) {
                 if (r >= 0 && r < board.rows) {
                     char cell = board.grid[r][col];
@@ -158,6 +163,7 @@ public class Pathfinder {
         return true;
     }
     
+
     private Board movePieceAndCreateNewBoard(Board board, Piece piece, int deltaRow, int deltaCol) {
         Board newBoard = board.copy();
         Piece newPiece = newBoard.pieces.get(piece.id);
@@ -183,6 +189,7 @@ public class Pathfinder {
         return newBoard;
     }
 
+
     protected List<State> reconstructStatePath(State goal) {
         List<State> path = new ArrayList<>();
         State current = goal;
@@ -193,6 +200,8 @@ public class Pathfinder {
         Collections.reverse(path);
         return path;
     }
+
+
     protected static String boardToString(Board board) {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < board.rows; i++) {

@@ -1,11 +1,8 @@
 6 7
 12
-A     AB..F.
-
-
-..B          CDF.
-
-.P PCD   F.K
-     G H.III.
-GHJ . ...
-L LJMM..
+AAB..F.
+..BCDF.
+.PPCDF.K
+GH.III.
+GHJ....
+LLJMM..

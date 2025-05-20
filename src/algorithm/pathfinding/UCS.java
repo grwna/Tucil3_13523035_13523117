@@ -12,17 +12,6 @@ import model.Board;
 import model.State;
 
 public class UCS extends Pathfinder {
-    private long runtimeNano = -1;
-    private int nodes;
-
-    public long getRuntimeNano() {
-        return this.runtimeNano;
-    }
-
-    public int getNodes(){
-        return this.nodes;
-    }
-
     @Override
     public String getName() {
         return "Uniform Cost Search";

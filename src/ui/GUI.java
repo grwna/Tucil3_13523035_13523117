@@ -42,7 +42,7 @@ import javafx.util.Duration;
 import javafx.util.StringConverter;
 import model.Board;
 import model.State;
-import parser.InputParser;
+import utils.InputParser;
 import utils.OutputWriter;
 
 
@@ -60,6 +60,7 @@ public class GUI extends Application {
 
     static int FILE_PATH_FIELD_WIDTH = 300;
 
+    
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
@@ -69,12 +70,14 @@ public class GUI extends Application {
         this.primaryStage.centerOnScreen();
     }
 
+
     public void initGui(){
         Timeline timeline = new Timeline(new KeyFrame(
             Duration.millis(70),
             ae -> titleScreen()));
         timeline.play();titleScreen();
     }
+
 
     public void titleScreen(){
         Label titleLabel = new Label("Rush Hour Solver");
@@ -112,6 +115,7 @@ public class GUI extends Application {
         this.primaryStage.setScene(scene);
         this.primaryStage.centerOnScreen(); 
     }
+
 
     public void userInputs(){
         // Algorithms Elements
@@ -230,6 +234,7 @@ public class GUI extends Application {
         this.primaryStage.centerOnScreen(); 
     }
 
+
     public void heuristicInput(){
         Label heuristicLabel = new Label("Choose your Heuristic:");
         heuristicLabel.setFont(Font.font("Arial", FontWeight.BOLD, 20));
@@ -298,6 +303,7 @@ public class GUI extends Application {
         this.primaryStage.centerOnScreen(); 
     }
 
+
     public void processInput(){
         try {
             this.board = InputParser.parseFromFile(this.filePath);
@@ -309,6 +315,7 @@ public class GUI extends Application {
             inputError(e.getMessage(), true);
         }
     }
+
 
     public void initSearch() {
         this.boardDisplayArea = new StackPane();
@@ -412,6 +419,7 @@ public class GUI extends Application {
         this.primaryStage.centerOnScreen();
     }
 
+
     public void startSearch() {
         this.solver = null;
         if ("Uniform Cost Search".equals(this.algorithm)) {
@@ -450,6 +458,7 @@ public class GUI extends Application {
         }
         animateSolution();
     }
+
 
     public void animateSolution() {
         Timeline timeline = new Timeline();
@@ -514,6 +523,7 @@ public class GUI extends Application {
         timeline.play();
     }
 
+
     public void solutionsFound(){
         this.boardDisplayArea.getChildren().clear();
 
@@ -574,6 +584,7 @@ public class GUI extends Application {
         this.primaryStage.centerOnScreen();
     }
 
+
     public void saveToFile(List<State> solution, String algorithmName, double executionTime, Button callerButton){
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Save Solution As");
@@ -607,6 +618,7 @@ public class GUI extends Application {
             System.out.println("Save operation cancelled by user.");
         }
     }
+
 
     // initially just for error, but used for no solutions too
     public void inputError(String errorMessage, boolean isError) {

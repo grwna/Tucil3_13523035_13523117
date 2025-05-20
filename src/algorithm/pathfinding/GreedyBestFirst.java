@@ -11,18 +11,6 @@ import model.Board;
 import model.State;
 
 public class GreedyBestFirst extends Pathfinder {
-    private Heuristic heuristic;
-    private long runtimeNano = -1;
-    private int nodes;
-
-    public long getRuntimeNano() {
-        return this.runtimeNano;
-    }
-
-    public int getNodes(){
-        return this.nodes;
-    }
-
     public GreedyBestFirst(Heuristic heuristic) {
         this.heuristic = heuristic;
     }
