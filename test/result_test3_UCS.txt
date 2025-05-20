@@ -2,8 +2,9 @@
   RUSH HOUR GAME SOLUTION USING UNIFORM COST SEARCH
 ==========================================================
 
-Number of moves: 5
-Execution time: 102.926 ms
+Number of moves : 5
+Execution time  : 109.505 ms
+Nodes visited   : 3742
 
 ----------------------------------------------------------
 SOLUTION STEPS:

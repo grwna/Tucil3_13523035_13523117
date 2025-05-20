@@ -2,8 +2,9 @@
   RUSH HOUR GAME SOLUTION USING A* SEARCH
 ==========================================================
 
-Number of moves: 5
-Execution time: 2287.878 ms
+Number of moves : 5
+Execution time  : 1881.932 ms
+Nodes visited   : 55276
 
 ----------------------------------------------------------
 SOLUTION STEPS:

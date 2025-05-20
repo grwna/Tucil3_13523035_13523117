@@ -2,8 +2,9 @@
   RUSH HOUR GAME SOLUTION USING GREEDY BEST FIRST SEARCH
 ==========================================================
 
-Number of moves: 288
-Execution time: 4596.777 ms
+Number of moves : 288
+Execution time  : 4596.777 ms
+Nodes visited   : 771108
 
 ----------------------------------------------------------
 SOLUTION STEPS:

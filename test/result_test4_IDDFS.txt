@@ -2,8 +2,9 @@
   RUSH HOUR GAME SOLUTION USING ITERATIVE DEEPENING SEARCH
 ==========================================================
 
-Number of moves: 5
-Execution time: 81990.335 ms
+Number of moves : 5
+Execution time  : 80768.890 ms
+Nodes visited   : 26444294
 
 ----------------------------------------------------------
 SOLUTION STEPS:

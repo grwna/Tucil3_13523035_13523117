@@ -9,14 +9,15 @@ import java.util.List;
 import model.State;
 
 public class OutputWriter {
-    public static String writeSolution(List<State> solution, String algorithmName, double executionTime, String outputPath) throws IOException {
+    public static String writeSolution(List<State> solution, String algorithmName, double executionTime, int nodesVisited, String outputPath) throws IOException {
         try (PrintWriter writer = new PrintWriter(new FileWriter(outputPath))) {
             writer.println("==========================================================");
             writer.println("  RUSH HOUR GAME SOLUTION USING " + algorithmName.toUpperCase());
             writer.println("==========================================================");
             writer.println();
-            writer.println("Number of moves: " + (solution.size() - 1));
-            writer.println("Execution time: " + String.format("%.3f ms", executionTime));
+            writer.println("Number of moves : " + (solution.size() - 1));
+            writer.println("Execution time  : " + String.format("%.3f ms", executionTime));
+            writer.println("Nodes visited   : " + nodesVisited);
             writer.println();
             writer.println("----------------------------------------------------------");
             writer.println("SOLUTION STEPS:");

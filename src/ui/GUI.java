@@ -579,7 +579,7 @@ public class GUI extends Application {
             }
         });
         Button saveButton = GUIHelper.createButton("Save", e->{});
-        saveButton.setOnAction(e -> {saveToFile(this.solution, this.algorithm, this.solver.getRuntimeNano()/1e6 , saveButton);});
+        saveButton.setOnAction(e -> {saveToFile(this.solution, this.algorithm, this.solver.getRuntimeNano()/1e6 , this.solver.getNodes(), saveButton);});
 
         HBox buttonControlBox = new HBox(20, backToTitleButton, replayButton, saveButton);
         buttonControlBox.setAlignment(Pos.CENTER);
@@ -601,7 +601,7 @@ public class GUI extends Application {
     }
 
 
-    public void saveToFile(List<State> solution, String algorithmName, double executionTime, Button callerButton){
+    public void saveToFile(List<State> solution, String algorithmName, double executionTime, int nodesVisited, Button callerButton){
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Save Solution As");
 
@@ -616,7 +616,7 @@ public class GUI extends Application {
         if (!fileToSave.getAbsolutePath().toLowerCase().endsWith(".txt")) fileToSave = new File(fileToSave.getAbsolutePath() + ".txt");
         if (fileToSave != null) {
             try {
-                String outputPath = OutputWriter.writeSolution( solution, algorithmName, executionTime,  fileToSave.getAbsolutePath());
+                String outputPath = OutputWriter.writeSolution( solution, algorithmName, executionTime, nodesVisited, fileToSave.getAbsolutePath());
 
                 Alert successAlert = new Alert(AlertType.INFORMATION);
                 successAlert.setTitle("Success");

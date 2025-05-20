@@ -2,8 +2,9 @@
   RUSH HOUR GAME SOLUTION USING HILL CLIMBING SEARCH
 ==========================================================
 
-Number of moves: 440
-Execution time: 21.008 ms
+Number of moves : 440
+Execution time  : 21.008 ms
+Nodes visited   : 6005
 
 ----------------------------------------------------------
 SOLUTION STEPS:
