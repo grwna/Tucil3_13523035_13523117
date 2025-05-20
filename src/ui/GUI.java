@@ -73,7 +73,7 @@ public class GUI extends Application {
         mainScrollPane.setFitToWidth(true); 
         mainScrollPane.setFitToHeight(true);
 
-        Scene scene = new Scene(mainScrollPane, 1200, 800);
+        Scene scene = new Scene(mainScrollPane, 1000, 600);
         this.primaryStage.setScene(scene);
 
         initGui();
@@ -420,13 +420,6 @@ public class GUI extends Application {
         searchScreenLayout.getChildren().add(infoBox);
         searchScreenLayout.getChildren().add(buttonControlBox);
 
-        double sceneWidth = 800;
-        double sceneHeight = 800;
-        if (this.primaryStage.getScene() != null) {
-            sceneWidth = Math.max(sceneWidth, this.primaryStage.getScene().getWidth());
-            sceneHeight = Math.max(sceneHeight, this.primaryStage.getScene().getHeight());
-        }
-
         setMainContent(searchScreenLayout);
     }
 
@@ -590,12 +583,6 @@ public class GUI extends Application {
         solutionScreenLayout.setPadding(new Insets(20));
         solutionScreenLayout.getChildren().addAll(finalStateTitleLabel, this.boardDisplayArea, infoBox, buttonControlBox);
 
-        double sceneWidth = 800;
-        double sceneHeight = 700;
-        if (this.primaryStage.getScene() != null) {
-            sceneWidth = Math.max(sceneWidth, this.primaryStage.getScene().getWidth());
-            sceneHeight = Math.max(sceneHeight, this.primaryStage.getScene().getHeight());
-        }
 
         setMainContent(solutionScreenLayout);
     }
