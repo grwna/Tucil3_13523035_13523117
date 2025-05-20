@@ -120,11 +120,7 @@ public class GUIHelper {
                     cellRect.setStroke(pieceColor.darker());
 
                     // contrasting text color
-                    if (pieceColor.getBrightness() * pieceColor.getSaturation() < 0.15) {
-                        pieceLabel.setTextFill(Color.WHITE);
-                    } else {
-                        pieceLabel.setTextFill(Color.BLACK);
-                    }
+                    pieceLabel.setTextFill(Color.BLACK);
                 }
                 cellPane.getChildren().addAll(cellRect, pieceLabel);
                 gridPane.add(cellPane, j, i);

@@ -1,9 +1,9 @@
 6 6
 11
 AAB..F 
-..BC2F 
-PG.C2F 
-PG.III 
+..BCDF 
+PGKCDF 
+PGKIII 
 JJJ... 
 LLLMM. 
 K
